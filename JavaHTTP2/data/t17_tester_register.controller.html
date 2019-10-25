@@ -1,0 +1,108 @@
+define(["../../app"], function(app) {
+  app_cached_providers.$controllerProvider.register(
+    "homeTesterRegisterController",
+    function(
+      $scope,
+      $rootScope,
+      $state,
+      $config,
+      $timeout,
+      Auth,
+      $metrika,
+      $http,
+      Translation,
+      $injector
+    ) {
+      var $validationProvider = $injector.get("$validation");
+
+      $scope.success = null;
+      $scope.doNotMatch = null;
+      $scope.error = null;
+      $scope.errorUserExists = null;
+      $scope.errorEmailExists = null;
+      $scope.registerAccount = { role: "ROLE_NEW_TESTER" };
+
+      $timeout(function() {
+        angular.element('[ng-model="registerAccount.email"]').focus();
+      });
+
+      $(".info__input-group-wrapper input").keypress(function() {
+        $(".block_error").html("");
+      });
+
+      $scope.uloginUrl = $config.fullUrl
+        .replace(new RegExp(":", "g"), "%3A")
+        .replace(new RegExp("/", "g"), "%2F");
+
+      $scope.register = function() {
+        $validationProvider
+          .validate($scope.TesterRegisterForm)
+          .success(function() {
+            $(".block_error").html("");
+
+            $scope.doNotMatch = false;
+            $scope.error = null;
+            $scope.errorUserExists = null;
+            $scope.errorEmailExists = null;
+
+            if (window.location.href.indexOf("https://uxcrowd.ru/") != -1) {
+              setInterval(function() {
+                $metrika.fireEvent("form1_submit");
+              }, 100);
+            }
+
+            Auth.createAccount($scope.registerAccount)
+              .then(function() {
+                pushToDataLayer({ event: "form_tester_register" });
+
+                $scope.success = true;
+                $scope.message = "OK";
+                $rootScope.successMessage = {
+                  header: Translation.translate("LCT.LCT2"),
+                  description: Translation.translate('LCT.LCT3')+
+                      '<strong style="font: 700 16px/18px futura-pt, sans-serif !important;">'+
+                      $scope.registerAccount.email+
+                      '</strong>. '+
+                      "</div></div><div class=\"col-xs-12\"><div class=\"row\"><div class=\"sub_header_modal_window text-center\" ng-bind-html=\"successMessage.description\">" +
+                      Translation.translate('LCT.LCT4')+
+                      ' <strong style="font: 700 16px/18px futura-pt, sans-serif !important;">'+
+                      Translation.translate('LCT.LCT5')+
+                      '</strong>.</div>'
+                };
+                $state.go("success", { notify: false });
+              })
+              .catch(function(response) {
+                $scope.success = null;
+
+                if (
+                  response.status === 400 &&
+                  response.data === "login already in use"
+                ) {
+                  $scope.errorUserExists = "ERROR";
+                } else if (
+                  response.status === 400 &&
+                  response.data === "E_MAIL_ADDRESS_ALREADY_IN_USE"
+                ) {
+                  $scope.errorEmailExists = "ERROR";
+                  $scope.success = null;
+                  $scope.error = "ERROR";
+                  $scope.message = response.data;
+                  $scope.email_not_valid = $scope.registerAccount.email;
+                  $(".block_error").html(
+                    '<span class="validation-invalid-duplicate-mail">Эта почта уже зарегистрирована. Укажите другой почтовый ящик или восстановите пароль.</span>'
+                  );
+                } else {
+                  $scope.success = null;
+                  $scope.error = "ERROR";
+                  $scope.message = response.data;
+                }
+              });
+          })
+          .error(function() {
+            console.log("error");
+          });
+      };
+
+    }
+  );
+});

@@ -1,0 +1,15 @@
+[t17]
+FileName1=t17.json
+URL1=https://api-iam.intercom.io/messenger/web/ping
+Total=2
+RequestHeaderFile=t17_RequestHeader.txt
+RequestBodyFile=t17_RequestBody.txt
+ResponseHeaderFile=t17_ResponseHeader.txt
+ContentType=application/json
+SnapshotXmlFile=snapshot_17.xml
+FileName2=t17_tester_register.controller.html
+URL2=https://test.uxcrowd.ru/controller/controller_home/tester_register.controller.js?bust=1571305230887
+[ProtocolInfo]
+ProtocolId=QTWeb
+[JavaHTTP]
+requestIndex=14

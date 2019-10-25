@@ -1,0 +1,13 @@
+POST /messenger/web/ping HTTP/1.1
+Host: api-iam.intercom.io
+Connection: keep-alive
+Content-Length: 598
+Sec-Fetch-Mode: cors
+Origin: https://test.uxcrowd.ru
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Accept: */*
+Sec-Fetch-Site: cross-site
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+

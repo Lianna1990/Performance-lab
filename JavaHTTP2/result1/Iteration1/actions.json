@@ -1,0 +1,132 @@
+[
+    {
+        "actionName": "Actions",
+        "steps": [
+            {
+                "stepId": "STEP1",
+                "stepName": "Url: test.uxcrowd.ru",
+                "infFile": "t1.inf",
+                "time": 1571306163930
+            },
+            {
+                "stepId": "STEP2",
+                "stepName": "Url: headerGreenWhite.html",
+                "infFile": "t2.inf",
+                "time": 1571306164291
+            },
+            {
+                "stepId": "STEP3",
+                "stepName": "Url: home.html",
+                "infFile": "t3.inf",
+                "time": 1571306167901
+            },
+            {
+                "stepId": "STEP4",
+                "stepName": "Url: footer.html",
+                "infFile": "t4.inf",
+                "time": 1571306168131
+            },
+            {
+                "stepId": "STEP5",
+                "stepName": "Custom Request: metrics",
+                "infFile": "t5.inf",
+                "time": 1571306168565
+            },
+            {
+                "stepId": "STEP6",
+                "stepName": "Url: header.html",
+                "infFile": "t6.inf",
+                "time": 1571306168812
+            },
+            {
+                "stepId": "STEP7",
+                "stepName": "Url: about.html",
+                "infFile": "t7.inf",
+                "time": 1571306169571
+            },
+            {
+                "stepId": "STEP8",
+                "stepName": "Url: footerWhite.html",
+                "infFile": "t8.inf",
+                "time": 1571306169819
+            },
+            {
+                "stepId": "STEP9",
+                "stepName": "Custom Request: ping_2",
+                "infFile": "t9.inf",
+                "time": 1571306170362
+            },
+            {
+                "stepId": "STEP10",
+                "stepName": "Url: price.html",
+                "infFile": "t10.inf",
+                "time": 1571306170609
+            },
+            {
+                "stepId": "STEP11",
+                "stepName": "Custom Request: ping_3",
+                "infFile": "t11.inf",
+                "time": 1571306171030
+            },
+            {
+                "stepId": "STEP12",
+                "stepName": "Url: headerWhite.html",
+                "infFile": "t12.inf",
+                "time": 1571306171220
+            },
+            {
+                "stepId": "STEP13",
+                "stepName": "Url: tester.html",
+                "infFile": "t13.inf",
+                "time": 1571306171539
+            },
+            {
+                "stepId": "STEP14",
+                "stepName": "Custom Request: ping_4",
+                "infFile": "t14.inf",
+                "time": 1571306171907
+            },
+            {
+                "stepId": "STEP15",
+                "stepName": "Url: faq.html",
+                "infFile": "t15.inf",
+                "time": 1571306172226
+            },
+            {
+                "stepId": "STEP16",
+                "stepName": "Submit Data: ping_5",
+                "infFile": "t16.inf",
+                "time": 1571306172584
+            },
+            {
+                "stepId": "STEP17",
+                "stepName": "Url: modal-login.html",
+                "infFile": "t17.inf",
+                "time": 1571306172696
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "2_transaction",
+                "rawStartTime": 1571306171909,
+                "rawEndTime": 1571306172586,
+                "thinkTime": 0.0,
+                "wastedTime": 0.07130050659179688
+            },
+            {
+                "transactionName": "1_transaction",
+                "rawStartTime": 1571306170364,
+                "rawEndTime": 1571306172588,
+                "thinkTime": 0.0,
+                "wastedTime": 0.25157856941223147
+            },
+            {
+                "transactionName": "3_transaction",
+                "rawStartTime": 1571306172590,
+                "rawEndTime": 1571306172698,
+                "thinkTime": 0.0,
+                "wastedTime": 0.019655466079711915
+            }
+        ]
+    }
+]
