@@ -1,0 +1,1 @@
+jmeter.bat -JTHREADS=1 -JQUANTITY=1 -JITERATIONS=1 -n -t C:\Users\student\Desktop\TestPlanLK3.jmx -j test.log -l jmeter_report\UC03_Result.csv -e -o jmeter_report
