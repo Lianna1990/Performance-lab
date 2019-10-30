@@ -1,0 +1,117 @@
+<div class="new-footer">
+    <div class="new-footer-wrapper">
+        <ul class="footer-list">
+            <li class="footer-item list-title" ng-tr="NFO.NFO">Продукт</li>
+            <li class="footer-item">
+                <a href="/product/website-testing" class="footer-link" alt="{{'NFO.NFO20' | translate}}" title="{{'NFO.NFO20' | translate}}" ng-tr="NFO.NFO1">
+                    Тестирование сайта
+                </a>
+            </li>
+            <li class="footer-item">
+                <a href="/product/mobile-testing" class="footer-link" alt="{{'NFO.NFO20' | translate}}" title="{{'NFO.NFO20' | translate}}" ng-tr="NFO.NFO2">
+                    Тестирование мобильных приложений
+                </a>
+            </li>
+            <li class="footer-item" ng-if="config.locale == 'ru'">
+                <a href="/product/diy" class="footer-link" title="{{'NFO.NFO21' | translate}}" ng-tr="NFO.NFO3">
+                    Возможности
+                </a>
+            </li>
+            <!--<li class="footer-item" ng-if="config.locale == 'ru'">
+                <a href="/product/services" class="footer-link" title="{{'NFO.NFO22' | translate}}" ng-tr="NFO.NFO4">
+                    Услуги
+                </a>
+            </li>-->
+            <li class="footer-item">
+                <a href="/product/price" class="footer-link" title="{{'NFO.NFO23' | translate}}" ng-tr="NFO.NFO5">
+                    Цены
+                </a>
+            </li>
+        </ul>
+        <ul class="footer-list">
+            <li class="footer-item list-title" ng-tr="NFO.NFO6">Кому</li>
+            <li class="footer-item">
+                <a href="/product-manager" class="footer-link"
+                   title="{{'NFO.NFO24' | translate}}" ng-tr="NFO.NFO7">
+                    Продуктологам
+                </a>
+            </li>
+            <li class="footer-item">
+                <a href="/developers" class="footer-link" title="{{'NFO.NFO25' | translate}}" ng-tr="NFO.NFO8">
+                    Разработчикам
+                </a>
+            </li>
+            <li class="footer-item">
+                <a href="/marketers" class="footer-link" title="{{'NFO.NFO26' | translate}}" ng-tr="NFO.NFO9">
+                    Маркетологам
+                </a>
+            </li>
+            <li class="footer-item">
+                <a href="/designers" class="footer-link" title="{{'NFO.NFO27' | translate}}" ng-tr="NFO.NFO10">
+                    Дизайнерам
+                </a>
+            </li>
+            <!--<li class="footer-item"><a href="" class="footer-link">Агентствам</a></li>-->
+        </ul>
+        <ul class="footer-list" ng-if="config.locale == 'ru'">
+            <li class="footer-item list-title" ng-tr="NFO.NFO11">
+                Материалы
+            </li>
+            <li class="footer-item">
+                <a href="/usability-testing-guide" class="footer-link" title="{{'NFO.NFO28' | translate}}" ng-tr="NFO.NFO12">
+                    Руководство по пользовательскому тестированию
+                </a>
+            </li>
+            <li class="footer-item" ng-if="config.locale == 'ru'">
+                <a href="/blog" class="footer-link" title="{{'NFO.NFO29' | translate}}" ng-tr="NFO.NFO13">
+                    Блог
+                </a>
+            </li>
+        </ul>
+        <ul class="footer-list">
+            <li class="footer-item list-title" ng-tr="NFO.NFO14">О нас</li>
+            <li class="footer-item">
+                <a href="/team" class="footer-link" title="{{'NFO.NFO30' | translate}}" ng-tr="NFO.NFO15">
+                    Наша команда
+                </a>
+            </li>
+            <li class="footer-item">
+                <a href="/contacts" class="footer-link" title="{{'NFO.NFO31' | translate}}" ng-tr="NFO.NFO16">
+                    Контакты
+                </a>
+            </li>
+            <!--<li class="footer-item"><a href="" class="footer-link">Публикации</a></li>-->
+        </ul>
+        <ul class="footer-list">
+            <li class="footer-item list-title" ng-tr="NFO.NFO17">Связаться</li>
+            <li class="footer-item"><a href="tel:{{ 'CON.CON81' | translate }}" class="footer-link" ng-tr="CON.CON81">+7 (499) 707-2939</a></li>
+            <li class="footer-item"><a href="mailto:{{ 'CON.CON91' | translate }}" class="footer-link" ng-tr="CON.CON91">contact@uxcrowd.ru</a></li>
+            <li class="footer-item">
+                <a href="/tester-register" class="footer-link" title="{{'NFO.NFO32' | translate}}"  ng-tr="NFO.NFO18">
+                    Стать тестировщиком
+                </a>
+            </li>
+            <li class="footer-item" ng-if="config.locale == 'ru'">
+                <!--<a href="https://twitter.com/ux_crowd" class="footer-link social-link tw-link" target="_blank">
+                    <img class="tw-icon" width="32" height="32" src="../assets/images/vector-smart-twitter.png"
+                         alt="Твиттер про UI UX">
+                </a>
+                <a href="https://www.facebook.com/uxcrowd.ru/" class="footer-link social-link fb-link" target="_blank">
+                    <img class="fb-icon" width="32" height="32" src="../assets/css/svg/facebook_icon.svg"
+                         alt="Facebook про UX, UI и аудит удобства сайта">
+                </a>-->
+                <a class="twitter-follow-button" href="https://twitter.com/ux_crowd" style="width: 182px;" ng-tr="NFO.NFO19">
+                    <i></i>
+                    Зафолловить в твиттере
+                </a>
+
+                <iframe class="facebook-footer" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fuxcrowd.ru%2F&width=110&layout=button_count&action=like&size=large&show_faces=true&share=false&height=21&appId" width="124" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                <a href="https://www.youtube.com/channel/UC0cm1YoFrD0GtEjD3EIBB3g"
+                   class="footer-link social-link fb-link" target="_blank">
+                    <img class="fb-icon" width="32" height="32" src="../assets/css/svg/youtube.svg"
+                         alt="YouTube-канал про UX, UI и аудит удобства сайта">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+Start auto log messages stack.	[MsgId: MMSG-10546]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/landing/jQuery.YouTube.HD.Thumbnail.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/main_route.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): web_url("/") was successful, 3911395 body bytes, 15558 header bytes, 13 chunking overhead bytes  	[MsgId: MMSG-26385]
+vuser_init.c(16): Notify: Transaction "Homepage" ended with a "Pass" status (Duration: 5.7835 Wasted Time: 0.0004).	[MsgId: MMSG-16871]
+vuser_init.c(18): web_reg_save_param started  	[MsgId: MMSG-26355]
+vuser_init.c(18): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+vuser_init.c(22): web_url("/api/account") started  	[MsgId: MMSG-26355]
+vuser_init.c(22): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");, Snapshot Info [MSH 1 2]  	[MsgId: MERR-26547]
+Start auto log messages stack.	[MsgId: MMSG-10546]
+vuser_init.c(22): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account", Snapshot Info [MSH 1 2]  	[MsgId: MERR-26630]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/landing/jQuery.YouTube.HD.Thumbnail.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/main_route.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): web_url("/") was successful, 3911498 body bytes, 15558 header bytes, 13 chunking overhead bytes  	[MsgId: MMSG-26385]
+vuser_init.c(16): Notify: Transaction "Homepage" ended with a "Pass" status (Duration: 5.7798 Wasted Time: 0.0010).	[MsgId: MMSG-16871]
+vuser_init.c(18): web_reg_save_param started  	[MsgId: MMSG-26355]
+vuser_init.c(18): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+vuser_init.c(22): web_url("/api/account") started  	[MsgId: MMSG-26355]
+vuser_init.c(22): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");, Snapshot Info [MSH 1 2]  	[MsgId: MERR-26547]
+vuser_init.c(22): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account", Snapshot Info [MSH 1 2]  	[MsgId: MERR-26630]
+End auto log messages stack.	[MsgId: MMSG-10544]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+
+

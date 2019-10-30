@@ -1,0 +1,17 @@
+[t12]
+FileName1=t12_has-completed-video.json
+URL1=https://prod.uxcrowd.ru/api/tester/has-completed-video
+Total=4
+ContentType=application/json
+SnapshotXmlFile=snapshot_12.xml
+RequestHeaderFile=t12_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t12_ResponseHeader.txt
+FileName2=t12_logo-final.png
+URL2=https://prod.uxcrowd.ru/assets/images/logo-final.png
+FileName3=t12_test-stand.png
+URL3=https://prod.uxcrowd.ru/assets/images/test-stand.png
+FileName4=t12_16-9.png
+URL4=https://prod.uxcrowd.ru/assets/images/16-9.png
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,15 @@
+[t22]
+FileName1=t22.json
+URL1=https://api-iam.intercom.io/messenger/web/ping
+Total=3
+RequestHeaderFile=t22_RequestHeader.txt
+RequestBodyFile=t22_RequestBody.txt
+ResponseHeaderFile=t22_ResponseHeader.txt
+ContentType=application/json
+SnapshotXmlFile=snapshot_22.xml
+FileName2=t22_getDeviceInfo.html
+URL2=https://oneid.mmstat.com/taobao/getDeviceInfo?_cbFunction=fn_Kncigkrl&tokenid=KTwvFrRNCUICAV6fRa6mMkSg7JFKFgU3&acookie=KTwvFrRNCUICAV6fRa6mMkSg&n=first&f=1&p=1&scr1=1920x1080&scr2=1920x1040&p1=390df26a170911bb33f052abfd2cbf38bb00b3778598178666ac5545bc2cc349de3ae542&p2=
+FileName3=t22_getDeviceInfo.html
+URL3=https://oneid.mmstat.com/taobao/getDeviceInfo?_cbFunction=fn_3e0SzQhG&tokenid=KTwvFrRNCUICAV6fRa6mMkSg7JFKFgU3&acookie=KTwvFrRNCUICAV6fRa6mMkSg&n=callback
+[ProtocolInfo]
+ProtocolId=QTWeb

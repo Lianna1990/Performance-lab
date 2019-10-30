@@ -1,0 +1,16 @@
+[parameter:host]
+CurrentValue="test.uxcrowd.ru"
+IsEncrypt="NO"
+IsServer="NO"
+OriginalValue=""
+ParamName="host"
+Prompt=""
+Type="Custom"
+[parameter:random]
+Format="%lu"
+GenerateNewVal="EachIteration"
+MaxValue="4294967295"
+MinValue="1000000000"
+OriginalValue=""
+ParamName="random"
+Type="Random"

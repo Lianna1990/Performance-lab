@@ -1,0 +1,321 @@
+Virtual User Script started at : 29.10.2019 17:10:47
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.53.0 for Windows 7; build 1203 (окт 29 2019 19:13:20)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)  	[MsgId: MMSG-26988]
+Run-Time Settings file: "D:\Users\user\Desktop\uxcrowd\Fight_Client_Registration\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.c(38): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Action.c(38): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Action.c(40): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
+Action.c(40): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+Action.c(42): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(42): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(46): web_custom_request("get_token") started  	[MsgId: MMSG-26355]
+Action.c(46): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+Action.c(46): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account/"  	[MsgId: MERR-26630]
+Action.c(46): web_custom_request("get_token") highest severity level was "continue on error", 0 body bytes, 409 header bytes  	[MsgId: MMSG-26388]
+Action.c(46): Continuing after error in Vuser script.
+Action.c(53): web_add_auto_header("X-XSRF-TOKEN") started  	[MsgId: MMSG-26355]
+Action.c(53): web_add_auto_header("X-XSRF-TOKEN") was successful  	[MsgId: MMSG-26392]
+Action.c(56): Notify: Transaction "Homepage" started.
+Action.c(58): web_custom_request("main") started  	[MsgId: MMSG-26355]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/gulp/sup_css.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/css/landing/webflow.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/css/landing/uxcrowd.webflow.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/css/landing/YouTube.HD.Thumbnail.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/gulp/env.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://use.typekit.net/hym5rnq.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://ulogin.ru/js/ulogin.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/library/jquery.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/library/jquery.form.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/library/jquery.uploadfile.min.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/library/FileSaver.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/gulp/sup_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/init.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.rule.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/js/app_js/auth.interceptor.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/mediaelement-and-player.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/gulp/app_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/gulp/admin_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/gulp/customer_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/gulp/blog_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/gulp/home_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/gulp/moderator_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/gulp/new_tester_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/gulp/tester_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/library/require.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/path_controller.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/js/landing/jQuery.YouTube.HD.Thumbnail.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/main_route.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(58): web_custom_request("main") was successful, 3911395 body bytes, 15992 header bytes, 25 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(65): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(65): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(66): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(66): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(73): loadrunner,label=Homepage,responseCode=200,success=0 responseTime=1.204327,bytes=3927412,timestamp=1572358250000000
+Action.c(76): Notify: Transaction "Homepage" ended with a "Pass" status (Duration: 1.2045 Wasted Time: 0.3052).
+Action.c(78): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(78): web_custom_request("web_custom_request") was successful, 0 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Action.c(89): Notify: Transaction "UC06_client_registration" started.
+Action.c(91): web_custom_request("register") started  	[MsgId: MMSG-26355]
+Action.c(91): Continuing after Error -26631: HTTP Status-Code=400 (Bad Request) for "https://prod.uxcrowd.ru/api/register"  	[MsgId: MERR-26631]
+Action.c(91): web_custom_request("register") highest severity level was "continue on error", 29 body bytes, 312 header bytes  	[MsgId: MMSG-26388]
+Action.c(91): Continuing after error in Vuser script.
+Action.c(110): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(110): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(111): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(111): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(118): loadrunner,label=Homepage,responseCode=400,success=1 responseTime=0.132447,bytes=341,timestamp=1572358250000000
+Action.c(121): Notify: Transaction "UC06_client_registration" ended with a "Fail" status (Duration: 0.1327 Wasted Time: 0.0019).
+Action.c(121): Notify: Transaction "UC06_client_registration" has 1 error message(s).
+Action.c(121): Notify: The 1st error message associated with transaction "UC06_client_registration" is "Error -26631: HTTP Status-Code=400 (Bad Request) for "https://prod.uxcrowd.ru/api/register""
+Action.c(123): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(123): web_custom_request("web_custom_request") was successful, 0 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Action.c(134): Notify: Transaction "Logout" started.
+Action.c(136): web_custom_request("logout") started  	[MsgId: MMSG-26355]
+Action.c(136): web_custom_request("logout") was successful, 0 body bytes, 987 header bytes  	[MsgId: MMSG-26386]
+Action.c(145): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(145): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(149): web_custom_request("get_token") started  	[MsgId: MMSG-26355]
+Action.c(149): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+Action.c(149): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account/"  	[MsgId: MERR-26630]
+Action.c(149): web_custom_request("get_token") highest severity level was "continue on error", 0 body bytes, 409 header bytes  	[MsgId: MMSG-26388]
+Action.c(149): Continuing after error in Vuser script.
+Action.c(156): web_add_auto_header("X-XSRF-TOKEN") started  	[MsgId: MMSG-26355]
+Action.c(156): web_add_auto_header("X-XSRF-TOKEN") was successful  	[MsgId: MMSG-26392]
+Action.c(159): web_custom_request("main") started  	[MsgId: MMSG-26355]
+Action.c(159): Retrieving data from cache for "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26558]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/gulp/sup_css.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/css/landing/webflow.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/css/landing/uxcrowd.webflow.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/css/landing/YouTube.HD.Thumbnail.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/gulp/env.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://use.typekit.net/hym5rnq.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://ulogin.ru/js/ulogin.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/library/jquery.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/library/jquery.form.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/library/jquery.uploadfile.min.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/library/FileSaver.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/gulp/sup_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/js/main_js/init.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.rule.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/js/app_js/auth.interceptor.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/js/main_js/mediaelement-and-player.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/gulp/app_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/gulp/admin_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/gulp/customer_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/gulp/blog_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/gulp/home_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/gulp/moderator_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/gulp/new_tester_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/gulp/tester_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/library/require.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/js/main_js/path_controller.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/js/landing/jQuery.YouTube.HD.Thumbnail.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): Resource "https://prod.uxcrowd.ru/assets/js/main_js/main_route.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(159): web_custom_request("main") was successful, 0 body bytes, 0 header bytes  	[MsgId: MMSG-26386]
+Action.c(166): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(166): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(167): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(167): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(174): loadrunner,label=Homepage,responseCode=-1,success=1 responseTime=0.148901,bytes=0,timestamp=1572358251000000
+Action.c(177): Notify: Transaction "Logout" ended with a "Fail" status (Duration: 0.1491 Wasted Time: 0.0029).
+Action.c(177): Notify: Transaction "Logout" has 2 error message(s).
+Action.c(177): Notify: The 1st error message associated with transaction "Logout" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+Action.c(177): Notify: The 2nd error message associated with transaction "Logout" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account/""
+Action.c(179): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(179): web_custom_request("web_custom_request") was successful, 0 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Action.c(190): Notify: Transaction "Login" started.
+Action.c(192): web_custom_request("main") started  	[MsgId: MMSG-26355]
+Action.c(192): Retrieving data from cache for "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26558]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/gulp/sup_css.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/css/landing/webflow.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/css/landing/uxcrowd.webflow.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/css/landing/YouTube.HD.Thumbnail.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/gulp/env.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://use.typekit.net/hym5rnq.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://ulogin.ru/js/ulogin.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/library/jquery.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/library/jquery.form.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/library/jquery.uploadfile.min.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/library/FileSaver.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/gulp/sup_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/js/main_js/init.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.rule.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/js/app_js/auth.interceptor.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/js/main_js/mediaelement-and-player.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/gulp/app_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/gulp/admin_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/gulp/customer_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/gulp/blog_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/gulp/home_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/gulp/moderator_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/gulp/new_tester_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/gulp/tester_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/library/require.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/js/main_js/path_controller.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/js/landing/jQuery.YouTube.HD.Thumbnail.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): Resource "https://prod.uxcrowd.ru/assets/js/main_js/main_route.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(192): web_custom_request("main") was successful, 0 body bytes, 0 header bytes  	[MsgId: MMSG-26386]
+Action.c(199): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(199): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(205): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(205): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(210): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(210): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(215): web_submit_data("authentication") started  	[MsgId: MMSG-26355]
+Action.c(215): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+Action.c(215): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/authentication"  	[MsgId: MERR-26630]
+Action.c(215): Continuing after Error -26377: No match found for the requested parameter "Token_new". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 2048 bytes. The total length of the response is 140 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+Action.c(215): Continuing after Error -26377: No match found for the requested parameter "sessionID". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 2048 bytes. The total length of the response is 140 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+Action.c(215): web_submit_data("authentication") highest severity level was "continue on error", 140 body bytes, 457 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26387]
+Action.c(215): Continuing after error in Vuser script.
+Action.c(228): web_add_auto_header("X-XSRF-TOKEN") started  	[MsgId: MMSG-26355]
+Action.c(228): Warning -26597: Added header value is NULL, empty or contains white spaces only. It is added anyway  	[MsgId: MWAR-26597]
+Action.c(228): web_add_auto_header("X-XSRF-TOKEN") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(231): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(231): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(236): web_url("account") started  	[MsgId: MMSG-26355]
+Action.c(236): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+Action.c(236): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account/"  	[MsgId: MERR-26630]
+Action.c(236): Continuing after Error -26377: No match found for the requested parameter "user_ID". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 2048 bytes. The total length of the response is 0 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+Action.c(236): Continuing after Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 340 and 0, respectively.  	[MsgId: MERR-26374]
+Action.c(236): web_url("account") highest severity level was "continue on error", 0 body bytes, 340 header bytes  	[MsgId: MMSG-26388]
+Action.c(236): Continuing after error in Vuser script.
+Action.c(245): web_url("account") started  	[MsgId: MMSG-26355]
+Action.c(245): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+Action.c(245): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/customer/waitingOrders"  	[MsgId: MERR-26630]
+Action.c(245): web_url("account") highest severity level was "continue on error", 118 body bytes, 442 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26387]
+Action.c(245): Continuing after error in Vuser script.
+Action.c(254): web_url("account") started  	[MsgId: MMSG-26355]
+Action.c(254): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+Action.c(254): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/customer/orders"  	[MsgId: MERR-26630]
+Action.c(254): web_url("account") highest severity level was "continue on error", 118 body bytes, 442 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26387]
+Action.c(254): Continuing after error in Vuser script.
+Action.c(263): web_url("account") started  	[MsgId: MMSG-26355]
+Action.c(263): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+Action.c(263): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/customer/hist-orders"  	[MsgId: MERR-26630]
+Action.c(263): web_url("account") highest severity level was "continue on error", 118 body bytes, 442 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26387]
+Action.c(263): Continuing after error in Vuser script.
+Action.c(272): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(272): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(273): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(273): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(280): loadrunner,label=Homepage,responseCode=401,success=1 responseTime=0.487925,bytes=571,timestamp=1572358251000000
+Action.c(283): Notify: Transaction "Login" ended with a "Fail" status (Duration: 0.4881 Wasted Time: 0.0061).
+Action.c(283): Notify: Transaction "Login" has 14 error message(s).
+Action.c(283): Notify: The 1st error message associated with transaction "Login" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+Action.c(283): Notify: The 2nd error message associated with transaction "Login" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/authentication""
+Action.c(283): Notify: The 3rd error message associated with transaction "Login" is "Error -26377: No match found for the requested parameter "Token_new". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 2048 bytes. The total length of the response is 140 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size."
+Action.c(283): Notify: The 4th error message associated with transaction "Login" is "Error -26377: No match found for the requested parameter "sessionID". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 2048 bytes. The total length of the response is 140 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size."
+Action.c(283): Notify: The 5th error message associated with transaction "Login" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+Action.c(283): Notify: The 6th error message associated with transaction "Login" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account/""
+Action.c(283): Notify: The 7th error message associated with transaction "Login" is "Error -26377: No match found for the requested parameter "user_ID". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 2048 bytes. The total length of the response is 0 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size."
+Action.c(283): Notify: The 8th error message associated with transaction "Login" is "Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 340 and 0, respectively."
+Action.c(283): Notify: The 9th error message associated with transaction "Login" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+Action.c(283): Notify: The 10th error message associated with transaction "Login" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/customer/waitingOrders""
+Action.c(283): Notify: The 11th error message associated with transaction "Login" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+Action.c(283): Notify: The 12th error message associated with transaction "Login" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/customer/orders""
+Action.c(283): Notify: The 13th error message associated with transaction "Login" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+Action.c(283): Notify: The 14th error message associated with transaction "Login" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/customer/hist-orders""
+Action.c(285): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(285): web_custom_request("web_custom_request") was successful, 0 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Action.c(296): Notify: Transaction "UC07_fill_client_profile" started.
+Action.c(298): web_custom_request("profile_3") started  	[MsgId: MMSG-26355]
+Action.c(298): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+Action.c(298): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/customer/profile?id="  	[MsgId: MERR-26630]
+Action.c(298): web_custom_request("profile_3") highest severity level was "continue on error", 118 body bytes, 442 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26387]
+Action.c(298): Continuing after error in Vuser script.
+Action.c(309): web_custom_request("fill_profile") started  	[MsgId: MMSG-26355]
+Action.c(309): Continuing after Error -26628: HTTP Status-Code=403 (Forbidden) for "https://prod.uxcrowd.ru/api/customer/profile"  	[MsgId: MERR-26628]
+Action.c(309): web_custom_request("fill_profile") highest severity level was "continue on error", 133 body bytes, 476 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26387]
+Action.c(309): Continuing after error in Vuser script.
+Action.c(322): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(322): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(323): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(323): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(330): loadrunner,label=Homepage,responseCode=403,success=1 responseTime=0.130619,bytes=620,timestamp=1572358251000000
+Action.c(333): Notify: Transaction "UC07_fill_client_profile" ended with a "Fail" status (Duration: 0.1308 Wasted Time: 0.0022).
+Action.c(333): Notify: Transaction "UC07_fill_client_profile" has 3 error message(s).
+Action.c(333): Notify: The 1st error message associated with transaction "UC07_fill_client_profile" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+Action.c(333): Notify: The 2nd error message associated with transaction "UC07_fill_client_profile" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/customer/profile?id=""
+Action.c(333): Notify: The 3rd error message associated with transaction "UC07_fill_client_profile" is "Error -26628: HTTP Status-Code=403 (Forbidden) for "https://prod.uxcrowd.ru/api/customer/profile""
+Action.c(335): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(335): web_custom_request("web_custom_request") was successful, 0 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Action.c(346): Notify: Transaction "Logout" started.
+Action.c(348): web_custom_request("logout") started  	[MsgId: MMSG-26355]
+Action.c(348): Continuing after Error -26628: HTTP Status-Code=403 (Forbidden) for "https://prod.uxcrowd.ru/api/logout"  	[MsgId: MERR-26628]
+Action.c(348): web_custom_request("logout") highest severity level was "continue on error", 124 body bytes, 476 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26387]
+Action.c(348): Continuing after error in Vuser script.
+Action.c(357): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(357): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(361): web_custom_request("get_token") started  	[MsgId: MMSG-26355]
+Action.c(361): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+Action.c(361): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account/"  	[MsgId: MERR-26630]
+Action.c(361): Continuing after Error -26377: No match found for the requested parameter "Token". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 2048 bytes. The total length of the response is 0 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+Action.c(361): Continuing after Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 340 and 0, respectively.  	[MsgId: MERR-26374]
+Action.c(361): web_custom_request("get_token") highest severity level was "continue on error", 0 body bytes, 340 header bytes  	[MsgId: MMSG-26388]
+Action.c(361): Continuing after error in Vuser script.
+Action.c(368): web_add_auto_header("X-XSRF-TOKEN") started  	[MsgId: MMSG-26355]
+Action.c(368): Warning -26597: Added header value is NULL, empty or contains white spaces only. It is added anyway  	[MsgId: MWAR-26597]
+Action.c(368): web_add_auto_header("X-XSRF-TOKEN") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(371): web_custom_request("main") started  	[MsgId: MMSG-26355]
+Action.c(371): Retrieving data from cache for "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26558]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/gulp/sup_css.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/css/landing/webflow.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/css/landing/uxcrowd.webflow.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/css/landing/YouTube.HD.Thumbnail.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/gulp/env.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://use.typekit.net/hym5rnq.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://ulogin.ru/js/ulogin.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/library/jquery.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/library/jquery.form.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/library/jquery.uploadfile.min.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/library/FileSaver.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/gulp/sup_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/js/main_js/init.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.rule.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/js/app_js/auth.interceptor.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/js/main_js/mediaelement-and-player.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/gulp/app_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/gulp/admin_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/gulp/customer_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/gulp/blog_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/gulp/home_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/gulp/moderator_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/gulp/new_tester_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/gulp/tester_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/library/require.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/js/main_js/path_controller.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/js/landing/jQuery.YouTube.HD.Thumbnail.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): Resource "https://prod.uxcrowd.ru/assets/js/main_js/main_route.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(371): web_custom_request("main") was successful, 0 body bytes, 0 header bytes  	[MsgId: MMSG-26386]
+Action.c(378): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(378): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(379): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(379): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(386): loadrunner,label=Homepage,responseCode=-1,success=1 responseTime=0.160157,bytes=0,timestamp=1572358252000000
+Action.c(389): Notify: Transaction "Logout" ended with a "Fail" status (Duration: 0.1603 Wasted Time: 0.0033).
+Action.c(389): Notify: Transaction "Logout" has 5 error message(s).
+Action.c(389): Notify: The 1st error message associated with transaction "Logout" is "Error -26628: HTTP Status-Code=403 (Forbidden) for "https://prod.uxcrowd.ru/api/logout""
+Action.c(389): Notify: The 2nd error message associated with transaction "Logout" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+Action.c(389): Notify: The 3rd error message associated with transaction "Logout" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account/""
+Action.c(389): Notify: The 4th error message associated with transaction "Logout" is "Error -26377: No match found for the requested parameter "Token". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 2048 bytes. The total length of the response is 0 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size."
+Action.c(389): Notify: The 5th error message associated with transaction "Logout" is "Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 340 and 0, respectively."
+Action.c(391): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(391): web_custom_request("web_custom_request") was successful, 0 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

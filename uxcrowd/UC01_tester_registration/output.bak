@@ -1,0 +1,66 @@
+Virtual User Script started at: 23.10.2019 10:50:07
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 10; build 971 (рту 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0  	[MsgId: MMSG-26988]
+Runtime Settings file: "C:\Users\student\Desktop\script1\uxcrowd\UC01_tester_registration\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.c(8): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
+Action.c(8): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+Action.c(10): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(10): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(14): web_custom_request("get_token") started  	[MsgId: MMSG-26355]
+Action.c(14): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+Action.c(14): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account/"  	[MsgId: MERR-26630]
+Action.c(14): web_custom_request("get_token") highest severity level was "continue on error", 0 body bytes, 409 header bytes  	[MsgId: MMSG-26388]
+Action.c(14): Continuing after error in Vuser script.
+Action.c(21): Notify: Transaction "UC01_tester_registration" started.
+Action.c(23): web_custom_request("main") started  	[MsgId: MMSG-26355]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/gulp/sup_css.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/css/landing/webflow.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/css/landing/uxcrowd.webflow.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/css/landing/YouTube.HD.Thumbnail.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/gulp/env.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://use.typekit.net/hym5rnq.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://ulogin.ru/js/ulogin.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/library/jquery.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/library/jquery.form.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/library/jquery.uploadfile.min.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/library/FileSaver.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/gulp/sup_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/init.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.rule.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/js/app_js/auth.interceptor.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/mediaelement-and-player.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/gulp/app_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/gulp/admin_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/gulp/customer_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/gulp/blog_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/gulp/home_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/gulp/moderator_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/gulp/new_tester_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/gulp/tester_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/library/require.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/path_controller.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/js/landing/jQuery.YouTube.HD.Thumbnail.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/main_route.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Action.c(23): web_custom_request("main") was successful, 3911498 body bytes, 21844 header bytes, 25 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(30): web_add_header("X-XSRF-TOKEN") started  	[MsgId: MMSG-26355]
+Action.c(30): web_add_header("X-XSRF-TOKEN") was successful  	[MsgId: MMSG-26392]
+Action.c(33): web_custom_request("register") started  	[MsgId: MMSG-26355]
+Action.c(33): web_custom_request("register") was successful, 0 body bytes, 780 header bytes  	[MsgId: MMSG-26386]
+test45@test.com
+Action.c(48): Warning: Invalid parameter detected in function.
+Action.c(49): Warning: Invalid parameter detected in function.
+Action.c(51): Notify: Transaction "UC01_tester_registration" ended with a "Pass" status (Duration: 2.2758 Wasted Time: 0.3426).
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

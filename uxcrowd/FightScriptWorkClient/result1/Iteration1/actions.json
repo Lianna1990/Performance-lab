@@ -1,0 +1,159 @@
+[
+    {
+        "actionName": "Homepage_and_Login",
+        "steps": [
+            {
+                "stepId": "STEP1",
+                "stepName": "Url: /",
+                "infFile": "t1.inf",
+                "time": 1572255499420
+            },
+            {
+                "stepId": "STEP2",
+                "stepName": "Url: /api/account",
+                "infFile": "t2.inf",
+                "time": 1572255499512
+            },
+            {
+                "stepId": "STEP3",
+                "stepName": "Submit Data: /api/authentication",
+                "infFile": "t3.inf",
+                "time": 1572255499850
+            },
+            {
+                "stepId": "STEP4",
+                "stepName": "Url: /api/account",
+                "infFile": "t4.inf",
+                "time": 1572255499969
+            },
+            {
+                "stepId": "STEP5",
+                "stepName": "Url: /api/v2/customer/profile",
+                "infFile": "t5.inf",
+                "time": 1572255500190
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "Homepage",
+                "rawStartTime": 1572255491902,
+                "rawEndTime": 1572255499519,
+                "thinkTime": 0.0,
+                "wastedTime": 0.47336292266845705
+            },
+            {
+                "transactionName": "Login",
+                "rawStartTime": 1572255499521,
+                "rawEndTime": 1572255500191,
+                "thinkTime": 0.0,
+                "wastedTime": 0.08284664154052735
+            }
+        ]
+    },
+    {
+        "actionName": "UC09_list_of_tests_client",
+        "steps": [
+            {
+                "stepId": "STEP6",
+                "stepName": "Url: /api/customer/hist-orders",
+                "infFile": "t6.inf",
+                "time": 1572255500307
+            },
+            {
+                "stepId": "STEP7",
+                "stepName": "Url: /api/customer/waitingOrders",
+                "infFile": "t7.inf",
+                "time": 1572255500424
+            },
+            {
+                "stepId": "STEP8",
+                "stepName": "Url: /api/customer/orders",
+                "infFile": "t10.inf",
+                "time": 1572255500589
+            }
+        ],
+        "transactions": []
+    },
+    {
+        "actionName": "UC10_watching_video",
+        "steps": [
+            {
+                "stepId": "STEP9",
+                "stepName": "Url: /api/video/relatedVideoIds",
+                "infFile": "t11.inf",
+                "time": 1572255500705
+            },
+            {
+                "stepId": "STEP10",
+                "stepName": "Url: /api/video/tags",
+                "infFile": "t12.inf",
+                "time": 1572255500811
+            },
+            {
+                "stepId": "STEP11",
+                "stepName": "Custom Request: /api/video/fileName",
+                "infFile": "t14.inf",
+                "time": 1572255500969
+            },
+            {
+                "stepId": "STEP12",
+                "stepName": "Custom Request: /videos/{clearFileName}.mp4",
+                "infFile": "t15.inf",
+                "time": 1572255501088
+            }
+        ],
+        "transactions": []
+    },
+    {
+        "actionName": "UC11_upload_results",
+        "steps": [
+            {
+                "stepId": "STEP13",
+                "stepName": "Url: /api/customer/orders",
+                "infFile": "t16.inf",
+                "time": 1572255501317
+            },
+            {
+                "stepId": "STEP14",
+                "stepName": "Url: orders",
+                "infFile": "t18.inf",
+                "time": 1572255501827
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "UC11_upload_results",
+                "rawStartTime": 1572255501097,
+                "rawEndTime": 1572255501829,
+                "thinkTime": 0.0,
+                "wastedTime": 0.09211587905883789
+            }
+        ]
+    },
+    {
+        "actionName": "Logout",
+        "steps": [
+            {
+                "stepId": "STEP15",
+                "stepName": "Url: /api/account/",
+                "infFile": "t20.inf",
+                "time": 1572255502344
+            },
+            {
+                "stepId": "STEP16",
+                "stepName": "Url: /",
+                "infFile": "t21.inf",
+                "time": 1572255502709
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "Logout",
+                "rawStartTime": 1572255501837,
+                "rawEndTime": 1572255502711,
+                "thinkTime": 0.0,
+                "wastedTime": 0.09933686256408692
+            }
+        ]
+    }
+]

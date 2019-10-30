@@ -1,0 +1,119 @@
+Virtual User Script started at: 25.10.2019 14:25:42
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 10; build 971 (рту 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36  	[MsgId: MMSG-26988]
+Runtime Settings file: "C:\Users\student\Desktop\uxcrowd-git\uxcrowd\FightScriptTestlink\\default.cfg"  	[MsgId: MMSG-27141]
+vuser_init.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+vuser_init.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Warning -27077: The "vuser_init" section contains web function(s) when the "Simulate a new user on each iteration" Runtime Setting is ON.  This may produce unpredictable results with multiple iterations  	[MsgId: MWAR-27077]
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.c(5): Notify: Transaction "UC05_passing_tests_by_reference" started.
+Action.c(7): Notify: Transaction "tran_05_01_go_to_link" started.
+Action.c(9): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(9): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(14): web_url("https://uxcrowd.test-app.link/do-prod-side-tester-welcome?ac={test_name}") started  	[MsgId: MMSG-26355]
+Action.c(14): Redirecting "https://uxcrowd.test-app.link/do-prod-side-tester-welcome?ac=16965423" (redirection depth is 0)  	[MsgId: MMSG-26694]
+Action.c(14): To location "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26693]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/gulp/sup_css.css" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/css/landing/webflow.css" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/css/landing/uxcrowd.webflow.css" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/css/landing/YouTube.HD.Thumbnail.css" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/gulp/env.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://use.typekit.net/hym5rnq.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://ulogin.ru/js/ulogin.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/library/jquery.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/library/jquery.form.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/library/jquery.uploadfile.min.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/library/FileSaver.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/gulp/sup_js.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/init.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.rule.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/js/app_js/auth.interceptor.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/mediaelement-and-player.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/gulp/app_js.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/gulp/admin_js.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/gulp/customer_js.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/gulp/blog_js.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/gulp/home_js.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/gulp/moderator_js.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/gulp/new_tester_js.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/gulp/tester_js.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/library/require.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/path_controller.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/js/landing/jQuery.YouTube.HD.Thumbnail.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/main_route.js" in HTML "https://prod.uxcrowd.ru/side-tester-welcome/welcome?ac=16965423&_branch_match_id=716238298872119868"  	[MsgId: MMSG-26659]
+Action.c(14): web_url("https://uxcrowd.test-app.link/do-prod-side-tester-welcome?ac={test_name}") was successful, 3911498 body bytes, 16221 header bytes, 13 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(23): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(23): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(27): web_custom_request("api/account") started  	[MsgId: MMSG-26355]
+Action.c(27): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");, Snapshot Info [MSH 1 2]  	[MsgId: MERR-26547]
+Action.c(27): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account", Snapshot Info [MSH 1 2]  	[MsgId: MERR-26630]
+Action.c(27): web_custom_request("api/account") highest severity level was "continue on error", 0 body bytes, 397 header bytes  	[MsgId: MMSG-26388]
+Action.c(27): Continuing after error in Vuser script.
+Action.c(36): web_add_auto_header("X-XSRF-TOKEN") started  	[MsgId: MMSG-26355]
+Action.c(36): web_add_auto_header("X-XSRF-TOKEN") was successful  	[MsgId: MMSG-26392]
+Action.c(39): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(39): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(44): web_url("/controller/controllers_testers/controller_side_tester/home.controller.js?bust=1571645335848") started  	[MsgId: MMSG-26355]
+Action.c(44): web_url("/controller/controllers_testers/controller_side_tester/home.controller.js?bust=1571645335848") was successful, 9684 body bytes, 531 header bytes  	[MsgId: MMSG-26386]
+Action.c(52): web_url("/api/v2/plugin/getLastVersion") started  	[MsgId: MMSG-26355]
+Action.c(52): web_url("/api/v2/plugin/getLastVersion") was successful, 6 body bytes, 599 header bytes  	[MsgId: MMSG-26386]
+Action.c(61): Notify: Transaction "tran_05_01_go_to_link" ended with a "Fail" status (Duration: 8.7704 Wasted Time: 0.5059).
+Action.c(61): Notify: Transaction "tran_05_01_go_to_link" has 2 error message(s).
+Action.c(61): Notify: The 1st error message associated with transaction "tran_05_01_go_to_link" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+Action.c(61): Notify: The 2nd error message associated with transaction "tran_05_01_go_to_link" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account""
+Action.c(63): Notify: Transaction "tran_05_02_enter_mail" started.
+Action.c(65): web_reg_save_param_json started  	[MsgId: MMSG-26355]
+Action.c(65): Registering web_reg_save_param_json was successful  	[MsgId: MMSG-26390]
+Action.c(72): web_custom_request("/api/tester-integration") started  	[MsgId: MMSG-26355]
+Action.c(72): web_custom_request("/api/tester-integration") was successful, 97 body bytes, 633 header bytes  	[MsgId: MMSG-26386]
+Action.c(84): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(84): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(90): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(90): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(95): web_custom_request("/api/authentication") started  	[MsgId: MMSG-26355]
+Action.c(95): web_custom_request("/api/authentication") was successful, 0 body bytes, 1058 header bytes  	[MsgId: MMSG-26386]
+Action.c(105): web_add_auto_header("X-XSRF-TOKEN") started  	[MsgId: MMSG-26355]
+Action.c(105): web_add_auto_header("X-XSRF-TOKEN") was successful  	[MsgId: MMSG-26392]
+Action.c(108): web_url("/api/account") started  	[MsgId: MMSG-26355]
+Action.c(108): web_url("/api/account") was successful, 473 body bytes, 633 header bytes  	[MsgId: MMSG-26386]
+Action.c(117): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+Action.c(117): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+Action.c(124): web_custom_request("/api/stats/create") started  	[MsgId: MMSG-26355]
+Action.c(124): web_custom_request("/api/stats/create") was successful, 30 body bytes, 633 header bytes  	[MsgId: MMSG-26386]
+Action.c(136): Notify: Transaction "tran_05_02_enter_mail" ended with a "Pass" status (Duration: 0.9159 Wasted Time: 0.0858).
+Action.c(138): Notify: Transaction "tran_05_03_passing_test" started.
+Action.c(140): web_url("/api/account") started  	[MsgId: MMSG-26355]
+Action.c(140): web_url("/api/account") was successful, 473 body bytes, 633 header bytes  	[MsgId: MMSG-26386]
+Action.c(149): web_url("order-info") started  	[MsgId: MMSG-26355]
+Action.c(149): web_url("order-info") was successful, 241 body bytes, 633 header bytes  	[MsgId: MMSG-26386]
+Action.c(165): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+Action.c(165): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+Action.c(171): web_custom_request("api/stats/create") started  	[MsgId: MMSG-26355]
+Action.c(171): web_custom_request("api/stats/create") was successful, 371 body bytes, 333 header bytes  	[MsgId: MMSG-26386]
+Action.c(196): web_reg_save_param_json started  	[MsgId: MMSG-26355]
+Action.c(196): Registering web_reg_save_param_json was successful  	[MsgId: MMSG-26390]
+Action.c(203): web_custom_request("api/tester/create-task") started  	[MsgId: MMSG-26355]
+Action.c(203): web_custom_request("api/tester/create-task") was successful, 18 body bytes, 600 header bytes  	[MsgId: MMSG-26386]
+Action.c(220): Notify: Transaction "upload_medium_video" started.
+Action.c(227): web_submit_data("api/video-upload-app") started  	[MsgId: MMSG-26355]
+Action.c(227): Warning -27057: "Content-Type" (argument number 0) ignored for a non-File item  	[MsgId: MWAR-27057]
+Action.c(227): web_submit_data("api/video-upload-app") highest severity level was "warning", 2 body bytes, 599 header bytes  	[MsgId: MMSG-26388]
+Action.c(244): Notify: Transaction "upload_medium_video" ended with a "Pass" status (Duration: 36.5462 Wasted Time: 0.0252).
+Action.c(249): Notify: Transaction "tran_05_03_passing_test" ended with a "Pass" status (Duration: 37.1726 Wasted Time: 0.1154).
+Action.c(251): Notify: Transaction "UC05_passing_tests_by_reference" ended with a "Fail" status (Duration: 46.8670 Wasted Time: 0.7071).
+Action.c(251): Notify: Transaction "UC05_passing_tests_by_reference" has 2 error message(s).
+Action.c(251): Notify: The 1st error message associated with transaction "UC05_passing_tests_by_reference" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+Action.c(251): Notify: The 2nd error message associated with transaction "UC05_passing_tests_by_reference" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account""
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

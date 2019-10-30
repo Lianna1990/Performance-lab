@@ -1,0 +1,73 @@
+[
+    {
+        "actionName": "Action",
+        "steps": [
+            {
+                "stepId": "STEP9",
+                "stepName": "Url: new.order.html",
+                "infFile": "t9.inf",
+                "time": 1572267067182
+            },
+            {
+                "stepId": "STEP10",
+                "stepName": "Custom Request: draft",
+                "infFile": "t11.inf",
+                "time": 1572267067530
+            },
+            {
+                "stepId": "STEP11",
+                "stepName": "Custom Request: updateOrderAudience",
+                "infFile": "t12.inf",
+                "time": 1572267067820
+            },
+            {
+                "stepId": "STEP12",
+                "stepName": "Custom Request: updateOrderSteps",
+                "infFile": "t13.inf",
+                "time": 1572267068080
+            },
+            {
+                "stepId": "STEP13",
+                "stepName": "Url: calculatePrice",
+                "infFile": "t14.inf",
+                "time": 1572267068224
+            },
+            {
+                "stepId": "STEP14",
+                "stepName": "Url: paymentInitRequest_2",
+                "infFile": "t15.inf",
+                "time": 1572267068564
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "Create_new_test",
+                "rawStartTime": 1572267066522,
+                "rawEndTime": 1572267067184,
+                "thinkTime": 0.0,
+                "wastedTime": 0.0554814338684082
+            },
+            {
+                "transactionName": "Add_description",
+                "rawStartTime": 1572267067247,
+                "rawEndTime": 1572267067532,
+                "thinkTime": 0.0,
+                "wastedTime": 0.02747488021850586
+            },
+            {
+                "transactionName": "Participant_group",
+                "rawStartTime": 1572267067598,
+                "rawEndTime": 1572267067822,
+                "thinkTime": 0.0,
+                "wastedTime": 0.025557756423950197
+            },
+            {
+                "transactionName": "Add_question",
+                "rawStartTime": 1572267067876,
+                "rawEndTime": 1572267068226,
+                "thinkTime": 0.0,
+                "wastedTime": 0.039792537689208987
+            }
+        ]
+    }
+]

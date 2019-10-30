@@ -1,0 +1,17 @@
+[t42]
+FileName1=t42_waitingOrders.json
+URL1=https://prod.uxcrowd.ru/api/customer/waitingOrders
+Total=4
+ContentType=application/json
+SnapshotXmlFile=snapshot_42.xml
+RequestHeaderFile=t42_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t42_ResponseHeader.txt
+FileName2=t42_test-stand.png
+URL2=https://prod.uxcrowd.ru/assets/images/test-stand.png
+FileName3=t42_logo-new.svg
+URL3=https://prod.uxcrowd.ru/assets/css/svg/logo-new.svg
+FileName4=t42_plus-orange.svg
+URL4=https://prod.uxcrowd.ru/assets/css/svg/left-menu-icons/plus-orange.svg
+[ProtocolInfo]
+ProtocolId=QTWeb

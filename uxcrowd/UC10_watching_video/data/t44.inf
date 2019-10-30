@@ -1,0 +1,15 @@
+[t44]
+FileName1=t44_orders.json
+URL1=https://prod.uxcrowd.ru/api/customer/orders
+Total=3
+ContentType=application/json
+SnapshotXmlFile=snapshot_44.xml
+RequestHeaderFile=t44_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t44_ResponseHeader.txt
+FileName2=t44_info_icon.svg
+URL2=https://prod.uxcrowd.ru/assets/css/svg/info_icon.svg
+FileName3=t44_video.controller.html
+URL3=https://prod.uxcrowd.ru/controller/controller_home/video.controller.js?bust=1571662863966
+[ProtocolInfo]
+ProtocolId=QTWeb

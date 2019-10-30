@@ -1,0 +1,13 @@
+HTTP/2.0 401
+Status: 401
+server: nginx
+date: Tue, 22 Oct 2019 06:31:35 GMT
+content-length: 0
+set-cookie: XSRF-TOKEN=9db8d80c-82fe-4721-aaf1-983d1cc2d246; Path=/
+set-cookie: CSRF-TOKEN=9db8d80c-82fe-4721-aaf1-983d1cc2d246; Path=/
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+

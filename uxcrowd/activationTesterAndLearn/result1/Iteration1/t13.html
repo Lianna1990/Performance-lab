@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="welcome-one">
+        <div class="slide-header instruction-h" ng-tr="TEI.TEI">
+        </div>
+    </div>
+</div>
+<div class="forth-row">
+    <div class="numbers-block">
+        <ul>
+            <li ng-tr="TEI.TEI1"></li>
+            <li ng-tr="TEI.TEI2"></li>
+            <li>
+                <span ng-tr="TEI.TEI4"></span>
+                <a href="https://www.google.ru/chrome/browser/desktop/">
+                    <img border="0" alt="Скачать Google Chrome" src="../assets/images/google-chrome-1.svg">
+                </a>
+                <span ng-tr="TEI.TEI5"></span>
+                <a href="https://browser.yandex.ru/" ng-if="config.locale == 'ru'">
+                    <img border="0" alt="Скачать Google Chrome" src="../assets/images/yandex.browser.svg">
+                </a> 
+                <span ng-tr="TEI.TEI6"></span></li>
+        </ul>
+    </div>
+</div>
+<div class="button-row">
+    <a class="white-button" ui-sref="welcome" ng-tr="TEI.TEI7"></a>
+    <a class="btn green-button" ui-sref="instruction2" ng-tr="TEI.TEI8"></a>
+</div>
+<script>setCookie('newTesterState', '');</script>

@@ -1,0 +1,9 @@
+GET /api/v2/tester/profile HTTP/1.1
+Referer: https://prod.uxcrowd.ru/
+X-XSRF-TOKEN: c2d42d16-d8f0-47f0-83c0-5d53637cf889
+User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+Accept-Encoding: gzip, deflate
+Accept: */*
+Host: prod.uxcrowd.ru
+Cookie: CSRF-TOKEN=2de61692-796b-467d-a4ad-8c0df87fcb59; XSRF-TOKEN=c2d42d16-d8f0-47f0-83c0-5d53637cf889; remember-me=c3A5Yzg3Sms5V0RoQVpuT2RxaTc5QSUzRCUzRDpSUUdkaENZMktzVlRNVU9LeSUyQmZYMGclM0QlM0Q; userId=493253070; JSESSIONID=89390E1A0E9DCC41D5F8EB64C04310FD
+

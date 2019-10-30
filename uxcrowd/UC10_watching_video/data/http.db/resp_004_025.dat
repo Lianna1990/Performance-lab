@@ -1,0 +1,67 @@
+<svg width="130" height="16" viewBox="0 0 130 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>arrows</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-3 -345)" figma:type="canvas">
+<g id="arrows" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="default" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="arrow right" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path0_stroke" transform="translate(4 353)" fill="#3D3D3D" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path1_stroke" transform="translate(15 346)" fill="#3D3D3D" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+<g id="arrow left" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path0_stroke" transform="matrix(-1 0 0 -1 44 353)" fill="#3D3D3D" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path2_stroke" transform="matrix(-1 0 0 -1 33 360)" fill="#3D3D3D" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+<g id="hover" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="arrow right" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path0_stroke" transform="translate(48 353)" fill="#189671" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path1_stroke" transform="translate(59 346)" fill="#189671" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+<g id="arrow left" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path0_stroke" transform="matrix(-1 0 0 -1 88 353)" fill="#189671" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path2_stroke" transform="matrix(-1 0 0 -1 77 360)" fill="#189671" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+<g id="active" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="arrow right" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path0_stroke" transform="translate(92 353)" fill="#707070" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path1_stroke" transform="translate(103 346)" fill="#707070" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+<g id="arrow left" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path0_stroke" transform="matrix(-1 0 0 -1 132 353)" fill="#707070" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path2_stroke" transform="matrix(-1 0 0 -1 121 360)" fill="#707070" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_stroke" d="M 0 -1C -0.552285 -1 -1 -0.552285 -1 0C -1 0.552285 -0.552285 1 0 1L 0 -1ZM 18 1C 18.5523 1 19 0.552285 19 0C 19 -0.552285 18.5523 -1 18 -1L 18 1ZM 0 1L 18 1L 18 -1L 0 -1L 0 1Z"/>
+<path id="path1_stroke" d="M 7 7L 7.70711 7.70711C 8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L 7 7ZM -0.707107 13.2929C -1.09763 13.6834 -1.09763 14.3166 -0.707107 14.7071C -0.316582 15.0976 0.316582 15.0976 0.707107 14.7071L -0.707107 13.2929ZM 0.707107 -0.707107C 0.316582 -1.09763 -0.316582 -1.09763 -0.707107 -0.707107C -1.09763 -0.316582 -1.09763 0.316582 -0.707107 0.707107L 0.707107 -0.707107ZM 6.29289 6.29289L -0.707107 13.2929L 0.707107 14.7071L 7.70711 7.70711L 6.29289 6.29289ZM 7.70711 6.29289L 0.707107 -0.707107L -0.707107 0.707107L 6.29289 7.70711L 7.70711 6.29289Z"/>
+<path id="path2_stroke" d="M 7 6.99976L 7.70712 7.70685C 7.89465 7.51931 8.00001 7.26496 8 6.99974C 8 6.73452 7.89464 6.48017 7.7071 6.29264L 7 6.99976ZM -0.707119 13.2929C -1.09764 13.6834 -1.09763 14.3166 -0.707095 14.7071C -0.316564 15.0976 0.316601 15.0976 0.707119 14.7071L -0.707119 13.2929ZM 0.707094 -0.707119C 0.316563 -1.09764 -0.316602 -1.09763 -0.707119 -0.707094C -1.09764 -0.316563 -1.09763 0.316602 -0.707094 0.707119L 0.707094 -0.707119ZM 6.29288 6.29266L -0.707119 13.2929L 0.707119 14.7071L 7.70712 7.70685L 6.29288 6.29266ZM 7.7071 6.29264L 0.707094 -0.707119L -0.707094 0.707119L 6.29291 7.70688L 7.7071 6.29264Z"/>
+</defs>
+</svg>

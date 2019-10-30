@@ -1,0 +1,116 @@
+[
+    {
+        "actionName": "Action",
+        "steps": [
+            {
+                "stepId": "STEP1",
+                "stepName": "Url: https://uxcrowd.test-app.link/do-prod-side-tester-welcome?ac={test_name}",
+                "infFile": "t1.inf",
+                "time": 1572002751035
+            },
+            {
+                "stepId": "STEP2",
+                "stepName": "Custom Request: api/account",
+                "infFile": "t2.inf",
+                "time": 1572002751174
+            },
+            {
+                "stepId": "STEP3",
+                "stepName": "Url: /api/v2/plugin/getLastVersion",
+                "infFile": "t4.inf",
+                "time": 1572002751365
+            },
+            {
+                "stepId": "STEP4",
+                "stepName": "Custom Request: /api/tester-integration",
+                "infFile": "t6.inf",
+                "time": 1572002751604
+            },
+            {
+                "stepId": "STEP5",
+                "stepName": "Custom Request: /api/authentication",
+                "infFile": "t7.inf",
+                "time": 1572002751988
+            },
+            {
+                "stepId": "STEP6",
+                "stepName": "Url: /api/account",
+                "infFile": "t8.inf",
+                "time": 1572002752116
+            },
+            {
+                "stepId": "STEP7",
+                "stepName": "Custom Request: /api/stats/create",
+                "infFile": "t10.inf",
+                "time": 1572002752282
+            },
+            {
+                "stepId": "STEP8",
+                "stepName": "Url: /api/account",
+                "infFile": "t11.inf",
+                "time": 1572002752393
+            },
+            {
+                "stepId": "STEP9",
+                "stepName": "Url: order-info",
+                "infFile": "t12.inf",
+                "time": 1572002752535
+            },
+            {
+                "stepId": "STEP10",
+                "stepName": "Custom Request: api/stats/create",
+                "infFile": "t14.inf",
+                "time": 1572002752697
+            },
+            {
+                "stepId": "STEP11",
+                "stepName": "Custom Request: api/tester/create-task",
+                "infFile": "t16.inf",
+                "time": 1572002752903
+            },
+            {
+                "stepId": "STEP12",
+                "stepName": "Submit Data: api/video-upload-app",
+                "infFile": "t17.inf",
+                "time": 1572002789450
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "tran_05_01_go_to_link",
+                "rawStartTime": 1572002742596,
+                "rawEndTime": 1572002751367,
+                "thinkTime": 0.0,
+                "wastedTime": 0.505892276763916
+            },
+            {
+                "transactionName": "tran_05_02_enter_mail",
+                "rawStartTime": 1572002751369,
+                "rawEndTime": 1572002752285,
+                "thinkTime": 0.0,
+                "wastedTime": 0.08581995964050293
+            },
+            {
+                "transactionName": "upload_medium_video",
+                "rawStartTime": 1572002752909,
+                "rawEndTime": 1572002789455,
+                "thinkTime": 0.0,
+                "wastedTime": 0.025172710418701173
+            },
+            {
+                "transactionName": "tran_05_03_passing_test",
+                "rawStartTime": 1572002752287,
+                "rawEndTime": 1572002789459,
+                "thinkTime": 0.0,
+                "wastedTime": 0.11542105674743653
+            },
+            {
+                "transactionName": "UC05_passing_tests_by_reference",
+                "rawStartTime": 1572002742594,
+                "rawEndTime": 1572002789461,
+                "thinkTime": 0.0,
+                "wastedTime": 0.7071332931518555
+            }
+        ]
+    }
+]

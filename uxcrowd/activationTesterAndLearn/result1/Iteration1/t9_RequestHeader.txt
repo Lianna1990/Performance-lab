@@ -1,0 +1,13 @@
+POST /api/authentication HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Referer: https://prod.uxcrowd.ru/activate?key=13803540245449084411
+X-XSRF-TOKEN: 01661d8c-6372-4c24-82ef-2ae0c0b0c094
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Accept: */*
+Connection: Keep-Alive
+Host: prod.uxcrowd.ru
+Cookie: XSRF-TOKEN=01661d8c-6372-4c24-82ef-2ae0c0b0c094; CSRF-TOKEN=01661d8c-6372-4c24-82ef-2ae0c0b0c094
+Content-Length: 64
+

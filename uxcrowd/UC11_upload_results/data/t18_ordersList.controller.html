@@ -1,0 +1,376 @@
+define(['../../app'], function (app) {
+    app_cached_providers
+        .$controllerProvider
+        .register('customerOrderListController', function ($location, $sce, $stateParams, $state, $scope, $uibModal, Orders, $http, Video, $config, Translation) {
+            $scope.customerOrders = [];
+            $scope.alertRightMenu = function () {
+                $('.alert_right_menu').addClass('open');
+            };
+            $scope.fullUrl = $config.fullUrl;
+            $scope.testUrl = $config.testUrl;
+            $scope.downloadResults = function (id) {
+                $http({
+                    method: 'GET',
+                    url: '/api/v2/customer/orderReport?id=' + id
+                }).then(function successCallback(data) {
+                    var link = document.createElement("a");
+                    link.setAttribute("href", 'data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;;base64,' + data.data);
+                    link.setAttribute("download", `Test_${id}_responses.xlsx`);
+                  document.body.appendChild(link);
+                    link.click();
+                  document.body.removeChild(link);
+                });
+            };
+          $scope.downloadOrderOferta = function (id) {
+            $http({
+              method: 'GET',
+              url: '/api/v2/customer/downloadOrderOferta?orderId='+id,
+            }).then(function successCallback(data) {
+              var filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+              var fileName = filenameRegex.exec(data.headers()["content-disposition"])[1].replace(/['"]/g, '');
+              var link = document.createElement("a");
+              link.setAttribute("href", 'data:application/pdf;;base64,' + data.data);
+              link.setAttribute("download", fileName);
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }).catch(function errorCallback() {
+              $uibModal.open({
+                animation: true,
+                size: "lg",
+                templateUrl:
+                    "../../tmpl/tmpl_customer/tariff_change_modal_result.html",
+                controller: function ($scope, $uibModalInstance) {
+                  $scope["headerText"] = Translation.translate("LTR.LTR29");
+                  $scope["bodyText"] = Translation.translate("LTR.LTR30");
+                  $scope["buttonText"] = Translation.translate("LTR.LTR35");
+
+                  $scope.ok = function () {
+                    $state.go('customer-profile');
+                    $uibModalInstance.dismiss('cancel');
+                  };
+
+                  $scope.close = function () {
+                    $uibModalInstance.dismiss("cancel");
+                  };
+                }
+              });
+            });
+          };
+
+          $scope.toPrivateVideo = function (rightOrder) {
+            Video.setPrivateByOrderId(rightOrder.id).then(function (data) {
+                    $scope.videoPrivateSaved = true;
+                    for (k in participantGroups.all_tester){
+                        participantGroups.all_tester[k].video.private = participantGroup.private;
+                    };
+                }).catch(function (data) {
+
+                });
+            }
+
+          $scope.loadWaitingOrders = function () {
+            $http({
+              method: 'GET',
+              url: '/api/customer/waitingOrders'
+            }).then(function successCallback(data) {
+              $scope.waitingOrders = data;
+              $scope.waitingOrders.length_array = $scope.waitingOrders.data.length;
+              for (var num_obj in $scope.waitingOrders.data) {
+                var step_el = '';
+                for (var num_step in $scope.waitingOrders.data[num_obj].steps) {
+                  for (var detail in $scope.waitingOrders.data[num_obj].steps[num_step].stepDetails) {
+                    if ($scope.waitingOrders.data[num_obj].steps[num_step].stepDetails[detail].orderNum==0) {
+                      step_el =step_el + (Number(num_step)+1) + ". " +  $scope.waitingOrders.data[num_obj].steps[num_step].stepDetails[detail].value + "\n";
+                    }
+                  }
+                }
+                $scope.waitingOrders.data[num_obj].step_el = step_el;
+              }
+              setTimeout(function () {
+                $('.show_more_list').each(function () {
+                  $(this).click(function () {
+                    var el = $(this).parents('.item_row').find('.more_info');
+                    if ($(el).hasClass('open')) {
+                      $('.more_info').removeClass('open');
+                    } else {
+                      $('.more_info').removeClass('open');
+                      $(el).addClass('open');
+                    }
+                  })
+                });
+              }, 300)
+            }, function errorCallback(response) {
+            });
+          };
+
+            $scope.loadActive = function () {
+                $http({
+                    method: 'GET',
+                    url: '/api/customer/orders'
+                }).then(function successCallback(data) {
+                    $scope.listDateActive = data;
+                    $scope.listDateActive.length_array = $scope.listDateActive.data.length;
+                    for (var num_obj in $scope.listDateActive.data) {
+                        for (var num_group in $scope.listDateActive.data[num_obj].participantGroups) {
+                          $scope.listDateActive.data[num_obj].participantGroups[num_group].all_tester = [];
+                            for (var tester in $scope.listDateActive.data[num_obj].testerTask) {
+                              if ($scope.listDateActive.data[num_obj].testerTask[tester].status
+                                  == "COMPLETED") {
+                                $scope.listDateActive.data[num_obj].participantGroups[num_group].all_tester.push(
+                                    $scope.listDateActive.data[num_obj].testerTask[tester])
+                              }
+                            }
+                            var completeTesterTaskLength = 0;
+                            for (var tt_num in $scope.listDateActive.data[num_obj].testerTask) {
+                                if ($scope.listDateActive.data[num_obj].testerTask[tt_num].status == "COMPLETED") {
+                                    completeTesterTaskLength++;
+                                }
+                            }
+                            $scope.listDateActive.data[num_obj].testerTaskCol = completeTesterTaskLength;
+                        }
+                      if ($scope.listDateActive.data[num_obj].testerType
+                          === "THEIR") {
+                            var completeTesterTaskLength = 0;
+                            for (var tt_num in $scope.listDateActive.data[num_obj].testerTask) {
+                                if ($scope.listDateActive.data[num_obj].testerTask[tt_num].status == "COMPLETED") {
+                                    completeTesterTaskLength++;
+                                }
+                            }
+                            $scope.listDateActive.data[num_obj].testerTaskCol = completeTesterTaskLength;
+                        }
+                        var step_el = '';
+                        for (var num_step in $scope.listDateActive.data[num_obj].steps) {
+                           step_el = step_el + (Number(num_step)+1) + ". " +  $scope.listDateActive.data[num_obj].steps[num_step].question + "\n";
+                        }
+                        $scope.listDateActive.data[num_obj].step_el = step_el;
+                    }
+                    setTimeout(function () {
+                        $('.show_more_list').each(function () {
+                            $(this).click(function () {
+                                var el = $(this).parents('.item_row').find('.more_info');
+                                if ($(el).hasClass('open')) {
+                                    $('.more_info').removeClass('open');
+                                } else {
+                                    $('.more_info').removeClass('open');
+                                    $(el).addClass('open');
+                                }
+                            })
+                        });
+                    }, 300)
+                }, function errorCallback(response) {
+                });
+            };
+            $scope.loadHist = function () {
+                $http({
+                    method: 'GET',
+                    url: '/api/customer/hist-orders'
+                }).then(function successCallback(data) {
+                    $scope.listDate = data;
+                    $scope.listDate.length_array = $scope.listDate.data.length;
+                    for (var num_obj in $scope.listDate.data) {
+                        for (var num_group in $scope.listDate.data[num_obj].participantGroups) {
+                            $scope.listDate.data[num_obj].participantGroups[num_group].all_tester = [];
+                            for (var tester in $scope.listDate.data[num_obj].testerTask) {
+                              if ($scope.listDate.data[num_obj].testerTask[tester].status
+                                  == "COMPLETED") {
+                                $scope.listDate.data[num_obj].participantGroups[num_group].all_tester.push(
+                                    $scope.listDate.data[num_obj].testerTask[tester])
+                              }
+                            }
+
+                            var step_el = '';
+                            for (var num_step in $scope.listDate.data[num_obj].steps) {
+                                for (var detail in $scope.listDate.data[num_obj].steps[num_step].stepDetails) {
+                                    if ($scope.listDate.data[num_obj].steps[num_step].stepDetails[detail].orderNum==0) {
+                                        step_el = step_el +  (Number(num_step)+1) + ". " + $scope.listDate.data[num_obj].steps[num_step].stepDetails[detail].value + "\n";
+                                    }
+                                }
+                            }
+                            $scope.listDate.data[num_obj].step_el = step_el;
+
+                            var completeTesterTaskLength = 0;
+                            for (var tt_num in $scope.listDate.data[num_obj].testerTask) {
+                                if ($scope.listDate.data[num_obj].testerTask[tt_num].status == "COMPLETED") {
+                                    completeTesterTaskLength++;
+                                }
+                            }
+                            $scope.listDate.data[num_obj].testerTaskCol = completeTesterTaskLength;
+                        }
+                      if ($scope.listDate.data[num_obj].testerType
+                          === "THEIR") {
+                            var completeTesterTaskLength = 0;
+                            for (var tt_num in $scope.listDate.data[num_obj].testerTask) {
+                                if ($scope.listDate.data[num_obj].testerTask[tt_num].status == "COMPLETED") {
+                                    completeTesterTaskLength++;
+                                }
+                            }
+                            $scope.listDate.data[num_obj].testerTaskCol = completeTesterTaskLength;
+                        }
+
+                    }
+                    setTimeout(function () {
+                        $('.show_more_list').each(function () {
+                            $(this).click(function () {
+                                var el = $(this).parents('.item_row').find('.more_info');
+                                if ($(el).hasClass('open')) {
+                                    $('.more_info').removeClass('open');
+                                } else {
+                                    $('.more_info').removeClass('open');
+                                    $(el).addClass('open');
+                                }
+                            })
+                        });
+                    }, 300)
+                }, function errorCallback(response) {
+                });
+            };
+            $scope.loadWaitingOrders();
+            $scope.loadActive();
+            $scope.loadHist();
+            $scope.filteredTodos = []
+                , $scope.currentPage = 1
+                , $scope.numPerPage = 10
+                , $scope.maxSize = 5;
+
+            $scope.makeTodos = function () {
+                $scope.todos = [];
+                for (i = 1; i <= 1000; i++) {
+                    $scope.todos.push({text: 'todo ' + i, done: false});
+                }
+            };
+            $scope.makeTodos();
+
+            $scope.numPages = function () {
+                return Math.ceil($scope.todos.length / $scope.numPerPage);
+            };
+
+            $scope.$watch('currentPage + numPerPage', function () {
+                var begin = (($scope.currentPage - 1) * $scope.numPerPage)
+                    , end = begin + $scope.numPerPage;
+
+                $scope.filteredTodos = $scope.todos.slice(begin, end);
+            });
+
+            $scope.copyOrder = function (id) {
+                $uibModal.open({
+                    animation: true,
+                    size: 'lg',
+                    templateUrl: '../../tmpl/tmpl_customer/modaltmp.html',
+                    controller: function ($scope, $uibModalInstance) {
+                        $scope.orderId = id;
+                        $scope.textMSG = 'Вы уверены, что хотите скопировать заказ с номером ' + id + '? (копия появится в черновиках)';
+                        $scope.textNO = "Нет";
+                        $scope.textYES = "Да";
+                        $scope.cancel = function () {
+                            $uibModalInstance.dismiss('cancel');
+                        };
+                        $scope.ok = function () {
+                            Orders.copyOrder(id, function (data) {
+                                console.log(data);
+
+                                $state.go('order', {'id': data.id, 'as':'select_tester'})
+                            });
+                            $uibModalInstance.dismiss('cancel');
+
+                        }
+                    }
+                });
+            };
+
+            $scope.openGroup = function ($event) {
+                $this = $($event.currentTarget);
+                if ($this.find('.arrow_bottom_top').hasClass('top')) {
+                    $this.find('.arrow_bottom_top').removeClass('top');
+                    $this.next('.header_right_group_body').removeClass('open');
+                } else {
+                    $this.find('.arrow_bottom_top').addClass('top');
+                    $this.next('.header_right_group_body').addClass('open');
+                }
+            }
+
+            $scope.openRightMenu = function (order) {
+                $scope.rightOrder = order;
+                $('.alert_right_menu').addClass('open');
+            };
+
+            $scope.closeRightMenu = function (index) {
+                $('.alert_right_menu').removeClass('open');
+            };
+
+            $scope.stopOrder = function(order) {
+                $uibModal.open({
+                  animation: true,
+                  size: "lg",
+                  templateUrl: "../../tmpl/tmpl_customer/modaltmp.html",
+                  controller: function($scope, $uibModalInstance) {
+                    if (order.status==='WAIT_CONFIRMATION'){
+                      $scope.textTitle = "Вы уверены, что хотите отменить тест №" + order.id + "?";
+                      $scope.textMSG = null;
+                    } else {
+                      $scope.textTitle = "Вы уверены, что хотите завершить тест №" + order.id + "?";
+                      $scope.textMSG = $sce.trustAsHtml(
+                          "Непотраченные тестирования можно будет использовать позже.<br/>Пользователи, которые уже начали тест, смогут закончить его."
+                      );
+                    }
+                    $scope.textNO = "Нет";
+                    $scope.textYES = "Да";
+                    $scope.cancel = function() {
+                      $uibModalInstance.dismiss("cancel");
+                    };
+                    $scope.ok = function() {
+                      Orders.stopOrder(order.id);
+                      $uibModalInstance.dismiss("cancel");
+                      $uibModal.open({
+                        animation: true,
+                        size: "lg",
+                        templateUrl: "../../tmpl/tmpl_customer/modaltmp.html",
+                        controller: function($scope, $uibModalInstance) {
+                          if (order.status==='WAIT_CONFIRMATION'){
+                            $scope.textTitle = "Тест отменён";
+                            $scope.textMSG = null;
+                          } else {
+                            $scope.textTitle = "Тест завершен";
+                            $scope.textMSG = $sce.trustAsHtml(`
+                                            Тест №${order.id} теперь находится в разделе "Завершенные".<br/>
+                                            Непотраченные тестрования вы можете использовать позже.<br/>
+                                            Количество доступных тестирований смотрите в разделе <a href="/app-customer-home/tariff">Тариф</a><br/>
+                                            `);
+                          }
+                          $scope.textYES = "OK";
+                          $scope.hideNO=true;
+                          $scope.cancel = function() {
+                            $uibModalInstance.dismiss("cancel");
+                            location.reload();
+                          };
+                          $scope.ok = function() {
+                            $uibModalInstance.dismiss("cancel");
+                            location.reload();
+                          };
+                        }
+                      });
+                    };
+                  }
+                });
+              };
+
+            $scope.text_dotted_open_close = function ($event) {
+                $this = $($event.currentTarget);
+                var el_right_menu_info = $this.closest('.item_tab_right').find('.right_menu_info');
+                if ($(el_right_menu_info).hasClass('open')) {
+                    $(el_right_menu_info).removeClass('open');
+                    $(el_right_menu_info).parents('.item_tab_right').removeClass('open');
+                    if ($scope.rightOrder.testerType=='OUR'){
+                        $this.text(Translation.translate('INT.INT20'));
+                    }
+                } else {
+                    $(el_right_menu_info).addClass('open');
+                    if ($scope.rightOrder.testerType=='OUR'){
+                        $this.text(Translation.translate('INT.INT21'));
+                    }
+                    $(el_right_menu_info).parents('.item_tab_right').addClass('open');
+                }
+            };
+        });
+});
+

@@ -1,0 +1,70 @@
+[
+    {
+        "actionName": "Action",
+        "steps": [
+            {
+                "stepId": "STEP1",
+                "stepName": "Custom Request: get_token",
+                "infFile": "t1.inf",
+                "time": 1571817728742
+            },
+            {
+                "stepId": "STEP2",
+                "stepName": "Custom Request: main",
+                "infFile": "t2.inf",
+                "time": 1571817731075
+            },
+            {
+                "stepId": "STEP3",
+                "stepName": "Submit Data: authentication",
+                "infFile": "t3.inf",
+                "time": 1571817731388
+            },
+            {
+                "stepId": "STEP4",
+                "stepName": "Url: account",
+                "infFile": "t4.inf",
+                "time": 1571817731513
+            },
+            {
+                "stepId": "STEP5",
+                "stepName": "Url: account",
+                "infFile": "t5.inf",
+                "time": 1571817731627
+            },
+            {
+                "stepId": "STEP6",
+                "stepName": "Url: account",
+                "infFile": "t6.inf",
+                "time": 1571817731741
+            },
+            {
+                "stepId": "STEP7",
+                "stepName": "Url: account",
+                "infFile": "t7.inf",
+                "time": 1571817731855
+            },
+            {
+                "stepId": "STEP8",
+                "stepName": "Custom Request: profile_3",
+                "infFile": "t8.inf",
+                "time": 1571817732032
+            },
+            {
+                "stepId": "STEP9",
+                "stepName": "Custom Request: fill_profile",
+                "infFile": "t9.inf",
+                "time": 1571817732253
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "UC07_fill_client_profile",
+                "rawStartTime": 1571817728748,
+                "rawEndTime": 1571817732255,
+                "thinkTime": 0.0,
+                "wastedTime": 0.46886777877807619
+            }
+        ]
+    }
+]

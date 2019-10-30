@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="welcome-one">
+        <div class="slide-header our-program" ng-tr="TEI3.TEI1">
+        </div>
+    </div>
+
+</div>
+<div class="forth-row">
+    <div class="numbers-block">
+        <ul style="text-align: center;">
+            <div class="slide-sub-header process-to-testing" ng-tr="TEI3.TEI2">
+            </div>
+            <br>
+            <div class="slide-sub-header process-to-testing" ng-tr="TEI3.TEI3">
+            </div>
+            <div class="slide-sub-header process-to-testing">
+                <img ng-if="config.locale == 'ru'" class="logo-image" src="../assets/images/ezgif-1-0f931c46a0.gif" style="width: 50%; height: 225px;">
+                <img ng-if="config.locale == 'en'" class="logo-image" src="../assets/images/task_moving.gif" style="width: 50%; height: 225px;">
+            </div>
+        </ul>
+    </div>
+</div>
+
+<div class="button-row">
+    <div class="btn-group flex-btn-group-container">
+        <form ng-if="config.locale == 'ru'" style="margin-left: auto; margin-right: auto;" method="post" action="uxcrowd://?orderId=4">
+            <a class="white-button" ui-sref="instruction2" ng-tr="TEI3.TEI4"></a>
+            <button type="submit" ux-test-click class="btn green-button">
+                <span ng-tr="TEI3.TEI5"></span>
+            </button>
+        </form>
+        <form ng-if="config.locale == 'en'" style="margin-left: auto; margin-right: auto;" method="post" action="uxcrowd://?orderId=5">
+            <a class="white-button" ui-sref="instruction2" ng-tr="TEI3.TEI4"></a>
+            <button type="submit" ux-test-click class="btn green-button">
+                <span ng-tr="TEI3.TEI5"></span>
+            </button>
+        </form>
+    </div>
+</div>
+<script>setCookie('newTesterState', '');</script>

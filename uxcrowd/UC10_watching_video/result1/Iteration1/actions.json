@@ -1,0 +1,109 @@
+[
+    {
+        "actionName": "UC09_list_of_tests_client",
+        "steps": [
+            {
+                "stepId": "STEP1",
+                "stepName": "Url: /",
+                "infFile": "t1.inf",
+                "time": 1571725894322
+            },
+            {
+                "stepId": "STEP2",
+                "stepName": "Url: /api/account",
+                "infFile": "t2.inf",
+                "time": 1571725894431
+            },
+            {
+                "stepId": "STEP3",
+                "stepName": "Submit Data: /api/authentication",
+                "infFile": "t3.inf",
+                "time": 1571725894769
+            },
+            {
+                "stepId": "STEP4",
+                "stepName": "Url: /api/account",
+                "infFile": "t4.inf",
+                "time": 1571725894905
+            },
+            {
+                "stepId": "STEP5",
+                "stepName": "Url: /api/v2/customer/profile",
+                "infFile": "t5.inf",
+                "time": 1571725895134
+            },
+            {
+                "stepId": "STEP6",
+                "stepName": "Url: /tmpl/tmpl_customer/ordersList.html",
+                "infFile": "t6.inf",
+                "time": 1571725895260
+            },
+            {
+                "stepId": "STEP7",
+                "stepName": "Url: /api/customer/hist-orders",
+                "infFile": "t7.inf",
+                "time": 1571725895395
+            },
+            {
+                "stepId": "STEP8",
+                "stepName": "Url: /api/customer/waitingOrders",
+                "infFile": "t8.inf",
+                "time": 1571725895507
+            },
+            {
+                "stepId": "STEP9",
+                "stepName": "Url: /api/customer/orders",
+                "infFile": "t10.inf",
+                "time": 1571725896530
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "Homepage",
+                "rawStartTime": 1571725886201,
+                "rawEndTime": 1571725894439,
+                "thinkTime": 0.0,
+                "wastedTime": 0.4949216842651367
+            },
+            {
+                "transactionName": "Login",
+                "rawStartTime": 1571725894441,
+                "rawEndTime": 1571725896532,
+                "thinkTime": 0.0,
+                "wastedTime": 0.1938774585723877
+            }
+        ]
+    },
+    {
+        "actionName": "Action",
+        "steps": [
+            {
+                "stepId": "STEP10",
+                "stepName": "Url: /api/video/relatedVideoIds",
+                "infFile": "t11.inf",
+                "time": 1571725896649
+            },
+            {
+                "stepId": "STEP11",
+                "stepName": "Url: /api/video/tags",
+                "infFile": "t12.inf",
+                "time": 1571725896773
+            },
+            {
+                "stepId": "STEP12",
+                "stepName": "Custom Request: /api/video/fileName",
+                "infFile": "t14.inf",
+                "time": 1571725896983
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "UC10_watching_video",
+                "rawStartTime": 1571725896542,
+                "rawEndTime": 1571725899827,
+                "thinkTime": 0.0,
+                "wastedTime": 0.24558305740356446
+            }
+        ]
+    }
+]

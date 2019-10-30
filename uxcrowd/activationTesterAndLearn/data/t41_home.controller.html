@@ -1,0 +1,119 @@
+define(['../../../app'], function (app) {
+    app_cached_providers
+        .$controllerProvider
+        .register('testerNewTesterHomeController', function ($scope, $window, $state, NewTesters, $config, Translation, $http) {
+            $scope.fullUrl = $config.fullUrl;
+            $scope.testStandLogo = $config.testStandLogo;
+            $scope.extensionID = Translation.getExtensionId();
+            $scope.checked = true;
+
+            $scope.openVoiceInstruction = function () {
+              $http({
+                method: 'GET',
+                url: '/api/tester/voice-instruction',
+              }).then(function successCallback(data) {
+                var link = document.createElement("a");
+                link.setAttribute("href",
+                    'data:application/pdf;base64,' + data.data);
+                link.setAttribute("download", "voice-instruction.pdf");
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              });
+            };
+
+            $scope.submitSurvey3 = function () {
+                $state.go('instruction3');
+            };
+
+            NewTesters.hasCompletedTask().then(function (result) {
+                if (result.data) {
+                    $state.go('congratulations');
+                } else {
+                    if (getCookie('newTesterState') == null) {
+                        $state.go('welcome');
+                    }
+                    else {
+                        ($state.go(getCookie('newTesterState')));
+                    }
+                }
+            });
+
+            $scope.isMicro = false;
+            $scope.isMicroClicked = false;
+            $scope.localStream = null;
+
+            $scope.openVoiceInstruction = function () {
+              $http({
+                method: 'GET',
+                url: '/api/tester/voice-instruction',
+              }).then(function successCallback(data) {
+                var link = document.createElement("a");
+                link.setAttribute("href",
+                    'data:application/pdf;base64,' + data.data);
+                link.setAttribute("download", "voice-instruction.pdf");
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              });
+            };
+
+            $scope.submitSurvey4 = function () {
+                if ($scope.showMicro) {
+                    track = $scope.localStream.getTracks()[0];  // if only one media track
+                    track.stop();
+                    $state.go('instruction4');
+                } else {
+                    return false;
+                }
+            };
+
+            $scope.success = function (audioStream) {
+               console.log('микрофон присутствует');
+
+               $scope.localStream = audioStream;
+               audioPlayer = document.createElement('audio');
+               audioPlayer.src = URL.createObjectURL(audioStream);
+
+               context = new AudioContext();
+
+               var source = context.createMediaStreamSource(audioStream),
+                   analyser = context.createAnalyser(),
+                   data;
+
+               scriptProcessor = context.createScriptProcessor(2048, 1, 1);
+               source.connect(analyser);
+               source.connect(scriptProcessor);
+               scriptProcessor.connect(context.destination);
+
+               data = new Uint8Array(analyser.frequencyBinCount);
+
+               scriptProcessor.onaudioprocess = function (e) {
+                   analyser.getByteFrequencyData(data);
+                   var progress = data[0] + '%' ;
+                   angular.element('#UXC_mic_progress').css('height', progress );
+                   //$('#UXC_mic_progress').css({'height': data[0].progress + '%'});
+               };
+
+                $scope.isMicroClicked = false;
+                $scope.showMicro = true;
+                $scope.$apply();
+            }
+
+            $scope.fail = function (s) {
+                $scope.isMicroClicked = false;
+                $scope.showMicro = false;
+                 $scope.$apply();
+            }
+
+            $scope.checkMicro = function (a) {
+                 $scope.isMicroClicked = true;
+
+                 navigator.getUserMedia({
+                     audio: true
+                 }, $scope.success, $scope.fail);
+
+                return;
+            }
+        });
+});

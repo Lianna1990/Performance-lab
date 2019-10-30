@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="slide-header instruction-h welcome-one" style="line-height: normal;" ng-tr="TEC.TEC">
+    </div>
+</div>
+<div class="forth-row">
+    <div class="slide-sub-header numbers-block" style="padding: 20px" ng-tr="TEC.TEC1">
+    </div>
+</div>
+<div class="button-row">
+    <div class="btn-group flex-btn-group-container">
+        <form ng-if="config.locale == 'ru'" style="margin-left: auto; margin-right: auto;" method="post" action="uxcrowd://?orderId=4">
+            <button type="submit" class="green-button" ux-test-click>
+                <span ng-tr="TEC.TEC2"></span>
+            </button>
+        </form>
+        <form ng-if="config.locale == 'en'" style="margin-left: auto; margin-right: auto;" method="post" action="uxcrowd://?orderId=5">
+            <button type="submit" class="green-button" ux-test-click>
+                <span ng-tr="TEC.TEC2"></span>
+            </button>
+        </form>
+    </div>
+</div>

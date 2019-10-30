@@ -1,0 +1,271 @@
+[
+    {
+        "actionName": "Action",
+        "steps": [
+            {
+                "stepId": "STEP1",
+                "stepName": "Url: /activate",
+                "infFile": "t1.inf",
+                "time": 1571908775938
+            },
+            {
+                "stepId": "STEP2",
+                "stepName": "Url: /assets/lang/ru.json",
+                "infFile": "t2.inf",
+                "time": 1571908776186
+            },
+            {
+                "stepId": "STEP3",
+                "stepName": "Url: /api/account",
+                "infFile": "t4.inf",
+                "time": 1571908776282
+            },
+            {
+                "stepId": "STEP4",
+                "stepName": "Url: /api/activate_exist",
+                "infFile": "t5.inf",
+                "time": 1571908776682
+            },
+            {
+                "stepId": "STEP5",
+                "stepName": "Custom Request: /api/activate",
+                "infFile": "t7.inf",
+                "time": 1571908776958
+            },
+            {
+                "stepId": "STEP6",
+                "stepName": "Submit Data: /api/authentication",
+                "infFile": "t9.inf",
+                "time": 1571908777243
+            },
+            {
+                "stepId": "STEP7",
+                "stepName": "Url: /api/account",
+                "infFile": "t10.inf",
+                "time": 1571908777453
+            },
+            {
+                "stepId": "STEP8",
+                "stepName": "Url: /api/tester/has-completed-video",
+                "infFile": "t11.inf",
+                "time": 1571908777684
+            },
+            {
+                "stepId": "STEP9",
+                "stepName": "Url: /api/tester/has-completed-video",
+                "infFile": "t12.inf",
+                "time": 1571908777803
+            },
+            {
+                "stepId": "STEP10",
+                "stepName": "Url: /tmpl/tmpl_testers/tmpl_new_tester/instruction_step_1.html",
+                "infFile": "t13.inf",
+                "time": 1571908778103
+            },
+            {
+                "stepId": "STEP11",
+                "stepName": "Url: /api/tester/has-completed-video",
+                "infFile": "t14.inf",
+                "time": 1571908778227
+            },
+            {
+                "stepId": "STEP12",
+                "stepName": "Url: /tmpl/tmpl_testers/tmpl_new_tester/instruction_step_2.html",
+                "infFile": "t15.inf",
+                "time": 1571908778457
+            },
+            {
+                "stepId": "STEP13",
+                "stepName": "Url: /api/tester/has-completed-video",
+                "infFile": "t16.inf",
+                "time": 1571908778565
+            },
+            {
+                "stepId": "STEP14",
+                "stepName": "Url: /tmpl/tmpl_testers/tmpl_new_tester/instruction_step_3.html",
+                "infFile": "t17.inf",
+                "time": 1571908778828
+            },
+            {
+                "stepId": "STEP15",
+                "stepName": "Url: /api/tester/has-completed-video",
+                "infFile": "t18.inf",
+                "time": 1571908778939
+            },
+            {
+                "stepId": "STEP16",
+                "stepName": "Url: /app-new-tester-home/instruction3",
+                "infFile": "t19.inf",
+                "time": 1571908779104
+            },
+            {
+                "stepId": "STEP17",
+                "stepName": "Url: /api/account",
+                "infFile": "t21.inf",
+                "time": 1571908779219
+            },
+            {
+                "stepId": "STEP18",
+                "stepName": "Url: /tmpl/tmpl_testers/tmpl_new_tester/instruction_step_3.html",
+                "infFile": "t22.inf",
+                "time": 1571908779241
+            },
+            {
+                "stepId": "STEP19",
+                "stepName": "Custom Request: /api/stats/create",
+                "infFile": "t23.inf",
+                "time": 1571908779370
+            },
+            {
+                "stepId": "STEP20",
+                "stepName": "Custom Request: /api/tester/create-task",
+                "infFile": "t25.inf",
+                "time": 1571908779516
+            },
+            {
+                "stepId": "STEP21",
+                "stepName": "Submit Data: video-upload-app",
+                "infFile": "t26.inf",
+                "time": 1571908878679
+            },
+            {
+                "stepId": "STEP22",
+                "stepName": "Custom Request: update_10",
+                "infFile": "t27.inf",
+                "time": 1571908878991
+            },
+            {
+                "stepId": "STEP23",
+                "stepName": "Url: instruction3_2",
+                "infFile": "t28.inf",
+                "time": 1571908879048
+            },
+            {
+                "stepId": "STEP24",
+                "stepName": "Url: account_4",
+                "infFile": "t29.inf",
+                "time": 1571908879367
+            },
+            {
+                "stepId": "STEP25",
+                "stepName": "Url: header.html_3",
+                "infFile": "t30.inf",
+                "time": 1571908879840
+            },
+            {
+                "stepId": "STEP26",
+                "stepName": "Url: home.html_4",
+                "infFile": "t31.inf",
+                "time": 1571908879957
+            },
+            {
+                "stepId": "STEP27",
+                "stepName": "Url: instruction_step_3.html_3",
+                "infFile": "t32.inf",
+                "time": 1571908879985
+            },
+            {
+                "stepId": "STEP28",
+                "stepName": "Url: has-completed-video_8",
+                "infFile": "t33.inf",
+                "time": 1571908880110
+            },
+            {
+                "stepId": "STEP29",
+                "stepName": "Url: has-completed-video_9",
+                "infFile": "t34.inf",
+                "time": 1571908880216
+            },
+            {
+                "stepId": "STEP30",
+                "stepName": "Url: congratulations.html",
+                "infFile": "t35.inf",
+                "time": 1571908880323
+            },
+            {
+                "stepId": "STEP31",
+                "stepName": "Url: has-completed-video_10",
+                "infFile": "t36.inf",
+                "time": 1571908880438
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "set password",
+                "rawStartTime": 1571908776683,
+                "rawEndTime": 1571908777805,
+                "thinkTime": 0.0,
+                "wastedTime": 0.1492464542388916
+            },
+            {
+                "transactionName": "LearnTesting_01_Instruction_Step1",
+                "rawStartTime": 1571908777807,
+                "rawEndTime": 1571908778228,
+                "thinkTime": 0.0,
+                "wastedTime": 0.10765647888183594
+            },
+            {
+                "transactionName": "LearnTesting_02_Instruction_Step2",
+                "rawStartTime": 1571908778230,
+                "rawEndTime": 1571908778567,
+                "thinkTime": 0.0,
+                "wastedTime": 0.08808445930480957
+            },
+            {
+                "transactionName": "LearnTesting_03_Instruction_Step3",
+                "rawStartTime": 1571908778569,
+                "rawEndTime": 1571908778940,
+                "thinkTime": 0.0,
+                "wastedTime": 0.08983516693115235
+            },
+            {
+                "transactionName": "LearnTesting_04_StartTesting",
+                "rawStartTime": 1571908778942,
+                "rawEndTime": 1571908779371,
+                "thinkTime": 0.0,
+                "wastedTime": 0.11267518997192383
+            },
+            {
+                "transactionName": "LearnTesting_05_StartTest",
+                "rawStartTime": 1571908779373,
+                "rawEndTime": 1571908779519,
+                "thinkTime": 0.0,
+                "wastedTime": 0.024915456771850587
+            },
+            {
+                "transactionName": "LearnTesting_06_UploadVideo",
+                "rawStartTime": 1571908779521,
+                "rawEndTime": 1571908878993,
+                "thinkTime": 0.0,
+                "wastedTime": 0.323775053024292
+            },
+            {
+                "transactionName": "LearnTesting_07_Œ ",
+                "rawStartTime": 1571908878995,
+                "rawEndTime": 1571908880440,
+                "thinkTime": 0.0,
+                "wastedTime": 0.2449193000793457
+            }
+        ]
+    },
+    {
+        "actionName": "Imported_Action",
+        "steps": [
+            {
+                "stepId": "STEP32",
+                "stepName": "Custom Request: logout",
+                "infFile": "t37.inf",
+                "time": 1571908880570
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "UC_00_LogOut",
+                "rawStartTime": 1571908880451,
+                "rawEndTime": 1571908880572,
+                "thinkTime": 0.0,
+                "wastedTime": 0.03555870056152344
+            }
+        ]
+    }
+]

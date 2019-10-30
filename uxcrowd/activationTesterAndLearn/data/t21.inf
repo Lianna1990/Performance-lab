@@ -1,0 +1,13 @@
+[t21]
+FileName1=t21_account.json
+URL1=https://prod.uxcrowd.ru/api/account
+Total=2
+ContentType=application/json
+SnapshotXmlFile=snapshot_21.xml
+RequestHeaderFile=t21_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t21_ResponseHeader.txt
+FileName2=t21_app.html
+URL2=https://prod.uxcrowd.ru/app.js?bust=1571905946897
+[ProtocolInfo]
+ProtocolId=QTWeb

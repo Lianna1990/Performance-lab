@@ -1,0 +1,15 @@
+HTTP/2.0 403
+Status: 403
+server: nginx
+date: Fri, 25 Oct 2019 14:03:45 GMT
+content-type: application/json;charset=UTF-8
+set-cookie: CSRF-TOKEN=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+csrf-expired: true
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+vary: accept-encoding
+content-encoding: gzip
+

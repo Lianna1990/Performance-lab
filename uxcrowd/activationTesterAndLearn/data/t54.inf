@@ -1,0 +1,13 @@
+[t54]
+FileName1=t54_account.json
+URL1=https://prod.uxcrowd.ru/api/account
+Total=2
+ContentType=application/json
+SnapshotXmlFile=snapshot_54.xml
+RequestHeaderFile=t54_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t54_ResponseHeader.txt
+FileName2=t54_app.html
+URL2=https://prod.uxcrowd.ru/app.js?bust=1571906673560
+[ProtocolInfo]
+ProtocolId=QTWeb

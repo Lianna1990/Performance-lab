@@ -1,0 +1,192 @@
+Virtual User Script started at : 29.10.2019 17:44:53
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.53.0 for Windows 7; build 1203 (окт 29 2019 19:13:20)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36  	[MsgId: MMSG-26988]
+Run-Time Settings file: "D:\Users\user\Documents\44444\uxcrowd\FightScriptCreatePayTest70_withmetr\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action UC08_create_pay_test.
+UC08_create_pay_test.c(11): web_set_sockets_option started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(11): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+UC08_create_pay_test.c(13): Notify: Transaction "Homepage" started.
+UC08_create_pay_test.c(15): web_url("/") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/gulp/sup_css.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/css/landing/webflow.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/css/landing/uxcrowd.webflow.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/css/landing/YouTube.HD.Thumbnail.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/gulp/env.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://use.typekit.net/hym5rnq.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://ulogin.ru/js/ulogin.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/library/jquery.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/library/jquery.form.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/library/jquery.uploadfile.min.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/library/FileSaver.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/gulp/sup_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/init.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.rule.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/js/app_js/auth.interceptor.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/mediaelement-and-player.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/gulp/app_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/gulp/admin_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/gulp/customer_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/gulp/blog_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/gulp/home_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/gulp/moderator_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/gulp/new_tester_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/gulp/tester_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/library/require.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/path_controller.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/js/landing/jQuery.YouTube.HD.Thumbnail.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/main_route.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+UC08_create_pay_test.c(15): web_url("/") was successful, 3911498 body bytes, 15992 header bytes, 25 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC08_create_pay_test.c(24): web_get_int_property started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(24): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC08_create_pay_test.c(25): web_get_int_property started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(25): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC08_create_pay_test.c(33): loadrunner,label=Homepage,responseCode=200,success=0 responseTime=2.632788,bytes=3927515,timestamp=1572360295000000
+UC08_create_pay_test.c(36): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(36): web_custom_request("web_custom_request") was successful, 0 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+UC08_create_pay_test.c(45): Notify: Transaction "Homepage" ended with a "Pass" status (Duration: 2.6898 Wasted Time: 1.7499).
+UC08_create_pay_test.c(49): web_reg_save_param started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(49): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+UC08_create_pay_test.c(53): web_url("/api/account") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(53): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");, Snapshot Info [MSH 1 3]  	[MsgId: MERR-26547]
+UC08_create_pay_test.c(53): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account", Snapshot Info [MSH 1 3]  	[MsgId: MERR-26630]
+UC08_create_pay_test.c(53): web_url("/api/account") highest severity level was "continue on error", 0 body bytes, 409 header bytes  	[MsgId: MMSG-26388]
+UC08_create_pay_test.c(53): Continuing after error in Vuser script.
+UC08_create_pay_test.c(62): web_add_auto_header("X-XSRF-TOKEN") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(62): web_add_auto_header("X-XSRF-TOKEN") was successful  	[MsgId: MMSG-26392]
+UC08_create_pay_test.c(65): Notify: Transaction "Login" started.
+UC08_create_pay_test.c(67): web_reg_save_param started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(67): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+UC08_create_pay_test.c(83): web_submit_data("/api/authentication") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(83): web_submit_data("/api/authentication") was successful, 0 body bytes, 1073 header bytes  	[MsgId: MMSG-26386]
+UC08_create_pay_test.c(96): web_add_auto_header("X-XSRF-TOKEN") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(96): web_add_auto_header("X-XSRF-TOKEN") was successful  	[MsgId: MMSG-26392]
+UC08_create_pay_test.c(99): web_reg_save_param started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(99): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+UC08_create_pay_test.c(104): web_url("/api/account") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(104): web_url("/api/account") was successful, 443 body bytes, 673 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC08_create_pay_test.c(122): web_url("/api/customer/hist-orders") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(122): web_url("/api/customer/hist-orders") was successful, 28 body bytes, 673 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC08_create_pay_test.c(131): web_url("/api/customer/waitingOrders") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(131): web_url("/api/customer/waitingOrders") was successful, 28 body bytes, 673 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC08_create_pay_test.c(140): web_url("/api/customer/orders") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(140): web_url("/api/customer/orders") was successful, 2855 body bytes, 673 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC08_create_pay_test.c(149): web_get_int_property started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(149): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC08_create_pay_test.c(150): web_get_int_property started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(150): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC08_create_pay_test.c(158): loadrunner,label=Login,responseCode=200,success=0 responseTime=1.296773,bytes=3540,timestamp=1572360297000000
+UC08_create_pay_test.c(161): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(161): web_custom_request("web_custom_request") was successful, 0 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+UC08_create_pay_test.c(170): Notify: Transaction "Login" ended with a "Pass" status (Duration: 1.3200 Wasted Time: 0.0112).
+UC08_create_pay_test.c(174): Notify: Transaction "UC_08_create_pay_test" started.
+UC08_create_pay_test.c(176): Notify: Transaction "Create_new_test" started.
+UC08_create_pay_test.c(178): web_url("new.order.html") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(178): web_url("new.order.html") was successful, 202438 body bytes, 543 header bytes, 69 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC08_create_pay_test.c(187): Notify: Transaction "Create_new_test" ended with a "Pass" status (Duration: 0.2101 Wasted Time: 0.0245).
+UC08_create_pay_test.c(189): Notify: Transaction "Add_description" started.
+UC08_create_pay_test.c(191): web_add_header("Origin") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(191): web_add_header("Origin") was successful  	[MsgId: MMSG-26392]
+UC08_create_pay_test.c(194): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(194): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+UC08_create_pay_test.c(200): web_custom_request("draft") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(200): web_custom_request("draft") was successful, 34 body bytes, 673 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC08_create_pay_test.c(212): Notify: Transaction "Add_description" ended with a "Pass" status (Duration: 0.1508 Wasted Time: 0.0023).
+UC08_create_pay_test.c(214): Notify: Transaction "Participant_group" started.
+UC08_create_pay_test.c(216): web_add_auto_header("Origin") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(216): web_add_auto_header("Origin") was successful  	[MsgId: MMSG-26392]
+UC08_create_pay_test.c(219): web_custom_request("updateOrderAudience") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(219): web_custom_request("updateOrderAudience") was successful, 55 body bytes, 673 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC08_create_pay_test.c(231): Notify: Transaction "Participant_group" ended with a "Pass" status (Duration: 0.0891 Wasted Time: 0.0012).
+UC08_create_pay_test.c(233): Notify: Transaction "Add_question" started.
+UC08_create_pay_test.c(235): web_custom_request("updateOrderSteps") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(235): web_custom_request("updateOrderSteps") was successful, 88 body bytes, 673 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC08_create_pay_test.c(247): web_remove_auto_header("Origin") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(247): Previous automatically added web header for "Origin" removed  	[MsgId: MMSG-26587]
+UC08_create_pay_test.c(247): web_remove/revert_auto_header("Origin") was successful  	[MsgId: MMSG-26392]
+UC08_create_pay_test.c(249): web_url("calculatePrice") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(249): web_url("calculatePrice") was successful, 15 body bytes, 618 header bytes  	[MsgId: MMSG-26386]
+UC08_create_pay_test.c(258): Notify: Transaction "Add_question" ended with a "Pass" status (Duration: 0.1915 Wasted Time: 0.0026).
+UC08_create_pay_test.c(260): web_add_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(260): web_add_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+UC08_create_pay_test.c(263): web_add_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(263): web_add_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+UC08_create_pay_test.c(266): web_add_header("X-XSRF-TOKEN") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(266): web_add_header("X-XSRF-TOKEN") was successful  	[MsgId: MMSG-26392]
+UC08_create_pay_test.c(269): web_url("paymentInitRequest_2") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(269): web_url("paymentInitRequest_2") was successful, 95 body bytes, 673 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC08_create_pay_test.c(277): web_get_int_property started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(277): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC08_create_pay_test.c(278): web_get_int_property started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(278): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC08_create_pay_test.c(286): loadrunner,label=UC_08_create_pay_test,responseCode=200,success=0 responseTime=0.850092,bytes=779,timestamp=1572360298000000
+UC08_create_pay_test.c(289): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(289): web_custom_request("web_custom_request") was successful, 0 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+UC08_create_pay_test.c(298): Notify: Transaction "UC_08_create_pay_test" ended with a "Pass" status (Duration: 0.8994 Wasted Time: 0.0336).
+UC08_create_pay_test.c(302): Notify: Transaction "Logout" started.
+UC08_create_pay_test.c(304): web_custom_request("logout") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(304): web_custom_request("logout") was successful, 0 body bytes, 987 header bytes  	[MsgId: MMSG-26386]
+UC08_create_pay_test.c(313): web_reg_save_param started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(313): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+UC08_create_pay_test.c(317): web_url("/api/account/") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(317): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");, Snapshot Info [MSH 1 19]  	[MsgId: MERR-26547]
+UC08_create_pay_test.c(317): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account/", Snapshot Info [MSH 1 19]  	[MsgId: MERR-26630]
+UC08_create_pay_test.c(317): web_url("/api/account/") highest severity level was "continue on error", 0 body bytes, 409 header bytes  	[MsgId: MMSG-26388]
+UC08_create_pay_test.c(317): Continuing after error in Vuser script.
+UC08_create_pay_test.c(326): web_add_auto_header("X-XSRF-TOKEN") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(326): web_add_auto_header("X-XSRF-TOKEN") was successful  	[MsgId: MMSG-26392]
+UC08_create_pay_test.c(329): web_url("/") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(329): Retrieving data from cache for "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26558]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/gulp/sup_css.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/css/landing/webflow.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/css/landing/uxcrowd.webflow.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/css/landing/YouTube.HD.Thumbnail.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/gulp/env.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://use.typekit.net/hym5rnq.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://ulogin.ru/js/ulogin.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/library/jquery.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/library/jquery.form.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/library/jquery.uploadfile.min.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/library/FileSaver.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/gulp/sup_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/js/main_js/init.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.rule.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/js/app_js/auth.interceptor.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/js/main_js/mediaelement-and-player.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/gulp/app_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/gulp/admin_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/gulp/customer_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/gulp/blog_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/gulp/home_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/gulp/moderator_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/gulp/new_tester_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/gulp/tester_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/library/require.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/js/main_js/path_controller.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/js/landing/jQuery.YouTube.HD.Thumbnail.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): Resource "https://prod.uxcrowd.ru/assets/js/main_js/main_route.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+UC08_create_pay_test.c(329): web_url("/") was successful, 0 body bytes, 0 header bytes  	[MsgId: MMSG-26386]
+UC08_create_pay_test.c(337): web_get_int_property started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(337): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC08_create_pay_test.c(338): web_get_int_property started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(338): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC08_create_pay_test.c(346): loadrunner,label=Logout,responseCode=-1,success=1 responseTime=0.145281,bytes=0,timestamp=1572360298000000
+UC08_create_pay_test.c(349): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+UC08_create_pay_test.c(349): web_custom_request("web_custom_request") was successful, 0 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+UC08_create_pay_test.c(358): Notify: Transaction "Logout" ended with a "Fail" status (Duration: 0.1923 Wasted Time: 0.0046).
+UC08_create_pay_test.c(358): Notify: Transaction "Logout" has 2 error message(s).
+UC08_create_pay_test.c(358): Notify: The 1st error message associated with transaction "Logout" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+UC08_create_pay_test.c(358): Notify: The 2nd error message associated with transaction "Logout" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account/""
+Ending action UC08_create_pay_test.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

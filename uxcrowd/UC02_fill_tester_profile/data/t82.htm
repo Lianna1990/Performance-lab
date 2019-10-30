@@ -1,0 +1,33 @@
+<!--<div class="nav_menu_main_container">
+    <a href="#" class="item_menu_nav">Личный кабинет</a>
+    <a href="#" class="item_menu_nav">Профиль</a>
+</div>-->
+<div class="title_main_container">
+    <span class="second-title">{{page_title}}</span>
+</div>
+
+<div class="title_btn_menu_top">
+  <a class="link" href="#" ng-click="openVoiceInstruction()" ng-tr="THD.THD1"></a>
+</div>
+
+<div class="settings_block">
+    <a class="link" ng-click="payout()" style="margin-right: 30px;">
+        <span ng-tr="THD.THD5">Withdraw</span>
+    </a>
+    <span ng-tr="THD.THD2"></span>
+    <div id="tester_raiting" class="rating" style="margin-right: 40px;display: inline-block;cursor: default;margin-top: 8px;"></div>
+
+    <div class="exit_btn btn_settings" ng-click="logout()">
+        <div class="block_exit_logo logo_settings"></div>
+        <div class="block_exit_text text_settings" translate="global.menu.account.logout"
+             id="logout" ng-tr="THD.THD3">
+        </div>
+    </div>
+    <a class="inline-btn btn_settings" href="/app-tester-home/tester-profile">
+        <!--<div class="block_settings_logo logo_settings"></div>-->
+        <div class="block_settings_text text_settings" ng-tr="THD.THD4"></div>
+        <!--<div class="col-xs-12 rating-header" ng:if="rating"><span class="header">Рейтинг:</span>-->
+        <!--<span class="rating_header" data-rating="{{rating}}"></span>-->
+        <!--</div>-->
+    </a>
+</div>

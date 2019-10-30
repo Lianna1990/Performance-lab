@@ -1,0 +1,15 @@
+[t83]
+FileName1=t83_has-completed-video.json
+URL1=https://prod.uxcrowd.ru/api/tester/has-completed-video
+Total=3
+ContentType=application/json
+SnapshotXmlFile=snapshot_83.xml
+RequestHeaderFile=t83_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t83_ResponseHeader.txt
+FileName2=t83_newMain.controller.html
+URL2=https://prod.uxcrowd.ru/controller/controller_home/newMain.controller.js?bust=1571906743648
+FileName3=t83_login.controller.html
+URL3=https://prod.uxcrowd.ru/controller/controller_home/login.controller.js?bust=1571906743648
+[ProtocolInfo]
+ProtocolId=QTWeb

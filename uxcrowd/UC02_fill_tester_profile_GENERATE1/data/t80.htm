@@ -1,0 +1,127 @@
+<div class="uxc_container">
+    <div class="left_menu_uxc">
+        <a ng-href="{{fullUrl}}">
+            <div class="logo_left_menu">
+                <img ng-if="testStandLogo" class="test-stand-dynamic" src="../assets/images/test-stand.png">
+            </div>
+        </a>
+
+        <aside class="left_menu">
+            <section class="item_menu_nav" ui-sref-active="active" ui-sref="new-tasks">
+                <div class="item_menu_logo list_add_test"></div>
+                <p class="item_menu_text" ng-tr="MTL.MTL">
+                </p>
+            </section>
+
+            <section class="item_menu_nav" ui-sref-active="active" ui-sref="done-tasks">
+                <div class="item_menu_logo done"></div>
+                <p class="item_menu_text" ng-tr="MTL.MTL1">
+                </p>
+            </section>
+
+            <!--<div class="item_menu_nav" ui-sref-active="active" ui-sref="tester-profile">
+                <div class="item_menu_logo"></div>
+                <div class="item_menu_text">Профиль</div>
+            </div>-->
+
+            <section class="item_menu_nav" ui-sref-active="active" ui-sref="pay-info" ng-if="config.locale == 'ru'">
+                <div class="item_menu_logo balance-info"></div>
+                <p class="item_menu_text" ng-tr="MTL.MTL2">
+                </p>
+            </section>
+
+            <section class="item_menu_nav" ui-sref-active="active" ui-sref="tester-profile">
+                <div class="item_menu_logo settings"></div>
+                <p class="item_menu_text" ng-tr="MTL.MTL3">
+                </p>
+            </section>
+
+            <a target="_blank" ng-href="https://chrome.google.com/webstore/detail/uxcrowd/{{extensionID}}" class="item_menu_nav" >
+                <div class="item_menu_logo download_icon"></div>
+
+                <p class="item_menu_text" ng-tr="MTL.MTL4">
+                </p>
+
+                <p class="uxc_chrome_info" ng:if="browser!=true">
+                    Сhrome<span class="logo_chrome"></span>
+                </p>
+            </a>
+        </aside>
+    </div>
+
+    <div class="main_container">
+        <div ui-view="header" class="header_main_container"></div>
+        <div ui-view="main_content_tester" class="sub_container_menu"></div>
+    </div>
+
+    <div class="alert_right_menu">
+        <div class="all_panel"></div>
+        <div class="right_container">
+            <div class="col-xs-12 first_table">
+                <div class="row">
+                    <div class="col-xs-2 title_header_right_panel" ng-tr="MTL.MTL5"></div>
+                    <div class="col-xs-9 title_header_right_panel"ng-tr="MTL.MTL6"></div>
+                    <div class="col-xs-1 close_right_panel"><span class="close"></span></div>
+                </div>
+            </div>
+            <div class="col-xs-12 main_right_header">
+                <div class="row">
+                    <div class="col-xs-2 header_right_main_text">1599</div>
+                    <div class="col-xs-9 header_right_main_href" ng-tr="MTL.MTL7"></div>
+                </div>
+            </div>
+            <div class="col-xs-12 header_right_group">
+                <div class="row">
+                    <div class="col-xs-12 header_group" ng-tr="MTL.MTL8"></div>
+                </div>
+            </div>
+            <div class="col-xs-12 first_table">
+                <div class="row">
+                    <div class="col-xs-1 title_header_right_panel">№</div>
+                    <div class="col-xs-2 title_header_right_panel" ng-tr="MTL.MTL9"></div>
+                    <div class="col-xs-4 title_header_right_panel" ng-tr="MTL.MTL10"></div>
+                    <div class="col-xs-2 title_header_right_panel">
+                        <div class="row" ng-tr="MTL.MTL11"></div>
+                    </div>
+                    <div class="col-xs-3 title_header_right_panel" ng-tr="MTL.MTL12"></div>
+                </div>
+            </div>
+            <div class="col-xs-12 item_tab_right">
+                <div class="row">
+                    <div class="col-xs-1 text_right_panel info_text">35245</div>
+                    <div class="col-xs-2 text_right_panel info_text">15:02 12.05</div>
+                    <div class="col-xs-4 text_right_panel href_text"><span
+                            class="text_dotted" ng-tr="MTL.MTL"></span></div>
+                    <div class="col-xs-2 text_right_panel">
+                        <div class="row">
+                            <span class="star_rating"></span>
+                            <span class="star_rating"></span>
+                            <span class="star_rating"></span>
+                            <span class="star_rating"></span>
+                            <span class="star_rating"></span>
+                        </div>
+                    </div>
+                    <div class="col-xs-3 text_right_panel href_text text_under" ng-tr="MTL.MTL14"></div>
+                </div>
+            </div>
+            <div class="col-xs-12 item_tab_right">
+                <div class="row">
+                    <div class="col-xs-1 text_right_panel info_text">35245</div>
+                    <div class="col-xs-2 text_right_panel info_text">15:02 12.05</div>
+                    <div class="col-xs-4 text_right_panel href_text"><span
+                            class="text_dotted" ng-tr="MTL.MTL15"></span></div>
+                    <div class="col-xs-2 text_right_panel">
+                        <div class="row">
+                            <span class="star_rating"></span>
+                            <span class="star_rating"></span>
+                            <span class="star_rating"></span>
+                            <span class="star_rating"></span>
+                            <span class="star_rating"></span>
+                        </div>
+                    </div>
+                    <div class="col-xs-3 text_right_panel href_text text_under" ng-tr="MTL.MTL16"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

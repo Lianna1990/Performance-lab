@@ -1,0 +1,13 @@
+GET /api/customer/waitingOrders HTTP/1.1
+Host: test.uxcrowd.ru
+Connection: keep-alive
+Accept: application/json, text/plain, */*
+X-XSRF-TOKEN: 8779a06b-f663-48fb-be24-8e04c2e6b96d
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Referer: https://test.uxcrowd.ru/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: CSRF-TOKEN=e4820a03-99a6-4940-a66d-618e5821f9ce; dbl=5e511b356828877b061da098ba7cb22a; fco2r34=5e511b356828877b061da098ba7cb22a; XSRF-TOKEN=8779a06b-f663-48fb-be24-8e04c2e6b96d; remember-me=VEZiS2RCQXNINUQlMkZ4QkVLYU05OWd3JTNEJTNEOkRrOExJeXVPJTJGb0xrNlBvc3FXMjVzdyUzRCUzRA; userId=661370557; JSESSIONID=28BF4A584E4F39BA89455EF936587081
+

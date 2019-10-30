@@ -1,0 +1,16 @@
+POST /api/authentication HTTP/1.1
+Host: prod.uxcrowd.ru
+Connection: keep-alive
+Content-Length: 68
+Accept: application/json, text/plain, */*
+Origin: https://prod.uxcrowd.ru
+X-XSRF-TOKEN: 81492e6e-e1e3-4dc5-b30d-76e9bb5d2c99
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36
+Sec-Fetch-Mode: cors
+Content-Type: application/x-www-form-urlencoded
+Sec-Fetch-Site: same-origin
+Referer: https://prod.uxcrowd.ru/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: XSRF-TOKEN=81492e6e-e1e3-4dc5-b30d-76e9bb5d2c99; CSRF-TOKEN=81492e6e-e1e3-4dc5-b30d-76e9bb5d2c99; dbl=a162d9ff57a83c815d7d1db86222acc7; fco2r34=a162d9ff57a83c815d7d1db86222acc7
+

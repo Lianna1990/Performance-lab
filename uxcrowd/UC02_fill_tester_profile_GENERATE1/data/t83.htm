@@ -1,0 +1,447 @@
+<div class="profile_tester">
+    <form name="ProfileForm" class="tester-form-body" novalidate>
+        <input hidden ng:model="profile.id">
+
+        <h1 class="header_clear_text profile_title_main" ng-tr="PTS.PTS"></h1>
+
+        <div>
+            <div class="uxc_custom_input" ng:class="profile.fio.length > 0 ? 'filled' : ''">
+                <label class="header_el_item" customtitle ng-tr="PTS.PTS1">
+                </label>
+
+                <input ng-model="profile.fio"
+                       data-type="fio"
+                       custominput
+                       name="fio"
+                       data-text-error="{{ 'PTS.PTS2' | translate }}"
+                       data-type-title="fio"
+                       data-mask="fio"
+                       class="customer-form-control"
+                       validator="required"
+                       valid-method="watch"
+                       required-error-message="{{ 'PTS.PTS2' | translate }}"
+                       surname-error-message="{{ 'PTS.PTS2' | translate }}">
+            </div>
+
+            <div class="uxc_custom_input" ng-class="profile.fio.length > 0 ? 'filled' : ''" ng-if="config.locale == 'en'">
+                <label class="header_el_item" customtitle>
+                    PayPal E-mail
+                </label>
+
+                <input type="email"
+                       ng-model="profile.paypalEmail"
+                       data-type="email"
+                       custominput
+                       data-text-error="Enter PayPal E-mail"
+                       data-type-title="email"
+                       data-mask="email"
+                       name="paypalEmail"
+                       class="customer-form-control"
+                       validator="required, email"
+                       valid-method="watch"
+                       required-error-message="Enter PayPal E-mail"
+                       email-error-message="Enter PayPal E-mail">
+            </div>
+
+            <div class="custom_select" ng-if="config.locale == 'en'">
+                <label class="header_el_item" ng-tr="PTS.PTS3">
+                </label>
+
+                <select class="item_select customer-form-control"
+                        name="salutation"
+                        id="salutation"
+                        data-type="select"
+                        custominput
+                        name="country"
+                        data-text-error="Enter country"
+                        data-type-title="select"
+                        ng-model="profile.country"
+                        ng-change="update()"
+                        validator="required"
+                        valid-method="watch"
+                        ng-options="o as o for o in countries track by o"
+                        style="overflow-x: hidden;overflow-y: scroll;height:288px">
+                    <option value="" selected="selected" disabled>Country</option>
+                </select>
+            </div>
+
+            <div class="uxc_custom_input" ng:class="profile.zipcode.length>0?'filled':''" ng-if="config.locale == 'en'">
+                <label class="header_el_item" customtitle>
+                    Zipcode
+                </label>
+
+                <input ng-model="profile.zipcode"
+                       custominput
+                       validator="required"
+                       valid-method="watch"
+                       data-type="string"
+                       name="zipcode"
+                       data-text-error="Enter Zipcode"
+                       data-type-title="account"
+                       class="customer-form-control">
+            </div>
+
+            <div class="custom_select" ng-if="config.locale == 'ru'">
+                <label class="header_el_item" ng-tr="PTS.PTS3">
+                </label>
+
+                <select class="item_select"
+                        name="salutation"
+                        id="salutation"
+                        custominput
+                        ng-model="profile.country"
+                        ng-change="update()">
+
+                    <option selected disabled value="" ng-tr="PTS.PTS4">
+                    </option>
+
+                    <option value="Россия" ng-tr="PTS.PTS5">
+                    </option>
+
+                    <option value="Белоруссия" ng-tr="PTS.PTS6">
+                    </option>
+
+                    <option value="Казахстан" ng-tr="PTS.PTS7">
+                    </option>
+
+                    <option value="Армения" ng-tr="PTS.PTS8">
+                    </option>
+
+                    <option value="Киргизия" ng-tr="PTS.PTS9">
+                    </option>
+                </select>
+            </div>
+
+            <div class="uxc_custom_input" ng:class="profile.birthday.length>0?'filled':''">
+                <label class="header_el_item" customtitle ng-tr="PTS.PTS10">
+                </label>
+
+                <input id="tester-profile-data"
+                       data-type="birthday"
+                       elevalidation
+                       data-text-error="{{ 'PTS.PTS12' | translate }}"
+                       maxlength="10"
+                       minlength="10"
+                       name="birthday"
+                       valid-method="watch"
+                       required-error-message="{{ 'PTS.PTS11' | translate }}"
+                       data-type-title="birthday"
+                       ng-model="profile.birthday"
+                       class="customer-form-control">
+            </div>
+
+            <div class="uxc_custom_input" ng:class="profile.city.length>0?'filled':''" ng-if="config.locale == 'ru'">
+                <label class="header_el_item" customtitle ng-tr="PTS.PTS12">
+                </label>
+
+                <input ng-model="profile.city"
+                       data-type="cyrillic_duo"
+                       validator="required"
+                       valid-method="watch"
+                       name="city"
+                       required-error-message="{{ 'PTS.PTS13' | translate }}"
+                       data-text-error="{{ 'PTS.PTS13' | translate }}"
+                       data-type-title="city"
+                       class="customer-form-control">
+            </div>
+
+            <div class="mt-10">
+                <label class="header_el_item" ng-tr="PTS.PTS14">
+                </label>
+
+                <div class="radio_button_el">
+                    <input type="radio"
+                           ng-model="profile.gender"
+                           value="MALE"
+                           ng:click="updateSelect()"
+                           required/>
+
+                    <span class="text_checkbox" ng-tr="PTS.PTS16">
+                    </span>
+                </div>
+
+                <div class="radio_button_el">
+                    <input type="radio"
+                           ng-model="profile.gender"
+                           value="FEMALE"
+                           name="gender"
+                           ng-click="updateSelect()"/>
+
+                    <span class="text_checkbox" ng-tr="PTS.PTS17">
+                    </span>
+                </div>
+                <p class="validation-invalid ng-scope" style="margin-top: 10px;" ng-show="profile.gender==null && isNotValid">{{ 'PTS.PTS15' | translate }}</p>
+            </div>
+
+            <div class="mt-10">
+                <label class="header_el_item" ng-tr="PTS.PTS18">
+                </label>
+
+                <div class="radio_button_el">
+                    <input type="radio"
+                           ng-model="profile.familyStatus"
+                           value="NOT_MARRIED"
+                           name="familyStatus"
+                           required/>
+
+                    <span class="text_checkbox">
+                        {{ profile.gender =='MALE' ? ('PTS.PTS20' | translate) : ('PTS.PTS21' | translate) }}
+                    </span>
+                </div>
+
+                <div class="radio_button_el">
+                    <input type="radio"
+                           ng-model="profile.familyStatus"
+                           value="MARRIED"
+                           name="familyStatus"/>
+
+                    <span class="text_checkbox">
+                        {{ profile.gender =='MALE' ? ('PTS.PTS22' | translate) : ('PTS.PTS23' | translate) }}
+                    </span>
+                </div>
+                <p class="validation-invalid ng-scope" style="margin-top: 10px;" ng-show="profile.familyStatus==null && isNotValid">{{ 'PTS.PTS19' | translate }}</p>
+            </div>
+
+            <div class="custom_select mt-20">
+                <label class="header_el_item" ng-tr="PTS.PTS24">
+                </label>
+
+                <select ng-model="profile.education"
+                        class="item_select tester-form-control"
+                        name="education"
+                        id="education"
+                        data-type-title="education"
+                        data-type="select"
+                        data-text-error="{{ 'PTS.PTS26' | translate }}"
+                        required>
+
+                    <option selected disabled value="" ng-tr="PTS.PTS25">
+                    </option>
+
+                    <option value="START" ng-tr="PTS.PTS27">
+                    </option>
+
+                    <option value="COMMON" ng-tr="PTS.PTS28">
+                    </option>
+
+                    <option value="MIDDLE_FULL" ng-tr="PTS.PTS29">
+                    </option>
+
+                    <option value="MIDDLE_SPEC" ng-tr="PTS.PTS30">
+                    </option>
+
+                    <option value="HIGH_NOT_FULL" ng-tr="PTS.PTS31">
+                    </option>
+
+                    <option value="HIGH" ng-tr="PTS.PTS32">
+                    </option>
+                </select>
+                <p class="validation-invalid ng-scope" style="margin-top: 10px;" ng-show="profile.education=='UNDEFINED' && isNotValid">{{ 'PTS.PTS26' | translate }}</p>
+            </div>
+
+            <div class="custom_select mt-20">
+                <label class="header_el_item" ng-tr="PTS.PTS33">
+                </label>
+
+                <select class="item_select tester-form-control"
+                        name="socialStatus"
+                        ng-model="profile.socialStatus"
+                        data-type="select"
+                        id="socialStatus"
+                        data-text-error="{{ 'PTS.PTS34' | translate }}"
+                        required>
+                    <option selected disabled value=""  ng-tr="PTS.PTS34">
+                    </option>
+
+                    <option value="CHIEF_DEPT" ng-tr="PTS.PTS36">
+                    </option>
+
+                    <option value="SPECIALIST" ng-tr="PTS.PTS37">
+                    </option>
+
+                    <option value="WORKER" ng-tr="PTS.PTS38">
+                    </option>
+
+                    <option value="FREELANCER" ng-tr="PTS.PTS39">
+                    </option>
+
+                    <option value="STUDENT">
+                        {{ profile.gender == 'FEMALE' ? ('PTS.PTS40' | translate) : ('PTS.PTS41' | translate) }}
+                    </option>
+
+                    <option value="HOUSEWIFE">
+                        {{ profile.gender == 'FEMALE' ? ('PTS.PTS42' | translate) : ('PTS.PTS43' | translate) }}
+                    </option>
+
+                    <option value="UNEMPLOYED">
+                        {{ profile.gender == 'FEMALE' ? ('PTS.PTS44' | translate) : ('PTS.PTS45' | translate) }}
+                    </option>
+                </select>
+                <p class="validation-invalid ng-scope" style="margin-top: 10px;" ng-show="profile.socialStatus == 'UNDEFINED' && isNotValid">{{ 'PTS.PTS35' | translate }}</p>
+            </div>
+
+            <div class="mt-25">
+                <div class="custom_select">
+                    <label class="header_el_item" ng-tr="PTS.PTS46">
+                    </label>
+
+                    <div class="mt-10">
+                        <input type="text"
+                               incomeel class="input_income"
+                               validator="required"
+                               valid-method="watch"
+                               ng-model="profile.income">
+                    </div>
+
+                    <div class="mt-20">
+                        <div class="block_range_js">
+                            <div class="line_range"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="">
+                    <label class="header_el_item" ng-tr="PTS.PTS47">
+                    </label>
+
+                    <div class="radio_button_el">
+                        <input type="radio" ng-model="profile.kids" value="NONE"/>
+
+                        <span class="text_checkbox" ng-tr="PTS.PTS48">
+                        </span>
+                    </div>
+
+                    <div class="radio_button_el">
+                        <input type="radio" ng:model="profile.kids" value="ONE"/>
+
+                        <span class="text_checkbox">1</span>
+                    </div>
+
+                    <div class="radio_button_el">
+                        <input type="radio" ng:model="profile.kids" value="TWO"/>
+
+                        <span class="text_checkbox">2</span>
+                    </div>
+
+                    <div class="radio_button_el">
+                        <input type="radio" ng:model="profile.kids" value="FOUR"/>
+
+                        <span class="text_checkbox">3+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 ng-tr="PTS.PTS49"></h2>
+
+        <div>
+            <div class="checkbox_button_el mb-20">
+                <input type="checkbox" ng:model="profile.emailNotification">
+
+                <span class="text_checkbox" ng-tr="PTS.PTS50">
+                </span>
+            </div>
+        </div>
+
+        <div class="block_show_error_profile"></div>
+
+        <div ng-show="profileSaved!=null && !profileSaved">
+            <div class="alert-danger alert text-center" ng-tr="PTS.PTS51">
+            </div>
+        </div>
+
+        <div ng-show="profileSaved" class="">
+            <div class="alert alert-success text-center" ng-tr="PTS.PTS52">
+            </div>
+        </div>
+
+        <div class="mt-15">
+            <button type="submit"
+                    class="new-green-btn"
+                    ng-click="login(ProfileForm)"
+                    ng-tr="PTS.PTS53">
+            </button>
+        </div>
+    </form>
+
+
+    <div>
+
+        <form name="FormUpdatePassword" id="FormUpdatePassword" class="tester-form-body mt-15">
+            <h2 ng-tr="PTS.PTS54"></h2>
+
+            <div class="item_el_input">
+                <div class="header_el_item" ng-tr="PTS.PTS55"></div>
+
+                <div class="input_el_item">
+                    <input type="password"
+                           name="currentPassword"
+                           class="customer-form-control"
+                           placeholder="{{ 'PTS.PTS57' | translate }}"
+                           data-type="string"
+                           data-text-error="{{ 'PTS.PTS56' | translate }}"
+                           data-type-title="password_one"
+                           ng-model="security_user.password_one"
+                           validator="required"
+                           valid-method="watch"
+                           required-error-message="{{ 'WHE.WHE39' | translate }}"
+                           password-error-message="{{ 'WHE.WHE39' | translate }}">
+
+                </div>
+            </div>
+
+            <div class="item_el_input">
+                <div class="header_el_item" ng-tr="PTS.PTS58"></div>
+
+                <div class="input_el_item">
+                    <input type="password"
+                           name="newPassword"
+                           class="customer-form-control"
+                           placeholder="{{ 'PTS.PTS60' | translate }}"
+                           data-type="password"
+                           data-text-error="{{ 'PTS.PTS59' | translate }}"
+                           data-type-title="password_new"
+                           ng-model="security_user.password_new"
+                           validator="required, password, minlength=6"
+                           valid-method="watch"
+                           required-error-message="{{ 'WHE.WHE40' | translate }}"
+                           password-error-message="{{ 'WHE.WHE40' | translate }}"
+                           minlength-error-message="{{ 'WHE.WHE42' | translate }}">
+
+                </div>
+            </div>
+
+            <div class="item_el_input">
+                <div class="header_el_item" ng-tr="PTS.PTS61"></div>
+
+                <div class="input_el_item">
+                    <input type="password"
+                           name="repeatPassword"
+                           class="customer-form-control"
+                           placeholder="{{ 'PTS.PTS63' | translate }}"
+                           data-type="password"
+                           data-text-error="{{ 'PTS.PTS62' | translate }}"
+                           data-type-title="repeat_password_new"
+                           ng-model="security_user.repeat_password_new"
+                           validator="required, password, minlength=6"
+                           valid-method="watch"
+                           required-error-message="{{ 'WHE.WHE43' | translate }}"
+                           password-error-message="{{ 'WHE.WHE43' | translate }}">
+                </div>
+            </div>
+
+            <div>
+                <button
+                        ng-click="updatePassword(FormUpdatePassword)"
+                        class="new-green-btn"
+                        ng-tr="PTS.PTS64">
+                </button>
+            </div>
+
+            <div class="form-errors-block">
+
+            </div>
+        </form>
+    </div>
+
+</div >

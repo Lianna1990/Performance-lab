@@ -1,0 +1,429 @@
+define(['../../app'], function (app) {
+    app_cached_providers
+        .$controllerProvider
+        .register('homeVideoController', function ($state, $rootScope, $scope, $uibModal, $log, $config, $stateParams,
+         Video, Account, DateUtils, Principal, Customer, $http, $compile, Translation) {
+            if (location.href.indexOf('app-customer-home/video') != -1) {
+                $('[name="viewport"]').attr({'content': "width=1300px, initial-scale=1, maximum-scale=1, minimum-scale=0, user-scalable=yes"});
+                $('body').css({'min-width': '1300px'})
+            }
+            Principal.identity().then(function (account) {
+                $scope.account = account;
+                if ($scope.account.role == 'ROLE_CUSTOMER' || $scope.account.role == 'ROLE_SUPER_CUSTOMER' || $scope.account.role == 'ROLE_MODERATOR') {
+                    $scope.customerPresented = true;
+
+                    $('[show-tab]').each(function () {
+                        $(this).click(function () {
+                            $('.btn_select_type.active').removeClass('active');
+                            $(this).parent('.btn_select_type').addClass('active');
+                        })
+                    });
+                }
+                if ($scope.account != undefined) {
+                    $scope.tryOrder = false;
+                }
+            });
+            $scope.videoId = $stateParams.videoId;
+            $scope.t = $stateParams.t;
+            $scope.startFrom = {enable: false, time:'00:00:00'};
+            $scope.isPauseWhenType = false;
+            $scope.video = null;
+            $scope.feedback = {reason: 'tester'};
+            $scope.tags = [];
+            $scope.newNote = {description: "", startTime: "", endTime: "", video: {id: ""}, orderNum: ""};
+            $scope.isVideoExist = null;
+            $scope.isVideoDecoded = null;
+            $scope.showMoreInsights = false;
+            $scope.isMobile = false;
+            $scope.linkText = Translation.translate('VDO.VDO73');
+            $scope.descriptionEditing = false;
+            $scope.descriptionEditingText = Translation.translate('VDO.VDO74');
+            $scope.editingInsight = {};
+
+            $scope.descriptionEdit = function (cancel, editingInsight) {
+                if (editingInsight!=null){
+                    $scope.editingInsight =  editingInsight;
+                    $scope.editingInsight.timeStart = DateUtils.secondsToHm($scope.editingInsight.timeStart);
+                    $scope.editingInsight.timeStop = DateUtils.secondsToHm($scope.editingInsight.timeStop);
+                }
+
+                if ($scope.linkText!=Translation.translate('VDO.VDO75')){
+                    $scope.showMore();
+                }
+                if (!$scope.descriptionEditing && !cancel) {
+                    $scope.descriptionEditing = true;
+                    $scope.descriptionEditingText = Translation.translate('VDO.VDO76');
+                } else {
+                    $scope.descriptionEditing = false;
+                    $scope.descriptionEditingText = Translation.translate('VDO.VDO77');
+                    if (cancel){
+                       $scope.editingInsight.timeStart = DateUtils.hmsToSeconds($scope.editingInsight.timeStart);
+                       $scope.editingInsight.timeStop = DateUtils.hmsToSeconds($scope.editingInsight.timeStop);
+                       return;
+                    } else {
+                        $scope.editingInsight.timeStart = DateUtils.hmsToSeconds($scope.editingInsight.timeStart);
+                        $scope.editingInsight.timeStop = DateUtils.hmsToSeconds($scope.editingInsight.timeStop);
+                        //editingInsight = $scope.editingInsight;
+                        Video.saveInsight($scope.editingInsight);
+                    }
+                }
+            }
+
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+                $scope.isMobile = true;
+            }
+            $scope.jumpToTimeoffset = function (time) {
+                jumpToTimeoffset(time)
+            };
+            $scope.openRightMenu = function ($event) {
+                 $this = $($event.currentTarget);
+                 var el_right_menu_info = $this.closest('.ratingPanel').find('.right_menu_info');
+                 if ($(el_right_menu_info).hasClass('open')) {
+                     $(el_right_menu_info).removeClass('open');
+                 } else {
+                     $(el_right_menu_info).addClass('open');
+                 }
+
+            }
+            Video.loadTags({videoId: $stateParams.videoId}).then(function (data) {
+                $log.info(data);
+                $scope.tags = data;
+            }).catch(function () {
+                $log.error("Can't load tags from server!")
+            });
+            $scope.idAllVideo = [];
+            $scope.showNavVideo = false;
+            $scope.numActiveVideo = 0;
+            $scope.numPrevVideo = 0;
+            $http({
+                method: 'GET',
+                url: "api/video/relatedVideoIds?videoId=" + $scope.videoId,
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+            }).then(function success(response) {
+                $scope.idAllVideo = response.data;
+                if ($scope.idAllVideo.length >= 2) {
+                    $scope.showNavVideo = true;
+                }
+                for (var i in $scope.idAllVideo) {
+                    if ($scope.idAllVideo[i] == $scope.videoId) {
+                        $scope.numActiveVideo = (Number(i) + 1);
+                        $scope.numPrevVideo = i - 1;
+                    }
+                }
+                $scope.apply;
+            });
+
+            $scope.inCopy = false;
+            if (!navigator.userAgent.match(/iPhone/i)) {
+                if (!navigator.userAgent.match(/iPod/i)) {
+                    if (document.queryCommandSupported('copy')) {
+                        $scope.inCopy = true;
+                    }
+                }
+            }
+            $scope.fullHrefPage = $config.fullUrl + '/video?videoId=' + $scope.videoId;
+            $scope.fullUrl = $config.fullUrl;
+            $scope.customerPresented = false;
+            $scope.tryOrder = true;
+            $scope.notes = '';
+            Video.loadVideoFileName({videoId: $stateParams.videoId}).then(function (data) {
+                $scope.notes = data.notes;
+                $scope.video = data;
+                $scope.posterPath = data.posterPath;
+                $scope.site = data.site;
+                $scope.owner = data.owner;
+                NEWSHERETITLE = SHERETITLE + ' ' + $scope.site;
+                $scope.isVideoExist = true;
+                if (data.posterPath) {
+                    pathPoster = data.posterPath;
+                }
+                $scope.rating = data.rating || 0.1;
+                $scope.fileName = data.fileName.replace(new RegExp(".webm", 'g'), ".mp4");
+                if ($config.profileId == 'dev') {
+                    $scope.url = 'http://localhost:9798/videos/' + $scope.fileName
+                } else {
+                    $scope.url = $config.fullUrl + '/videos/' + $scope.fileName;
+                }
+                $('#pflb-video source').each(function () {
+                   $(this).attr("src", $scope.url);
+                });
+                //check if video file is decoded on server;
+                if ($scope.fileName) {
+                    $.ajax({
+                        url: $scope.url,
+                        type: 'HEAD',
+                        async: false,
+                        error: function () {
+                            $scope.isVideoDecoded = false;
+                        },
+                        success: function () {
+                            $scope.isVideoDecoded = true;
+                        }
+                    });
+                } else {
+                    $scope.isVideoExist = false;
+                }
+
+                $scope.initPlayer();
+
+                $('.block_share_soc').attr({
+                    'data-pathsharing': $scope.posterPath ? $scope.posterPath : '/assets/images/preview_template.png',
+                    'data-titlesharing': NEWSHERETITLE,
+                    'data-descriptionsharing': SHEREDESCRIPTION
+                });
+
+            }).catch(function (error) {
+                if (error.status == 403) {
+                    $scope.isVideoForbidden = true;
+                    return;
+                }
+                $scope.isVideoExist = false;
+                $log.error("Can't load file name from server!")
+            });
+            $scope.toPrivateVideo = function () {
+                $scope.video.id = $scope.videoId;
+                Video.setPrivate($scope.video).then(function (data) {
+                    $scope.videoPrivateSaved = true;
+                    setTimeout(function () {
+                        $scope.videoPrivateSaved = false;
+                    }, 500);
+                })
+                    .catch(function (data) {
+                    });
+            }
+
+            $("[data-mask=time]").mask(TIME_MASK);
+
+            $scope.sendFeedback = function () {
+                $scope.feedback.videoId = $scope.videoId;
+                Customer.sendFeedback($scope.feedback)
+                .then(function (data) {
+                    feedbackSuccess = true;
+                    $("#bad-video").attr('checked', false);
+                    $("#bad-video-label").text(Translation.translate('VDO.VDO78'));
+                    $("#bad-video").remove();
+                })
+                .catch(function (data) {
+                    feedbackSuccess = false;
+                    $("#bad-video").attr('checked', false);
+                    $("#bad-video-label").text(Translation.translate('VDO.VDO79'));
+                    $("#bad-video").remove();
+                });
+            }
+
+            $scope.pushAndSaveVideoNotes = function () {
+                if ($scope.video.notes == null || $scope.video.notes.length == 0) {
+                    $scope.video.notes = [];
+                    $scope.newNote.orderNum = 0;
+                } else {
+                    var res = Math.max.apply(Math, $scope.video.notes.map(function (o) {
+                        return o.orderNum;
+                    }))
+                    var obj = $scope.video.notes.find(function (o) {
+                        return o.orderNum == res;
+                    });
+                    $scope.newNote.orderNum = obj.orderNum + 1;
+                }
+                $scope.newNote.video.id = $scope.videoId;
+
+                Video.updateVideoNotes($scope.newNote)
+                    .then(function (data) {
+                        $scope.video.notes.push(data);
+                        loadVideoPlayer($scope.video.notes);
+                        $scope.apply;
+                        $scope.newNote = {description: "", startTime: "", endTime: "", video: {id: ""}, orderNum: ""};
+                        $('.close_pane_note').trigger('click');
+                    })
+                    .catch(function (data) {
+
+                    });
+            };
+
+            $scope.createInsight = function (obj, isShare) {
+                var insight = {
+                    "title": obj.title_insight,
+                    "description": obj.description_insight,
+                    "timeStart": obj.currentTimerStart,
+                    "timeStop": obj.currentTimerStop,
+                    "video": {"id": $scope.videoId}
+                };
+                Video.saveInsight(insight).then(function successCallback(data) {
+                    if (isShare){
+                        $scope.insight = data;
+
+                        function createTranslationOption(translator) {this.Translation = translator;}
+                        const translationLikeOption = new createTranslationOption(Translation);
+
+                        $(".insight_modal_block").html( $compile($scope.media.renderModal('share_modal_success', translationLikeOption))($scope));
+                        $scope.fullHrefPageInsight = $config.fullUrl + '/insight-page?insightId=' + $scope.insight.id;
+                        $scope.apply;
+                        $('.close_modal').click(function (e) {
+                            $('.contain_insight').remove();
+                            $('.insight_modal_block').remove();
+                            options.showModalInsight = true;
+                        });
+                    } else {
+                      $scope.video.insights.push(data);
+                    }
+                    $('.save_modal_success span').click(function () {
+                        $state.go('insight-page', {'insightId': data.id}, {reload: false});
+                    });
+                });
+            };
+
+            $(".status_insight").on("saveinsight", function (event, obj) {
+                $scope.createInsight(obj, false);
+            }).on("shareinsight", function (event, obj) {
+                $scope.createInsight(obj, true);
+            }).on("closeinsight", function (event, obj) {
+
+            });
+            $scope.createNote = function () {
+                createNote($('#pflb-video')[0].getCurrentTime());
+            }
+
+            $scope.changeStartFrom = function (enable) {
+                if (enable){
+                    $scope.startFrom.time = DateUtils.secondsToHm($scope.media.getCurrentTime());
+                    $scope.fullHrefPage =  $scope.fullHrefPage + '&t=' + $scope.media.getCurrentTime();
+                } else {
+                    $scope.fullHrefPage =  $scope.fullHrefPage.split('&t=')[0];
+                }
+            };
+
+            $scope.showMore = function () {
+                $scope.showMoreInsights = !$scope.showMoreInsights;
+                if ($scope.showMoreInsights){
+                    $scope.linkText = Translation.translate('VDO.VDO80');
+                    $('#video-insight-hide-content').switchClass("hide-content", "show-content", 400);
+                } else {
+                    $scope.linkText = Translation.translate('VDO.VDO81');
+                    $('#video-insight-hide-content').switchClass("show-content", "hide-content", 400);
+                }
+            };
+            $scope.$watch('startFrom.time', function(newVal, oldVal){
+                $scope.fullHrefPage =  $scope.fullHrefPage.split('&t=')[0] + '&t=' + DateUtils.hmsToSeconds($scope.startFrom.time);
+            });
+            $scope.initPlayer = function () {
+                $('video').mediaelementplayer({
+                    stretching: stretching,
+                    pluginPath: '../build/',
+                    showAddNotes: $scope.owner,
+                    Translation: Translation,
+                    fullscreenText: Translation.translate('VDO.VDO108'),
+                    muteText: Translation.translate('VDO.VDO109'),
+                    unmuteText: Translation.translate('VDO.VDO110'),
+                    playText: Translation.translate('VDO.VDO111'),
+                    pauseText: Translation.translate('VDO.VDO112'),
+                    showInsightControls: $scope.owner && !$scope.isMobile,
+                    showInsight: true,
+                    success: function (media) {
+                        $scope.media = media;
+                        var renderer = $('#' + media.id + '-rendername');
+                        if ($scope.t) {
+                            media.setCurrentTime( Math.round( Number($scope.t) ));
+                        }
+                        media.addEventListener('loadedmetadata', function (e) {
+                            var src = media.originalNode.getAttribute('src').replace('&amp;', '&');
+                            if (src !== null && src !== undefined) {
+                                renderer.find('.src').html('<a href="' + src + '" target="_blank">' + src + '</a>')
+                                    .end()
+                                    .find('.renderer').html(media.rendererName)
+                                    .end()
+                                    .find('.error').html('')
+                                ;
+                                if ($config.profileId == 'dev') {
+                                } else {
+                                    media.play();
+                                }
+                                loadVideoPlayer($scope.notes);
+                            }
+                        }, false);
+
+                        media.addEventListener('error', function (e) {
+                            renderer.find('.error').html('<strong>Error</strong>: ' + e.message);
+                        }, false);
+                        $('.close_pane_note').on('click', function () {
+                            show_note = false;
+                            $('.style_active_panel_absolute').removeClass('open');
+                            $('.uxc__addnote-button button').removeClass('active')
+                        });
+
+                        // hide Add note button when fullscreen
+                        document.onwebkitfullscreenchange = function () {
+                            if (document.webkitFullscreenElement) {
+                                $('.uxc__addnote-button').hide();
+                            } else {
+                                $('.uxc__addnote-button').show();
+                            }
+                        };
+                    },
+                    error: function (mediaElement) {
+                        $scope.isVideoDecoded = false;
+                        return;
+                    }
+
+                });
+
+
+                //Start: video_script.js
+                init_sup_video($scope.notes);
+                timer = setInterval(active_time, 1000);
+                //End: video_script.js
+                //$scope.player.seekButtons({forward: 5, back: 5});
+            };
+
+            $scope.expression = function () {
+                $('#rating_video').raty({
+                    start: Number($scope.rating),
+                    click: function (rating, event) {
+                        $http({
+                            method: 'GET',
+                            url: 'api/video/rating?taskId=' + Number($scope.video.taskId) + '&rating=' + rating
+                        }).then(function successCallback(data) {
+                            $scope.rating = rating;
+                            $('#rating_video-score').val($scope.rating);
+                        }, function errorCallback(response) {
+                            $('#rating_video-score').val($scope.rating);
+                            $('.error_rating').addClass('open');
+                            setTimeout(function () {
+                                $('.error_rating').removeClass('open');
+                            }, 2000)
+                        });
+                    }
+                });
+            },
+                $scope.video_el = function (el, wq) {
+                    $scope.newNote.startTime = DateUtils.secondsToHm($('[data-secTime-notes]').attr('data-secTime-notes'));
+                };
+            $scope.deleteNote = function (id) {
+                $http({
+                    method: 'GET',
+                    url: "/api/video/removeNote?id=" + id,
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+                }).then(function success(response) {
+                        for (i in $scope.video.notes) {
+                            if ($scope.video.notes[i].id == response.data) {
+                                $scope.video.notes.splice(i, 1);
+                                loadVideoPlayer($scope.video.notes);
+                            }
+                        }
+                    }
+                );
+            };
+
+            $scope.open = function () {
+                $uibModal.open({
+                    animation: true,
+                    size: 'lg',
+                    templateUrl: 'tmpl/tmpl_home/insight-instruction.html',
+                    controller: function ($scope, $uibModalInstance) {
+                        $scope.cancel = function () {
+                            $uibModalInstance.dismiss('cancel');
+                        };
+                    }
+                });
+            };
+
+        });
+});

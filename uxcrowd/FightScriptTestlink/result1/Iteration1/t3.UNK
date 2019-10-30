@@ -1,0 +1,205 @@
+define(['../../../app'], function (app) {
+    app_cached_providers
+        .$controllerProvider
+        .register('testerSideTesterHomeController', function ($scope, $rootScope, $window, $timeout, $config,
+                                                                $stateParams, $state, Auth, $interval, $compile, Translation, $http) {
+            $scope.fullUrl = $config.fullUrl;
+            $scope.testStandLogo = $config.testStandLogo;
+            $scope.extensionID = Translation.getExtensionId();
+            $scope.group = $stateParams.gr; //getting gr
+            $scope.acc = $stateParams.ac; //getting ac
+            $scope.email = localStorage.getItem('side_tester_email');
+            $scope.checked = false; //getting ac
+            if ($scope.acc == null) {
+                 alert("Не правильная ссылка в адресной строке браузера. Пожалуйста используй правильную ссылку");
+            }
+            $scope.state = $state.current
+            $scope.params = $stateParams;
+            $scope.isMicro = false;
+            $scope.isMicroClicked = false;
+            $scope.localStream = null;
+            $scope.openVoiceInstruction = function () {
+              $http({
+                method: 'GET',
+                url: '/api/tester/voice-instruction',
+              }).then(function successCallback(data) {
+                var link = document.createElement("a");
+                link.setAttribute("href",
+                    'data:application/pdf;base64,' + data.data);
+                link.setAttribute("download", "voice-instruction.pdf");
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              });
+            };
+            $scope.submitSurvey = function () {
+                if ($scope.showMicro) {
+                    track = $scope.localStream.getTracks()[0];  // if only one media track
+                    track.stop();
+                    $state.go('st-instruction3',{gr:$scope.group,ac:$scope.acc});
+                } else {
+                    return false;
+                }
+            };
+            $scope.startTest = function () {
+               if ($scope.acc == null){
+                    alert("Не правильная ссылка в адресной строке браузера. Пожалуйста используй правильную ссылку");
+               }
+               Auth.createSideTesterAccount($scope.group, $scope.acc).then(function (data) {
+                    var startTestClick = function () {
+                        $('#startTestButton').attr('href','uxcrowd://?orderId='+$scope.orderId);
+                        $('#startTestButton').click();
+                    }
+
+                    $scope.orderId = data.orderId;
+
+                    if (data.ourTester == true) {
+                        $rootScope.openLoginModal('modal-lk-enterlk', function() {
+                            startTestClick();
+                        });
+                    } else {
+                        Auth.login({
+                            username: data.username,
+                            password: 'GdfRRee34'
+                        }).then(function (data) {
+                            startTestClick();
+                        });
+                    }
+               });
+            };
+
+            $scope.start = function() {
+              $scope.stop();
+              $scope.promise = $interval(checkPluginInstalled, 1000);
+            };
+            $scope.stop = function() {
+              $interval.cancel($scope.promise);
+            };
+            $scope.start();
+            $scope.$on('$destroy', function() {
+              $scope.stop();
+            });
+            function checkPluginInstalled() {
+                $.ajax({
+                    type: 'GET',
+                    url: 'chrome-extension://'+Translation.getExtensionId()+'/manifest.json',
+                    dataType: 'json',
+                    success: function (json) {
+                        $scope.checked = true;
+                        $scope.pluginError = "";
+                    },
+                    error: function (json) {
+                        $scope.checked = false;
+                    },
+                    data: {},
+                    async: false
+                });
+            }
+
+            $scope.success = function (audioStream) {
+               $scope.localStream = audioStream;
+               console.log('микрофон присутствует');
+               audioPlayer = document.createElement('audio');
+               audioPlayer.src = URL.createObjectURL(audioStream);
+
+               ///audioPlayer.play();
+
+               context = new AudioContext();
+
+               var source = context.createMediaStreamSource(audioStream),
+                   analyser = context.createAnalyser(),
+                   data;
+               scriptProcessor = context.createScriptProcessor(2048, 1, 1);
+               source.connect(analyser);
+               source.connect(scriptProcessor);
+               scriptProcessor.connect(context.destination);
+
+               data = new Uint8Array(analyser.frequencyBinCount);
+
+               scriptProcessor.onaudioprocess = function (e) {
+                   analyser.getByteFrequencyData(data);
+                   var progress = data[0] + '%' ;
+                   angular.element('#UXC_mic_progress').css('height', progress );
+                   //$('#UXC_mic_progress').css({'height': data[0].progress + '%'});
+               };
+                $scope.isMicroClicked = false;
+                $scope.showMicro = true;
+                $scope.$apply();
+            }
+            $scope.fail = function (s) {
+                $scope.isMicroClicked = false;
+                $scope.showMicro = false;
+                 $scope.$apply();
+            }
+            $scope.toStep1 = function ($event) {
+                $scope.error  ="";
+                if ($('.final_block_inputs .ng-invalid-elevalidation').length <= 0 && $scope.email!= null) {
+                    localStorage.setItem('side_tester_email', $scope.email);
+                    if ($scope.checked){
+                        if ($scope.acc == null){
+                             alert("Не правильная ссылка в адресной строке браузера. Пожалуйста используй правильную ссылку");
+                        }
+                        $scope.account = {"acc": $scope.acc, "email": $scope.email};
+                        Auth.createSideTesterAccount($scope.account).then(function (data) {
+                            var startTestClick = function () {
+                                $('#startTestButton').attr('href','uxcrowd://?orderId='+$scope.orderId);
+                                $('#startTestButton').click();
+                            }
+                             $scope.orderId = data.orderId;
+                             if (data.ourTester == true) {
+                                $rootScope.openLoginModal('modal-lk-enterlk', function() {
+                                    startTestClick();
+                                });
+                             } else {
+                                Auth.login({
+                                    username: data.username,
+                                    password: 'GdfRRee34'
+                                }).then(function (data) {
+                                    startTestClick();
+                                }).catch(function (data) {
+                                   console.log(data);
+                                });
+                             }
+                        }).catch(function (data) {
+                          if (data.data.message
+                              === 'THIS_TEST_IS_NO_LONGER_ACTIVE') {
+                            $scope.error = Translation.translate('TMT.TMT23');
+                          } else if (data.data.message
+                              === 'YOU_HAVE_ALREADY_COMPLETED_THIS_TEST') {
+                            $scope.error = Translation.translate('TMT.TMT24');
+                          } else if (data.data.message
+                              === 'YOU_HAVE_ALREADY_WORKING_ON_THIS_TEST') {
+                            $scope.error = Translation.translate('TMT.TMT25');
+                          } else if (data.data.message
+                              === 'CUSTOMER_CANNOT_PASS_TEST') {
+                            $scope.error = Translation.translate('TMT.TMT26');
+                          } else if (data.data.message
+                              === 'WRONG_LINK') {
+                            $scope.error = Translation.translate('TMT.TMT27');
+                          } else {
+                            $scope.error = "Ошибка сервиса.";
+                          }
+                          return;
+                        });
+                        return;
+                    } else {
+                        $scope.pluginError = "Необходимо установить расширение чтобы продолжить";
+                        $scope.error  ="";
+                    }
+                } else {
+                    $scope.error = "Необходимо указать реальный E-mail"
+                }
+            }
+            $scope.checkMicro = function (a) {
+                 $scope.isMicroClicked = true;
+
+                 navigator.getUserMedia({
+                     audio: true
+                 }, $scope.success, $scope.fail);
+
+
+
+                return;
+            }
+        });
+});

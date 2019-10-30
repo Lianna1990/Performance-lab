@@ -1,0 +1,13 @@
+[t101]
+FileName1=t101.json
+URL1=https://prod.uxcrowd.ru/api/stats/update
+Total=2
+RequestHeaderFile=t101_RequestHeader.txt
+RequestBodyFile=t101_RequestBody.txt
+ResponseHeaderFile=t101_ResponseHeader.txt
+ContentType=application/json
+SnapshotXmlFile=snapshot_101.xml
+FileName2=t101_rtrg.gif
+URL2=https://vk.com/rtrg?p=VK-RTRG-208363-3NOqH
+[ProtocolInfo]
+ProtocolId=QTWeb

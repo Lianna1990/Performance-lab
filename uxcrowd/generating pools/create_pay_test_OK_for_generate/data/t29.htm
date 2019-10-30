@@ -1,0 +1,79 @@
+<div class="list-view-wrapper">
+    <h2 class="second-title" ng-tr="DOR.DOR1">
+        Список черновиков
+    </h2>
+
+    <div class="block_list">
+        <div class="header_table">
+            <div class="all_info orders-list">
+                <div class="order-num-table table-header-names">
+                    №
+                </div>
+
+                <div class="date-table table-header-names" ng-tr="DOR.DOR2">
+                    Дата
+                </div>
+
+                <!-- <div class="">
+                Название
+            </div> -->
+
+            <div class="link-table table-header-names" ng-tr="DOR.DOR3">
+                Сайт
+            </div>
+
+
+            <div class="actions-table table-header-names" ng-tr="DOR.DOR4">
+                Действия
+            </div>
+        </div>
+    </div>
+
+    <div class="item_row" ng:repeat="order in customerOrders track by order.id">
+        <div class="all_info orders-list">
+            <div class="order-num-table">
+                {{order.id}}
+            </div>
+
+            <div class="date-table">
+                <span ng-if="config.locale == 'ru'">{{order.createDate | date:'dd.MM.yyyy'}}</span>
+                <span ng-if="config.locale == 'en'">{{order.createDate | date:'MM/dd/yyyy'}}</span>
+            </div>
+
+            <!-- <div class="col-xs-2 not_overflow">
+                {{order.testTitle}}
+            </div> -->
+
+            <div class="link-table">
+                {{order.targetSite}}
+            </div>
+
+            <div class="actions-table">
+                <span class="link" ng-click="editDraft(order.id)" role="button" ng-tr="DOR.DOR6">
+                    Редактировать и запустить
+                </span>
+
+                <span ng-click="copyOrder(order.id)" aria-hidden="true" title="{{'DOR.DOR7' | translate}}">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                         viewBox="0 0 43 46"><defs></defs><title>{{'DOR.DOR7' | translate}}</title><g
+                        id="Layer_2" data-name="Layer 2"><g id="copy"><path class="cls-2"
+                                                                            d="M39,6V38a4,4,0,0,1-4,4H7a4,4,0,0,0,4,4H39a4,4,0,0,0,4-4V10a4,4,0,0,0-4-4Z"/><path
+                        class="cls-2"
+                        d="M32,4V36H4V4H32m0-4H4A4,4,0,0,0,0,4V36a4,4,0,0,0,4,4H32a4,4,0,0,0,4-4V4a4,4,0,0,0-4-4Z"/></g></g>
+                    </svg>
+                </span>
+
+                <span ng-click="delDraft(order.id)" role="button" title="{{'DOR.DOR8' | translate}}">
+                    <svg class="delete-icon" xmlns="http://www.w3.org/2000/svg" width="20"
+                         height="20" viewBox="0 0 32 46"><defs></defs><title>{{'DOR.DOR8' | translate}}</title><g
+                        id="Layer_2" data-name="Layer 2"><g id="delete"><path class="cls-1"
+                                                                              d="M28,18h0L23.55,42H8.45L4,18H28m0-4H4A4,4,0,0,0,.07,18.74l4.45,24A4,4,0,0,0,8.41,46H23.59a4,4,0,0,0,3.89-3.26l4.45-24A4,4,0,0,0,28,14Z"/><path
+                        class="cls-1"
+                        d="M17,0H14a1,1,0,0,0-1,1V3c0,.55,0,1-1,1H1A1,1,0,0,0,0,5V8A1,1,0,0,0,1,9H31a1,1,0,0,0,1-1V5a1,1,0,0,0-1-1H18.83C18,4,18,3.93,18,3V1a1,1,0,0,0-1-1Z"/></g></g>
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

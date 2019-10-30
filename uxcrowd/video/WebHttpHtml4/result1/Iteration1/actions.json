@@ -1,0 +1,44 @@
+[
+    {
+        "actionName": "Action",
+        "steps": [
+            {
+                "stepId": "STEP1",
+                "stepName": "Custom Request: get_token",
+                "infFile": "t1.inf",
+                "time": 1572269223626
+            },
+            {
+                "stepId": "STEP2",
+                "stepName": "Custom Request: main",
+                "infFile": "t2.inf",
+                "time": 1572269225694
+            },
+            {
+                "stepId": "STEP3",
+                "stepName": "Submit Data: authentication",
+                "infFile": "t3.inf",
+                "time": 1572269225969
+            },
+            {
+                "stepId": "STEP4",
+                "stepName": "Custom Request: profile_3",
+                "infFile": "t4.inf",
+                "time": 1572269226080
+            },
+            {
+                "stepId": "STEP5",
+                "stepName": "Custom Request: api/account",
+                "infFile": "t5.inf",
+                "time": 1572269226195
+            },
+            {
+                "stepId": "STEP6",
+                "stepName": "Submit Data: api/video-upload-app",
+                "infFile": "t6.inf",
+                "time": 1572269240047
+            }
+        ],
+        "transactions": []
+    }
+]

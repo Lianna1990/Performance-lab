@@ -1,0 +1,50 @@
+﻿var i, c, y, v, s, n;
+v = document.getElementsByClassName("youtube");
+if (v.length > 0) {
+    s = document.createElement("style");
+    s.type = "text/css";
+    s.innerHTML = '.youtube{background-color:#000;max-width:100%;overflow:hidden;position:relative;cursor:hand;cursor:pointer}.youtube .thumb{bottom:0;display:block;left:0;margin:auto;max-width:100%;position:absolute;right:0;top:0;width:100%;height:auto}.youtube .play{filter:alpha(opacity=80);opacity:.8;height:77px;left:50%;margin-left:-38px;margin-top:-38px;position:absolute;top:50%;width:77px;background:url("/assets/images/1.png") no-repeat}';
+    document.body.appendChild(s)
+}
+for (n = 0; n < v.length; n++) {
+    y = v[n];
+    i = document.createElement("img");
+    if(y.id == 'uKLmtq0RjSs'){
+        i.setAttribute("src", "/assets/images/usability-testing.jpg");
+        i.setAttribute("alt", "Юзабилити-тестирование");
+    }else{
+        i.setAttribute("src", "https://i.ytimg.com/vi/" + y.id + "/hqdefault.jpg");
+    }
+    i.setAttribute("class", "thumb");
+    c = document.createElement("div");
+    c.setAttribute("class", "play");
+    y.appendChild(i);
+    y.appendChild(c);
+    y.onclick = function () {
+        var a = document.createElement("iframe");
+        a.setAttribute("src", "https://www.youtube.com/embed/" + this.id + "?rel=0&autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1");
+        a.setAttribute("id", this.id + '_uxc');
+        a.setAttribute("allowfullscreen", true);
+        a.style.width = this.style.width;
+        a.style.height = this.style.height;
+        a.style.position = this.style.position;
+        a.style.top = this.style.top;
+        a.style.left = this.style.left;
+        a.style.right = this.style.right;
+        a.style.bottom = this.style.bottom;
+        this.parentNode.replaceChild(a, this);
+       // onYouTubePlayerAPIReadys();
+    }
+}
+
+$('.close_modal_btn').click(function () {
+  $('.main_page_modal_el_bg').removeClass('open');
+  //$('#uxc_video_example').removeClass('open');
+  var iframe = document.getElementById('uxc_video_example');
+  iframe.src = iframe.src;
+});
+
+/*
+$('.href_el_video').click(function () {
+    $('.main_page_modal_el_bg').addClass('open');
+});*/

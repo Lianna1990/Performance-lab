@@ -1,0 +1,17 @@
+[t53]
+FileName1=t53.htm
+URL1=https://prod.uxcrowd.ru/app-new-tester-home/instruction3
+Total=4
+RequestHeaderFile=t53_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t53_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_53.xml
+FileName2=t53.html
+URL2=https://ulogin-stats.ru/visit/
+FileName3=t53_home.controller.html
+URL3=https://prod.uxcrowd.ru/controller/controllers_testers/controller_new_tester/home.controller.js?bust=1571906673560
+FileName4=t53_header.controller.html
+URL4=https://prod.uxcrowd.ru/controller/controllers_testers/controller_new_tester/header.controller.js?bust=1571906673560
+[ProtocolInfo]
+ProtocolId=QTWeb

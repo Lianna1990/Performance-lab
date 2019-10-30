@@ -1,0 +1,83 @@
+define(['../../../app'], function (app) {
+    app_cached_providers
+        .$controllerProvider
+        .register('testerHeaderController', function ($rootScope, $scope, $state, $config, $uibModal,
+                                                      Principal, Header, Auth, $window, $http, Translation, Tester) {
+            $scope.testStandLogo = $config.testStandLogo;
+            $scope.fullUrl = $config.fullUrl;
+            $scope.extensionID = Translation.getExtensionId();
+            Principal.identity().then(function (account) {
+                $scope.account = account;
+                if (account.balance!=null){
+                    $scope.balance = format_price(account.balance);
+                }
+                $scope.id = account.id;
+                $http({
+                    method: 'GET',
+                    url: 'api/tester/rating?testerId=' + $scope.id
+                }).then(function successCallback(data) {
+                    $scope.rating = data.data;
+                    setTimeout(function () {
+                        $('#tester_raiting').raty({
+                            readOnly: true,
+                            start: $scope.rating,
+                            half    : true,
+                            noRatedMsg: "Нет оценок"
+                        });
+                    }, 100);
+                }, function errorCallback(response) {
+                });
+            });
+            $scope.openVoiceInstruction = function () {
+              $http({
+                method: 'GET',
+                url: '/api/tester/voice-instruction',
+              }).then(function successCallback(data) {
+                var link = document.createElement("a");
+                link.setAttribute("href",
+                    'data:application/pdf;base64,' + data.data);
+                link.setAttribute("download", "voice-instruction.pdf");
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              });
+            };
+            $scope.logout = function () {
+                Auth.logout();
+                $state.go('new_main_index');
+            };
+            $scope.isDisabled = false;
+
+            $scope.payout = function () {
+                Header.balance().then(function (account) {
+                    var sc = $scope;
+                    $uibModal.open({
+                        animation: true,
+                        size: 'md',
+                        templateUrl: '../../tmpl/tmpl_testers/tmpl_tester/withdraw_modal.html',
+                        controller: function ($scope, $uibModalInstance,$sce) {
+                            $scope.withdraw = {type:"paypal"};
+                            if ($config.locale=='ru'){
+                                $scope.withdraw.type = "ethereum";
+                            }
+                            $scope.sum = account.balance;
+                            $scope.cancel = function () {
+                                $uibModalInstance.dismiss('cancel');
+                            };
+                            $scope.ok = function () {
+                                $scope.isDisabled = true;
+                                $scope.payoutDone = false;
+                                Tester.doWithdraw($scope.withdraw).then(function (account) {
+                                    $scope.payoutDone = true;
+                                    $scope.transactionHash = account.transactionHash;
+                                }).catch(function (data){
+                                    $('.errors_block').html(Translation.translate('INT.INT29'));
+                                });
+                            }
+                        }
+                    });
+                });
+            };
+        });
+});
+

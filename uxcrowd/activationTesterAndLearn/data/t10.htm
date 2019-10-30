@@ -1,0 +1,12 @@
+<div class="tester-header">
+    <a class="logo" ng-href="{{fullUrl}}">
+        <img class="logo-image" src="../assets/images/logo-final.png">
+        <img ng-if="testStandLogo" class="test-stand-dynamic" src="../assets/images/test-stand.png">
+    </a>
+    <div class="tester-header-items header-text" style="text-align: center;"><a href="#" class="text-clickable" ng-click="openVoiceInstruction()" ng-tr="TEHE.TEHE1">Инструкция по настройке звука</a></div>
+    <a class="green_button customer-header-items" ng-href="https://chrome.google.com/webstore/detail/uxcrowd/{{extensionID}}" ng-tr="TEHE.TEHE2" target="_blank">Скачать расширение</a>
+    <div class="tester-header-items header-text menu-border">{{account.login}}</div>
+    <a class="tester-header-items header-text" style="" href="" translate="global.menu.account.logout" ng-click="logout()" id="logout" ng-tr="TEHE.TEHE3">
+        Выйти
+    </a>
+</div>

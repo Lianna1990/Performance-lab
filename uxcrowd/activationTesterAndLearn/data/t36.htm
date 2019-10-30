@@ -1,0 +1,50 @@
+<div class="activate-wrapper">
+    <div class="activate" ng-show="existKey">
+        <div class="modal-lk-wrapper">
+            <h2 class="second-title" ng-tr="ACH.ACH">Придумайте пароль</h2>
+            <div class="errors_block"></div>
+            <form class="" role="form" ng-submit="passwordConfirm($event)">
+                <div class="form-group">
+                    <input class="modal-lk-password-input initialPassword ng-invalid-elevalidation" elevalidation data-type="password"
+                    data-text-error="{{'ACH.ACH7' | translate}}"
+                    ng-model="password.newPassword"
+                    type="password"
+                    placeholder="{{'ACH.ACH9' | translate}}">
+
+                    <input class="modal-lk-password-input confirmPassword ng-invalid-elevalidation" ng-change="checkPassword()"
+                    data-type="confirmPassword"
+                    data-text-error="{{'ACH.ACH8' | translate}}"
+                    ng-model="password.confirmPassword"
+                    type="password"
+                    placeholder="{{'ACH.ACH10' | translate}}">
+
+                    <button type="submit" class="submit_button" ng-tr="ACH.ACH1">Войти</button>
+                </div>
+            </form>
+            <a href="/" class="link" ng-tr="ACH.ACH2">Вернуться на UXCrowd</a>
+        </div>
+    </div>
+
+    <div class="activate" ng-show="!existKey && !successActivation">
+        <div class="modal-lk-wrapper">
+            <p class="err-message" ng-tr="ACH.ACH3">Cсылка устарела или была использована.</p>
+            <button type="submit" class="submit_button" ng-click="$state.go('new_main_index')" ng-tr="ACH.ACH4">
+                Вернуться на UXCrowd
+            </button>
+        </div>
+    </div>
+
+    <div ng-show="!existKey && successActivation">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success">
+                <span class="bold-text" ng-tr="ACH.ACH5">Ваш аккаунт успешно активирован.</span>.
+            </div>
+            <div class="">
+                <button type="submit" class="green_button btn btn-primary" ng-click="$state.go('new_main_index')" ng-tr="ACH.ACH6">
+                    Вернуться на UXCrowd
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>

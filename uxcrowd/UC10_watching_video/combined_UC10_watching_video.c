@@ -1,0 +1,7 @@
+#include "lrun.h"
+#include "SharedParameter.h"
+#include "globals.h"
+#include "vuser_init.c"
+#include "Action.c"
+#include "UC09_list_of_tests_client.c"
+#include "vuser_end.c"

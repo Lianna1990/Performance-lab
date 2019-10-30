@@ -1,0 +1,9 @@
+define(['../../../app'], function (app) {
+    app_cached_providers
+        .$controllerProvider
+        .register('testerHomeController', function ($scope, $state, Principal, Auth) {
+            Principal.identity().then(function (account) {
+                $scope.account = account;
+            });
+        });
+});

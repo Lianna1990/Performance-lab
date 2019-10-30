@@ -1,0 +1,13 @@
+GET /api/tester/has-completed-video HTTP/1.1
+Host: prod.uxcrowd.ru
+Connection: keep-alive
+Accept: application/json, text/plain, */*
+X-XSRF-TOKEN: ce9182e4-614f-4c3d-b58b-d22c8c8185b5
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Referer: https://prod.uxcrowd.ru/activate?key=41321040590282137284
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: CSRF-TOKEN=76ff0695-1d69-4794-a270-47a99facce62; dbl=aacc30ec1e4ba6fc895ee20a496916cd; fco2r34=aacc30ec1e4ba6fc895ee20a496916cd; XSRF-TOKEN=ce9182e4-614f-4c3d-b58b-d22c8c8185b5; remember-me=SHNnVjlIZmRMMUV6ZHNHNnJRbGxMUSUzRCUzRDpZVkxqSUw3SElXdUpRMFhzYzFXVHVRJTNEJTNE; userId=493253221; JSESSIONID=7B5B497D1FD9E83EE4F06A9EB4CA59BB; newTesterState=welcome
+

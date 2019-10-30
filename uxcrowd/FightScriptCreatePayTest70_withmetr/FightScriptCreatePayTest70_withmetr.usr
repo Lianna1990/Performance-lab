@@ -1,0 +1,69 @@
+[General]
+Type=Multi
+DefaultCfg=default.cfg
+ParameterFile=FightScriptCreatePayTest70_withmetr.prm
+GlobalParameterFile=
+NewFunctionHeader=1
+RunType=cci
+ActionLogicExt=action_logic
+LastActiveAction=Action
+MajorVersion=12
+MinorVersion=53
+ActiveTypes=QTWeb
+GenerateTypes=QTWeb
+AdditionalTypes=QTWeb
+DevelopTool=Vugen
+LastModifyVer=12.53.0.1203
+ParamLeftBrace={
+ParamRightBrace=}
+ScriptLanguage=C
+LastCodeGenerationVer=12.60.0.971
+DisableRegenerate=0
+Encoding=ANSI
+Description=
+ScriptLocale=ru-RU
+[Actions]
+vuser_init=vuser_init.c
+UC08_create_pay_test=UC08_create_pay_test.c
+vuser_end=vuser_end.c
+[RunLogicFiles]
+Default Profile=default.usp
+[VuserProfiles]
+Profiles=Default Profile
+[CfgFiles]
+Default Profile=default.cfg
+[ExtraFiles]
+globals.h=
+WebSocketBuffer.h=
+[Modified Actions]
+vuser_init=1
+UC08_create_pay_test=1
+vuser_end=0
+[Recorded Actions]
+vuser_init=0
+UC08_create_pay_test=1
+vuser_end=0
+[Replayed Actions]
+vuser_init=1
+UC08_create_pay_test=1
+vuser_end=1
+[Interpreters]
+vuser_init=cci
+UC08_create_pay_test=cci
+vuser_end=cci
+[TransactionsOrder]
+Order="Homepage__*delimiter*__Login__*delimiter*__UC_08_create_pay_test__*delimiter*__Create_new_test__*delimiter*__Add_description__*delimiter*__Participant_group__*delimiter*__Add_question__*delimiter*__Logout"
+[StateManagement]
+LastReplayStatus=2
+[ActiveReplay]
+LastReplayedRunName=result1
+ActiveRunName=result1
+[Transactions]
+Homepage=
+Login=
+UC_08_create_pay_test=
+Create_new_test=
+Add_description=
+Participant_group=
+Add_question=
+Logout=

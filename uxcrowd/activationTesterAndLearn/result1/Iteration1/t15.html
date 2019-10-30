@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="welcome-one">
+        <div class="slide-header" ng-tr="TEI2.TEI1">
+        </div>
+    </div>
+</div>
+<div class="forth-row">
+    <div class="numbers-block">
+        <ul style="text-align: center;">
+            <li ng-tr="TEI2.TEI2"></li>
+            <li class="video-button">
+                <a ng-href="https://chrome.google.com/webstore/detail/uxcrowd/{{extensionID}}" target="_blank">
+                    <img style="margin-right: 10px;" src="../assets/images/download-arr.png"><span
+                        class="presentation-link" ng-tr="TEI2.TEI3"></span>
+                </a>
+            </li>
+            <li ng-tr="TEI2.TEI4"></li>
+            <!-- <li class="video-button"><label><span ng-tr="TEI2.TEI5"></span><input type="checkbox" ng-model="checked"></label></li> -->
+        </ul>
+    </div>
+</div>
+
+<div class="button-row">
+    <a class="white-button" ui-sref="instruction1" ng-tr="TEI2.TEI6"></a>
+    <a class="btn green-button" ng-disabled="!checked" ng-click="submitSurvey3(survey)" ng-disabled="myForm.$invalid" ng-tr="TEI2.TEI7"></a>
+</div>
+<script>
+    setCookie('newTesterState', '');
+</script>

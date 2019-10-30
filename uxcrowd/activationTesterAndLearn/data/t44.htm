@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="welcome-one" style="height: 5px;">
+        <div class="slide-header welcome-h" ng-tr="TEW.TEW1">
+        </div>
+    </div>
+</div>
+<div class="forth-row">
+    <div class="numbers-block">
+        <ul style="text-align: center;font-size: 18px;">
+            <div class="paid-tests" ng-tr="TEW.TEW2">
+            </div>
+            <br>
+            <div class="paid-tests" ng-tr="TEW.TEW3">
+            </div>
+            <div class="paid-tests" ng-tr="TEW.TEW4">
+            </div>
+            <div class="paid-tests" ng-tr="TEW.TEW5" ng-if="config.locale == 'ru'">
+            </div>
+            <br>
+            <section class="item_section main-audience" ng-if="config.locale == 'ru'">
+                <div class="">
+                    <div class="container_better_webflow w-container">
+                        <div class="w-embed w-video">
+                            <div class="main-video-wrapper">
+                                <!-- <div class="youtube" id="uKLmtq0RjSs"></div> -->
+                                <img class="picture-169" src="../../assets/images/16-9.png">
+                                <iframe ng-src="{{youtubeIntroAsEmbed()}}" allowfullscreen="true"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </ul>
+    </div>
+</div>
+
+
+<div class="button-row">
+    <a class="btn green-button" ui-sref="instruction1" ng-tr="TEW.TEW6"></a>
+</div>
+<script src="assets/js/home_js/youtube.js"></script>
+<script>setCookie('newTesterState', 'welcome');</script>

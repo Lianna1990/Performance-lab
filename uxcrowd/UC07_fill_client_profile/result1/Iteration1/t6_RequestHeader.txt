@@ -1,0 +1,10 @@
+GET /api/customer/orders HTTP/1.1
+Referer: https://prod.uxcrowd.ru/
+X-XSRF-TOKEN: aaf41c6f-84c9-49a7-bbe6-cd126875a379
+User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: Keep-Alive
+Host: prod.uxcrowd.ru
+Cookie: CSRF-TOKEN=28707d66-3037-4707-96e2-57c9b50ab467; XSRF-TOKEN=aaf41c6f-84c9-49a7-bbe6-cd126875a379; remember-me=SkRiTkhJOTBWZm1Cak54M0tVMCUyQlF3JTNEJTNEOlNZbWFjblRuMVZHRDBWJTJCNXBMRVVzdyUzRCUzRA; userId=493253108; JSESSIONID=F46AD00BF2406A7F683F56E70920F580
+

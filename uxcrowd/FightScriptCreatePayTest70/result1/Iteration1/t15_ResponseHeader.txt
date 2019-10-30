@@ -1,0 +1,16 @@
+HTTP/2.0 200
+Status: 200
+server: nginx
+date: Fri, 25 Oct 2019 09:45:53 GMT
+content-type: application/json;charset=UTF-8
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+vary: accept-encoding
+content-encoding: gzip
+access-control-origin: https://test.uxcrowd.ru
+content-security-policy-report-only: default-src https:; script-src https: 'unsafe-eval' 'unsafe-inline'; style-src https: 'unsafe-inline'; img-src https: data:; font-src https: data:; report-uri /csp-report
+strict-transport-security: max-age=86400;
+

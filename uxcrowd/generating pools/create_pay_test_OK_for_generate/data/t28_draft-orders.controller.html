@@ -1,0 +1,90 @@
+define(['../../app'], function (app) {
+    app_cached_providers
+        .$controllerProvider
+        .register('customerOrderDraftController', function ($state, $scope, Orders, $uibModal, $http, Translation) {
+            $scope.customerOrders = [];
+            $scope.loadAll = function () {
+                Orders.getDrafts().then(function (data) {
+                    $scope.customerOrders = data;
+                }).catch(function (data) {
+                    $scope.clear();
+                    $scope.error = 'ERROR';
+                    $scope.message = data.data;
+                });
+                $scope.apply;
+            };
+            $scope.loadAll();
+            $scope.delDraft = function (id) {
+                var sc = $scope;
+                $uibModal.open({
+                    animation: true,
+                    size: 'lg',
+                    templateUrl: '../../tmpl/tmpl_customer/modaltmp.html',
+                    controller: function ($scope, $uibModalInstance) {
+                        $scope.orderId = id;
+                        $scope.textMSG = Translation.translate('INT.INT16') + ' ' + $scope.orderId + '?';
+                        $scope.textNO = Translation.translate('INT.INT17');
+                        $scope.textYES = Translation.translate('INT.INT18');
+                        $scope.cancel = function () {
+                            $uibModalInstance.dismiss('cancel');
+                        };
+                        $scope.ok = function (id) {
+                            $http({
+                                method: 'GET',
+                                url: "/api/customer/removeDraft?id=" + $scope.orderId,
+                                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+                            }).then(function success(response) {
+                                    sc.loadAll();
+                                }
+                            );
+                            $uibModalInstance.dismiss('cancel');
+                        }
+                    }
+                });
+            };
+            $scope.refresh = function () {
+                $scope.loadAll();
+                $scope.clear();
+            };
+            $scope.clear = function () {
+                $scope.customerOrders = {};
+            };
+            $scope.open = function (order) {
+                $uibModal.open({
+                    animation: true,
+                    size: 'lg',
+                    templateUrl: 'scripts/app-customer/order/order-detail/detail.html',
+                    controller: function ($scope, $uibModalInstance) {
+                        $scope.details = order;
+                        $scope.cancel = function () {
+                            $uibModalInstance.dismiss('cancel');
+                        };
+                    }
+                });
+            };
+            $scope.editDraft = function (id) {
+                $state.go('order', {'id': id, 'as':'select_tester'})
+            };
+            $scope.copyOrder = function (id) {
+                var sc = $scope;
+                $uibModal.open({
+                    animation: true,
+                    size: 'lg',
+                    templateUrl: '../../tmpl/tmpl_customer/modaltmp.html',
+                    controller: function ($scope, $uibModalInstance,$sce) {
+                        $scope.orderId = id;
+                        $scope.textMSG = $sce.trustAsHtml(Translation.translate('INT.INT19') + ' ' + id + '?');
+                        $scope.textNO = $sce.trustAsHtml(Translation.translate('INT.INT17'));
+                        $scope.textYES = $sce.trustAsHtml(Translation.translate('INT.INT18'));
+                        $scope.cancel = function () {
+                            $uibModalInstance.dismiss('cancel');
+                        };
+                        $scope.ok = function () {
+                            Orders.copyOrder($scope.orderId, sc.loadAll);
+                            $uibModalInstance.dismiss('cancel');
+                        }
+                    }
+                });
+            }
+        });
+});

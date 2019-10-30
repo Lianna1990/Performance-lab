@@ -1,0 +1,160 @@
+[
+    {
+        "actionName": "UC08_create_pay_test",
+        "steps": [
+            {
+                "stepId": "STEP1",
+                "stepName": "Url: /",
+                "infFile": "t1.inf",
+                "time": 1571996745651
+            },
+            {
+                "stepId": "STEP2",
+                "stepName": "Url: /api/account",
+                "infFile": "t2.inf",
+                "time": 1571996745855
+            },
+            {
+                "stepId": "STEP3",
+                "stepName": "Submit Data: /api/authentication",
+                "infFile": "t3.inf",
+                "time": 1571996746236
+            },
+            {
+                "stepId": "STEP4",
+                "stepName": "Url: /api/account",
+                "infFile": "t4.inf",
+                "time": 1571996746357
+            },
+            {
+                "stepId": "STEP5",
+                "stepName": "Url: /api/v2/customer/profile",
+                "infFile": "t5.inf",
+                "time": 1571996746553
+            },
+            {
+                "stepId": "STEP6",
+                "stepName": "Url: /api/customer/hist-orders",
+                "infFile": "t6.inf",
+                "time": 1571996746661
+            },
+            {
+                "stepId": "STEP7",
+                "stepName": "Url: /api/customer/waitingOrders",
+                "infFile": "t7.inf",
+                "time": 1571996746768
+            },
+            {
+                "stepId": "STEP8",
+                "stepName": "Url: /api/customer/orders",
+                "infFile": "t8.inf",
+                "time": 1571996749031
+            },
+            {
+                "stepId": "STEP9",
+                "stepName": "Url: new.order.html",
+                "infFile": "t9.inf",
+                "time": 1571996749814
+            },
+            {
+                "stepId": "STEP10",
+                "stepName": "Custom Request: draft",
+                "infFile": "t11.inf",
+                "time": 1571996750232
+            },
+            {
+                "stepId": "STEP11",
+                "stepName": "Custom Request: updateOrderAudience",
+                "infFile": "t12.inf",
+                "time": 1571996750536
+            },
+            {
+                "stepId": "STEP12",
+                "stepName": "Custom Request: updateOrderSteps",
+                "infFile": "t13.inf",
+                "time": 1571996750846
+            },
+            {
+                "stepId": "STEP13",
+                "stepName": "Url: calculatePrice",
+                "infFile": "t14.inf",
+                "time": 1571996751001
+            },
+            {
+                "stepId": "STEP14",
+                "stepName": "Url: paymentInitRequest_2",
+                "infFile": "t15.inf",
+                "time": 1571996751278
+            },
+            {
+                "stepId": "STEP15",
+                "stepName": "Custom Request: logout",
+                "infFile": "t16.inf",
+                "time": 1571996751494
+            },
+            {
+                "stepId": "STEP16",
+                "stepName": "Url: /api/account/",
+                "infFile": "t17.inf",
+                "time": 1571996751592
+            },
+            {
+                "stepId": "STEP17",
+                "stepName": "Url: /",
+                "infFile": "t18.inf",
+                "time": 1571996751772
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "Homepage",
+                "rawStartTime": 1571996737733,
+                "rawEndTime": 1571996745652,
+                "thinkTime": 0.0,
+                "wastedTime": 0.5166118144989014
+            },
+            {
+                "transactionName": "Login",
+                "rawStartTime": 1571996745865,
+                "rawEndTime": 1571996749033,
+                "thinkTime": 0.0,
+                "wastedTime": 0.15634989738464356
+            },
+            {
+                "transactionName": "Create_new_test",
+                "rawStartTime": 1571996749132,
+                "rawEndTime": 1571996749816,
+                "thinkTime": 0.0,
+                "wastedTime": 0.04587388038635254
+            },
+            {
+                "transactionName": "Add_description",
+                "rawStartTime": 1571996749900,
+                "rawEndTime": 1571996750234,
+                "thinkTime": 0.0,
+                "wastedTime": 0.03137612342834473
+            },
+            {
+                "transactionName": "Participant_group",
+                "rawStartTime": 1571996750316,
+                "rawEndTime": 1571996750537,
+                "thinkTime": 0.0,
+                "wastedTime": 0.02188897132873535
+            },
+            {
+                "transactionName": "Add_question",
+                "rawStartTime": 1571996750621,
+                "rawEndTime": 1571996751002,
+                "thinkTime": 0.0,
+                "wastedTime": 0.04045557975769043
+            },
+            {
+                "transactionName": "Logout",
+                "rawStartTime": 1571996751280,
+                "rawEndTime": 1571996751774,
+                "thinkTime": 0.0,
+                "wastedTime": 0.10557079315185547
+            }
+        ]
+    }
+]

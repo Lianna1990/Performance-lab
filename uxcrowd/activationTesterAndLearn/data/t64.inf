@@ -1,0 +1,11 @@
+[t64]
+FileName1=t64.json
+URL1=https://prod.uxcrowd.ru/api/tester/create-task?orderId=4
+Total=1
+RequestHeaderFile=t64_RequestHeader.txt
+RequestBodyFile=t64_RequestBody.txt
+ResponseHeaderFile=t64_ResponseHeader.txt
+ContentType=application/json
+SnapshotXmlFile=snapshot_64.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

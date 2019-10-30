@@ -1,0 +1,77 @@
+[General]
+Type=Multi
+DefaultCfg=default.cfg
+ParameterFile=FightScriptClient.prm
+GlobalParameterFile=
+NewFunctionHeader=1
+RunType=cci
+ActionLogicExt=action_logic
+LastActiveAction=Action
+MajorVersion=12
+MinorVersion=60
+ActiveTypes=QTWeb
+GenerateTypes=QTWeb
+AdditionalTypes=QTWeb
+DevelopTool=Vugen
+LastModifyVer=12.60.0.971
+ParamLeftBrace={
+ParamRightBrace=}
+ScriptLanguage=C
+LastCodeGenerationVer=
+DisableRegenerate=0
+Encoding=
+Description=
+ScriptLocale=ru-RU
+[Actions]
+vuser_init=vuser_init.c
+UC09_list_of_tests_client=UC09_list_of_tests_client.c
+UC10_watching_video=UC10_watching_video.c
+UC11_upload_results=UC11_upload_results.c
+vuser_end=vuser_end.c
+[RunLogicFiles]
+Default Profile=default.usp
+[VuserProfiles]
+Profiles=Default Profile
+[CfgFiles]
+Default Profile=default.cfg
+[ExtraFiles]
+globals.h=
+[Modified Actions]
+vuser_init=1
+UC09_list_of_tests_client=1
+UC10_watching_video=1
+UC11_upload_results=1
+vuser_end=1
+[Recorded Actions]
+vuser_init=0
+UC09_list_of_tests_client=0
+UC10_watching_video=0
+UC11_upload_results=0
+vuser_end=0
+[Replayed Actions]
+vuser_init=1
+UC09_list_of_tests_client=1
+UC10_watching_video=1
+UC11_upload_results=1
+vuser_end=1
+[Interpreters]
+vuser_init=cci
+UC09_list_of_tests_client=cci
+UC10_watching_video=cci
+UC11_upload_results=cci
+vuser_end=cci
+[TransactionsOrder]
+Order="HomePage__*delimiter*__UC09_list_of_test_client__*delimiter*__Login__*delimiter*__UC10_watching_video__*delimiter*__UC11_upload_results__*delimiter*__Login__*delimiter*__save__*delimiter*__LogOut"
+[StateManagement]
+LastReplayStatus=2
+[ActiveReplay]
+LastReplayedRunName=result1
+ActiveRunName=result1
+[Transactions]
+HomePage=
+UC09_list_of_test_client=
+Login=
+UC10_watching_video=
+UC11_upload_results=
+save=
+LogOut=

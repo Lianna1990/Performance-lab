@@ -1,0 +1,13 @@
+[t52]
+FileName1=t52_has-completed-video.json
+URL1=https://prod.uxcrowd.ru/api/tester/has-completed-video
+Total=2
+ContentType=application/json
+SnapshotXmlFile=snapshot_52.xml
+RequestHeaderFile=t52_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t52_ResponseHeader.txt
+FileName2=t52_getLastVersion.txt
+URL2=https://prod.uxcrowd.ru/api/v2/plugin/getLastVersion?pluginType=WEB&environmentType=DO_PROD
+[ProtocolInfo]
+ProtocolId=QTWeb

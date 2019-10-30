@@ -1,0 +1,92 @@
+define(['../../app'], function (app) {
+    app_cached_providers
+        .$controllerProvider
+        .register('homeActivateController', function ($scope, $rootScope, $state, $stateParams, Auth,$metrika,$config, Principal, Translation) {
+            $scope.keyAndPassword = {"key": {}, "password": {}};
+            $scope.successActivation = false;
+            $scope.unsuccessActivation = false;
+            $scope.newPassInput = $('.initialPassword');
+            $scope.confirmPassInput = $('.confirmPassword');
+            $scope.passwordConfirm = function (event) {
+                event.preventDefault();
+                var error ='';
+                if ($scope.password == null || $scope.password.newPassword == null  || $scope.password.newPassword == '' ) {
+                    error =error+'<p>'+Translation.translate('WHE.WHE34')+'</p>';
+                } else {
+                    if ($scope.password.newPassword != $scope.password.confirmPassword) {
+                        error =error+'<p>'+Translation.translate('WHE.WHE47')+'</p>';
+                    }
+                    if ($scope.password.newPassword.length < 6 || ALL_RU_CHAR.test($scope.password.newPassword)) {
+                        error =error+'<p>'+Translation.translate('WHE.WHE48')+'</p>';
+                    }
+                }
+                if ($scope.password == null || $scope.password.confirmPassword == null || $scope.password.confirmPassword == '') {
+                    error =error+'<p>'+Translation.translate('WHE.WHE43')+'</p>';
+                }
+                if (error=='') {
+                    $scope.keyAndPassword.key = $stateParams.key;
+                    $scope.keyAndPassword.password = $scope.password.newPassword;
+
+                    Auth.activateAccount({keyAndPassword: $scope.keyAndPassword}).then(function (data) {
+                        pushToDataLayer({'event':'activation_success'});
+
+                        $scope.successActivation = true;
+                        $scope.existKey = false;
+                        $scope.unsuccessActivation = false;
+                        if ($config.isProd) {
+                            $metrika.fireEvent('BOOKING');
+                        }
+                        Auth.login({
+                            username: data.username,
+                            password: $scope.keyAndPassword.password,
+                            rememberMe: false
+                        }).then(function (data) {
+                            Principal.identity().then(function (account) {
+                              if (account.role === 'ROLE_CUSTOMER') {
+                                $state.go('list-orders');
+                              } else if (account.role === 'ROLE_TESTER') {
+                                Profiles.getProfile().then(function (data) {
+                                  $scope.profile = data;
+                                  if ($scope.profile.fio == null || $scope.profile.birthday == null || $scope.profile.gender == null ||
+                                      $scope.profile.education == null || $scope.profile.income == null || $scope.profile.socialStatus == null ||
+                                      $scope.profile.familyStatus == null || $scope.profile.kids == null) {
+                                    $scope.testerProfile = false;
+                                  } else {
+                                    $scope.testerProfile = true;
+                                  }
+                                  if ($scope.testerProfile) {
+                                    $state.go('new-tasks');
+                                  } else {
+                                    $state.go('tester-profile');
+                                  }
+                                })
+                              } else if (account.role === 'ROLE_NEW_TESTER') {
+                                $state.go('welcome');
+                              } else {
+                                $state.go('home');
+                              }
+                            });
+                        }).catch(function () {
+                            $state.go('home');
+                        });
+                    }).catch(function (error) {
+                        $('.errors_block').html('<p>'+Translation.translate('WHE.WHE50')+'</p>')
+
+                        $scope.successActivation = false;
+                        $scope.unsuccessActivation = true;
+                    });
+
+                } else {
+                    $('.errors_block').html(error)
+                }
+            };
+
+            if ($stateParams.key != null) {
+                Auth.existActivationKey({key: $stateParams.key}).then(function () {
+                    $scope.existKey = true;
+                }).catch(function () {
+                    $scope.existKey = false;
+                });
+            }
+        });
+});

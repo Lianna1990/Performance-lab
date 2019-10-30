@@ -1,0 +1,11 @@
+POST /api/stats/create HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+X-XSRF-TOKEN: cb20918c-60a1-492c-affc-fc99ae820883
+User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+Accept-Encoding: gzip, deflate
+Accept: */*
+Host: prod.uxcrowd.ru
+Cookie: CSRF-TOKEN=acfbcea8-74c9-4288-8c58-4c225feb63c8; XSRF-TOKEN=cb20918c-60a1-492c-affc-fc99ae820883; remember-me=SVZhMnlxaWVaMnJLVXM4UGklMkZvWFN3JTNEJTNEOmZDeDU2S1lnWlIzS2E3QWEwRSUyQm40ZyUzRCUzRA; userId=493253073; JSESSIONID=FE41D1F4A54C6D85FA0B6DF2E3EC16BF
+Content-Length: 73
+

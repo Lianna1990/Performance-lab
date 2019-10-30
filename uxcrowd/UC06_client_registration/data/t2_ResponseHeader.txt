@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: nginx/1.17.1
+Date: Thu, 17 Oct 2019 12:01:33 GMT
+Cache-Control: public, max-age=90
+Strict-Transport-Security: max-age=31536000;
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'none'; frame-ancestors 'none'
+X-Proxy-Cache-Status: EXPIRED
+Content-Encoding: gzip
+Via: 1.1 google, 1.1 c2b8afd815ea3a93ab268784562b059b.cloudfront.net (CloudFront)
+Alt-Svc: clear
+Vary: Accept-Encoding
+X-Cache: Miss from cloudfront
+X-Amz-Cf-Pop: ARN53
+X-Amz-Cf-Id: 62aKaCdpXa5dq3s7cXpBN-FmuF-Gf7tjVjWkhmp8zh4jaAOBqdHVjQ==
+

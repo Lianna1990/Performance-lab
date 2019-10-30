@@ -1,0 +1,68 @@
+Virtual User Script started at: 25.10.2019 17:03:37
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 10; build 971 (рту 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)  	[MsgId: MMSG-26988]
+Runtime Settings file: "C:\Users\student\Desktop\Lianna\ClientWork1\\default.cfg"  	[MsgId: MMSG-27141]
+vuser_init.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+vuser_init.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+vuser_init.c(5): Notify: Transaction "HomePage" started.
+vuser_init.c(7): web_url("HomePage") started  	[MsgId: MMSG-26355]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/sup_css.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/css/landing/webflow.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/css/landing/uxcrowd.webflow.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/css/landing/YouTube.HD.Thumbnail.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/env.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://use.typekit.net/hym5rnq.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://ulogin.ru/js/ulogin.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/library/jquery.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/library/jquery.form.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/library/jquery.uploadfile.min.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/library/FileSaver.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/sup_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/init.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.rule.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/app_js/auth.interceptor.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/mediaelement-and-player.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/app_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/admin_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/customer_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/blog_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/home_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/moderator_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/new_tester_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/tester_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/library/require.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/path_controller.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/landing/jQuery.YouTube.HD.Thumbnail.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/main_route.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): web_url("HomePage") was successful, 3911498 body bytes, 15558 header bytes, 13 chunking overhead bytes  	[MsgId: MMSG-26385]
+vuser_init.c(16): Notify: Transaction "HomePage" ended with a "Pass" status (Duration: 7.8142 Wasted Time: 0.4560).
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Warning -27077: The "vuser_init" section contains web function(s) when the "Simulate a new user on each iteration" Runtime Setting is ON.  This may produce unpredictable results with multiple iterations  	[MsgId: MWAR-27077]
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action UC09_list_of_tests_client.
+UC09_list_of_tests_client.c(3): Notify: Transaction "UC09_list_of_test_client" started.
+UC09_list_of_tests_client.c(5): web_reg_save_param started  	[MsgId: MMSG-26355]
+UC09_list_of_tests_client.c(5): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+UC09_list_of_tests_client.c(10): web_url("/api/account") started  	[MsgId: MMSG-26355]
+UC09_list_of_tests_client.c(10): Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+UC09_list_of_tests_client.c(10): Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account"  	[MsgId: MERR-26630]
+UC09_list_of_tests_client.c(10): web_url("/api/account") highest severity level was "ERROR", 0 body bytes, 397 header bytes  	[MsgId: MMSG-26388]
+UC09_list_of_tests_client.c(10): Notify: Transaction "UC09_list_of_test_client" ended with a "Fail" status (Duration: 0.1567 Wasted Time: 0.0187).
+UC09_list_of_tests_client.c(10): Notify: Transaction "UC09_list_of_test_client" has 2 error message(s).
+UC09_list_of_tests_client.c(10): Notify: The 1st error message associated with transaction "UC09_list_of_test_client" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+UC09_list_of_tests_client.c(10): Notify: The 2nd error message associated with transaction "UC09_list_of_test_client" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account""
+Ending action UC09_list_of_tests_client.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+vuser_end.c(4): Notify: Transaction "LogOut" started.
+vuser_end.c(6): web_custom_request("logOut") started  	[MsgId: MMSG-26355]
+vuser_end.c(6): web_custom_request("logOut") was successful, 124 body bytes, 436 header bytes  	[MsgId: MMSG-26386]
+vuser_end.c(16): Notify: Transaction "LogOut" ended with a "Pass" status (Duration: 0.2017 Wasted Time: 0.0310).
+Ending action vuser_end.
+Vuser Terminated.

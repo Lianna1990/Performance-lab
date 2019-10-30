@@ -1,0 +1,561 @@
+<div class="col-xs-12 header_video" ng-cloak>
+  <!-- Customization -->
+  <div class="row center-block" ng-show="isVideoExist">
+    <div class="col-md-12">
+      <div class="">
+        <div class="col-md-8 text-center padding-bottom-v"
+             style="padding-top: 10px; padding-bottom: 10px;">
+          <div ng-show="isVideoDecoded">
+            <video id="pflb-video" style="max-width:100%;" controls preload="auto" playsinline>
+              <source type='video/mp4'>
+            </video>
+            <div class="insight_info">
+              <span class="status_insight"></span>
+            </div>
+            <div class="info_Tool">
+              <div class="video-desc">
+                <div class="col-md-4 leftside-wrapper">
+                  <div class="ratingPanel" ng-show="customerPresented" style="max-width: 770px;">
+
+                    <span ng-if="video.testerType=='OUR'"><span ng-tr="VDO.VDO">Оценить</span> <a
+                        class="link text_dotted" ng-click="openRightMenu($event);" ng-tr="VDO.VDO1">тестировщика</a>:</span>
+                    <span ng-if="video.testerType=='THEIR'"><a class="link text_dotted"
+                                                               ng-click="openRightMenu($event);">{{video.testerEmail}}</a></span>
+                    <br>
+                    <div class="right_menu_info" ng-if="video.testerType=='OUR'">
+                      <div class="item_info_right_menu">
+                        <h6 class="sixth-title" ng-tr="VDO.VDO8">
+                          Пол
+                        </h6>
+
+                        <p class="subtext">
+                          {{video.profileSnapshot.gender == "MALE" ? ('VDO.VDO9' | translate) :
+                          ('VDO.VDO10' | translate)}}
+                        </p>
+                      </div>
+
+                      <div class="item_info_right_menu">
+                        <h6 class="sixth-title" ng-tr="VDO.VDO11">
+                          Дата рождения
+                        </h6>
+
+                        <p class="subtext">
+                          {{video.profileSnapshot.birthday}}
+                        </p>
+                      </div>
+
+                      <div class="item_info_right_menu">
+                        <h6 class="sixth-title" ng-tr="VDO.VDO12">
+                          Доход
+                        </h6>
+
+                        <p class="subtext">
+                          {{video.profileSnapshot.income}}
+                        </p>
+                      </div>
+
+                      <div class="item_info_right_menu">
+                        <h6 class="sixth-title" ng-tr="VDO.VDO13">
+                          Семейное положение
+                        </h6>
+
+                        <p class="subtext">
+                          {{video.profileSnapshot.familyStatus == "MARRIED" ? ('VDO.VDO14' |
+                          translate) :
+                          ('VDO.VDO15' | translate)}}{{video.profileSnapshot.kids != "NONE" ?
+                          ('VDO.VDO16' | translate) : ('VDO.VDO17' | translate)}}
+                        </p>
+                      </div>
+
+                      <div class="item_info_right_menu">
+                        <h6 class="sixth-title" ng-tr="VDO.VDO18">
+                          Социальный статус
+                        </h6>
+
+                        <p class="subtext">
+                                                    <span
+                                                        ng-if="video.profileSnapshot.socialStatus=='STUDENT'"
+                                                        ng-tr="VDO.VDO19">
+                                                        Студенты
+                                                    </span>
+
+                          <span ng-if="video.profileSnapshot.socialStatus=='UNEMPLOYED'"
+                                ng-tr="VDO.VDO20">
+                                                        Безработные
+                                                    </span>
+
+                          <span ng-if="video.profileSnapshot.socialStatus=='HOUSEWIFE'"
+                                ng-tr="VDO.VDO21">
+                                                        Домохозяйки
+                                                    </span>
+
+                          <span ng-if="video.profileSnapshot.socialStatus=='FREELANCER'"
+                                ng-tr="VDO.VDO22">
+                                                        Фрилансеры
+                                                    </span>
+
+                          <span ng-if="video.profileSnapshot.socialStatus=='WORKER'"
+                                ng-tr="VDO.VDO23">
+                                                        Рабочие (любой квалификации)
+                                                    </span>
+
+                          <span ng-if="video.profileSnapshot.socialStatus=='SPECIALIST'"
+                                ng-tr="VDO.VDO24">
+                                                        Специалисты с высшим образованием без подчиненных
+                                                    </span>
+
+                          <span ng-if="video.profileSnapshot.socialStatus=='CHIEF_DEPT'"
+                                ng-tr="VDO.VDO25">
+                                                        Руководители отделов
+                                                    </span>
+                        </p>
+                      </div>
+
+                      <div class="item_info_right_menu">
+                        <h6 class="sixth-title" ng-tr="VDO.VDO26">
+                          Образование
+                        </h6>
+
+                        <p class="subtext">
+                                                    <span
+                                                        ng-if="video.profileSnapshot.education=='START'"
+                                                        ng-tr="VDO.VDO27">
+                                                        Начальное
+                                                    </span>
+
+                          <span ng-if="video.profileSnapshot.education=='MIDDLE_SPEC'"
+                                ng-tr="VDO.VDO28">
+                                                        Среднее профессиональное
+                                                    </span>
+
+                          <span ng-if="video.profileSnapshot.education=='MIDDLE_FULL'"
+                                ng-tr="VDO.VDO29">
+                                                        Полное общее (среднее)
+                                                    </span>
+
+                          <span ng-if="video.profileSnapshot.education=='COMMON'" ng-tr="VDO.VDO30">
+                                                        Основное общее
+                                                    </span>
+
+                          <span ng-if="video.profileSnapshot.education=='HIGH_NOT_FULL'"
+                                ng-tr="VDO.VDO31">
+                                                        Неоконченное высшее
+                                                    </span>
+
+                          <span ng-if="video.profileSnapshot.education=='HIGH'" ng-tr="VDO.VDO32">
+                                                        Высшее
+                                                    </span>
+                        </p>
+                      </div>
+                    </div>
+                    <div ng-if="video.testerType=='OUR' && rating" id="rating_video" class="rating"
+                         ng-init="expression()" data-rating="{{rating}}"></div>
+                    <span class="error_rating" ng-tr="VDO.VDO33">Поставить оценку может только владелец видео</span>
+                  </div>
+
+                  <div class="related-insights-wrapper" style="text-align: left;">
+                    <h4 class="fourth-title" ng-tr="VDO.VDO34">Инсайты из этого видео</h4>
+                    <div ng-show="video.insights.length>2">
+                      <div class="">
+                        <div id="video-insight-hide-content" class="hide-content">
+                          <div ng-show="!descriptionEditing" class="single-insight-wrapper"
+                               ng-repeat="insight in video.insights">
+                            <a class="link single-insight-time"
+                               href="/insight-page?insightId={{insight.id}}">{{insight.timeStart |
+                              secondsToMinutes }} - {{insight.timeStop | secondsToMinutes }}</a>
+                            <span class="single-insight-desc">{{insight.description ? insight.description : insight.title}}&nbsp;<a
+                                class="link" ng-show="customerPresented"
+                                ng-click="descriptionEdit(false, insight)">{{descriptionEditingText}}</a></span>
+                          </div>
+                          <input ng-show="descriptionEditing" ng-model="editingInsight.timeStart"
+                                 data-mask="time" maxlength="60"
+                                 class="customer-form-control"
+                                 placeholder="{{'VDO.VDO35' | translate}}">
+                          <input ng-show="descriptionEditing" ng-model="editingInsight.timeStop"
+                                 data-mask="time" maxlength="60"
+                                 class="customer-form-control"
+                                 placeholder="{{'VDO.VDO36' | translate}}">
+                          <input ng-show="descriptionEditing" ng-model="editingInsight.title"
+                                 maxlength="60"
+                                 class="customer-form-control"
+                                 placeholder="{{'VDO.VDO37' | translate}}">
+                          <textarea ng-show="descriptionEditing"
+                                    ng-model="editingInsight.description"
+                                    class="customer-form-control"
+                                    placeholder="{{'VDO.VDO38' | translate}}"></textarea>
+                          <a class="link" ng-show="customerPresented && descriptionEditing"
+                             ng-click="descriptionEdit(false)">{{descriptionEditingText}}</a>
+                          <a class="link" ng-show="descriptionEditing"
+                             ng-click="descriptionEdit(true)" ng-tr="VDO.VDO39">Отмена</a>
+                        </div>
+                      </div>
+                      <div class="video-insight-showmore" ng-show="!descriptionEditing">
+                        <a class="show-more-button link show-more-insight" ng-click="showMore()">{{linkText}}</a>
+                      </div>
+                    </div>
+                    <div ng-show="video.insights.length>0 && video.insights.length<3">
+                      <div class="">
+                        <div id="video-insight-hide-content" class="hide-content">
+                          <div class="single-insight-wrapper" ng-repeat="insight in video.insights">
+                            <a class="link single-insight-time"
+                               href="/insight-page?insightId={{insight.id}}">{{insight.timeStart |
+                              secondsToMinutes }} - {{insight.timeStop | secondsToMinutes }}</a>
+                            <span class="single-insight-desc">{{insight.description ? insight.description : insight.title}}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div ng-show="video.insights.length==0">
+                      <div class="insights-empty-state">
+                        <p class="" ng-tr="VDO.VDO40">Инсайтов пока нет :(</p>
+                        <a ng-show="customerPresented" class="link" ng-click="open()"
+                           ng-tr="VDO.VDO41">Как их сделать</a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col-md-3 block_nav_video_wrapper" ng-show="customerPresented"
+                     style="position: relative;">
+                  <div class="block_nav_video">
+                    <div class="video-nav-arrows" ng-show="idAllVideo.length>=1">
+                      <div class="arrow_left_video_wrapper">
+                        <div ng-show="numActiveVideo>1">
+                          <a class="arrow_left_video_num"
+                             href="/video?videoId={{idAllVideo[numPrevVideo]}}"></a>
+                        </div>
+                      </div>
+
+                      <div class="num">
+                        <span class="video_num"><span ng-tr="VDO.VDO42">ВИДЕО</span> #{{numActiveVideo}}</span>
+                      </div>
+
+
+                      <div class="arrow_right_wrapper">
+                        <div ng-show="idAllVideo.length>numActiveVideo">
+                          <a class="arrow_right_video_num"
+                             href="/video?videoId={{idAllVideo[numActiveVideo]}}"></a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 block_share_soc_wrapper">
+                  <div class="block_share_soc"
+                       data-pathsharing="{{video.posterPath? video.posterPath : '/assets/images/preview_template.png'}}"
+                       data-titlesharing="{{'VDO.VDO43' | translate}} {{video.site}}"
+                       data-urlsharing="/video?videoId={{videoId}}"
+                       data-descriptionsharing="{{'VDO.VDO44' | translate}}">
+                    <div class="share_icon tw_img" sharing></div>
+                    <div class="share_icon od_img" sharing></div>
+                    <div class="share_icon fb_img" sharing></div>
+                    <div class="share_icon vk_img" sharing></div>
+                    <div class="share_icon copy_img" sharing>
+                      <div id="block_copy_img" class="block_copy_img"
+                           ng-class="!inCopy?'status_close':''">
+                        <div class="block_href">
+                          <input type="text" class="orign_href_copy"
+                                 ng-model="fullHrefPage" id="insight-full-href">
+                          <div class="checkbox_button_el" style="background: white;">
+                            <input type="checkbox" ng-model="startFrom.enable"
+                                   ng-change="changeStartFrom(startFrom.enable)">
+                            <span class="text_checkbox" ng-tr="VDO.VDO45">начиная с</span>
+                          </div>
+                          <input type="text" style="width: 68px;" ng-keyup="changeTime()"
+                                 data-mask="time" id="insight-time-start"
+                                 ng-show="startFrom.enable" ng-model="startFrom.time"
+                                 class="orign_href_copy">
+                        </div>
+                        <span class="text_href_copy btn_copy_full_href" ng-show="inCopy"
+                              ng-tr="VDO.VDO46">Скопировать</span>
+                        <span class="text_href_copy close_btn_share"
+                              ng-show="!inCopy"></span>
+                      </div>
+                      <div class="block_info_share">
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="private_video_setting_wrapper"
+                       ng-if="customerPresented && video.owner">
+                    <div class="private_video_wrapper">
+                      <div class="checkbox_button_el">
+                        <input type="checkbox" ng-model="video.private"
+                               ng-change="toPrivateVideo(video.private)">
+                        <span class="text_checkbox" id="uxc_video_owner" ng-tr="VDO.VDO47">Видео доступно только мне</span>
+                      </div>
+                    </div>
+                  </div>
+                  <input type="checkbox" id="bad-video" hidden name="mainEnterForm">
+                  <label ng-show="customerPresented" for="bad-video" id="bad-video-label"
+                         class="button-white" ng-tr="VDO.VDO48">Пожаловаться на видео
+                    модератору</label>
+                  <div class="menu-white">
+                    <div style="line-height: 1.2;" ng-tr="VDO.VDO49">Почему это видео плохое?</div>
+                    <div class="menu-white-radio-group" style="text-align: left;">
+                      <div class="radio_button_el">
+                        <input name="feedback" ng-model="feedback.reason"
+                               type="radio" value="tester">
+                        <label class="text_checkbox" style="line-height: 1.2;" ng-tr="VDO.VDO50">Невнимательность
+                          тестировщика</label>
+                      </div>
+                      <div class="radio_button_el">
+                        <input name="feedback" ng-model="feedback.reason"
+                               type="radio" value="speech">
+                        <label class="text_checkbox" style="line-height: 1.2;" ng-tr="VDO.VDO51">Неприемлемая
+                          речь</label>
+                      </div>
+                      <div class="radio_button_el">
+                        <input name="feedback" ng-model="feedback.reason"
+                               type="radio" value="quality">
+                        <label class="text_checkbox" style="line-height: 1.2;" ng-tr="VDO.VDO52">Плохое
+                          качество видео</label>
+                      </div>
+                      <div class="radio_button_el">
+                        <input id="other" name="feedback" ng-model="feedback.reason"
+                               type="radio" value="other">
+                        <label class="text_checkbox" style="line-height: 1.2;" ng-tr="VDO.VDO53">Другое</label>
+                      </div>
+                      <div class="input-wrapper" style="margin-top: 5px">
+                                                <textarea id="contacts-message"
+                                                          ng-model="feedback.comment"
+                                                          focusout rows="4" type="text"
+                                                          placeholder="{{'VDO.VDO54' | translate}}"></textarea>
+                      </div>
+                      <div class="new-green-btn-wrapper">
+                        <div class="row">
+                          <button type="submit" style="   padding: 9px 32px;
+                                                                                    font-size: 14px;
+                                                                                    color: #fff;
+                                                                                    border-radius: 5px;
+                                                                                    display: inline-block;
+                                                                                    vertical-align: top;
+                                                                                    text-decoration: none;
+                                                                                    cursor: pointer;
+                                                                                    background-color: #20C997;
+                                                                                    transition: background-color .2s ease;
+                                                                                "
+                                  ng-click="sendFeedback();" ng-tr="VDO.VDO55">
+                            Отправить заявку
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ng-show="!isVideoDecoded"
+             style="background: #a7a6a6; padding: 185px 20px; display: inherit;"
+             class="col-md-8 padding-bottom-v">
+          <div>
+            <span style="color: #fff; font-size: 18px;" ng-tr="VDO.VDO56">Видео обрабатывается и будет доступно через несколько минут.</span>
+          </div>
+        </div>
+
+        <div class="panel panel-default style_active_panel style_active_panel_absolute">
+          <div class="header_modal_note">
+            <div class="time_note">
+            </div>
+            <div class="block_time_bar"></div>
+            <div class="title_note">
+              <span ng-tr="VDO.VDO57">НОВАЯ ЗАМЕТКА</span>
+              <span class="close_pane_note"></span>
+            </div>
+          </div>
+          <div class="content_note">
+        <textarea ng-model="newNote.description" maxlength="300" id="textarea_block"
+                  class="el_block none"
+                  ng-change="videoPause();"
+                  ng-focus="video_el()" placeholder="{{'VDO.VDO58' | translate}}">
+        </textarea>
+          </div>
+          <div class="btn_add_notes">
+            <div class="line_pay_btn" ng-click="pushAndSaveVideoNotes();" ng-tr="VDO.VDO59">
+              ДОБАВИТЬ
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="" ng-show="tryOrder">
+        <div class="panel-group">
+          <div class="try-order-wrapper">
+            <div class="text_try_order" ng-tr="VDO.VDO60">Проверь свой сайт на&nbsp;пользователях
+            </div>
+            <a class="big-green-btn" role="button" ng-href="{{fullUrl}}" ng-tr="VDO.VDO61">Заказать
+              тест</a>
+          </div>
+        </div>
+      </div>
+      <div
+          class="col-md-4 col-xs-12 padding-left-10 padding-right-10 mt-10 float_right_import left-col-scroll right_menu_all_step top_menu_video_step">
+        <div class="col-xs-12 width_contain_btn_video">
+          <div class="btn_video_type_info">
+            <div class="btn_select_type active"
+                 ng-class="customerPresented && account.role != 'ROLE_MODERATOR' ? 'two_btn_tab' : 'one_btn_tab'">
+              <a show-tab data-toggle="tab" href="#tags" ng-tr="VDO.VDO62">Задания</a>
+            </div>
+            <div class="btn_select_type" ng-show="account.role != 'ROLE_MODERATOR'">
+              <a show-tab data-toggle="tab" href="#notes" ng-tr="VDO.VDO63">Заметки</a></div>
+          </div>
+        </div>
+        <div class="tab-content">
+          <div id="tags" class="tab-pane fade in active">
+            <div class="block_question lnk-jump_to_time"
+                 ng-repeat="tag in tags"
+                 data-router="article" data-interval-from="{{tag.linkStartFrom}}"
+                 data-interval-to="{{tag.linkStartTo}}"
+                 data-seconds="0" ng-click="jumpToTimeoffset(tag.startSecond)">
+              <div class="header_block_question">
+                <div class="header_block_question_title">{{$index + 1}}</div>
+                <div class="header_block_question_title_block">
+                  <div class="block_type_question_item" ng-if="tag.step.stepType=='ANSWER'"
+                       ng-tr="VDO.VDO64">
+                    Текстовое
+                  </div>
+                  <div class="block_type_question_item" ng-if="tag.step.stepType=='TEXT'"
+                       ng-tr="VDO.VDO65">
+                    Голосовое
+                  </div>
+                  <div class="block_type_question_item" ng-if="tag.step.stepType=='RATING'"
+                       ng-tr="VDO.VDO66">
+                    Рейтинговое
+                  </div>
+                  <div class="block_type_question_item" ng-if="tag.step.stepType=='RADIO'"
+                       ng-tr="VDO.VDO67">
+                    Выбор одного
+                  </div>
+                  <div class="block_type_question_item" ng-if="tag.step.stepType=='CHECKBOX'"
+                       ng-tr="VDO.VDO68">
+                    Выбор нескольких
+                  </div>
+                </div>
+                <div class="header_block_question_date">
+                  <a><span ng-tr="VDO.VDO82"></span> {{tag.linkStartFrom}} <span
+                      ng-tr="VDO.VDO83"></span> {{tag.linkStartTo}}
+                    <span ng-show="$index==(tags.length-1) && vidDuration"
+                          style="font-size: 14px; color: #2594EA;"><span
+                        ng-tr="VDO.VDO69"></span> {{vidDuration}}</span>
+                    <span ng-show="$index==(tags.length-1) && !vidDuration"
+                          class="duration_step"
+                          style="font-size: 14px; color: #2594EA;"> NaN</span></a>
+                </div>
+              </div>
+              <div class="content_block_question">
+                <div class="content_block_question_text">
+                  {{tag.step.question}}
+                </div>
+              </div>
+              <div class="option_question">
+                <div class="block_option_rating" ng-if="tag.step.stepType=='RATING'">
+                  <div class="item_question_text_one col-xs-5">
+                    <div class="row">{{tag.step.stepDetails[0].value}}
+                    </div>
+                  </div>
+                  <div class="item_question_text_two col-xs-5 col-xs-offset-2">
+                    <div class="row">{{tag.step.stepDetails[1].value}}
+                    </div>
+                  </div>
+                  <div class="item_question_rating col-xs-12">
+                    <div class="items_question_ratings">
+                      <span class="item_rating"
+                            ng:repeat="i in (((b=[]).length=tag.step.stepDetails[2].value)&&b) track by $index"
+                            ng-bind="$index + 1"
+                            ng-class="{active : (tag.answer>=$index+1), last : tag.answer == $index+1}">i</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="block_option_answer" ng-if="tag.step.stepType=='ANSWER'">
+                  <div class="answer_block">
+                    <div class="answer_text_item_question">
+                      {{tag.answer}}
+                    </div>
+                  </div>
+                </div>
+                <div class="block_option_radio" ng-if="tag.step.stepType=='RADIO'">
+                  <div class="item_question_radio_checkbox col-xs-12"
+                       ng-repeat="step_info in tag.step.stepDetails">
+                    <div class="row"
+                         ng-class="step_info.value==tag.answer?'active':''">
+                      <div class="radio_item"><span></span></div>
+                      <div class="text_item_question">
+                        {{step_info.value}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="block_option_checkbox" ng-if="tag.step.stepType=='CHECKBOX'">
+                  <div class="item_question_radio_checkbox col-xs-12"
+                       ng-repeat="step_info in tag.step.stepDetails">
+                    <div class="row"
+                         ng-class="tag.answer.includes(step_info.value)?'active':''">
+                      <div class="checkbox_item"><span></span></div>
+                      <div class="text_item_question">{{step_info.value}}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div ng-show="customerPresented" id="notes" class="tab-pane fade">
+            <div class="notes_panel col-xs-12" style="margin-top: 15px;">
+              <div class="row">
+                <div ng-repeat="note in video.notes | orderObjectBy : 'orderNum'"
+                     class="item_panel_notes"
+                     data-order="{{note.orderNum}}">
+                  <div class="event_panel_notes"
+                       ng-click="jumpToTimeoffset(note.stringStartSecond)">
+                    <div class="panel_notes_time">
+                      <p class="time">{{note.startTime}}</p>
+                    </div>
+                    <div class="panel_notes_description">
+                      <p class="description">{{note.description}}</p>
+                    </div>
+                  </div>
+                  <div class="sup_panel_notes">
+                    <span class="note_remove_el" ng-click="deleteNote(note.id)"></span>
+                  </div>
+                </div>
+                <div ng-click="createNote()" class="btnCreateNote" ng-tr="VDO.VDO70">Добавить
+                  заметку
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8" style="position: unset">
+        <div class="row">
+          <div class="col-md-12 text-center padding-bottom-v"
+               style="padding-top: 10px; padding-bottom: 10px;">
+            <div hyper-comments-widget id="hypercomments_widget"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row center-block" ng-show="isVideoExist!=null && !isVideoExist" ng-cloak>
+  <div class="col-md-offset-4 col-md-4 col-md-offset-4" style="margin-top: 50px">
+    <div class="row">
+      <div class="alert alert-danger text-center col-xs-12">
+        <strong ng-tr="VDO.VDO71">Видео не найдено</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row center-block" ng-show="isVideoForbidden" ng-cloak>
+  <div class="col-md-offset-4 col-md-4 col-md-offset-4" style="margin-top: 50px">
+    <div class="row">
+      <div class="alert alert-danger text-center col-xs-12">
+        <strong ng-tr="VDO.VDO72">Владелец видео закрыл публичный доступ</strong>
+      </div>
+    </div>
+  </div>
+</div>

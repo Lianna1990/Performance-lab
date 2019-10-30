@@ -1,0 +1,15 @@
+POST /api/video-upload-app HTTP/1.1
+Host: prod.uxcrowd.ru
+Connection: keep-alive
+Content-Length: 6495020
+Sec-Fetch-Mode: cors
+Origin: chrome-extension://dfhbnhciflaelghihmdfldmlpfbiobgc
+X-XSRF-TOKEN: c963bba4-74eb-447c-ae14-16a211b175d0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundarysWObeUhNkvKU06xd
+Accept: */*
+Sec-Fetch-Site: cross-site
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: _gcl_au=1.1.1478294464.1571211453; _ym_d=1571211453; _ym_uid=1571211453779728618; _ga=GA1.2.1566072516.1571211453; _fbp=fb.1.1571211453213.1992205076; _hjid=af551394-e1bf-4a9c-a802-a34127cb6932; supportOnlineTalkID=NQtz7VT3tBWegZp7HJtH7uKtsdpFCABR; mp_7e8c1704afe136d673068a7cf50876d7_mixpanel=%7B%22distinct_id%22%3A%20%2216dd3802179263-0d3fe0e95c886c-b363e65-1fa400-16dd380217ab9b%22%2C%22%24device_id%22%3A%20%2216dd3802179263-0d3fe0e95c886c-b363e65-1fa400-16dd380217ab9b%22%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com%22%7D; s_l_p=qeyRO8VpGnitxcwBhcf5O2ZxS1S0dZZl; dbl=067bcf8ea81a05fc78bfa9bda30ef4d5; fco2r34=067bcf8ea81a05fc78bfa9bda30ef4d5; newTesterState=; intercom-id-fkbc3no8=285e199c-750a-41f4-8079-bd580c8fdef6; userId=493253208; intercom-session-fkbc3no8=Y2xOQyt0Y3lqcUZYR21MM0Q4RnJLVVZJZGpuZWV5RXh4NkpxbS9Ic3FWeldnS1dwVHpKSjlESU0xTlYxYjlIbC0tTldWZFkvYWtoSE5wdXdtUWFSMnVzdz09--c8c4839797826ed0ec239db79ca05101885c8e5d; XSRF-TOKEN=c963bba4-74eb-447c-ae14-16a211b175d0; remember-me=MUxqMXMlMkZPM21mblI5UHFXJTJGVmZKeHclM0QlM0Q6ZSUyRno1WUxrMmtSYUNPU3pWRnFiV3p3JTNEJTNE; JSESSIONID=1C9A120C2A55C3B164D2A27B3ABE6A8D; CSRF-TOKEN=c963bba4-74eb-447c-ae14-16a211b175d0
+

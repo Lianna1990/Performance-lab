@@ -1,0 +1,64 @@
+[
+    {
+        "actionName": "Action",
+        "steps": [
+            {
+                "stepId": "STEP1",
+                "stepName": "Url: /",
+                "infFile": "t1.inf",
+                "time": 1571666002512
+            },
+            {
+                "stepId": "STEP2",
+                "stepName": "Url: /api/account",
+                "infFile": "t2.inf",
+                "time": 1571666002608
+            },
+            {
+                "stepId": "STEP3",
+                "stepName": "Submit Data: /api/authentication",
+                "infFile": "t3.inf",
+                "time": 1571666002947
+            },
+            {
+                "stepId": "STEP4",
+                "stepName": "Url: /api/account",
+                "infFile": "t4.inf",
+                "time": 1571666003067
+            },
+            {
+                "stepId": "STEP5",
+                "stepName": "Url: /api/v2/customer/profile",
+                "infFile": "t5.inf",
+                "time": 1571666003301
+            },
+            {
+                "stepId": "STEP6",
+                "stepName": "Url: /api/customer/hist-orders",
+                "infFile": "t6.inf",
+                "time": 1571666003417
+            },
+            {
+                "stepId": "STEP7",
+                "stepName": "Url: /api/customer/waitingOrders",
+                "infFile": "t7.inf",
+                "time": 1571666003535
+            },
+            {
+                "stepId": "STEP8",
+                "stepName": "Url: /api/customer/orders",
+                "infFile": "t8.inf",
+                "time": 1571666004536
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "Login",
+                "rawStartTime": 1571666002614,
+                "rawEndTime": 1571666004538,
+                "thinkTime": 0.0,
+                "wastedTime": 0.14654326438903809
+            }
+        ]
+    }
+]

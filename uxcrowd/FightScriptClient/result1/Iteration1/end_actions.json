@@ -1,0 +1,22 @@
+[
+    {
+        "actionName": "vuser_end",
+        "steps": [
+            {
+                "stepId": "STEP3",
+                "stepName": "Custom Request: logOut",
+                "infFile": "t3.inf",
+                "time": 1572012225795
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "LogOut",
+                "rawStartTime": 1572012225594,
+                "rawEndTime": 1572012225796,
+                "thinkTime": 0.0,
+                "wastedTime": 0.031008005142211915
+            }
+        ]
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "actionName": "vuser_init",
+        "steps": [
+            {
+                "stepId": "STEP1",
+                "stepName": "Url: /",
+                "infFile": "t1.inf",
+                "time": 1572267064642
+            },
+            {
+                "stepId": "STEP2",
+                "stepName": "Url: /api/account",
+                "infFile": "t2.inf",
+                "time": 1572267064808
+            },
+            {
+                "stepId": "STEP3",
+                "stepName": "Submit Data: /api/authentication",
+                "infFile": "t3.inf",
+                "time": 1572267065174
+            },
+            {
+                "stepId": "STEP4",
+                "stepName": "Url: /api/account",
+                "infFile": "t4.inf",
+                "time": 1572267065287
+            },
+            {
+                "stepId": "STEP5",
+                "stepName": "Url: /api/v2/customer/profile",
+                "infFile": "t5.inf",
+                "time": 1572267065516
+            },
+            {
+                "stepId": "STEP6",
+                "stepName": "Url: /api/customer/hist-orders",
+                "infFile": "t6.inf",
+                "time": 1572267065631
+            },
+            {
+                "stepId": "STEP7",
+                "stepName": "Url: /api/customer/waitingOrders",
+                "infFile": "t7.inf",
+                "time": 1572267065735
+            },
+            {
+                "stepId": "STEP8",
+                "stepName": "Url: /api/customer/orders",
+                "infFile": "t8.inf",
+                "time": 1572267066365
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "Homepage",
+                "rawStartTime": 1572267056901,
+                "rawEndTime": 1572267064642,
+                "thinkTime": 0.0,
+                "wastedTime": 0.4918811321258545
+            },
+            {
+                "transactionName": "Login",
+                "rawStartTime": 1572267064812,
+                "rawEndTime": 1572267066365,
+                "thinkTime": 0.0,
+                "wastedTime": 0.14230084419250489
+            }
+        ]
+    }
+]

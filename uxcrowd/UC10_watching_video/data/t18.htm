@@ -1,0 +1,199 @@
+<div class="new-header-container" id="greenHeader">
+    <div class="uxc-logo-green">
+        <a href="/">
+            <div ng-if="testStandLogo" class="version-label" ng-bind="versionNumber" style="position: absolute;top: 25px;font-weight: bold;color: crimson;"></div>
+            <img ng-if="testStandLogo" class="test-stand-dynamic" src="../assets/images/test-stand.png">
+        </a>
+    </div>
+        <div class="hidden-lg hidden-md burger-menu" ng-click="openMenu()">
+        <span class="burger-icon burger-icon--green"></span>
+    </div>
+    <ul class="header-list header-list--green" id="navbar">
+        <li class="header-item header-more">
+            <a class="uxc_item" ng-tr="GRH.GRH">
+                Продукт
+            </a>
+
+            <ul class="header-more-dropdown">
+                <li class="header-more-dropdown-item" ng-if="config.locale == 'ru'">
+                    <a class="header-more-link" href="/product/diy" ng-tr="GRH.GRH1">
+                        Возможности платформы
+                    </a>
+                </li>
+
+                <li class="header-more-dropdown-item">
+                    <a class="header-more-link" href="/product/website-testing" ng-tr="GRH.GRH2">
+                        Тестирование сайтов
+                    </a>
+                </li>
+
+                <li class="header-more-dropdown-item">
+                    <a class="header-more-link" href="/product/mobile-testing" ng-tr="GRH.GRH3">
+                        Тестирование мобильных приложений
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="header-item">
+            <a href="/product/price" class="uxc_item" ng-tr="GRH.GRH5">
+                Цены
+            </a>
+        </li>
+
+        <li class="header-item header-more">
+            <a class="uxc_item" ng-tr="GRH.GRH6">
+                Кто пользуется
+            </a>
+
+            <ul class="header-more-dropdown">
+                <li class="header-more-dropdown-item">
+                    <a class="header-more-link" href="/marketers" ng-tr="GRH.GRH7">
+                        Маркетологи
+                    </a>
+                </li>
+
+                <li class="header-more-dropdown-item">
+                    <a class="header-more-link" href="/designers" ng-tr="GRH.GRH8">
+                        Дизайнеры
+                    </a>
+                </li>
+
+                <li class="header-more-dropdown-item">
+                    <a class="header-more-link" href="/product-manager" ng-tr="GRH.GRH9">
+                        Продуктологи
+                    </a>
+                </li>
+
+                <li class="header-more-dropdown-item">
+                    <a class="header-more-link" href="/developers" ng-tr="GRH.GRH10">
+                        Разработчики
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="header-item header-more">
+            <a class="uxc_item" ng-tr="GRH.GRH11">
+                О нас
+            </a>
+
+            <ul class="header-more-dropdown">
+                <li class="header-more-dropdown-item">
+                    <a class="header-more-link" href="/team" ng-tr="GRH.GRH12">
+                        Команда
+                    </a>
+                </li>
+
+                <li class="header-more-dropdown-item" ng-if="config.locale == 'ru'">
+                    <a class="header-more-link" href="/blog" ng-tr="GRH.GRH13">
+                        Блог
+                    </a>
+                </li>
+
+                <li class="header-more-dropdown-item">
+                    <a class="header-more-link" href="/contacts" ng-tr="GRH.GRH14">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="header-item">
+            <a href="/tester-register" class="uxc_item" ng-tr="GRH.GRH15">Стать тестировщиком</a>
+        </li>
+
+        <li class="hidden-sm hidden-md hidden-lg header-item">
+            <a href="/contacts" class="uxc_item" ng-tr="GRH.GRH16">Контакты</a>
+        </li>
+
+        <li class="hidden-sm hidden-md hidden-lg header-item">
+            <a href="/team" class="uxc_item" ng-tr="GRH.GRH17">О команде</a>
+        </li>
+
+        <li class="header-item lk-btn">
+            <a class="uxc_lk" ng-click="openLoginModal()" ng-tr="GRH.GRH18">Войти в кабинет</a>
+            <div class="modal-lk ng-hide" ng-click="$event.stopPropagation();">
+                <span class="hidden-md hidden-lg modal-close-btn" ng-click="toggleLoginPopup($event)"></span>
+                <input type="radio" id="enterLk" name="mainEnterForm" checked>
+
+
+              <!-- ВХОД В ЛК -->
+              <div class="modal-lk-wrapper modal-lk-enterlk">
+                <h3 class="modal-lk-title" ng-tr="GRH.GRH19">Вход</h3>
+
+                <section class="switch-login-type">
+                  <label class="link-lk" ng-click="cleanBlockError()" for="registrationLk" ng-tr="GRH.GRH20">Зарегистрироваться</label>
+                </section>
+
+                <form id="form_auth" class="ng-invalid-elevalidation" name="loginForm" role="form">
+                  <input class="modal-lk-email-input ng-invalid-elevalidation" elevalidation
+                          data-type="login_number" data-text-error="{{'GRH1.GRH' | translate}}"
+                          id="login" placeholder="{{'GRH1.GRH1' | translate}}"
+                          ng-model="username" type="text">
+
+                  <input class="modal-lk-password-input ng-invalid-elevalidation" data-type="password"
+                          data-text-error="{{'GRH1.GRH2' | translate}}"
+                          ng-model="password"
+                          type="password" placeholder="{{'GRH1.GRH3' | translate}}">
+
+                  <button ng-disabled="{{loginForm.$invalid}}" ng-click="login()"
+                          class="lk-enter-btn" ng-tr="GRH.GRH21">Войти</button>
+                </form>
+
+                <section class="switch-login-type">
+                  <label class="forget-password link-lk" for="forgetLk" ng-click="cleanBlockError()" ng-tr="GRH.GRH22">Забыли пароль?</label>
+                </section>
+              </div>
+
+              <input type="radio" id="registrationLk" name="mainEnterForm">
+
+
+
+              <!-- РЕГИСТРАЦИЯ ПОЛЬЗОВАТЕЛЯ -->
+              <div class="modal-lk-wrapper modal-lk-registrationlk">
+                <h3 class="modal-lk-title" ng-tr="GRH.GRH23">Регистрация</h3>
+
+                <section class="switch-login-type">
+                  <label class="link-lk" ng-click="cleanBlockError()" for="enterLk" ng-tr="GRH.GRH24">Войти</label>
+                </section>
+
+                <form id="form_register" name="registerCustomerForm" role="form">
+                  <input class="modal-lk-email-input ng-invalid-elevalidation" elevalidation
+                          data-type="email" data-text-error="{{'GRH1.GRH4' | translate}}" placeholder="Почта"
+                          type="email" id="emails" name="email" ng-model="registerAccount.email" />
+
+                    <button ng-if="config.locale == 'ru'" ng-click="register()" class="lk-enter-btn" ng-tr="WHE.WHE26">Зарегистрироваться</button>
+                    <button ng-if="config.locale == 'en'" ng-click="registerEarlyBird()" class="lk-enter-btn" ng-tr="WHE.WHE26">Зарегистрироваться</button>
+                </form>
+<!-- 
+                <section  ng-if="config.locale == 'ru'">
+                  <label class="forget-password link-lk" for="forgetLk" ng-click="cleanBlockError()" ng-tr="GRH.GRH22">Забыли пароль?</label>
+                </section> -->
+              </div>
+
+              <input type="radio" id="forgetLk" name="mainEnterForm">
+
+
+
+              <!-- ВОССТАНОВЛЕНИЕ ПАРОЛЯ -->
+              <div class="modal-lk-wrapper modal-lk-forgetlk">
+                <h3 class="modal-lk-title reset-pass" ng-tr="GRH1.GRH5">Восстановление пароля</h3>
+
+                <form class="" name="resetPasswordForm" role="form">
+                  <input class="modal-lk-email-input ng-invalid-elevalidation" elevalidation
+                          data-type="email_valid" data-text-error="{{'GRH1.GRH4' | translate}}" id="email_valid"
+                          placeholder="Email" ng-model="resetEmail" type="text">
+
+                  <button ng-click="passwordReset()" class="lk-enter-btn" ng-tr="WHE.WHE32">Восстановить</button>
+                </form>
+
+                <section>
+                  <label class="link-lk forget-password" ng-click="cleanBlockError()" for="enterLk" ng-tr="WHE.WHE33">Я помню пароль</label>
+                </section>
+              </div>
+            </div>
+
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,34 @@
+[
+    {
+        "actionName": "Action",
+        "steps": [
+            {
+                "stepId": "STEP1",
+                "stepName": "Custom Request: get_token",
+                "infFile": "t1.inf",
+                "time": 1571817058226
+            },
+            {
+                "stepId": "STEP2",
+                "stepName": "Custom Request: main",
+                "infFile": "t2.inf",
+                "time": 1571817060104
+            },
+            {
+                "stepId": "STEP3",
+                "stepName": "Custom Request: register",
+                "infFile": "t3.inf",
+                "time": 1571817060217
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "UC01_tester_registration",
+                "rawStartTime": 1571817058256,
+                "rawEndTime": 1571817060229,
+                "thinkTime": 0.0,
+                "wastedTime": 0.34043455123901369
+            }
+        ]
+    }
+]

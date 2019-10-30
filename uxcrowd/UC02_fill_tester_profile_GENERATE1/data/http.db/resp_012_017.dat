@@ -1,0 +1,10 @@
+define(['../../app'], function (app) {
+    app_cached_providers
+        .$controllerProvider
+        .register('homeMainBrowser', function ($rootScope, $scope, $uibModal, $sce, $state, Principal, NewTesters, $config, Translation) {
+            $scope.testStandLogo = $config.testStandLogo;
+            $scope.fullUrl = $config.fullUrl;
+            $scope.extensionID = Translation.getExtensionId();
+            $scope.browser = uxc_chrome || false;
+        });
+});

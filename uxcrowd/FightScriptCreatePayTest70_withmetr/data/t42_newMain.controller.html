@@ -1,0 +1,182 @@
+define(['../../app'], function (app) {
+    app_cached_providers
+        .$controllerProvider
+        .register('homeNewMainController', function ($scope, $rootScope, $sce, $state, $stateParams, Principal, NewTesters,
+         $http, $window, Payments, Orders, $metrika, $config, $uibModal,Translation) {
+                $scope.animate = function () {
+                    $('html, body').animate({scrollTop: $('#block_main_video').offset().top}, 500);
+                };
+                $scope.obj = {site:null};
+                $scope.doOrder = function () {
+                    show_error_valid({'selected_container': '.head-input-wrapper'});
+                    if ($('.class_valid_tester').find('.ng-invalid-elevalidation').length <= 0) {
+                        $('.block_error').html('');
+                        $scope.doNotMatch = false;
+                        $scope.error = null;
+                        $scope.errorUserExists = null;
+                        $scope.errorEmailExists = null;
+                        var form = $scope['form'];
+                        var sendObjFree = {
+                            "site": $scope.order.site,
+                            "email": $scope.order.email
+                        };
+                        if ($config.isProd) {
+                            $metrika.fireEvent('PREBOOKING');
+                        }
+                        $http({
+                            method: 'POST',
+                            url: '/api/public/booking',
+                            data: sendObjFree
+                        }).then(function successCallback(data) {
+                            $scope.success = true;
+                            var header;
+                            var description;
+                            if (data.data=='FIRST_BOOKING'){
+                                header = 'Отличная работа! Тест готов к запуску';
+                                description = 'Активируй тест переходом по ссылке, которую мы отправили по адресу:<strong> ' +$scope.main_order.email+'<strong>';
+                            } else {
+                                header = 'ВЫ ТОЛЬКО ЧТО ЗАКАЗАЛИ БЕСПЛАТНЫЙ ТЕСТ!';
+                                description = 'Тест появился в личном кабинете, зарегистрированным на адрес <strong>' +$scope.main_order.email+'<strong>';
+                            }
+                            $rootScope.successMessage = {
+                                'header': header,
+                                    'description': description,
+                                'tmpl': '/tmpl/tmpl_home/success_free.html'
+                            };
+                            $state.go('success', {notify: false});
+                        }).catch(function (data) {
+                            $scope.email_not_valid = $scope.order.email;
+                            $scope.message = data.data;
+                            $scope.success = false;
+                            return;
+                        });
+                    } else {
+                        var error = "";
+                        $('.class_valid_tester').find('.ng-invalid-elevalidation:not("form")').each(function () {
+                            var type = $(this).data('type-title');
+                            error += "<p class='" + type + " valid_element' >" + $(this).data('text-error') + "</p>";
+                        }).removeClass('ng-pristine');
+                        $('.block_error').html(error);
+                        return false;
+                    }
+                };
+
+                $scope.registerEarlyBird = function (type, customerTariffName) {
+                    var sc = $scope;
+                    $scope.newFunctionalModal = $uibModal.open({
+                        animation: true,
+                        size: 'md',
+                        templateUrl: '../../tmpl/tmpl_customer/from_landing_registration.html',
+                        controller: function ($scope,$sce,$uibModalInstance,$http) {
+                            $scope.obj = {email:null, username:null};
+                            $scope.registerAccount = {};
+                            $scope.tariffName = sc.tariffName;
+                            $scope.sent = false;
+                            $scope.terms = {"platform":true, "data":true};
+                            $scope.cancel = function () {
+                                $uibModalInstance.dismiss('cancel');
+                            };
+                            $scope.sendRegistration = function () {
+                                $('#price_errors_block').text('');
+                                if ($scope.obj.email!=null){
+                                    $scope.registerAccount.role = 'ROLE_CUSTOMER';
+                                    $scope.registerAccount.email = $scope.obj.email;
+                                    $scope.registerAccount.username = $scope.obj.username;
+                                    $scope.registerAccount.site = sc.obj.site;
+                                    $http.post("/api/registerEarlyBird?type="+type+"&customerTariffName="+customerTariffName, $scope.registerAccount).then(function (response) {
+                                        $uibModalInstance.dismiss('cancel');
+                                        $scope.success = 'OK';
+                                        $scope.error = null;
+                                        $scope.message = "OK";
+                                        $rootScope.successMessage = {
+                                            'header': Translation.translate('LCT.LCT2'),
+                                             'description': Translation.translate('LCT.LCT3')+'<strong>'+$scope.registerAccount.email+ '</strong>. '+Translation.translate('LCT.LCT4')+' <strong>'+Translation.translate('LCT.LCT5')+'</strong>'
+                                        };
+                                        $state.go('success', {notify: false}, {reload: true});
+                                    }).catch(function (response) {
+                                        if (response.data == "E_MAIL_ADDRESS_ALREADY_IN_USE" || response.data == "TESTER_USER_ALREADY_EXISTS") {
+                                            $scope.email_not_valid = $scope.registerAccount.email;
+                                        }
+
+                                        if ((response.data == "E_MAIL_ADDRESS_ALREADY_IN_USE") || (response.data == "TESTER_USER_ALREADY_EXISTS")) {
+                                            $('.errors_block').html('<p class="email valid_element">'+Translation.translate('LCT.LCT6') + $scope.email_not_valid + Translation.translate('LCT.LCT7')+'</p>');
+                                        }
+
+                                        $scope.success = null;
+                                        $scope.error = 'ERROR';
+                                        $scope.message = response.data;
+                                    });
+                                }
+                            };
+                        }
+                    });
+
+                    $scope.newFunctionalModal.result.then(function (scope) {
+                        }, function () {
+                    });
+                };
+
+                $scope.registerFromLanding = function () {
+                    var sc = $scope;
+                    $scope.newFunctionalModal = $uibModal.open({
+                        animation: true,
+                        size: 'md',
+                        templateUrl: '../../tmpl/tmpl_customer/from_landing_registration.html',
+                        controller: function ($scope,$sce,$uibModalInstance) {
+                            $scope.obj = {email:null};
+                            $scope.tariffName = sc.tariffName;
+                            $scope.sent = false;
+                            $scope.terms = {"platform":true, "data":true};
+
+                            $scope.cancel = function () {
+                                $uibModalInstance.dismiss('cancel');
+                            };
+                            $scope.sendRegistration = function () {
+                                if ($scope.obj.email!=null){
+                                    sc.email = $scope.obj.email;
+                                    $scope.account = {"customerTariffName": "PRODUCT", "email": sc.email, "hasFree": $scope.hasFree};
+                                    Auth.registerCustomerByTariff($scope.account).then(function (data) {
+                                            $state.go('pay', {'id': data.id});
+                                            $uibModalInstance.dismiss('cancel');
+                                        }
+                                    ).catch(function (data) {
+                                        if (data.data == "E_MAIL_ADDRESS_ALREADY_IN_USE") {
+                                           $('#price_errors_block').text('На данный адрес уже есть зарегистрированный аккаунт');
+                                        }
+                                        if (data.data == "CUSTOMER_ALREADY_HAS_PAYED_TARIFF") {
+                                           $('#price_errors_block').text('В этом аккаунте уже подключен платный тариф. Войди в кабинет, чтобы воспользоваться');
+                                        }
+                                        if (data.data == "CUSTOMER_ALREADY_HAS_FREE_TARIFF") {
+                                           $scope.hasFree = true;
+                                        }
+                                        if (data.data == "E_MAIL_ADDRESS_ALREADY_AS_TESTER") {
+                                           $('#price_errors_block').text('Введи адрес, на который не зарегистрирован аккаунт тестировщика');
+                                        }
+
+                                    });
+                                }
+                            };
+                        }
+                    });
+
+                    $scope.newFunctionalModal.result.then(function (scope) {
+                        }, function () {
+                    });
+                };
+
+                if (localStorage.getItem('uxc_info_block') != 'close') {
+                    $('.top_modal').addClass('open');
+                    $('html, body').animate({ scrollTop: 0 }, 500);
+                    /*
+                     скрываем отображение плашки с учебником
+                     для возврата отображение запустить в консоле
+                     localStorage.setItem('uxc_info_block', 'open');
+                     */
+                    $('.main_page_close_btn').click(function () {
+                        localStorage.setItem('uxc_info_block', 'close');
+                        $('.top_modal').removeClass('open');
+                    });
+                }
+            }
+        )
+});

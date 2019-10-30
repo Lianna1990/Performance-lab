@@ -1,0 +1,131 @@
+[
+    {
+        "actionName": "Action",
+        "steps": [
+            {
+                "stepId": "STEP1",
+                "stepName": "Url: {host}",
+                "infFile": "t1.inf",
+                "time": 1571405912853
+            },
+            {
+                "stepId": "STEP2",
+                "stepName": "Url: account",
+                "infFile": "t2.inf",
+                "time": 1571405912964
+            },
+            {
+                "stepId": "STEP3",
+                "stepName": "Url: headerGreenWhite.html",
+                "infFile": "t3.inf",
+                "time": 1571405913644
+            },
+            {
+                "stepId": "STEP4",
+                "stepName": "Url: footer.html",
+                "infFile": "t4.inf",
+                "time": 1571405914104
+            },
+            {
+                "stepId": "STEP5",
+                "stepName": "Url: home.html",
+                "infFile": "t5.inf",
+                "time": 1571405919245
+            },
+            {
+                "stepId": "STEP6",
+                "stepName": "Url: {host}_2",
+                "infFile": "t6.inf",
+                "time": 1571405919401
+            },
+            {
+                "stepId": "STEP7",
+                "stepName": "Url: modal-login.html",
+                "infFile": "t7.inf",
+                "time": 1571405919546
+            },
+            {
+                "stepId": "STEP8",
+                "stepName": "Submit Data: authentication",
+                "infFile": "t8.inf",
+                "time": 1571405919843
+            },
+            {
+                "stepId": "STEP9",
+                "stepName": "Url: account",
+                "infFile": "t9.inf",
+                "time": 1571405919964
+            },
+            {
+                "stepId": "STEP10",
+                "stepName": "Url: profile",
+                "infFile": "t10.inf",
+                "time": 1571405920196
+            },
+            {
+                "stepId": "STEP11",
+                "stepName": "Url: main_template.html",
+                "infFile": "t11.inf",
+                "time": 1571405920312
+            },
+            {
+                "stepId": "STEP12",
+                "stepName": "Url: home.html_2",
+                "infFile": "t12.inf",
+                "time": 1571405920468
+            },
+            {
+                "stepId": "STEP13",
+                "stepName": "Url: header.html",
+                "infFile": "t13.inf",
+                "time": 1571405920579
+            },
+            {
+                "stepId": "STEP14",
+                "stepName": "Url: ordersList.html",
+                "infFile": "t14.inf",
+                "time": 1571405920687
+            },
+            {
+                "stepId": "STEP15",
+                "stepName": "Url: hist-orders",
+                "infFile": "t15.inf",
+                "time": 1571405920794
+            },
+            {
+                "stepId": "STEP16",
+                "stepName": "Url: waitingOrders",
+                "infFile": "t16.inf",
+                "time": 1571405921057
+            },
+            {
+                "stepId": "STEP17",
+                "stepName": "Url: orders",
+                "infFile": "t17.inf",
+                "time": 1571405923144
+            },
+            {
+                "stepId": "STEP18",
+                "stepName": "Url: orders",
+                "infFile": "t18.inf",
+                "time": 1571405925389
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "Login",
+                "rawStartTime": 1571405919404,
+                "rawEndTime": 1571405923148,
+                "thinkTime": 0.0,
+                "wastedTime": 0.2688877582550049
+            },
+            {
+                "transactionName": "save",
+                "rawStartTime": 1571405923201,
+                "rawEndTime": 1571405925391,
+                "thinkTime": 0.0,
+                "wastedTime": 0.05017566680908203
+            }
+        ]
+    }
+]

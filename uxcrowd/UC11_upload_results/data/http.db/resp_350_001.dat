@@ -1,0 +1,38 @@
+1414
+<?xml version="1.0" encoding="UTF-8"?>
+<VAST xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd" version="3.0">
+        <Ad id="16.367.9250">
+                <Wrapper>
+			<AdSystem>OTM</AdSystem>
+			<VASTAdTagURI><![CDATA[https://g.adspeed.net/ad.php?do=vast&zid=98560&oid=23692&wd=-1&ht=-1&vastver=3&cb=1568806028]]></VASTAdTagURI>
+                        <Impression id="ae4ea833-400c-ac7e-7c21-7c7fa53c7852"><![CDATA[https://bidder-eu-02.b.otm-r.com/otm/imp?bid=b4566f1678a84e448c0059b7414a6ab0&creative=16.367.9250.12503&id=ae4ea833-400c-ac7e-7c21-7c7fa53c7852&pub_id=5aa66cd6b5c4d3f20c0c1874&secure=1&ssp=direct&uid=NWRhOWE0Y2EwNDE5MmFlZA%3D%3D&media_cost=80.00&dc=MA]]></Impression>
+						<Error><![CDATA[https://bidder-eu-02.b.otm-r.com/otm/tracking?bid=b4566f1678a84e448c0059b7414a6ab0&creative=16.367.9250.12503&event=error&id=ae4ea833-400c-ac7e-7c21-7c7fa53c7852&error=[ERRORCODE]]]></Error>
+                        <Creatives>
+                                <Creative id="16.367.12503">
+                                        <Linear>
+                                                <VideoClicks>
+                                                        <ClickTracking><![CDATA[https://bidder-eu-02.b.otm-r.com/otm/click?bid=b4566f1678a84e448c0059b7414a6ab0&creative=16.367.9250.12503&id=ae4ea833-400c-ac7e-7c21-7c7fa53c7852&pub_id=5aa66cd6b5c4d3f20c0c1874&secure=1&ssp=direct&uid=NWRhOWE0Y2EwNDE5MmFlZA%3D%3D]]></ClickTracking>
+                                                </VideoClicks>
+                                                <TrackingEvents>
+                                                        <Tracking event="complete"><![CDATA[https://bidder-eu-02.b.otm-r.com/otm/tracking?bid=b4566f1678a84e448c0059b7414a6ab0&creative=16.367.9250.12503&event=complete&id=ae4ea833-400c-ac7e-7c21-7c7fa53c7852]]></Tracking>
+                                                        <Tracking event="firstQuartile"><![CDATA[https://bidder-eu-02.b.otm-r.com/otm/tracking?bid=b4566f1678a84e448c0059b7414a6ab0&creative=16.367.9250.12503&event=firstQuartile&id=ae4ea833-400c-ac7e-7c21-7c7fa53c7852]]></Tracking>
+                                                        <Tracking event="midpoint"><![CDATA[https://bidder-eu-02.b.otm-r.com/otm/tracking?bid=b4566f1678a84e448c0059b7414a6ab0&creative=16.367.9250.12503&event=midpoint&id=ae4ea833-400c-ac7e-7c21-7c7fa53c7852]]></Tracking>
+                                                        <Tracking event="mute"><![CDATA[https://bidder-eu-02.b.otm-r.com/otm/tracking?bid=b4566f1678a84e448c0059b7414a6ab0&creative=16.367.9250.12503&event=mute&id=ae4ea833-400c-ac7e-7c21-7c7fa53c7852]]></Tracking>
+                                                        <Tracking event="pause"><![CDATA[https://bidder-eu-02.b.otm-r.com/otm/tracking?bid=b4566f1678a84e448c0059b7414a6ab0&creative=16.367.9250.12503&event=pause&id=ae4ea833-400c-ac7e-7c21-7c7fa53c7852]]></Tracking>
+                                                        <Tracking event="resume"><![CDATA[https://bidder-eu-02.b.otm-r.com/otm/tracking?bid=b4566f1678a84e448c0059b7414a6ab0&creative=16.367.9250.12503&event=resume&id=ae4ea833-400c-ac7e-7c21-7c7fa53c7852]]></Tracking>
+                                                        <Tracking event="skip"><![CDATA[https://bidder-eu-02.b.otm-r.com/otm/tracking?bid=b4566f1678a84e448c0059b7414a6ab0&creative=16.367.9250.12503&event=skip&id=ae4ea833-400c-ac7e-7c21-7c7fa53c7852]]></Tracking>
+                                                        <Tracking event="start"><![CDATA[https://bidder-eu-02.b.otm-r.com/otm/tracking?bid=b4566f1678a84e448c0059b7414a6ab0&creative=16.367.9250.12503&event=start&id=ae4ea833-400c-ac7e-7c21-7c7fa53c7852]]></Tracking>
+                                                        <Tracking event="thirdQuartile"><![CDATA[https://bidder-eu-02.b.otm-r.com/otm/tracking?bid=b4566f1678a84e448c0059b7414a6ab0&creative=16.367.9250.12503&event=thirdQuartile&id=ae4ea833-400c-ac7e-7c21-7c7fa53c7852]]></Tracking>
+                                                        <Tracking event="unmute"><![CDATA[https://bidder-eu-02.b.otm-r.com/otm/tracking?bid=b4566f1678a84e448c0059b7414a6ab0&creative=16.367.9250.12503&event=unmute&id=ae4ea833-400c-ac7e-7c21-7c7fa53c7852]]></Tracking>
+                                                        <Tracking event="creativeView"><![CDATA[https://sync.dmp.otm-r.com/pre.gif?with=mgcomm,lin,stream,segmento2,segmento&rnd=550074721]]></Tracking>
+                                                        <Tracking event="creativeView"><![CDATA[https://sync.dmp.otm-r.com/pre.gif?with=google2,bazzoola,snp,getintent,aidata&rnd=1546514052]]></Tracking>
+                                                        <Tracking event="creativeView"><![CDATA[https://sync.dmp.otm-r.com/pre.gif?with=adriver,inspiritum&rnd=2076846770]]></Tracking>
+                                                </TrackingEvents>
+                                        </Linear>
+                                </Creative>
+                        </Creatives>
+                </Wrapper>
+        </Ad>
+</VAST>
+0
+

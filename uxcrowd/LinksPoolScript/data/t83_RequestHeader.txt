@@ -1,0 +1,16 @@
+PUT /api/v2/customer/updateOrderSteps HTTP/1.1
+Host: prod.uxcrowd.ru
+Connection: keep-alive
+Content-Length: 93
+Accept: */*
+Origin: https://prod.uxcrowd.ru
+X-XSRF-TOKEN: 3277a738-66ad-44bc-aed1-4633c34eb6e8
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36
+Sec-Fetch-Mode: cors
+Content-Type: application/json;charset=UTF-8
+Sec-Fetch-Site: same-origin
+Referer: https://prod.uxcrowd.ru/app-customer-home/order?id=16960811
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: CSRF-TOKEN=3a28e7f7-1361-4148-a297-8b5c71daf9b4; intercom-id-fkbc3no8=bf685739-47ec-4fbe-86ea-8a4be0152dd0; XSRF-TOKEN=3277a738-66ad-44bc-aed1-4633c34eb6e8; remember-me=ZCUyQmR4Qnd5T0xBSnVkYnlHMWNTTGtnJTNEJTNEOmUlMkJCOG5TV2lZdHRKaHVmaiUyRnc2TWd3JTNEJTNE; userId=493253069; JSESSIONID=8AD62E5F4115B9FE1C75EBFC07F6C220; intercom-session-fkbc3no8=dWxCMFhHZm96Q3BjTWtLNHdMQWxKenJkd2hVTDliR2hLMTNySU9rUDRPZUdBZVZKaE50eEpnaXc4SHdFSXVVdi0tUjFpQ2tlUytQemhhYW5iMDhkcGYwZz09--51d6306464ea7046addb003d2fb09937d60c8ad5
+

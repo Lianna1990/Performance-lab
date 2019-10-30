@@ -1,0 +1,34 @@
+[Scenario]
+Product=LoadRunner Controller
+Version=12.60.0.0
+Path=Scenario2
+Subject=
+Result_file=C:\Users\student\Documents\UXCrowd3\UC08_create_pay_test\res\res.lrr
+Description=
+ResultName=res
+Time_Zone=-10800
+Start_time=1571919468
+Daylight_Bias=0
+Stop_time=1571919417
+[Configuration]
+Public_local=1
+Is_mix=1
+Is_runner_file=0
+Runner_file=
+[Running_mode]
+Start_reason=By command
+Stop_reason=By command
+[Data Collection]
+FullData=0
+[Scenario_summary]
+Scenario Type=Manual Scenario
+Goal Profile Name=Group schedule for: uc08_create_pay_test_1
+Mode=Group Scheduling
+Scenario Duration=Unknown duration
+Load Behavior=Defined per scenario group
+[Scripts]
+UC08_create_pay_test=C:\Users\student\Documents\UXCrowd3\UC08_create_pay_test\UC08_create_pay_test.usr
+UC08_create_pay_test_1=C:\Users\student\Documents\UXCrowd3\UC08_create_pay_test\UC08_create_pay_test.usr
+[Scripts_types]
+UC08_create_pay_test=Multi+QTWeb
+UC08_create_pay_test_1=Multi+QTWeb

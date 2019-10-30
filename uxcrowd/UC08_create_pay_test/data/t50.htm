@@ -1,0 +1,74 @@
+<div class="uxc_container">
+    <div class="left_menu_uxc">
+
+        <a ng-href="{{fullUrl}}/app-customer-home/list-orders">
+            <div class="logo_left_menu">
+                <img ng-if="testStandLogo" class="test-stand-dynamic" src="../assets/images/test-stand.png">
+            </div>
+        </a>
+
+        <aside class="left_menu">
+            <section class="item_menu_nav new-test-btn customer-left-menu" ui-sref-active="active" ui-sref="order({as: 'select_tester',id:null})">
+                <div class="item_menu_logo new_test"></div>
+
+                <p class="item_menu_text" ng-tr="MTP.MTP">
+                    Новый тест
+                </p>
+            </section>
+
+            <section class="item_menu_nav customer-left-menu" ui-sref-active="active" ui-sref="list-orders">
+                <div class="item_menu_logo list"></div>
+
+                <p class="item_menu_text" ng-tr="MTP.MTP1">
+                    Все тесты
+                </p>
+            </section>
+
+            <section class="item_menu_nav customer-left-menu" ui-sref-active="active" ui-sref="draft-orders">
+                <div class="item_menu_logo drafts"><span  id="draftSavedId" class="draft-count">+1</span></div>
+
+                <p class="item_menu_text" ng-tr="MTP.MTP2">
+                    Черновики
+                </p>
+            </section>
+
+            <section class="item_menu_nav customer-left-menu" ui-sref-active="active" ui-sref="insight-list">
+                <div class="item_menu_logo insight_icon"></div>
+
+                <p class="item_menu_text" ng-tr="MTP.MTP3">
+                    Инсайты
+                </p>
+            </section>
+
+            <section class="item_menu_nav customer-left-menu" ui-sref-active="active" ui-sref="customer-profile">
+                <div class="item_menu_logo settings"></div>
+
+                <p class="item_menu_text" ng-tr="MTP.MTP4">
+                    Профиль
+                </p>
+            </section>
+
+            <section class="item_menu_nav customer-left-menu" ui-sref-active="active" ui-sref="tariff">
+                <div class="item_menu_logo settings"></div>
+
+                <p class="item_menu_text" ng-tr="TRF.TRF0">
+                </p>
+            </section>
+
+            <div class="item_menu_nav customer-left-menu" ui-sref-active="active" ui-sref="balance" ng:if="account.role=='ROLE_SUPER_CUSTOMER'">
+                <div class="item_menu_logo balance-info"></div>
+
+                <p class="item_menu_text" ng-tr="MTP.MTP5">
+                    Баланс
+                </p>
+            </div>
+
+        </aside>
+    </div>
+
+    <div class="main_container">
+        <div ui-view="header" class="header_main_container"></div>
+
+        <div ui-view="main_content_customer" class="sub_container_menu"></div>
+    </div>
+</div>

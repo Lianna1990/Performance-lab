@@ -1,0 +1,12 @@
+POST /api/v2/tester/profile HTTP/1.1
+Content-Type: application/json
+X-XSRF-TOKEN: 262af455-0953-49b4-948d-8d5425ebb83c
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+Accept: */*
+Connection: Keep-Alive
+Host: prod.uxcrowd.ru
+Cookie: CSRF-TOKEN=ac4780ff-4163-48e0-ba71-a0bb0a4d75ee; XSRF-TOKEN=262af455-0953-49b4-948d-8d5425ebb83c; remember-me=S3I2OEJtWEFZbUR1eXJiJTJGZyUyQmc1REElM0QlM0Q6RkZOeG5aWEt3emZBYVllaUR5azl3QSUzRCUzRA; userId=493253119; JSESSIONID=A0398D1BD4C3BF7F3039E9C639213CD7
+Content-Length: 298
+

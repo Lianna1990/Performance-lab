@@ -1,0 +1,13 @@
+GET /api/tester/has-completed-video HTTP/1.1
+Host: prod.uxcrowd.ru
+Connection: keep-alive
+Accept: application/json, text/plain, */*
+X-XSRF-TOKEN: ce9182e4-614f-4c3d-b58b-d22c8c8185b5
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Referer: https://prod.uxcrowd.ru/app-new-tester-home/instruction3
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: dbl=aacc30ec1e4ba6fc895ee20a496916cd; fco2r34=aacc30ec1e4ba6fc895ee20a496916cd; XSRF-TOKEN=ce9182e4-614f-4c3d-b58b-d22c8c8185b5; remember-me=SHNnVjlIZmRMMUV6ZHNHNnJRbGxMUSUzRCUzRDpZVkxqSUw3SElXdUpRMFhzYzFXVHVRJTNEJTNE; userId=493253221; JSESSIONID=7B5B497D1FD9E83EE4F06A9EB4CA59BB; newTesterState=; CSRF-TOKEN=ce9182e4-614f-4c3d-b58b-d22c8c8185b5; intercom-session-fkbc3no8=SVBmVXlTM1hpK05HL3J5VFRqQjRjWnJCTFpWSG82M0dZdXJFM0ozL0d6NzhRb0oraW5mV0krbUVXdUhRdW5YQS0tSGd1QkY4WjF5TEpMTTFIc2lySWNUQT09--6dd53ab2dab077e1ee37c6ac9524d2043dcb960c
+

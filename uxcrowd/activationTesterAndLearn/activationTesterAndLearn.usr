@@ -1,0 +1,77 @@
+[General]
+Type=Multi
+DefaultCfg=default.cfg
+ParameterFile=activationTesterAndLearn.prm
+GlobalParameterFile=
+NewFunctionHeader=1
+RunType=cci
+ActionLogicExt=action_logic
+LastActiveAction=Action
+MajorVersion=12
+MinorVersion=60
+ActiveTypes=QTWeb
+GenerateTypes=QTWeb
+AdditionalTypes=QTWeb
+DevelopTool=Vugen
+LastModifyVer=12.60.0.971
+ParamLeftBrace={
+ParamRightBrace=}
+ScriptLanguage=C
+LastCodeGenerationVer=12.60.0.971
+DisableRegenerate=0
+Encoding=ANSI
+Description=
+ScriptLocale=ru-RU
+[Actions]
+vuser_init=vuser_init.c
+Action=Action.c
+Imported_Action=Imported_Action.c
+vuser_end=vuser_end.c
+[RunLogicFiles]
+Default Profile=default.usp
+[VuserProfiles]
+Profiles=Default Profile
+[CfgFiles]
+Default Profile=default.cfg
+[ExtraFiles]
+globals.h=
+WebSocketBuffer.h=
+[Modified Actions]
+vuser_init=0
+Action=1
+Imported_Action=0
+vuser_end=0
+[Recorded Actions]
+vuser_init=0
+Action=1
+Imported_Action=0
+vuser_end=0
+[Replayed Actions]
+vuser_init=1
+Action=1
+Imported_Action=1
+vuser_end=1
+[Interpreters]
+vuser_init=cci
+Action=cci
+Imported_Action=cci
+vuser_end=cci
+[TransactionsOrder]
+Order="set password__*delimiter*__LearnTesting_01_Instruction_Step1__*delimiter*__LearnTesting_02_Instruction_Step2__*delimiter*__LearnTesting_03_Instruction_Step3__*delimiter*__LearnTesting_04_StartTesting__*delimiter*__LearnTesting_05_StartTest__*delimiter*__LearnTesting_06_UploadVideo__*delimiter*__LearnTesting_07_Œ __*delimiter*__UC_00_LogOut"
+[StateManagement]
+LastReplayStatus=2
+[ActiveReplay]
+LastReplayedRunName=result1
+ActiveRunName=result1
+[ImportedAction]
+Imported_Action=
+[Transactions]
+"set password"=
+LearnTesting_01_Instruction_Step1=
+LearnTesting_02_Instruction_Step2=
+LearnTesting_03_Instruction_Step3=
+LearnTesting_04_StartTesting=
+LearnTesting_05_StartTest=
+LearnTesting_06_UploadVideo=
+LearnTesting_07_Œ =
+UC_00_LogOut=

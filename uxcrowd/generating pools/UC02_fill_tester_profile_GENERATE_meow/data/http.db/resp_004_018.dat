@@ -1,0 +1,437 @@
+define(['../../../app'], function (app) {
+    app_cached_providers
+        .$controllerProvider
+        .register('testerProfileController', function ($scope, Principal, Profiles, Account, $http, $config, Translation, $injector) {
+            $scope.profile = {};
+
+            var $validationProvider = $injector.get('$validation');
+          $scope.isNotValid = false;
+            $scope.fileCount = 0;
+            $scope.getCurrentPrincipal = function () {
+                Principal.identity().then(function (account) {
+                    $scope.account = account;
+                    Profiles.getProfile().then(function (data) {
+                        $scope.profile = data;
+                        if ($scope.profile.income == 55000) {
+                            $scope.profile.income = '50 000+';
+                        } else {
+                            $scope.profile.income = $scope.profile.income || 0;
+                        }
+                        $scope.profile.kids = $scope.profile.kids || "NONE";
+                        if ($config.locale == 'en') {
+                            $("#tester-profile-data").datepicker({
+                                defaultDate: $.datepicker.formatDate('dd.mm.yy', new Date()),
+                                changeMonth: true,
+                                dateFormat: "mm/dd/yy",
+                                yearRange: "1920:2019",
+                                changeYear: true,
+                                dayNamesMin: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+                                monthNamesShort: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                                onSelect: function (data) {
+                                    $scope.profile.birthday = data;
+                                    $("#tester-profile-data").removeClass('ng-untouched');
+                                    $("#tester-profile-data").removeClass('ng-pristine');
+                                    $("#tester-profile-data").removeClass('ng-invalid-elevalidation');
+                                    $("#tester-profile-data").addClass('ng-valid-elevalidation');
+                                    $("#tester-profile-data").parent('.uxc_custom_input').addClass('filled');
+                                    $(".birthday.valid_element").remove();
+                                }
+                            });
+                            if ($scope.profile.birthday!=null){
+                                var initial = $scope.profile.birthday.split(".");
+                                $scope.profile.birthday = [ initial[1], initial[0], initial[2] ].join('/');
+
+                            }
+                        } else {
+                            $("#tester-profile-data").datepicker({
+                                defaultDate: $.datepicker.formatDate('dd.mm.yy', new Date()),
+                                changeMonth: true,
+                                dateFormat: "dd.mm.yy",
+                                yearRange: "1920:2019",
+                                changeYear: true,
+                                dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+                                monthNamesShort: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+                                onSelect: function (data) {
+                                    $scope.profile.birthday = data;
+                                    $("#tester-profile-data").removeClass('ng-untouched');
+                                    $("#tester-profile-data").removeClass('ng-pristine');
+                                    $("#tester-profile-data").removeClass('ng-invalid-elevalidation');
+                                    $("#tester-profile-data").addClass('ng-valid-elevalidation');
+                                    $("#tester-profile-data").parent('.uxc_custom_input').addClass('filled');
+                                    $(".birthday.valid_element").remove();
+                                }
+                            });
+                        }
+                        var valueIncome = $scope.profile.income == '50 000+' ? 55000 : $scope.profile.income;
+
+                        $('.block_range_js').slider({
+                            range: "min",
+                            max: 55000,
+                            step: 5000,
+                            value: valueIncome,
+                            slide: function (event, ui) {
+                                if (ui.value == '55000') {
+                                    $scope.profile.income = "50 000+"
+                                } else {
+                                    $scope.profile.income = format_price(ui.value);
+                                }
+                                $scope.$apply();
+                            }
+                        });
+                        if ($(".input_income")) {
+                            $(".input_income").val(format_price($(".slider").slider("values", 0)));
+                            if ($(".input_income").val() == "0") {
+                                $(".input_income").val(Translation.translate('ORL.ORL33'))
+                            }
+                        }
+
+                        $("#salutation").selectmenu({
+                            change: function (event, data) {
+                                if (data.item) {
+                                    $scope.profile.country = data.item.value;
+                                    $scope.$apply();
+                                }
+                            }
+                        }).val($scope.profile.country).selectmenu("refresh");
+
+                        $("#education").selectmenu({
+                            change: function (event, data) {
+                                if (data.item) {
+                                    $scope.profile.education = data.item.value;
+                                    $scope.$apply();
+                                }
+                            }
+                        }).val($scope.profile.education == 'UNDEFINED' ? '' : $scope.profile.education).selectmenu("refresh");
+
+                        $("#socialStatus").selectmenu({
+                            change: function (event, data) {
+                                if (data.item) {
+                                    $scope.profile.socialStatus = data.item.value;
+                                    $scope.$apply();
+                                }
+                            }
+                        }).val($scope.profile.socialStatus == 'UNDEFINED' ? '' : $scope.profile.socialStatus).selectmenu("refresh");
+
+
+                        if ($scope.profile.income == '55000') {
+                            $scope.profile.income = '50 000+';
+                        } else {
+                            $scope.profile.income = format_price($scope.profile.income);
+                        }
+                    }).catch(function (data) {
+                        $scope.error = 'ERROR';
+                        $scope.message = data.data;
+                    });
+                });
+            };
+
+            $scope.updateSelect = function () {
+                $("#socialStatus").selectmenu({
+                    change: function (event, data) {
+                        if (data.item) {
+                            $scope.profile.socialStatus = data.item.value;
+                            $scope.$apply();
+                        }
+                    }
+                }).val($scope.profile.socialStatus).selectmenu("refresh");
+            };
+
+            $scope.getCSRF = function () {
+                var name = 'XSRF-TOKEN=';
+                var ca = document.cookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') c = c.substring(1);
+                    if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+                }
+                return '';
+            };
+
+            $scope.login = function () {
+                $validationProvider.validate($scope.ProfileForm)
+                    .success(function() {
+                        $scope.profile.id = $scope.account.id;
+                        var val_el = $('.input_income').val().replace(' ', '');
+
+                        if (val_el == '50000+') {
+                            $scope.profile.income = '55000'
+                        } else {
+                            $scope.profile.income = val_el;
+                        }
+
+                        if ($scope.profile.education === 'UNDEFINED' || $scope.profile.socialStatus === 'UNDEFINED' ){
+                          $scope.isNotValid = true;
+                          return;
+                        }
+
+                        if ($config.locale == 'en') {
+                            var initial = $scope.profile.birthday.split("/");
+                            $scope.profile.birthday = [ initial[1], initial[0], initial[2] ].join('.');
+                        }
+
+                        Profiles.saveProfile($scope.profile).then(function (data) {
+                            if ($config.locale == 'en') {
+                                var initial = $scope.profile.birthday.split(".");
+                                $scope.profile.birthday = [ initial[1], initial[0], initial[2] ].join('/');
+                            }
+                            $scope.profileSaved = true;
+                            if ($scope.profile.income == '55000') {
+                                $scope.profile.income = '50 000+'
+                            } else {
+                                console.log(data.income);
+                                $scope.profile.income = format_price(data.income);
+                            }
+                        }).catch(function (data) {
+                            $scope.profileSaved = false;
+                            if ($scope.profile.income == '55000') {
+                                $scope.profile.income = '50 000+'
+                            } else {
+                                $scope.profile.income = format_price(data.income);
+                            }
+                        });
+                    })
+                    .error(function() {
+                        $scope.isNotValid = true;
+                    });
+
+            };
+
+            $scope.security_user = {
+                password_one: '',
+                password_new: '',
+                repeat_password_new: ''
+            };
+
+            $scope.update = function () {
+                $('.errors_block').html('')
+            };
+
+            $scope.updatePassword = function () {
+                 $validationProvider.validate($scope.FormUpdatePassword)
+                     .success(function() {
+                         $http({
+                             method: 'POST',
+                             url: '/api/change-password',
+                             data: $scope.security_user
+                         }).then(function successCallback(data) {
+                             $scope.activeDate = data;
+                             $('.form-errors-block')
+                                 .html('<div class="alert-success text-center col-xs-12">Ваш пароль успешно изменен </div>')
+                         }, function errorCallback(response) {
+                             if (response.data == "BAD_OLD_PASSWORD") {
+                                 $('.form-errors-block')
+                                     .html('<div class="alert-danger text-center col-xs-12">Неверный старый пароль</div>')
+                             } else {
+                                 $('.form-errors-block')
+                                     .html('<div class="alert-danger text-center col-xs-12">Ошибка, пожалуйста попробуйте позже </div>')
+                             }
+                         });
+                     })
+                     .error(function() {
+                            console.log('error');
+                            console.log(form);
+                     });
+            };
+
+            $scope.getCurrentPrincipal();
+
+            $scope.countries = [
+                'Afghanistan',
+                'Albania',
+                'Algeria',
+                'Andorra',
+                'Angola',
+                'Antigua & Deps',
+                'Argentina',
+                'Armenia',
+                'Australia',
+                'Austria',
+                'Azerbaijan',
+                'Bahamas',
+                'Bahrain',
+                'Bangladesh',
+                'Barbados',
+                'Belarus',
+                'Belgium',
+                'Belize',
+                'Benin',
+                'Bhutan',
+                'Bolivia',
+                'Bosnia Herzegovina',
+                'Botswana',
+                'Brazil',
+                'Brunei',
+                'Bulgaria',
+                'Burkina',
+                'Burundi',
+                'Cambodia',
+                'Cameroon',
+                'Canada',
+                'Cape Verde',
+                'Central African Rep',
+                'Chad',
+                'Chile',
+                'China',
+                'Colombia',
+                'Comoros',
+                'Congo',
+                'Congo {Democratic Rep}',
+                'Costa Rica',
+                'Croatia',
+                'Cuba',
+                'Cyprus',
+                'Czech Republic',
+                'Denmark',
+                'Djibouti',
+                'Dominica',
+                'Dominican Republic',
+                'East Timor',
+                'Ecuador',
+                'Egypt',
+                'El Salvador',
+                'Equatorial Guinea',
+                'Eritrea',
+                'Estonia',
+                'Ethiopia',
+                'Fiji',
+                'Finland',
+                'France',
+                'Gabon',
+                'Gambia',
+                'Georgia',
+                'Germany',
+                'Ghana',
+                'Greece',
+                'Grenada',
+                'Guatemala',
+                'Guinea',
+                'Guinea-Bissau',
+                'Guyana',
+                'Haiti',
+                'Honduras',
+                'Hungary',
+                'Iceland',
+                'India',
+                'Indonesia',
+                'Iran',
+                'Iraq',
+                'Ireland {Republic}',
+                'Israel',
+                'Italy',
+                'Ivory Coast',
+                'Jamaica',
+                'Japan',
+                'Jordan',
+                'Kazakhstan',
+                'Kenya',
+                'Kiribati',
+                'Korea North',
+                'Korea South',
+                'Kosovo',
+                'Kuwait',
+                'Kyrgyzstan',
+                'Laos',
+                'Latvia',
+                'Lebanon',
+                'Lesotho',
+                'Liberia',
+                'Libya',
+                'Liechtenstein',
+                'Lithuania',
+                'Luxembourg',
+                'Macedonia',
+                'Madagascar',
+                'Malawi',
+                'Malaysia',
+                'Maldives',
+                'Mali',
+                'Malta',
+                'Marshall Islands',
+                'Mauritania',
+                'Mauritius',
+                'Mexico',
+                'Micronesia',
+                'Moldova',
+                'Monaco',
+                'Mongolia',
+                'Montenegro',
+                'Morocco',
+                'Mozambique',
+                'Myanmar, {Burma}',
+                'Namibia',
+                'Nauru',
+                'Nepal',
+                'Netherlands',
+                'New Zealand',
+                'Nicaragua',
+                'Niger',
+                'Nigeria',
+                'Norway',
+                'Oman',
+                'Pakistan',
+                'Palau',
+                'Panama',
+                'Papua New Guinea',
+                'Paraguay',
+                'Peru',
+                'Philippines',
+                'Poland',
+                'Portugal',
+                'Qatar',
+                'Romania',
+                'Russian Federation',
+                'Rwanda',
+                'St Kitts & Nevis',
+                'St Lucia',
+                'Saint Vincent & the Grenadines',
+                'Samoa',
+                'San Marino',
+                'Sao Tome & Principe',
+                'Saudi Arabia',
+                'Senegal',
+                'Serbia',
+                'Seychelles',
+                'Sierra Leone',
+                'Singapore',
+                'Slovakia',
+                'Slovenia',
+                'Solomon Islands',
+                'Somalia',
+                'South Africa',
+                'South Sudan',
+                'Spain',
+                'Sri Lanka',
+                'Sudan',
+                'Suriname',
+                'Swaziland',
+                'Sweden',
+                'Switzerland',
+                'Syria',
+                'Taiwan',
+                'Tajikistan',
+                'Tanzania',
+                'Thailand',
+                'Togo',
+                'Tonga',
+                'Trinidad & Tobago',
+                'Tunisia',
+                'Turkey',
+                'Turkmenistan',
+                'Tuvalu',
+                'Uganda',
+                'Ukraine',
+                'United Arab Emirates',
+                'United Kingdom',
+                'United States',
+                'Uruguay',
+                'Uzbekistan',
+                'Vanuatu',
+                'Vatican City',
+                'Venezuela',
+                'Vietnam',
+                'Yemen',
+                'Zambia',
+                'Zimbabwe',
+            ]
+        });
+});

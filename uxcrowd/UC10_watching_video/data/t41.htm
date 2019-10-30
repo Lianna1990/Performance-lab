@@ -1,0 +1,1249 @@
+<div class="list-view-wrapper">
+  <h5 class="header_table_description" ng-tr="ORL.ORL159">
+    Ожидают оплаты:
+  </h5>
+
+  <div class="block_list waiting-payment-test">
+    <div class="header_table">
+      <div class="all_info orders-list">
+        <div class="order-num-table table-header-names">
+          №
+        </div>
+
+        <div class="url-table table-header-names" ng-tr="ORL.ORL1">
+          Название
+        </div>
+
+        <div class="url-table table-header-names" ng-tr="ORL.ORL2">
+          Тестируем
+        </div>
+
+        <div class="price-table table-header-names" ng-tr="ORL.ORL3">
+          Цена
+        </div>
+
+        <div class="price-table table-header-names" ng-tr="ORL.ORL4">
+          Тип респондентов
+        </div>
+
+        <div class="videos-table table-header-names" ng-tr="ORL.ORL160">
+          Количество респондентов
+        </div>
+
+        <div class="result-table table-header-names">
+
+        </div>
+
+      </div>
+    </div>
+
+    <div ng:if="waitingOrders.data.length===0" class="item_row">
+      <p class="text-center all_info" ng-tr="ORL.ORL164">
+        У вас нет заказов, ожидающих оплаты
+      </p>
+    </div>
+
+    <div ng:if="waitingOrders.data.length>0" class="item_row"
+         ng:repeat="order in waitingOrders.data | orderBy:'-id' | sort_step_participantGroup track by order.id">
+      <div class="all_info orders-list">
+        <div class="order-num-table">
+          <span class="link" ng:click="openRightMenu(order)">{{order.id}}</span>
+        </div>
+
+        <div class="url-table">
+          {{order.testTitle}}
+        </div>
+
+        <div class="url-table">
+          {{order.targetSite}}
+        </div>
+
+        <div class="price-table">{{order.payment.coast == null ? ('ORL.ORL7' | translate):
+          order.payment.coast}}
+          <span ng:if="order.payment.coast != null" class="ru_pay" ng-hide="order.payment == null">
+                        <span ng-if="config.locale == 'ru'">&#8381;</span>
+                        <span ng-if="config.locale == 'en'">&#36;</span>
+                    </span>
+        </div>
+
+        <div class="price-table">
+          {{order.testerType=='OUR'?'ORL.ORL8':'ORL.ORL9' | translate}}
+        </div>
+
+        <div class="videos-table">
+          {{order.testerCount}}
+        </div>
+
+        <div class="result-table  not_overflow copy">
+                    <span ng-click="copyOrder(order.id)" aria-hidden="true"
+                          title="{{'DOR.DOR9' | translate}}">
+                        <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="20"
+                             height="20"
+                             viewBox="0 0 43 46"><defs></defs><title>{{'DOR.DOR9' | translate}}</title><g
+                            id="Layer_2" data-name="Layer 2"><g id="copy"><path class="cls-2"
+                                                                                d="M39,6V38a4,4,0,0,1-4,4H7a4,4,0,0,0,4,4H39a4,4,0,0,0,4-4V10a4,4,0,0,0-4-4Z"/><path
+                            class="cls-2"
+                            d="M32,4V36H4V4H32m0-4H4A4,4,0,0,0,0,4V36a4,4,0,0,0,4,4H32a4,4,0,0,0,4-4V4a4,4,0,0,0-4-4Z"/></g></g>
+                        </svg>
+                    </span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <h5 class="header_table_description" ng-tr="ORL.ORL">
+    Выполняются:
+  </h5>
+
+  <div class="block_list active-tests">
+    <div class="header_table">
+      <div class="all_info orders-list">
+        <div class="order-num-table table-header-names">
+          №
+        </div>
+
+        <div class="url-table table-header-names" ng-tr="ORL.ORL1">
+          Название
+        </div>
+
+        <div class="url-table table-header-names" ng-tr="ORL.ORL2">
+          Тестируем
+        </div>
+
+        <div class="price-table table-header-names" ng-tr="ORL.ORL3">
+          Цена
+        </div>
+
+
+        <div class="price-table table-header-names" ng-tr="ORL.ORL4">
+          Тип респондентов
+        </div>
+
+        <div class="videos-table table-header-names" ng-tr="ORL.ORL5">
+          Видео
+        </div>
+
+        <div class="result-table table-header-names" ng-tr="ORL.ORL158">
+          Результаты теста
+        </div>
+        <div class="result-table table-header-names">
+
+        </div>
+
+        <!--<div class="date-table table-header-names">
+        Дата создания
+    </div>-->
+      </div>
+    </div>
+
+    <div ng:if="listDateActive.data.length===0" class="item_row">
+      <p class="text-center all_info" ng-tr="ORL.ORL6">
+        У вас нет активных заказов
+      </p>
+    </div>
+
+    <div ng:if="listDateActive.data.length>0" class="item_row"
+         ng:repeat="order in listDateActive.data | orderBy:'-id' | sort_step_participantGroup track by order.id">
+      <div class="all_info orders-list">
+        <div class="order-num-table">
+          <span class="link" ng:click="openRightMenu(order)">{{order.id}}</span>
+        </div>
+
+        <div class="url-table">
+          {{order.testTitle}}
+        </div>
+
+        <div class="url-table">
+          {{order.targetSite}}
+        </div>
+
+        <div class="price-table">{{order.payment.coast == null ? ('ORL.ORL7' | translate):
+          order.payment.coast}}
+          <span ng:if="order.payment.coast != null" class="ru_pay" ng-hide="order.payment == null">
+                        <span ng-if="config.locale == 'ru'">&#8381;</span>
+                        <span ng-if="config.locale == 'en'">&#36;</span>
+                    </span>
+        </div>
+
+        <div class="price-table">
+          {{order.testerType=='OUR'?'ORL.ORL8':'ORL.ORL9' | translate}}
+        </div>
+
+        <div class="videos-table  not_overflow">
+          {{order.testerTaskCol!=null?order.testerTaskCol:'0'}}/{{order.testerCount}}
+        </div>
+
+        <div class="result-table  not_overflow">
+          <a ng:click="downloadResults(order.id)" class="link" ng-tr="ORL.ORL156">Скачать
+            результаты</a>
+        </div>
+        <div class="result-table  not_overflow copy">
+                    <span ng-click="copyOrder(order.id)" aria-hidden="true"
+                          title="{{'DOR.DOR9' | translate}}">
+                        <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="20"
+                             height="20"
+                             viewBox="0 0 43 46"><defs></defs><title>{{'DOR.DOR9' | translate}}</title><g
+                            id="Layer_2" data-name="Layer 2"><g id="copy"><path class="cls-2"
+                                                                                d="M39,6V38a4,4,0,0,1-4,4H7a4,4,0,0,0,4,4H39a4,4,0,0,0,4-4V10a4,4,0,0,0-4-4Z"/><path
+                            class="cls-2"
+                            d="M32,4V36H4V4H32m0-4H4A4,4,0,0,0,0,4V36a4,4,0,0,0,4,4H32a4,4,0,0,0,4-4V4a4,4,0,0,0-4-4Z"/></g></g>
+                        </svg>
+                    </span>
+        </div>
+      </div>
+    </div>
+
+    <div ng:if="listDateActive.data.length>0" class="item_row"
+         ng:repeat="order in listDateActive.data | orderBy:'-id' | sort_step_no_participantGroup track by order.id">
+      <div class="all_info orders-list">
+        <div class="order-num-table">
+          <span class="link" ng:click="openRightMenu(order)">{{order.id}}</span>
+        </div>
+        <div class="url-table" ng-tr="ORL.ORL10">
+          Бесплатный
+        </div>
+        Вы уже завершили данный тест.
+        <div class="url-table">
+          {{order.targetSite}}
+        </div>
+
+        <div class="price-table">
+          {{order.payment.coast == null ? ('ORL.ORL11' | translate):
+          (order.testerType=='OUR'?order.payment.coast:0)}}
+
+          <span ng:if="order.payment.coast != null" class="ru_pay" ng-hide="order.payment == null">
+                        <span ng-if="config.locale == 'ru'">&#8381;</span>
+                        <span ng-if="config.locale == 'en'">&#36;</span>
+                    </span>
+        </div>
+
+        <div class="price-table">
+          UXCrowd
+        </div>
+
+        <div class="videos-table  not_overflow">
+          {{order.testerTaskCol}}/1
+        </div>
+        <div class="result-table  not_overflow">
+          <a ng:click="downloadResults(order.id)" class="link" ng-tr="ORL.ORL156">Скачать
+            результаты</a>
+        </div>
+        <div class="result-table  not_overflow copy">
+                        <span ng-click="copyOrder(order.id)" aria-hidden="true"
+                              title="{{'DOR.DOR9' | translate}}">
+                            <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="20"
+                                 height="20"
+                                 viewBox="0 0 43 46"><defs></defs><title>{{'DOR.DOR9' | translate}}</title><g
+                                id="Layer_2" data-name="Layer 2"><g id="copy"><path class="cls-2"
+                                                                                    d="M39,6V38a4,4,0,0,1-4,4H7a4,4,0,0,0,4,4H39a4,4,0,0,0,4-4V10a4,4,0,0,0-4-4Z"/><path
+                                class="cls-2"
+                                d="M32,4V36H4V4H32m0-4H4A4,4,0,0,0,0,4V36a4,4,0,0,0,4,4H32a4,4,0,0,0,4-4V4a4,4,0,0,0-4-4Z"/></g></g>
+                            </svg>
+                        </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h5 class="header_table_description" ng-tr="ORL.ORL12">
+    Завершены:
+  </h5>
+
+  <div class="block_list done-tests">
+    <div class="header_table">
+      <div class="all_info orders-list">
+        <div class="order-num-table table-header-names">
+          №
+        </div>
+
+        <div class="url-table table-header-names" ng-tr="ORL.ORL13">
+          Название
+        </div>
+        <div class="url-table table-header-names" ng-tr="ORL.ORL14">
+          Тестируем
+        </div>
+
+        <div class="price-table table-header-names" ng-tr="ORL.ORL15">
+          Цена
+        </div>
+
+        <div class="price-table table-header-names" ng-tr="ORL.ORL16">
+          Тип респондентов
+        </div>
+
+        <div class="videos-table table-header-names" ng-tr="ORL.ORL17">
+          Видео
+        </div>
+
+        <div class="result-table table-header-names" ng-tr="ORL.ORL158">
+          Результаты теста
+        </div>
+
+        <div class="result-table table-header-names">
+
+        </div>
+      </div>
+    </div>
+
+    <div ng:if="listDate.data.length===0" class="item_row">
+      <p class="text-center all_info" ng-tr="ORL.ORL163">
+        У вас нет завершенных заказов
+      </p>
+    </div>
+
+    <div ng:if="listDate.data.length>0" class="item_row"
+         ng:repeat="order in listDate.data | orderBy:'-id' | sort_step_participantGroup track by order.id">
+      <div class="all_info orders-list">
+        <div class="order-num-table">
+          <span class="link" ng:click="openRightMenu(order)">{{order.id}}</span>
+        </div>
+
+        <div class="url-table">
+          {{order.testTitle}}
+        </div>
+
+        <div class="url-table">
+          {{order.targetSite}}
+        </div>
+
+        <div class="price-table">
+          {{order.payment.coast == null ? ('ORL.ORL18' | translate): order.payment.coast}}
+
+          <span ng:if="order.payment.coast != null" class="ru_pay" ng-hide="order.payment == null">
+                        <span ng-if="config.locale == 'ru'">&#8381;</span>
+                        <span ng-if="config.locale == 'en'">&#36;</span>
+                    </span>
+        </div>
+
+        <div class="price-table">
+          {{order.testerType=='OUR'?('ORL.ORL19' | translate):('ORL.ORL20' | translate)}}
+        </div>
+
+        <div class="videos-table  not_overflow">
+          {{order.testerTaskCol}}/{{order.testerCount}}
+        </div>
+        <div class="result-table  not_overflow">
+          <a ng:click="downloadResults(order.id)" class="link" ng-tr="ORL.ORL156">Скачать
+            результаты</a>
+        </div>
+        <div class="result-table  not_overflow copy">
+                        <span ng-click="copyOrder(order.id)" aria-hidden="true"
+                              title="{{'DOR.DOR9' | translate}}">
+                            <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="20"
+                                 height="20"
+                                 viewBox="0 0 43 46"><defs></defs><title>{{'DOR.DOR9' | translate}}</title><g
+                                id="Layer_2" data-name="Layer 2"><g id="copy"><path class="cls-2"
+                                                                                    d="M39,6V38a4,4,0,0,1-4,4H7a4,4,0,0,0,4,4H39a4,4,0,0,0,4-4V10a4,4,0,0,0-4-4Z"/><path
+                                class="cls-2"
+                                d="M32,4V36H4V4H32m0-4H4A4,4,0,0,0,0,4V36a4,4,0,0,0,4,4H32a4,4,0,0,0,4-4V4a4,4,0,0,0-4-4Z"/></g></g>
+                            </svg>
+                        </span>
+        </div>
+      </div>
+    </div>
+
+    <div ng:if="listDate.data.length>0" class="item_row"
+         ng:repeat="order in listDate.data | orderBy:'-id' | sort_step_no_participantGroup track by order.id">
+      <div class="all_info orders-list">
+        <div class="order-num-table">
+          <span class="link" ng:click="openRightMenu(order)">{{order.id}}</span>
+        </div>
+
+        <div class="url-table" ng-tr="ORL.ORL21">
+          Бесплатный
+        </div>
+        <div class="url-table">
+          {{order.targetSite}}
+        </div>
+
+        <div class="price-table">
+          {{order.payment.coast == null ? ('ORL.ORL22' | translate):
+          (order.testerType=='OUR'?order.payment.coast:0)}}
+
+          <span ng:if="order.payment.coast != null" class="ru_pay" ng-hide="order.payment == null">
+                        <span ng-if="config.locale == 'ru'">&#8381;</span>
+                        <span ng-if="config.locale == 'en'">&#36;</span>
+                    </span>
+        </div>
+
+        <div class="price-table">
+          UXCrowd
+        </div>
+
+        <div class="videos-table  not_overflow">
+          {{order.testerTaskCol}}/1
+        </div>
+        <div class="result-table  not_overflow">
+          <a ng:click="downloadResults(order.id)" class="link" ng-tr="ORL.ORL156">Скачать
+            результаты</a>
+        </div>
+        <div class="result-table  not_overflow copy">
+                        <span ng-click="copyOrder(order.id)" aria-hidden="true"
+                              title="{{'DOR.DOR9' | translate}}">
+                            <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="20"
+                                 height="20"
+                                 viewBox="0 0 43 46"><defs></defs><title>{{'DOR.DOR9' | translate}} djn ns hui</title><g
+                                id="Layer_2" data-name="Layer 2"><g id="copy"><path class="cls-2"
+                                                                                    d="M39,6V38a4,4,0,0,1-4,4H7a4,4,0,0,0,4,4H39a4,4,0,0,0,4-4V10a4,4,0,0,0-4-4Z"/><path
+                                class="cls-2"
+                                d="M32,4V36H4V4H32m0-4H4A4,4,0,0,0,0,4V36a4,4,0,0,0,4,4H32a4,4,0,0,0,4-4V4a4,4,0,0,0-4-4Z"/></g></g>
+                            </svg>
+                        </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="empty-state-btn-wrapper">
+    <a class="empty-state-btn orders"
+       href="app-customer-home/order?as=select_tester" ng-tr="ORL.ORL23">
+      + Создать новый тест
+    </a>
+  </div>
+</div>
+
+<div class="alert_right_menu">
+  <div class="all_panel" ng-click="closeRightMenu();"></div>
+
+  <div class="right_container">
+    <div class="first_table">
+      <section class="right-menu-order-number" ng-if="rightOrder.testTitle!=null">
+                <span class="subtext" ng-tr="ORL.ORL24">
+                    Название
+                </span>
+
+        <span class="fifth-title">
+                    {{rightOrder.testTitle}}
+                </span>
+      </section>
+
+      <section class="right-menu-order-number" ng-if="rightOrder.testTitle==null">
+                <span class="subtext">
+                &nbsp;
+                </span>
+        <span class="fifth-title">
+                &nbsp;
+                </span>
+      </section>
+      <span class="close_right_panel">
+                <span class="close" ng-click="closeRightMenu();"></span>
+            </span>
+    </div>
+    <div class="first_table" ng-if="rightOrder.status !== 'COMPLETED'">
+      <section>
+        <span class="stop_test" ng-click="stopOrder(rightOrder)">
+          <span ng-tr="ORL.ORL24_complete_test" ng-if="rightOrder.status === 'ACTIVE'">Завершить тест</span>
+          <span ng-tr="ORL.ORL24_cancel_test" ng-if="rightOrder.status === 'WAIT_CONFIRMATION'">Отменить тест</span>
+        </span>
+        <span ng-if="rightOrder.status === 'ACTIVE'"
+          style="left: 557px;" class="info_icon" pop-over data-class="popover-content-inn"
+          data-content="{{'ORL.ORL24_tooltip_content' | translate}}"
+          data-toggle="popover" data-placement="right" data-trigger="hover popover focus"></span>
+      </section>
+    </div>
+    <div class="first_table">
+      <section class="right-menu-order-number">
+                <span class="subtext">
+                    №
+                </span>
+
+        <span class="fifth-title">
+                    {{rightOrder.id}}
+                </span>
+      </section>
+
+      <section class="right-menu-website-url">
+                <span class="subtext" ng-tr="ORL.ORL25">
+                    Тестируем
+                </span>
+        <span>{{rightOrder.appName}}</span>
+        <a class="link fifth-title"
+           ng-href="{{(rightOrder.targetSite.indexOf('http://') > -1 || rightOrder.targetSite.indexOf('https://') > -1) ? rightOrder.targetSite : '//'+rightOrder.targetSite}}"
+           target="_blank">
+          {{rightOrder.targetSite}}
+        </a>
+      </section>
+    </div>
+
+    <div class="first_table">
+      <section class="right-menu-order-number">
+                <span class="subtext">
+                    <span ng-tr="ORL.ORL27">Количество респондентов: </span><span
+                    class="fifth-title">{{rightOrder.testerCount == null ? '1': rightOrder.testerCount}}</span>
+                </span>
+      </section>
+    </div>
+
+    <div class="first_table" ng-if="rightOrder.testerType=='THEIR' && rightOrder.status=='ACTIVE'">
+      <section class="right-menu-order-number">
+                <span class="subtext" ng-tr="ORL.ORL29">
+                     Ссылка на выполнение теста:
+                </span>
+        <span class="fifth-title" ng-if="rightOrder.status!='ACTIVE'" ng-tr="ORL.ORL165">
+                    Не доступна
+                </span>
+
+        <span class="fifth-title" ng-if="rightOrder.status=='ACTIVE'">
+                    {{testUrl}}{{rightOrder.testType=='MOBILE' || rightOrder.testType=='ANDROID'?'mobile-side-tester-welcome?ac=':'side-tester-welcome?ac='}}{{rightOrder.id}}
+                </span>
+      </section>
+    </div>
+
+    <div class="first_table" ng-if="rightOrder.status=='WAIT_CONFIRMATION'">
+      <section class="right-menu-order-number">
+        <a ng:click="downloadOrderOferta(rightOrder.id)" class="link" ng-tr="ORL.ORL162">Скачать оферту</a>
+      </section>
+    </div>
+
+    <div class="subheader-wrapper" ng-if="rightOrder.status!='WAIT_CONFIRMATION' && rightOrder.testerTask.length>0">
+      <h2 class="second-title text-center" ng-tr="ORL.ORL157">
+        Результаты
+      </h2>
+    </div>
+
+    <div class="first_table" ng-if="rightOrder.status!='WAIT_CONFIRMATION' && rightOrder.testerTask.length>0">
+      <section class="right-menu-order-number">
+        <a ng:click="downloadResults(rightOrder.id)" class="link" ng-tr="ORL.ORL156">Скачать результаты</a>
+      </section>
+    </div>
+
+    <div class="group_tester"
+         ng:if="rightOrder.testerType === 'OUR'"
+         ng:repeat="participantGroup in rightOrder.participantGroups | orderBy : 'id'">
+      <div class="block_hide">
+        <div class="header_right_group fourth-title" ng-click="openGroup($event)"
+             ng-if="rightOrder.testerType=='OUR'">
+          {{participantGroup.name}}. <span ng-tr="ORL.ORL31">Кол-во: </span>{{participantGroup.count}}<span
+            class="arrow_bottom_top" style="margin-left: 10px;right: unset;top: unset;">
+                        <svg width="17px" height="10px" viewBox="1500 600 17 10" version="1.1"
+                             xmlns="http://www.w3.org/2000/svg"> <desc>Created with Sketch.</desc> <defs></defs> <polyline
+                            id="path14458-2-5-5" stroke="#b6b6b6" stroke-width="1.99999976"
+                            fill="none"
+                            points="1501.39697 601.727 1508.42818 608.295 1515.45939 601.727"></polyline></svg>
+                      </span>
+        </div>
+        <div class="header_right_group_body fourth-title">
+          <div class="target-audience-left">
+            <div class="target-audience-item-wrapper">
+              <div class="header_label_collapse" ng-tr="ORL.ORL32">
+                Возраст
+              </div>
+
+              <div class="text_collapse">
+                {{(participantGroup.minAge==18&&participantGroup.maxAge=='61')?('ORL.ORL33' |
+                translate): participantGroup.minAge +'-'+
+                (participantGroup.maxAge=='61'?'60+':participantGroup.maxAge)}}
+              </div>
+            </div>
+
+            <div class="target-audience-item-wrapper">
+              <div class="header_label_collapse" ng-tr="ORL.ORL34">
+                Доход
+              </div>
+
+              <div class="text_collapse">
+                {{(participantGroup.householdIncomeMin==0&&participantGroup.householdIncomeMax=='55000')?('ORL.ORL35'
+                | translate): participantGroup.householdIncomeMin +'-'+
+                (participantGroup.householdIncomeMax=='55000'?'50
+                000+':participantGroup.householdIncomeMax)}}
+              </div>
+            </div>
+          </div>
+
+          <div class="target-audience-right">
+            <div class="target-audience-item-wrapper">
+              <div class="header_label_collapse" ng-tr="ORL.ORL36">
+                Состав
+              </div>
+
+              <span
+                  ng-if="participantGroup.gender!='ANY' && participantGroup.children=='ANY' && participantGroup.familyStatus=='ANY'"
+                  class="block_info_item">
+                                        <span ng-if="participantGroup.gender=='MALE'"
+                                              ng-tr="ORL.ORL37">Мужчины</span>
+                                        <span ng-if="participantGroup.gender=='FEMALE'"
+                                              ng-tr="ORL.ORL38">Женщины</span>
+                                    </span>
+
+              <span
+                  ng-if="participantGroup.gender=='ANY' && participantGroup.children!='ANY' && participantGroup.familyStatus=='ANY'"
+                  class="block_info_item">
+                                        <span ng-if="participantGroup.children=='YES'"
+                                              ng-tr="ORL.ORL39">С детьми</span>
+                                        <span ng-if="participantGroup.children=='NO'"
+                                              ng-tr="ORL.ORL40">Без детей</span>
+                                    </span>
+
+              <span
+                  ng-if="participantGroup.gender=='ANY' && participantGroup.children=='ANY' && participantGroup.familyStatus!='ANY'"
+                  class="block_info_item">
+                                        <span ng-if="participantGroup.familyStatus=='NOT_MARRIED'"
+                                              ng-tr="ORL.ORL41">Холост/Не замужем</span>
+                                        <span ng-if="participantGroup.familyStatus=='MARRIED'"
+                                              ng-tr="ORL.ORL42">Женат/Замужем</span>
+                                    </span>
+
+              <span
+                  ng-if="participantGroup.gender!='ANY' && participantGroup.children!='ANY' && participantGroup.familyStatus=='ANY'"
+                  class="block_info_item">
+                                        <span
+                                            ng-if="participantGroup.gender=='MALE' && participantGroup.children=='YES'"
+                                            ng-tr="ORL.ORL43">Мужчины с детьми</span>
+                                        <span
+                                            ng-if="participantGroup.gender=='MALE' && participantGroup.children=='NO'"
+                                            ng-tr="ORL.ORL44">Мужчины без детей</span>
+                                        <span
+                                            ng-if="participantGroup.gender=='FEMALE' && participantGroup.children=='YES'"
+                                            ng-tr="ORL.ORL45">Женщины с детьми</span>
+                                        <span
+                                            ng-if="participantGroup.gender=='FEMALE' && participantGroup.children=='NO'"
+                                            ng-tr="ORL.ORL46">Женщины без детей</span>
+                                    </span>
+
+              <span
+                  ng-if="participantGroup.gender!='ANY' && participantGroup.children=='ANY' && participantGroup.familyStatus!='ANY'"
+                  class="block_info_item">
+                                        <span
+                                            ng-if="participantGroup.gender=='MALE' && participantGroup.familyStatus=='MARRIED'"
+                                            ng-tr="ORL.ORL47">Женатые мужчины</span>
+                                        <span
+                                            ng-if="participantGroup.gender=='MALE' && participantGroup.familyStatus=='NOT_MARRIED'"
+                                            ng-tr="ORL.ORL48">Холостые мужчины</span>
+                                        <span
+                                            ng-if="participantGroup.gender=='FEMALE' && participantGroup.familyStatus=='MARRIED'"
+                                            ng-tr="ORL.ORL49">Замужние женщины</span>
+                                        <span
+                                            ng-if="participantGroup.gender=='FEMALE' && participantGroup.familyStatus=='NOT_MARRIED'"
+                                            ng-tr="ORL.ORL50">Незамужние женщины</span>
+                                    </span>
+
+              <span
+                  ng-if="participantGroup.gender=='ANY' && participantGroup.children!='ANY' && participantGroup.familyStatus!='ANY'"
+                  class="block_info_item">
+                                        <span
+                                            ng-if="participantGroup.familyStatus=='NOT_MARRIED' && participantGroup.children=='YES'"
+                                            ng-tr="ORL.ORL51">Холост/Не замужем с детьми</span>
+                                        <span
+                                            ng-if="participantGroup.familyStatus=='NOT_MARRIED' && participantGroup.children=='NO'"
+                                            ng-tr="ORL.ORL52">Холост/Не замужем без детей</span>
+                                        <span
+                                            ng-if="participantGroup.familyStatus=='MARRIED' && participantGroup.children=='YES'"
+                                            ng-tr="ORL.ORL53">Женат/Замужем с детьми</span>
+                                        <span
+                                            ng-if="participantGroup.familyStatus=='MARRIED' && participantGroup.children=='NO'"
+                                            ng-tr="ORL.ORL54">Женат/Замужем без детей</span>
+                                    </span>
+
+              <span
+                  ng-if="participantGroup.gender!='ANY' && participantGroup.children!='ANY' && participantGroup.familyStatus!='ANY'"
+                  class="block_info_item">
+                                        <span
+                                            ng-if="participantGroup.gender=='MALE' && participantGroup.children=='YES' && participantGroup.familyStatus=='MARRIED'"
+                                            ng-tr="ORL.ORL55">Женатые мужчины с детьми</span>
+                                        <span
+                                            ng-if="participantGroup.gender=='MALE' && participantGroup.children=='NO' && participantGroup.familyStatus=='MARRIED'"
+                                            ng-tr="ORL.ORL56">Женатые мужчины без детей</span>
+                                        <span
+                                            ng-if="participantGroup.gender=='FEMALE' && participantGroup.children=='YES' && participantGroup.familyStatus=='MARRIED'"
+                                            ng-tr="ORL.ORL57">Замужние женщины с детьми</span>
+                                        <span
+                                            ng-if="participantGroup.gender=='FEMALE' && participantGroup.children=='NO' && participantGroup.familyStatus=='MARRIED'"
+                                            ng-tr="ORL.ORL58">Замужние женщины без детей</span>
+                                        <span
+                                            ng-if="participantGroup.gender=='MALE' && participantGroup.children=='YES' && participantGroup.familyStatus=='NOT_MARRIED'"
+                                            ng-tr="ORL.ORL59">Холостые мужчины с детьми</span>
+                                        <span
+                                            ng-if="participantGroup.gender=='MALE' && participantGroup.children=='NO' && participantGroup.familyStatus=='NOT_MARRIED'"
+                                            ng-tr="ORL.ORL60">Холостые мужчины без детей</span>
+                                        <span
+                                            ng-if="participantGroup.gender=='FEMALE' && participantGroup.children=='YES' && participantGroup.familyStatus=='NOT_MARRIED'"
+                                            ng-tr="ORL.ORL61">Незамужние женщины с детьми</span>
+                                        <span
+                                            ng-if="participantGroup.gender=='FEMALE' && participantGroup.children=='NO' && participantGroup.familyStatus=='NOT_MARRIED'"
+                                            ng-tr="ORL.ORL62">Незамужние женщины без детей</span>
+                                    </span>
+
+              <span
+                  ng-if="participantGroup.gender=='ANY' && participantGroup.children=='ANY' && participantGroup.familyStatus=='ANY'"
+                  class="block_info_item">
+                            <span ng-tr="ORL.ORL63">Любой</span>
+                        </span>
+            </div>
+
+            <div class="target-audience-item-wrapper">
+              <div class="header_label_collapse" ng-tr="ORL.ORL64">
+                Образование
+              </div>
+
+              <span ng-if="participantGroup.educations.length<6"
+                    ng-repeat="education in participantGroup.educations" class="block_info_item">
+                            <span ng-if="education.value=='START'"
+                                  ng-tr="ORL.ORL65">Начальное</span>
+                            <span ng-if="education.value=='MIDDLE_SPEC'" ng-tr="ORL.ORL66">Среднее профессиональное</span>
+                            <span ng-if="education.value=='MIDDLE_FULL'" ng-tr="ORL.ORL67">Полное общее (среднее)</span>
+                            <span ng-if="education.value=='COMMON'"
+                                  ng-tr="ORL.ORL68">Основное общее</span>
+                            <span ng-if="education.value=='HIGH_NOT_FULL'" ng-tr="ORL.ORL69">Неоконченное высшее</span>
+                            <span ng-if="education.value=='HIGH'" ng-tr="ORL.ORL70">Высшее образование</span>
+                        </span>
+
+              <span
+                  ng-if="participantGroup.educations.length==6 || participantGroup.educations.length==0"
+                  class="block_info_item" ng-tr="ORL.ORL35">
+                            Любое
+                        </span>
+            </div>
+
+            <div class="target-audience-item-wrapper" ng-show="participantGroup.testers.length>0">
+              <div class="header_item_expand_block">
+                <div class="header_label_collapse" ng-tr="ORL.ORL71">
+                  Тестировщики
+                </div>
+              </div>
+
+              <div class="header_item_expand_block" ng:repeat="tester in participantGroup.testers">
+                <div class="">
+                  {{tester.id}}
+                </div>
+
+                <div class="">
+                  {{tester.username}}
+                </div>
+
+                <div class="">
+                  {{tester.email}}
+                </div>
+
+                <div class="">
+                  {{tester.city}}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="target-audience-item-wrapper">
+            <div class="header_label_collapse" ng-tr="ORL.ORL72">
+              Социальный статус
+            </div>
+
+            <span class="block_info_item socialStatus-wrapper"
+                  ng-if="participantGroup.socialStatuses.length<7"
+                  ng-repeat="socialStatus in participantGroup.socialStatuses">
+                        <span class="socialStatus-item" ng-if="socialStatus.value=='STUDENT'"
+                              ng-tr="ORL.ORL73">Студенты</span>
+                        <span class="socialStatus-item" ng-if="socialStatus.value=='UNEMPLOYED'"
+                              ng-tr="ORL.ORL74">Безработные</span>
+                        <span class="socialStatus-item" ng-if="socialStatus.value=='HOUSEWIFE'"
+                              ng-tr="ORL.ORL75">Домохозяйки</span>
+                        <span class="socialStatus-item" ng-if="socialStatus.value=='FREELANCER'"
+                              ng-tr="ORL.ORL76">Фрилансеры</span>
+                        <span class="socialStatus-item" ng-if="socialStatus.value=='WORKER'"
+                              ng-tr="ORL.ORL77">Рабочие (любой квалификации)</span>
+                        <span class="socialStatus-item" ng-if="socialStatus.value=='SPECIALIST'"
+                              ng-tr="ORL.ORL78">Специалисты с высшим образованием без подчиненных</span>
+                        <span class="socialStatus-item" ng-if="socialStatus.value=='CHIEF_DEPT'"
+                              ng-tr="ORL.ORL79">Руководители отделов</span>
+                    </span>
+
+            <span
+                ng-if="participantGroup.socialStatuses.length==7 || participantGroup.socialStatuses.length==0"
+                class="block_info_item" ng-tr="ORL.ORL80">
+                        Любой
+                    </span>
+          </div>
+        </div>
+        <section class="item_tab_right"
+                 ng:repeat="item_tester in rightOrder.testerTask | orderBy : 'video.uploadTime'"
+                 ng:if="rightOrder.testerTask.length>0">
+
+          <section class="main-info-line">
+                        <span><span>{{$index+1}}. </span><a class="text_dotted link subtext"
+                                                            ng:click="text_dotted_open_close($event)">
+                             {{rightOrder.testerType=='THEIR'?item_tester.tester.email:('ORL.ORL81' | translate)}}
+                        </a></span>
+
+            <div class="text_right_panel">
+                                <span class="" ng:if="item_tester.rating == 5">
+                                    <span class="star_rating"></span><span
+                                    class="star_rating"></span><span
+                                    class="star_rating"></span><span
+                                    class="star_rating"></span><span
+                                    class="star_rating"></span>
+                                </span>
+
+              <span class="" ng:if="item_tester.rating == 4"><span class="star_rating"></span><span
+                  class="star_rating"></span><span class="star_rating"></span><span
+                  class="star_rating"></span>
+                                </span>
+
+              <span class="" ng:if="item_tester.rating == 3"><span class="star_rating"></span><span
+                  class="star_rating"></span><span class="star_rating"></span>
+                                </span>
+
+              <span class="" ng:if="item_tester.rating == 2">
+                                    <span class="star_rating"></span><span
+                  class="star_rating"></span>
+                                </span>
+
+              <span class="" ng:if="item_tester.rating == 1">
+                                    <span class="star_rating"></span>
+                                </span>
+            </div>
+
+            <a class="inline-btn" ng-click="cancel($event)"
+               ui-sref="video({videoId: item_tester.video.id})" ng-tr="ORL.ORL82">
+              <!--<div class="privat_status" ng-show="item_tester.video.private"></div>-->
+              Работать с видео
+            </a>
+          </section>
+
+          <div class="right_menu_info" ng-if="rightOrder.testerType=='OUR'">
+            <div class="item_info_right_menu">
+              <h6 class="sixth-title" ng-tr="ORL.ORL89">
+                Пол
+              </h6>
+
+              <p class="subtext">
+                {{item_tester.profileSnapshot.gender == "MALE" ? ('ORL.ORL90' | translate) :
+                ('ORL.ORL91' | translate)}}
+              </p>
+            </div>
+
+            <div class="item_info_right_menu">
+              <h6 class="sixth-title" ng-tr="ORL.ORL92">
+                Дата рождения
+              </h6>
+
+              <p class="subtext">
+                {{item_tester.profileSnapshot.birthday}}
+              </p>
+            </div>
+
+            <div class="item_info_right_menu">
+              <h6 class="sixth-title" ng-tr="ORL.ORL93">
+                Доход
+              </h6>
+
+              <p class="subtext">
+                {{item_tester.profileSnapshot.income}}
+              </p>
+            </div>
+
+            <div class="item_info_right_menu">
+              <h6 class="sixth-title" ng-tr="ORL.ORL94">
+                Семейное положение
+              </h6>
+
+              <p class="subtext">
+                {{item_tester.profileSnapshot.familyStatus == "MARRIED" ? ('ORL.ORL95' | translate)
+                :
+                ('ORL.ORL951' | translate)}}{{item_tester.profileSnapshot.kids != "NONE" ?
+                ('ORL.ORL96' | translate) : ('ORL.ORL97' | translate)}}
+              </p>
+            </div>
+
+            <div class="item_info_right_menu">
+              <h6 class="sixth-title" ng-tr="ORL.ORL98">
+                Социальный статус
+              </h6>
+
+              <p class="subtext">
+                                    <span
+                                        ng-if="item_tester.profileSnapshot.socialStatus=='STUDENT'"
+                                        ng-tr="ORL.ORL99">
+                                        Студенты
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.socialStatus=='UNEMPLOYED'"
+                      ng-tr="ORL.ORL100">
+                                        Безработные
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.socialStatus=='HOUSEWIFE'"
+                      ng-tr="ORL.ORL101">
+                                        Домохозяйки
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.socialStatus=='FREELANCER'"
+                      ng-tr="ORL.ORL102">
+                                        Фрилансеры
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.socialStatus=='WORKER'" ng-tr="ORL.ORL103">
+                                        Рабочие (любой квалификации)
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.socialStatus=='SPECIALIST'"
+                      ng-tr="ORL.ORL104">
+                                        Специалисты с высшим образованием без подчиненных
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.socialStatus=='CHIEF_DEPT'"
+                      ng-tr="ORL.ORL105">
+                                        Руководители отделов
+                                    </span>
+              </p>
+            </div>
+
+            <div class="item_info_right_menu">
+              <h6 class="sixth-title" ng-tr="ORL.ORL106">
+                Образование
+              </h6>
+
+              <p class="subtext">
+                                    <span ng-if="item_tester.profileSnapshot.education=='START'"
+                                          ng-tr="ORL.ORL107">
+                                        Начальное
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.education=='MIDDLE_SPEC'"
+                      ng-tr="ORL.ORL108">
+                                        Среднее профессиональное
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.education=='MIDDLE_FULL'"
+                      ng-tr="ORL.ORL109">
+                                        Полное общее (среднее)
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.education=='COMMON'" ng-tr="ORL.ORL110">
+                                        Основное общее
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.education=='HIGH_NOT_FULL'"
+                      ng-tr="ORL.ORL111">
+                                        Неоконченное высшее
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.education=='HIGH'" ng-tr="ORL.ORL112">
+                                        Высшее
+                                    </span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div class="item_tab_right" ng:if="participantGroup.all_tester.length>0">
+          <div class="checkbox_button_el">
+            <input type="checkbox" ng-model="participantGroup.private"
+                   ng-change="toPrivateVideo(rightOrder)"
+                   class="ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched">
+
+            <span class="text_checkbox" id="uxc_video_owner" ng-tr="ORL.ORL113">
+                                Видео доступны только мне
+                            </span>
+          </div>
+        </div>
+
+        <div class="item_tab_right text-center" ng:if="participantGroup.all_tester.length==0"
+             ng-tr="ORL.ORL114">
+          Пока нет выполненных тестов
+        </div>
+      </div>
+    </div>
+
+    <div class="group_tester"
+         ng-if="rightOrder.testerCount != null && rightOrder.testerType === 'THEIR'">
+      <div class="block_hide">
+        <section class="item_tab_right"
+                 ng:repeat="item_tester in rightOrder.testerTask | orderBy : 'video.uploadTime'"
+                 ng:if="rightOrder.testerTask.length>0">
+
+          <section class="main-info-line">
+                        <span><span>{{$index+1}}. </span><a class="text_dotted link subtext"
+                                                            ng:click="text_dotted_open_close($event)">
+                             {{rightOrder.testerType=='THEIR'?item_tester.tester.email:('ORL.ORL115' | translate)}}
+                        </a></span>
+
+            <div class="text_right_panel">
+                                <span class="" ng:if="item_tester.rating == 5">
+                                    <span class="star_rating"></span><span
+                                    class="star_rating"></span><span
+                                    class="star_rating"></span><span
+                                    class="star_rating"></span><span
+                                    class="star_rating"></span>
+                                </span>
+
+              <span class="" ng:if="item_tester.rating == 4"><span class="star_rating"></span><span
+                  class="star_rating"></span><span class="star_rating"></span><span
+                  class="star_rating"></span>
+                                </span>
+
+              <span class="" ng:if="item_tester.rating == 3"><span class="star_rating"></span><span
+                  class="star_rating"></span><span class="star_rating"></span>
+                                </span>
+
+              <span class="" ng:if="item_tester.rating == 2">
+                                    <span class="star_rating"></span><span
+                  class="star_rating"></span>
+                                </span>
+
+              <span class="" ng:if="item_tester.rating == 1">
+                                    <span class="star_rating"></span>
+                                </span>
+            </div>
+
+            <a class="inline-btn" ng-click="cancel($event)"
+               ui-sref="video({videoId: item_tester.video.id})" ng-tr="ORL.ORL116">
+              <!--<div class="privat_status" ng-show="item_tester.video.private"></div>-->
+              Работать с видео
+            </a>
+          </section>
+
+          <div class="right_menu_info" ng-if="rightOrder.testerType=='OUR'">
+            <div class="item_info_right_menu">
+              <h6 class="sixth-title" ng-tr="ORL.ORL124">
+                Пол
+              </h6>
+
+              <p class="subtext">
+                {{item_tester.profileSnapshot.gender == "MALE" ? ('ORL.ORL125' | translate) :
+                ('ORL.ORL126' | translate)}}
+              </p>
+            </div>
+
+            <div class="item_info_right_menu">
+              <h6 class="sixth-title" ng-tr="ORL.ORL127">
+                Дата рождения
+              </h6>
+
+              <p class="subtext">
+                {{item_tester.profileSnapshot.birthday}}
+              </p>
+            </div>
+
+            <div class="item_info_right_menu">
+              <h6 class="sixth-title" ng-tr="ORL.ORL128">
+                Доход
+              </h6>
+
+              <p class="subtext">
+                {{item_tester.profileSnapshot.income}}
+              </p>
+            </div>
+
+            <div class="item_info_right_menu">
+              <h6 class="sixth-title" ng-tr="ORL.ORL129">
+                Семейное положение
+              </h6>
+
+              <p class="subtext">
+                {{item_tester.profileSnapshot.familyStatus == "MARRIED" ? ('ORL.ORL95' | translate)
+                :
+                ('ORL.ORL951' | translate)}}{{item_tester.profileSnapshot.kids != "NONE" ?
+                ('ORL.ORL96' | translate) : ('ORL.ORL97' | translate)}}
+              </p>
+            </div>
+
+            <div class="item_info_right_menu">
+              <h6 class="sixth-title" ng-tr="ORL.ORL133">
+                Социальный статус
+              </h6>
+
+              <p class="subtext">
+                                    <span
+                                        ng-if="item_tester.profileSnapshot.socialStatus=='STUDENT'"
+                                        ng-tr="ORL.ORL134">
+                                        Студенты
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.socialStatus=='UNEMPLOYED'"
+                      ng-tr="ORL.ORL135">
+                                        Безработные
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.socialStatus=='HOUSEWIFE'"
+                      ng-tr="ORL.ORL136">
+                                        Домохозяйки
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.socialStatus=='FREELANCER'"
+                      ng-tr="ORL.ORL137">
+                                        Фрилансеры
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.socialStatus=='WORKER'" ng-tr="ORL.ORL138">
+                                        Рабочие (любой квалификации)
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.socialStatus=='SPECIALIST'"
+                      ng-tr="ORL.ORL139">
+                                        Специалисты с высшим образованием без подчиненных
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.socialStatus=='CHIEF_DEPT'"
+                      ng-tr="ORL.ORL140">
+                                        Руководители отделов
+                                    </span>
+              </p>
+            </div>
+
+            <div class="item_info_right_menu">
+              <h6 class="sixth-title" ng-tr="ORL.ORL141">
+                Образование
+              </h6>
+
+              <p class="subtext">
+                                    <span ng-if="item_tester.profileSnapshot.education=='START'"
+                                          ng-tr="ORL.ORL142">
+                                        Начальное
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.education=='MIDDLE_SPEC'"
+                      ng-tr="ORL.ORL143">
+                                        Среднее профессиональное
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.education=='MIDDLE_FULL'"
+                      ng-tr="ORL.ORL144">
+                                        Полное общее (среднее)
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.education=='COMMON'" ng-tr="ORL.ORL145">
+                                        Основное общее
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.education=='HIGH_NOT_FULL'"
+                      ng-tr="ORL.ORL146">
+                                        Неоконченное высшее
+                                    </span>
+
+                <span ng-if="item_tester.profileSnapshot.education=='HIGH'" ng-tr="ORL.ORL147">
+                                        Высшее
+                                    </span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div class="item_tab_right text-center" ng:if="rightOrder.testerTask.length==0"
+             ng-tr="ORL.ORL148">
+          Пока нет выполненных тестов
+        </div>
+      </div>
+    </div>
+
+    <div class="group_tester" ng-if="rightOrder.introduction!=null">
+      <div class="block_hide">
+        <section class="right-menu-order-number" style="margin-left: 2rem">
+                <span class="subtext" ng-tr="ORL.ORL149">
+                     Описание для респондентов:
+                </span>
+        </section>
+        <div class="header_right_group fourth-title">
+          {{rightOrder.introduction}}
+        </div>
+      </div>
+    </div>
+
+    <div class="subheader-wrapper">
+      <h2 class="second-title text-center" ng-tr="ORL.ORL150">
+        Задания
+      </h2>
+    </div>
+
+    <div class="block_all_question --step4">
+      <div class="block_all_question_width">
+        <div class="item_all_question" ng:repeat="step in rightOrder.steps | orderBy:'orderNum'">
+          <div class="text-center question-type bold-text">
+                        <span ng:if="step.stepType == 'ANSWER'" ng-tr="ORL.ORL151">
+                            Письменный ответ
+                        </span>
+
+            <span ng:if="step.stepType == 'TEXT'" ng-tr="ORL.ORL152">
+                            Голосовой ответ
+                        </span>
+
+            <span ng:if="step.stepType == 'RATING'" ng-tr="ORL.ORL153">
+                            Рейтинг
+                        </span>
+
+            <span ng:if="step.stepType == 'RADIO'" ng-tr="ORL.ORL154">
+                            Выбор одного ответа
+                        </span>
+
+            <span ng:if="step.stepType == 'CHECKBOX'" ng-tr="ORL.ORL155">
+                            Выбор нескольких ответов
+                        </span>
+          </div>
+
+          <div class="item_question">
+            <section class="step_item">
+              <div class="num_step">
+                {{$index+1}}
+              </div>
+
+              <div class="description_step">
+                {{step.question}}
+              </div>
+            </section>
+
+            <div class="item_question_options">
+              <div class="item_question_radio_checkbox"
+                   ng:repeat="stepDetail in step.stepDetails | orderBy:'orderNum'"
+                   ng:if="step.stepType == 'CHECKBOX'">
+                <div class="checkbox_item">
+                  <span></span>
+                </div>
+
+                <div class="text_item_question">
+                  {{stepDetail.value}}
+                </div>
+                <!--<div class="close_tmpl" ng:click="close_item(step.orderNum, $index)">+</div>-->
+              </div>
+
+              <div class="item_question_radio_checkbox"
+                   ng:repeat="stepDetail in step.stepDetails | orderBy:'orderNum'"
+                   ng:if="step.stepType == 'RADIO'">
+                <div class="radio_item">
+                  <span></span>
+                </div>
+
+                <div class="text_item_question">
+                  {{stepDetail.value}}
+                </div>
+                <!--<div class="close_tmpl" ng:click="close_item(step.orderNum, $index)">+</div>-->
+              </div>
+
+              <div class="item_question_rating_wrapper" ng:if="step.stepType == 'RATING'">
+                <div class="item_question_text_one"
+                     ng:repeat="stepDetail in step.stepDetails | orderBy:'orderNum'"
+                     ng:if="step.stepType == 'RATING' && stepDetail.orderNum==0">
+                  {{stepDetail.value}}
+                </div>
+
+                <div class="item_question_rating_dots">
+                  <span class="item_rating"
+                        ng:repeat="i in (((b=[]).length=step.stepDetails[2].value)&&b) track by $index">
+                  </span>
+                </div>
+
+                <div class="item_question_text_two"
+                     ng:repeat="stepDetail in step.stepDetails | orderBy:'orderNum'"
+                     ng:if="step.stepType == 'RATING' && stepDetail.orderNum==1">
+                  <div class="">
+                    {{stepDetail.value}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .list-view-wrapper .copy {
+    display: flex;
+    align-self: center;
+  }
+
+  .alert_right_menu .stop_test {
+    cursor: pointer;
+    color: #FFAB29
+  }
+</style>

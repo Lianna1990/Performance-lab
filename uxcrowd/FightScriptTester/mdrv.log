@@ -1,0 +1,316 @@
+Virtual User Script started at : 10/29/2019 6:27:45 PM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.53.0 for Windows 7; build 1203 (окт 29 2019 19:13:20)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36  	[MsgId: MMSG-26988]
+Run-Time Settings file: "D:\Users\user\Desktop\uxcrowd-master\uxcrowd-master\FightScriptTester\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Homepage.
+Homepage.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Homepage.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Homepage.c(5): Notify: Transaction "Homepage" started.
+Homepage.c(7): web_reg_save_param_ex started  	[MsgId: MMSG-26355]
+Homepage.c(7): Registering web_reg_save_param_ex was successful  	[MsgId: MMSG-26390]
+Homepage.c(16): web_custom_request("/api/account/") started  	[MsgId: MMSG-26355]
+Homepage.c(16): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+Homepage.c(16): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account/"  	[MsgId: MERR-26630]
+Homepage.c(16): web_custom_request("/api/account/") highest severity level was "continue on error", 0 body bytes, 409 header bytes  	[MsgId: MMSG-26388]
+Homepage.c(16): Continuing after error in Vuser script.
+Homepage.c(23): web_add_header("X-XSRF-TOKEN") started  	[MsgId: MMSG-26355]
+Homepage.c(23): web_add_header("X-XSRF-TOKEN") was successful  	[MsgId: MMSG-26392]
+Homepage.c(26): web_custom_request("/") started  	[MsgId: MMSG-26355]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/gulp/sup_css.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/css/landing/webflow.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/css/landing/uxcrowd.webflow.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/css/landing/YouTube.HD.Thumbnail.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/gulp/env.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://use.typekit.net/hym5rnq.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://ulogin.ru/js/ulogin.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/library/jquery.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/library/jquery.form.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/library/jquery.uploadfile.min.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/library/FileSaver.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/gulp/sup_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/init.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.rule.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/js/app_js/auth.interceptor.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/mediaelement-and-player.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/gulp/app_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/gulp/admin_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/gulp/customer_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/gulp/blog_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/gulp/home_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/gulp/moderator_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/gulp/new_tester_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/gulp/tester_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/library/require.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/path_controller.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/js/landing/jQuery.YouTube.HD.Thumbnail.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/main_route.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+Homepage.c(26): Notify: Transaction "https://prod.uxcrowd.ru/assets/js/main_js/main_route.js" will be skipped - could not calculate the transaction time (duration=0.1862, think_time=0.0000, wasted_time=0.2758).
+Homepage.c(26): web_custom_request("/") was successful, 3911498 body bytes, 15992 header bytes, 25 chunking overhead bytes  	[MsgId: MMSG-26385]
+Homepage.c(34): web_get_int_property started  	[MsgId: MMSG-26355]
+Homepage.c(34): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Homepage.c(35): web_get_int_property started  	[MsgId: MMSG-26355]
+Homepage.c(35): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Homepage.c(44): Notify: Transaction "Homepage" ended with a "Fail" status (Duration: 2.4564 Wasted Time: 1.4845).
+Homepage.c(44): Notify: Transaction "Homepage" has 2 error message(s).
+Homepage.c(44): Notify: The 1st error message associated with transaction "Homepage" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+Homepage.c(44): Notify: The 2nd error message associated with transaction "Homepage" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account/""
+Homepage.c(46): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Homepage.c(46): web_custom_request("web_custom_request") was successful, 0 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Ending action Homepage.
+Starting action UC01_tester_registration.
+UC01_tester_registration.c(5): Notify: Transaction "UC01_tester_registration" started.
+UC01_tester_registration.c(7): web_custom_request("/api/register") started  	[MsgId: MMSG-26355]
+UC01_tester_registration.c(7): Continuing after Error -26628: HTTP Status-Code=403 (Forbidden) for "https://prod.uxcrowd.ru/api/register", Snapshot Info [MSH 1 4]  	[MsgId: MERR-26628]
+UC01_tester_registration.c(7): web_custom_request("/api/register") highest severity level was "continue on error", 125 body bytes, 476 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26387]
+UC01_tester_registration.c(7): Continuing after error in Vuser script.
+UC01_tester_registration.c(19): web_get_int_property started  	[MsgId: MMSG-26355]
+UC01_tester_registration.c(19): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC01_tester_registration.c(20): web_get_int_property started  	[MsgId: MMSG-26355]
+UC01_tester_registration.c(20): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC01_tester_registration.c(29): Notify: Transaction "UC01_tester_registration" ended with a "Fail" status (Duration: 0.0844 Wasted Time: 0.0019).
+UC01_tester_registration.c(29): Notify: Transaction "UC01_tester_registration" has 1 error message(s).
+UC01_tester_registration.c(29): Notify: The 1st error message associated with transaction "UC01_tester_registration" is "Error -26628: HTTP Status-Code=403 (Forbidden) for "https://prod.uxcrowd.ru/api/register""
+UC01_tester_registration.c(31): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+UC01_tester_registration.c(31): web_custom_request("web_custom_request") was successful, 0 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Ending action UC01_tester_registration.
+Starting action LogOut.
+LogOut.c(7): Notify: Transaction "Logout" started.
+LogOut.c(9): web_custom_request("/api/logout") started  	[MsgId: MMSG-26355]
+LogOut.c(9): Continuing after Error -26628: HTTP Status-Code=403 (Forbidden) for "https://prod.uxcrowd.ru/api/logout", Snapshot Info [MSH 1 6]  	[MsgId: MERR-26628]
+LogOut.c(9): web_custom_request("/api/logout") highest severity level was "continue on error", 124 body bytes, 476 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26387]
+LogOut.c(9): Continuing after error in Vuser script.
+LogOut.c(18): web_reg_save_param started  	[MsgId: MMSG-26355]
+LogOut.c(18): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+LogOut.c(22): web_url("/api/account/") started  	[MsgId: MMSG-26355]
+LogOut.c(22): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");, Snapshot Info [MSH 1 7]  	[MsgId: MERR-26547]
+LogOut.c(22): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account/", Snapshot Info [MSH 1 7]  	[MsgId: MERR-26630]
+LogOut.c(22): web_url("/api/account/") highest severity level was "continue on error", 0 body bytes, 340 header bytes  	[MsgId: MMSG-26388]
+LogOut.c(22): Continuing after error in Vuser script.
+LogOut.c(31): web_add_auto_header("X-XSRF-TOKEN") started  	[MsgId: MMSG-26355]
+LogOut.c(31): web_add_auto_header("X-XSRF-TOKEN") was successful  	[MsgId: MMSG-26392]
+LogOut.c(34): web_url("/") started  	[MsgId: MMSG-26355]
+LogOut.c(34): Retrieving data from cache for "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26558]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/gulp/sup_css.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/css/landing/webflow.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/css/landing/uxcrowd.webflow.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/css/landing/YouTube.HD.Thumbnail.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/gulp/env.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://use.typekit.net/hym5rnq.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://ulogin.ru/js/ulogin.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/library/jquery.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/library/jquery.form.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/library/jquery.uploadfile.min.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/library/FileSaver.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/gulp/sup_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/js/main_js/init.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.rule.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/js/app_js/auth.interceptor.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/js/main_js/mediaelement-and-player.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/gulp/app_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/gulp/admin_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/gulp/customer_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/gulp/blog_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/gulp/home_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/gulp/moderator_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/gulp/new_tester_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/gulp/tester_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/library/require.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/js/main_js/path_controller.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/js/landing/jQuery.YouTube.HD.Thumbnail.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): Resource "https://prod.uxcrowd.ru/assets/js/main_js/main_route.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+LogOut.c(34): web_url("/") was successful, 0 body bytes, 0 header bytes  	[MsgId: MMSG-26386]
+LogOut.c(42): web_get_int_property started  	[MsgId: MMSG-26355]
+LogOut.c(42): web_get_int_property was successful  	[MsgId: MMSG-26392]
+LogOut.c(43): web_get_int_property started  	[MsgId: MMSG-26355]
+LogOut.c(43): web_get_int_property was successful  	[MsgId: MMSG-26392]
+LogOut.c(52): Notify: Transaction "Logout" ended with a "Fail" status (Duration: 0.1901 Wasted Time: 0.0029).
+LogOut.c(52): Notify: Transaction "Logout" has 3 error message(s).
+LogOut.c(52): Notify: The 1st error message associated with transaction "Logout" is "Error -26628: HTTP Status-Code=403 (Forbidden) for "https://prod.uxcrowd.ru/api/logout""
+LogOut.c(52): Notify: The 2nd error message associated with transaction "Logout" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+LogOut.c(52): Notify: The 3rd error message associated with transaction "Logout" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account/""
+LogOut.c(55): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+LogOut.c(55): web_custom_request("web_custom_request") was successful, 0 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Ending action LogOut.
+Starting action UC02_fill_tester_profile.
+UC02_fill_tester_profile.c(20): Notify: Transaction "Login" started.
+UC02_fill_tester_profile.c(22): web_reg_save_param started  	[MsgId: MMSG-26355]
+UC02_fill_tester_profile.c(22): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+UC02_fill_tester_profile.c(28): web_reg_save_param started  	[MsgId: MMSG-26355]
+UC02_fill_tester_profile.c(28): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+UC02_fill_tester_profile.c(33): web_submit_data("/api/authentication") started  	[MsgId: MMSG-26355]
+UC02_fill_tester_profile.c(33): web_submit_data("/api/authentication") was successful, 0 body bytes, 1067 header bytes  	[MsgId: MMSG-26386]
+UC02_fill_tester_profile.c(46): web_add_auto_header("X-XSRF-TOKEN") started  	[MsgId: MMSG-26355]
+UC02_fill_tester_profile.c(46): web_add_auto_header("X-XSRF-TOKEN") was successful  	[MsgId: MMSG-26392]
+UC02_fill_tester_profile.c(49): web_reg_save_param started  	[MsgId: MMSG-26355]
+UC02_fill_tester_profile.c(49): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+UC02_fill_tester_profile.c(54): web_custom_request("/api/v2/tester/profile") started  	[MsgId: MMSG-26355]
+UC02_fill_tester_profile.c(54): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://prod.uxcrowd.ru/api/v2/tester/profile"  	[MsgId: MMSG-26548]
+UC02_fill_tester_profile.c(54): web_custom_request("/api/v2/tester/profile") was successful, 252 body bytes, 673 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC02_fill_tester_profile.c(63): web_get_int_property started  	[MsgId: MMSG-26355]
+UC02_fill_tester_profile.c(63): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC02_fill_tester_profile.c(64): web_get_int_property started  	[MsgId: MMSG-26355]
+UC02_fill_tester_profile.c(64): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC02_fill_tester_profile.c(73): Notify: Transaction "Login" ended with a "Pass" status (Duration: 0.3789 Wasted Time: 0.0023).
+UC02_fill_tester_profile.c(76): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+UC02_fill_tester_profile.c(76): web_custom_request("web_custom_request") was successful, 0 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+UC02_fill_tester_profile.c(87): Notify: Transaction "fill_profile" started.
+UC02_fill_tester_profile.c(124): web_custom_request("fill_profile") started  	[MsgId: MMSG-26355]
+UC02_fill_tester_profile.c(124): web_custom_request("fill_profile") was successful, 0 body bytes, 571 header bytes  	[MsgId: MMSG-26386]
+UC02_fill_tester_profile.c(138): web_get_int_property started  	[MsgId: MMSG-26355]
+UC02_fill_tester_profile.c(138): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC02_fill_tester_profile.c(139): web_get_int_property started  	[MsgId: MMSG-26355]
+UC02_fill_tester_profile.c(139): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC02_fill_tester_profile.c(149): Notify: Transaction "fill_profile" ended with a "Pass" status (Duration: 0.1002 Wasted Time: 0.0011).
+UC02_fill_tester_profile.c(152): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+UC02_fill_tester_profile.c(152): web_custom_request("web_custom_request") was successful, 0 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Ending action UC02_fill_tester_profile.
+Starting action UC03_list_of_tests_tester.
+UC03_list_of_tests_tester.c(16): Notify: Transaction "UC03_list_of_tests_tester (50 tests)" started.
+UC03_list_of_tests_tester.c(16): Warning: Transaction name 'UC03_list_of_tests_tester (50 tests)' is illegal, will replaced with 'UC03_list_of_tests_tester -50 tests-'. Characters '`&*()\|:'"<>/?[]=' are not supported by NV.
+UC03_list_of_tests_tester.c(18): web_url("/api/tester/rating") started  	[MsgId: MMSG-26355]
+UC03_list_of_tests_tester.c(18): web_url("/api/tester/rating") was successful, 29 body bytes, 673 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC03_list_of_tests_tester.c(36): web_reg_save_param started  	[MsgId: MMSG-26355]
+UC03_list_of_tests_tester.c(36): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+UC03_list_of_tests_tester.c(42): web_url("/api/tester/new-tasks") started  	[MsgId: MMSG-26355]
+UC03_list_of_tests_tester.c(42): web_url("/api/tester/new-tasks") was successful, 293 body bytes, 673 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC03_list_of_tests_tester.c(51): web_get_int_property started  	[MsgId: MMSG-26355]
+UC03_list_of_tests_tester.c(51): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC03_list_of_tests_tester.c(52): web_get_int_property started  	[MsgId: MMSG-26355]
+UC03_list_of_tests_tester.c(52): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC03_list_of_tests_tester.c(63): Notify: Transaction "UC03_list_of_tests_tester (50 tests)" ended with a "Pass" status (Duration: 50.4074 Wasted Time: 0.0031).
+UC03_list_of_tests_tester.c(65): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+UC03_list_of_tests_tester.c(65): Continuing after Error -26631: HTTP Status-Code=400 (Bad Request) for "http://localhost:8086/write?db=loadrunner", Snapshot Info [MSH 1 17]  	[MsgId: MERR-26631]
+UC03_list_of_tests_tester.c(65): web_custom_request("web_custom_request") highest severity level was "continue on error", 193 body bytes, 470 header bytes  	[MsgId: MMSG-26388]
+UC03_list_of_tests_tester.c(65): Continuing after error in Vuser script.
+Ending action UC03_list_of_tests_tester.
+Starting action UC04_passing_user_tests.
+UC04_passing_user_tests.c(18): Notify: Transaction "UC04_passing_user_tests" started.
+UC04_passing_user_tests.c(29): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(29): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+UC04_passing_user_tests.c(35): web_custom_request("api/stats/create") started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(35): web_custom_request("api/stats/create") was successful, 30 body bytes, 673 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC04_passing_user_tests.c(55): web_custom_request("/api/stats/update") started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(55): web_custom_request("/api/stats/update") was successful, 30 body bytes, 673 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC04_passing_user_tests.c(68): web_custom_request("/api/account") started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(68): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://prod.uxcrowd.ru/api/account"  	[MsgId: MMSG-26548]
+UC04_passing_user_tests.c(68): web_custom_request("/api/account") was successful, 430 body bytes, 673 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC04_passing_user_tests.c(77): web_custom_request("api/tester/order-info") started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(77): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://prod.uxcrowd.ru/api/tester/order-info?id=16962286"  	[MsgId: MMSG-26548]
+UC04_passing_user_tests.c(77): web_custom_request("api/tester/order-info") was successful, 246 body bytes, 673 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC04_passing_user_tests.c(98): web_reg_save_param_json started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(98): Registering web_reg_save_param_json was successful  	[MsgId: MMSG-26390]
+UC04_passing_user_tests.c(105): web_custom_request("api/tester/create-task") started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(105): web_custom_request("api/tester/create-task") was successful, 18 body bytes, 612 header bytes  	[MsgId: MMSG-26386]
+UC04_passing_user_tests.c(125): web_custom_request("api/stats/update") started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(125): web_custom_request("api/stats/update") was successful, 30 body bytes, 673 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC04_passing_user_tests.c(145): web_custom_request("api/stats/update") started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(145): web_custom_request("api/stats/update") was successful, 30 body bytes, 673 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC04_passing_user_tests.c(165): web_custom_request("api/stats/update") started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(165): web_custom_request("api/stats/update") was successful, 30 body bytes, 673 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC04_passing_user_tests.c(193): Notify: Transaction "upload_medium_video" started.
+UC04_passing_user_tests.c(195): web_submit_data("api/video-upload-app") started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(195): Warning -27057: "Content-Type" (argument number 0) ignored for a non-File item  	[MsgId: MWAR-27057]
+UC04_passing_user_tests.c(195): Continuing after Error -26488: Could not obtain information about submitted file "D:\Users\user\Desktop\uxcrowd-master\uxcrowd-master\FightScriptTester\video\medium.webm": _stat32 rc=-1, errno=2 [No such file or directory]. Using an empty file, Snapshot Info [MSH 1 28]  	[MsgId: MERR-26488]
+UC04_passing_user_tests.c(195): Aborting pending download of URL="https://prod.uxcrowd.ru/api/video-upload-app" (RelFrameId=1, Internal ID=55)  	[MsgId: MMSG-27652]
+UC04_passing_user_tests.c(195): web_submit_data("api/video-upload-app") highest severity level was "continue on error", 0 body bytes, 0 header bytes  	[MsgId: MMSG-26388]
+UC04_passing_user_tests.c(195): Continuing after error in Vuser script.
+UC04_passing_user_tests.c(210): web_get_int_property started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(210): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC04_passing_user_tests.c(211): web_get_int_property started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(211): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC04_passing_user_tests.c(220): Notify: Transaction "upload_medium_video" ended with a "Fail" status (Duration: 0.0362 Wasted Time: 0.0008).
+UC04_passing_user_tests.c(220): Notify: Transaction "upload_medium_video" has 0 error message(s).
+UC04_passing_user_tests.c(222): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(222): web_custom_request("web_custom_request") was successful, 0 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+UC04_passing_user_tests.c(242): web_custom_request("api/stats/update") started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(242): web_custom_request("api/stats/update") was successful, 30 body bytes, 673 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC04_passing_user_tests.c(255): web_custom_request("api/account") started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(255): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://prod.uxcrowd.ru/api/account"  	[MsgId: MMSG-26548]
+UC04_passing_user_tests.c(255): web_custom_request("api/account") was successful, 431 body bytes, 673 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC04_passing_user_tests.c(264): web_custom_request("/api/tester/new-tasks") started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(264): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://prod.uxcrowd.ru/api/tester/new-tasks?isMobile=false"  	[MsgId: MMSG-26548]
+UC04_passing_user_tests.c(264): web_custom_request("/api/tester/new-tasks") was successful, 292 body bytes, 673 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC04_passing_user_tests.c(273): web_custom_request("/api/tester/rating") started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(273): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://prod.uxcrowd.ru/api/tester/rating?testerId=493253092"  	[MsgId: MMSG-26548]
+UC04_passing_user_tests.c(273): web_custom_request("/api/tester/rating") was successful, 29 body bytes, 673 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC04_passing_user_tests.c(282): web_custom_request("/api/v2/tester/profile") started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(282): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://prod.uxcrowd.ru/api/v2/tester/profile"  	[MsgId: MMSG-26548]
+UC04_passing_user_tests.c(282): web_custom_request("/api/v2/tester/profile") was successful, 254 body bytes, 673 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+UC04_passing_user_tests.c(291): web_get_int_property started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(291): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC04_passing_user_tests.c(292): web_get_int_property started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(292): web_get_int_property was successful  	[MsgId: MMSG-26392]
+UC04_passing_user_tests.c(301): Notify: Transaction "UC04_passing_user_tests" ended with a "Fail" status (Duration: 50.6425 Wasted Time: 0.2441).
+UC04_passing_user_tests.c(301): Notify: Transaction "UC04_passing_user_tests" has 0 error message(s).
+UC04_passing_user_tests.c(303): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+UC04_passing_user_tests.c(303): web_custom_request("web_custom_request") was successful, 0 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Ending action UC04_passing_user_tests.
+Starting action Logout_finish.
+Logout_finish.c(6): Notify: Transaction "Logout_finish" started.
+Logout_finish.c(8): web_custom_request("/api/logout") started  	[MsgId: MMSG-26355]
+Logout_finish.c(8): web_custom_request("/api/logout") was successful, 0 body bytes, 987 header bytes  	[MsgId: MMSG-26386]
+Logout_finish.c(17): web_reg_save_param started  	[MsgId: MMSG-26355]
+Logout_finish.c(17): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Logout_finish.c(21): web_url("/api/account/") started  	[MsgId: MMSG-26355]
+Logout_finish.c(21): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");, Snapshot Info [MSH 1 37]  	[MsgId: MERR-26547]
+Logout_finish.c(21): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account/", Snapshot Info [MSH 1 37]  	[MsgId: MERR-26630]
+Logout_finish.c(21): web_url("/api/account/") highest severity level was "continue on error", 0 body bytes, 409 header bytes  	[MsgId: MMSG-26388]
+Logout_finish.c(21): Continuing after error in Vuser script.
+Logout_finish.c(30): web_add_auto_header("X-XSRF-TOKEN") started  	[MsgId: MMSG-26355]
+Logout_finish.c(30): web_add_auto_header("X-XSRF-TOKEN") was successful  	[MsgId: MMSG-26392]
+Logout_finish.c(33): web_url("/") started  	[MsgId: MMSG-26355]
+Logout_finish.c(33): Retrieving data from cache for "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26558]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/gulp/sup_css.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/css/landing/webflow.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/css/landing/uxcrowd.webflow.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/css/landing/YouTube.HD.Thumbnail.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/gulp/env.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://use.typekit.net/hym5rnq.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://ulogin.ru/js/ulogin.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/library/jquery.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/library/jquery.form.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/library/jquery.uploadfile.min.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/library/FileSaver.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/gulp/sup_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/js/main_js/init.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.rule.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/js/app_js/auth.interceptor.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/js/main_js/mediaelement-and-player.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/gulp/app_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/gulp/admin_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/gulp/customer_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/gulp/blog_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/gulp/home_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/gulp/moderator_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/gulp/new_tester_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/gulp/tester_js.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/library/require.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/js/main_js/path_controller.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/js/landing/jQuery.YouTube.HD.Thumbnail.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): Resource "https://prod.uxcrowd.ru/assets/js/main_js/main_route.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout_finish.c(33): web_url("/") was successful, 0 body bytes, 0 header bytes  	[MsgId: MMSG-26386]
+Logout_finish.c(41): web_get_int_property started  	[MsgId: MMSG-26355]
+Logout_finish.c(41): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Logout_finish.c(42): web_get_int_property started  	[MsgId: MMSG-26355]
+Logout_finish.c(42): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Logout_finish.c(51): Notify: Transaction "Logout_finish" ended with a "Fail" status (Duration: 0.1975 Wasted Time: 0.0032).
+Logout_finish.c(51): Notify: Transaction "Logout_finish" has 2 error message(s).
+Logout_finish.c(51): Notify: The 1st error message associated with transaction "Logout_finish" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+Logout_finish.c(51): Notify: The 2nd error message associated with transaction "Logout_finish" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account/""
+Logout_finish.c(53): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Logout_finish.c(53): web_custom_request("web_custom_request") was successful, 0 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Ending action Logout_finish.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

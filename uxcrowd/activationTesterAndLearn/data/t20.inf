@@ -1,0 +1,15 @@
+[t20]
+FileName1=t20.htm
+URL1=https://prod.uxcrowd.ru/app-new-tester-home/instruction3
+Total=3
+RequestHeaderFile=t20_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t20_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_20.xml
+FileName2=t20_header.controller.html
+URL2=https://prod.uxcrowd.ru/controller/controllers_testers/controller_new_tester/header.controller.js?bust=1571905946897
+FileName3=t20_home.controller.html
+URL3=https://prod.uxcrowd.ru/controller/controllers_testers/controller_new_tester/home.controller.js?bust=1571905946897
+[ProtocolInfo]
+ProtocolId=QTWeb

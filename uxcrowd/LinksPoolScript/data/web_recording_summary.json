@@ -1,0 +1,1971 @@
+{
+  "FilterHeaders": [
+    {
+      "Header": "x-xsrf-token",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "x-requested-with",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "user-agent",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "upgrade-insecure-requests",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "sec-fetch-user",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "sec-fetch-site",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "sec-fetch-mode",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "origin",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "if-none-match",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "if-modified-since",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept-language",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept-encoding",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept",
+      "IncludeInScript": false
+    }
+  ],
+  "FilterResources": [
+    {
+      "IsNonResource": true,
+      "type": "text/html"
+    },
+    {
+      "IsNonResource": false,
+      "type": "text/css"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/svg+xml"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/png"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/jpeg"
+    },
+    {
+      "IsNonResource": false,
+      "type": "font/woff2"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/x-javascript"
+    },
+    {
+      "IsNonResource": true,
+      "type": "application/json"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/javascript"
+    }
+  ],
+  "GeneralInfo": {
+    "BrowserVersion": "",
+    "IsWinInetMode": false,
+    "MaxUsedConnections": 7,
+    "RecordedBrowser": "Chrome",
+    "RecordingDate": "окт-23-2019",
+    "RecordingDuration": 181250,
+    "RecordingMode": "N/A",
+    "RecordingTimeStamp": 1571834268,
+    "RecordingType": "Browser",
+    "TotalBytesReceived": 6458281,
+    "TotalBytesSent": 96802,
+    "TotalRequests": 132,
+    "UserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36"
+  },
+  "HostInfo": [
+    {
+      "DomainName": "ytimg.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "64.233.162.119",
+          "IncludeInScript": false,
+          "Name": "i.ytimg.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 16,
+              "EventId": 2717,
+              "HttpStatus": 200,
+              "Size": 4708,
+              "URL": "https://i.ytimg.com/vi/Q2CnE_Nlsbc/default.jpg"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "youtube.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "64.233.162.198",
+          "IncludeInScript": false,
+          "Name": "www.youtube.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 32,
+              "EventId": 2468,
+              "HttpStatus": 200,
+              "Size": 41546,
+              "URL": "https://www.youtube.com/yts/cssbin/www-player-webp-vfl_pygXA.css"
+            },
+            {
+              "CompressionType": "br",
+              "DataType": "text/html",
+              "DownloadTime": 156,
+              "EventId": 2430,
+              "HttpStatus": 200,
+              "Size": 20644,
+              "URL": "https://www.youtube.com/embed/Q2CnE_Nlsbc"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "uxcrowd.ru",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "134.209.183.182",
+          "IncludeInScript": true,
+          "Name": "prod.uxcrowd.ru",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 203,
+              "EventId": 3224,
+              "HttpStatus": 200,
+              "Size": 95,
+              "URL": "https://prod.uxcrowd.ru/api/v2/public/paymentInitRequest?orderId=16960811"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 157,
+              "EventId": 3222,
+              "HttpStatus": 200,
+              "Size": 15,
+              "URL": "https://prod.uxcrowd.ru/api/customer/calculatePrice?orderId=16960811"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 156,
+              "EventId": 3220,
+              "HttpStatus": 200,
+              "Size": 84,
+              "URL": "https://prod.uxcrowd.ru/api/v2/customer/updateOrderSteps"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 125,
+              "EventId": 3218,
+              "HttpStatus": 200,
+              "Size": 55,
+              "URL": "https://prod.uxcrowd.ru/api/v2/customer/updateOrderAudience"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 109,
+              "EventId": 3216,
+              "HttpStatus": 200,
+              "Size": 889,
+              "URL": "https://prod.uxcrowd.ru/api/v2/customer/getMetrics?testType=SITE"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 94,
+              "EventId": 3214,
+              "HttpStatus": 200,
+              "Size": 2299,
+              "URL": "https://prod.uxcrowd.ru/api/v2/customer/getTemplates?testType=SITE"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 359,
+              "EventId": 3203,
+              "HttpStatus": 200,
+              "Size": 34,
+              "URL": "https://prod.uxcrowd.ru/api/v2/customer/draft"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 156,
+              "EventId": 3190,
+              "HttpStatus": 405,
+              "Size": 559,
+              "URL": "https://prod.uxcrowd.ru/csp-report"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 78,
+              "EventId": 3178,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://prod.uxcrowd.ru/tmpl/tmpl_customer/new.order.html"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 47,
+              "EventId": 3176,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://prod.uxcrowd.ru/tmpl/tmpl_customer/header.html"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 47,
+              "EventId": 3174,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://prod.uxcrowd.ru/tmpl/tmpl_customer/home.html"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 47,
+              "EventId": 3172,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://prod.uxcrowd.ru/tmpl/tmpl_customer/main_template.html"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 62,
+              "EventId": 3166,
+              "HttpStatus": 200,
+              "Size": 155,
+              "URL": "https://prod.uxcrowd.ru/app.js?bust=1571834870567"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 78,
+              "EventId": 3162,
+              "HttpStatus": 200,
+              "Size": 448,
+              "URL": "https://prod.uxcrowd.ru/api/account"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 62,
+              "EventId": 3160,
+              "HttpStatus": 200,
+              "Size": 605,
+              "URL": "https://prod.uxcrowd.ru/controller/controller_customer/header.controller.js?bust=1571834870567"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 62,
+              "EventId": 3157,
+              "HttpStatus": 200,
+              "Size": 918,
+              "URL": "https://prod.uxcrowd.ru/controller/controller_customer/home.controller.js?bust=1571834870567"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 47,
+              "EventId": 3152,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://prod.uxcrowd.ru/assets/lang/ru.json"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 63,
+              "EventId": 3146,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://prod.uxcrowd.ru/assets/css/landing/YouTube.HD.Thumbnail.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 62,
+              "EventId": 3141,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://prod.uxcrowd.ru/assets/css/landing/uxcrowd.webflow.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 62,
+              "EventId": 3139,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://prod.uxcrowd.ru/assets/css/landing/webflow.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 47,
+              "EventId": 3137,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://prod.uxcrowd.ru/assets/gulp/sup_css.css"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 94,
+              "EventId": 3132,
+              "HttpStatus": 200,
+              "Size": 3314,
+              "URL": "https://prod.uxcrowd.ru/app-customer-home/order?"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 156,
+              "EventId": 3130,
+              "HttpStatus": 200,
+              "Size": 95,
+              "URL": "https://prod.uxcrowd.ru/api/v2/public/paymentInitRequest?orderId=16960810"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 62,
+              "EventId": 3124,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://prod.uxcrowd.ru/assets/images/burger-white-mobile.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 62,
+              "EventId": 3122,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://prod.uxcrowd.ru/assets/images/avatar-white-mobile.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 47,
+              "EventId": 3120,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://prod.uxcrowd.ru/assets/images/uxcrowd-logo-white-mobile.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 141,
+              "EventId": 3118,
+              "HttpStatus": 200,
+              "Size": 15,
+              "URL": "https://prod.uxcrowd.ru/api/customer/calculatePrice?orderId=16960810"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 125,
+              "EventId": 3116,
+              "HttpStatus": 200,
+              "Size": 84,
+              "URL": "https://prod.uxcrowd.ru/api/v2/customer/updateOrderSteps"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 156,
+              "EventId": 3114,
+              "HttpStatus": 200,
+              "Size": 55,
+              "URL": "https://prod.uxcrowd.ru/api/v2/customer/updateOrderAudience"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 78,
+              "EventId": 3112,
+              "HttpStatus": 200,
+              "Size": 2299,
+              "URL": "https://prod.uxcrowd.ru/api/v2/customer/getTemplates?testType=SITE"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 62,
+              "EventId": 3110,
+              "HttpStatus": 200,
+              "Size": 889,
+              "URL": "https://prod.uxcrowd.ru/api/v2/customer/getMetrics?testType=SITE"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 328,
+              "EventId": 3102,
+              "HttpStatus": 200,
+              "Size": 34,
+              "URL": "https://prod.uxcrowd.ru/api/v2/customer/draft"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 63,
+              "EventId": 3100,
+              "HttpStatus": 200,
+              "Size": 1555,
+              "URL": "https://prod.uxcrowd.ru/assets/images/avatar-gray-mobile.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 63,
+              "EventId": 3098,
+              "HttpStatus": 200,
+              "Size": 303,
+              "URL": "https://prod.uxcrowd.ru/assets/images/burger-gray-mobile.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 63,
+              "EventId": 3096,
+              "HttpStatus": 200,
+              "Size": 6103,
+              "URL": "https://prod.uxcrowd.ru/assets/images/uxcrowd-logo-green-mobile.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 47,
+              "EventId": 3088,
+              "HttpStatus": 200,
+              "Size": 1583,
+              "URL": "https://prod.uxcrowd.ru/assets/css/svg/left-menu-icons/plus-active.svg"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 110,
+              "EventId": 3070,
+              "HttpStatus": 200,
+              "Size": 202438,
+              "URL": "https://prod.uxcrowd.ru/tmpl/tmpl_customer/new.order.html"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 2109,
+              "EventId": 3068,
+              "HttpStatus": 200,
+              "Size": 5350,
+              "URL": "https://prod.uxcrowd.ru/api/customer/orders"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 63,
+              "EventId": 3052,
+              "HttpStatus": 200,
+              "Size": 751,
+              "URL": "https://prod.uxcrowd.ru/assets/css/svg/close.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 62,
+              "EventId": 3050,
+              "HttpStatus": 200,
+              "Size": 4491,
+              "URL": "https://prod.uxcrowd.ru/assets/css/svg/left-menu-icons/list-active.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 78,
+              "EventId": 3044,
+              "HttpStatus": 200,
+              "Size": 2392,
+              "URL": "https://prod.uxcrowd.ru/assets/css/svg/left-menu-icons/insight.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 79,
+              "EventId": 3042,
+              "HttpStatus": 200,
+              "Size": 2238,
+              "URL": "https://prod.uxcrowd.ru/assets/css/svg/left-menu-icons/draft.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 63,
+              "EventId": 3040,
+              "HttpStatus": 200,
+              "Size": 1220,
+              "URL": "https://prod.uxcrowd.ru/assets/css/svg/logout.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 63,
+              "EventId": 3038,
+              "HttpStatus": 200,
+              "Size": 4509,
+              "URL": "https://prod.uxcrowd.ru/assets/css/svg/left-menu-icons/list.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 63,
+              "EventId": 3036,
+              "HttpStatus": 200,
+              "Size": 9429,
+              "URL": "https://prod.uxcrowd.ru/assets/css/svg/left-menu-icons/settings.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 78,
+              "EventId": 3033,
+              "HttpStatus": 200,
+              "Size": 1586,
+              "URL": "https://prod.uxcrowd.ru/assets/css/svg/left-menu-icons/plus-orange.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 78,
+              "EventId": 3031,
+              "HttpStatus": 200,
+              "Size": 3935,
+              "URL": "https://prod.uxcrowd.ru/assets/css/svg/logo-new.svg"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 109,
+              "EventId": 3029,
+              "HttpStatus": 200,
+              "Size": 28,
+              "URL": "https://prod.uxcrowd.ru/api/customer/hist-orders"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 109,
+              "EventId": 3027,
+              "HttpStatus": 200,
+              "Size": 28,
+              "URL": "https://prod.uxcrowd.ru/api/customer/waitingOrders"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 63,
+              "EventId": 3025,
+              "HttpStatus": 200,
+              "Size": 25745,
+              "URL": "https://prod.uxcrowd.ru/assets/images/test-stand.png"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 63,
+              "EventId": 3023,
+              "HttpStatus": 200,
+              "Size": 8666,
+              "URL": "https://prod.uxcrowd.ru/tmpl/tmpl_customer/ordersList.html"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 62,
+              "EventId": 3021,
+              "HttpStatus": 200,
+              "Size": 521,
+              "URL": "https://prod.uxcrowd.ru/tmpl/tmpl_customer/header.html"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 47,
+              "EventId": 3019,
+              "HttpStatus": 200,
+              "Size": 81,
+              "URL": "https://prod.uxcrowd.ru/tmpl/tmpl_customer/home.html"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 47,
+              "EventId": 3017,
+              "HttpStatus": 200,
+              "Size": 757,
+              "URL": "https://prod.uxcrowd.ru/tmpl/tmpl_customer/main_template.html"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 157,
+              "EventId": 3014,
+              "HttpStatus": 200,
+              "Size": 298,
+              "URL": "https://prod.uxcrowd.ru/controller/controller_customer/ordersListHeader.controller.js?bust=1571834720676"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 156,
+              "EventId": 3012,
+              "HttpStatus": 200,
+              "Size": 918,
+              "URL": "https://prod.uxcrowd.ru/controller/controller_customer/home.controller.js?bust=1571834720676"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 141,
+              "EventId": 3010,
+              "HttpStatus": 200,
+              "Size": 605,
+              "URL": "https://prod.uxcrowd.ru/controller/controller_customer/header.controller.js?bust=1571834720676"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 141,
+              "EventId": 3008,
+              "HttpStatus": 200,
+              "Size": 19298,
+              "URL": "https://prod.uxcrowd.ru/controller/controller_customer/ordersList.controller.js?bust=1571834720676"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 78,
+              "EventId": 3006,
+              "HttpStatus": 200,
+              "Size": 448,
+              "URL": "https://prod.uxcrowd.ru/api/account"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 344,
+              "EventId": 3004,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://prod.uxcrowd.ru/api/authentication"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 62,
+              "EventId": 2987,
+              "HttpStatus": 405,
+              "Size": 559,
+              "URL": "https://prod.uxcrowd.ru/csp-report"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 109,
+              "EventId": 2890,
+              "HttpStatus": 200,
+              "Size": 3367,
+              "URL": "https://prod.uxcrowd.ru/tmpl/tmpl_home/modal-login.html"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 62,
+              "EventId": 2678,
+              "HttpStatus": 200,
+              "Size": 675,
+              "URL": "https://prod.uxcrowd.ru/assets/images/facebook.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 63,
+              "EventId": 2639,
+              "HttpStatus": 200,
+              "Size": 4009,
+              "URL": "https://prod.uxcrowd.ru/assets/images/youtube.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 110,
+              "EventId": 2534,
+              "HttpStatus": 200,
+              "Size": 24660,
+              "URL": "https://prod.uxcrowd.ru/assets/images/ux-logo-new-white.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 125,
+              "EventId": 2532,
+              "HttpStatus": 200,
+              "Size": 1828,
+              "URL": "https://prod.uxcrowd.ru/assets//images/question.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 110,
+              "EventId": 2530,
+              "HttpStatus": 200,
+              "Size": 626,
+              "URL": "https://prod.uxcrowd.ru/assets/images/nl-home-blot-bottom-mobile.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 94,
+              "EventId": 2528,
+              "HttpStatus": 200,
+              "Size": 871107,
+              "URL": "https://prod.uxcrowd.ru/assets/images/Rectangle%205.2.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 62,
+              "EventId": 2525,
+              "HttpStatus": 200,
+              "Size": 588,
+              "URL": "https://prod.uxcrowd.ru/assets/images/nl-home-clients-blot-mobile.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 62,
+              "EventId": 2523,
+              "HttpStatus": 200,
+              "Size": 901770,
+              "URL": "https://prod.uxcrowd.ru/assets/images/nl-home-center-blot.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 78,
+              "EventId": 2497,
+              "HttpStatus": 200,
+              "Size": 5285,
+              "URL": "https://prod.uxcrowd.ru/assets/images/egor_golubev.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 78,
+              "EventId": 2495,
+              "HttpStatus": 200,
+              "Size": 3747,
+              "URL": "https://prod.uxcrowd.ru/assets/images/svetlana_gorshkova.jpg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 78,
+              "EventId": 2493,
+              "HttpStatus": 200,
+              "Size": 3579,
+              "URL": "https://prod.uxcrowd.ru/assets/images/nl-home-clients-logo-4.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 78,
+              "EventId": 2491,
+              "HttpStatus": 200,
+              "Size": 2179,
+              "URL": "https://prod.uxcrowd.ru/assets/images/nl-home-clients-logo-5.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 62,
+              "EventId": 2489,
+              "HttpStatus": 200,
+              "Size": 8113,
+              "URL": "https://prod.uxcrowd.ru/assets/images/ildar_mullahmetov.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 63,
+              "EventId": 2486,
+              "HttpStatus": 200,
+              "Size": 7455,
+              "URL": "https://prod.uxcrowd.ru/assets/images/nl-home-clients-logo-3.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 94,
+              "EventId": 2459,
+              "HttpStatus": 200,
+              "Size": 9520,
+              "URL": "https://prod.uxcrowd.ru/assets/images/nl-home-clients-logo-1.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 79,
+              "EventId": 2455,
+              "HttpStatus": 200,
+              "Size": 5840,
+              "URL": "https://prod.uxcrowd.ru/assets/images/nl-home-clients-logo-2.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 79,
+              "EventId": 2453,
+              "HttpStatus": 200,
+              "Size": 5858,
+              "URL": "https://prod.uxcrowd.ru/assets/images/nl-home-helpful-block-3.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 78,
+              "EventId": 2450,
+              "HttpStatus": 200,
+              "Size": 4783,
+              "URL": "https://prod.uxcrowd.ru/assets/images/google-play-btn.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 62,
+              "EventId": 2448,
+              "HttpStatus": 200,
+              "Size": 3470,
+              "URL": "https://prod.uxcrowd.ru/assets/images/nl-home-helpful-block-2.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 62,
+              "EventId": 2446,
+              "HttpStatus": 200,
+              "Size": 4371,
+              "URL": "https://prod.uxcrowd.ru/assets/images/nl-home-helpful-block-1.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 125,
+              "EventId": 2428,
+              "HttpStatus": 200,
+              "Size": 187,
+              "URL": "https://prod.uxcrowd.ru/assets/images/nl-home-work-blot-rect.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 125,
+              "EventId": 2426,
+              "HttpStatus": 200,
+              "Size": 212,
+              "URL": "https://prod.uxcrowd.ru/assets/images/nl-home-work-blot-circle.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 110,
+              "EventId": 2423,
+              "HttpStatus": 200,
+              "Size": 9720,
+              "URL": "https://prod.uxcrowd.ru/assets/images/nl-home-girl.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 110,
+              "EventId": 2421,
+              "HttpStatus": 200,
+              "Size": 237,
+              "URL": "https://prod.uxcrowd.ru/assets/images/nl-home-work-arrow.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "font/woff2",
+              "DownloadTime": 110,
+              "EventId": 2419,
+              "HttpStatus": 200,
+              "Size": 18028,
+              "URL": "https://prod.uxcrowd.ru/assets/fonts/glyphicons-halflings-regular.woff2"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 47,
+              "EventId": 2417,
+              "HttpStatus": 200,
+              "Size": 2322,
+              "URL": "https://prod.uxcrowd.ru/assets/images/nl-home-top-blot.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 79,
+              "EventId": 2410,
+              "HttpStatus": 200,
+              "Size": 675,
+              "URL": "https://prod.uxcrowd.ru/assets/images/facebook-colored.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 94,
+              "EventId": 2408,
+              "HttpStatus": 200,
+              "Size": 22696,
+              "URL": "https://prod.uxcrowd.ru/assets/images/uxcrowd-logo-white-mobile.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 79,
+              "EventId": 2406,
+              "HttpStatus": 200,
+              "Size": 4009,
+              "URL": "https://prod.uxcrowd.ru/assets/images/youtube-colored.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 78,
+              "EventId": 2404,
+              "HttpStatus": 200,
+              "Size": 1551,
+              "URL": "https://prod.uxcrowd.ru/assets/images/avatar-white-mobile.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 78,
+              "EventId": 2402,
+              "HttpStatus": 200,
+              "Size": 297,
+              "URL": "https://prod.uxcrowd.ru/assets/images/burger-white-mobile.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 62,
+              "EventId": 2399,
+              "HttpStatus": 200,
+              "Size": 22696,
+              "URL": "https://prod.uxcrowd.ru/assets/images/uxcrowd-logo-new.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 62,
+              "EventId": 2394,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://prod.uxcrowd.ru/"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 63,
+              "EventId": 2373,
+              "HttpStatus": 200,
+              "Size": 1263,
+              "URL": "https://prod.uxcrowd.ru/tmpl/tmpl_landing_new/footer.html"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 63,
+              "EventId": 2371,
+              "HttpStatus": 200,
+              "Size": 8963,
+              "URL": "https://prod.uxcrowd.ru/tmpl/tmpl_landing_new/home.html"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 47,
+              "EventId": 2366,
+              "HttpStatus": 200,
+              "Size": 2873,
+              "URL": "https://prod.uxcrowd.ru/tmpl/tmpl_landing_new/headerGreenWhite.html"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 63,
+              "EventId": 2352,
+              "HttpStatus": 200,
+              "Size": 155,
+              "URL": "https://prod.uxcrowd.ru/app.js?bust=1571834720676"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 109,
+              "EventId": 2332,
+              "HttpStatus": 200,
+              "Size": 20696,
+              "URL": "https://prod.uxcrowd.ru/controller/controller_home/login.controller.js?bust=1571834720676"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 94,
+              "EventId": 2330,
+              "HttpStatus": 200,
+              "Size": 11249,
+              "URL": "https://prod.uxcrowd.ru/controller/controller_home/newMain.controller.js?bust=1571834720676"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 62,
+              "EventId": 2312,
+              "HttpStatus": 401,
+              "Size": 0,
+              "URL": "https://prod.uxcrowd.ru/api/account"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 62,
+              "EventId": 2287,
+              "HttpStatus": 200,
+              "Size": 234968,
+              "URL": "https://prod.uxcrowd.ru/assets/lang/ru.json"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 109,
+              "EventId": 2257,
+              "HttpStatus": 200,
+              "Size": 119769,
+              "URL": "https://prod.uxcrowd.ru/assets/js/main_js/main_route.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 78,
+              "EventId": 2253,
+              "HttpStatus": 200,
+              "Size": 7762,
+              "URL": "https://prod.uxcrowd.ru/assets/js/main_js/path_controller.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 62,
+              "EventId": 2250,
+              "HttpStatus": 200,
+              "Size": 2765,
+              "URL": "https://prod.uxcrowd.ru/assets/js/landing/jQuery.YouTube.HD.Thumbnail.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 109,
+              "EventId": 2243,
+              "HttpStatus": 200,
+              "Size": 17824,
+              "URL": "https://prod.uxcrowd.ru/library/require.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 94,
+              "EventId": 2241,
+              "HttpStatus": 200,
+              "Size": 3971,
+              "URL": "https://prod.uxcrowd.ru/assets/gulp/tester_js.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 109,
+              "EventId": 2230,
+              "HttpStatus": 200,
+              "Size": 618,
+              "URL": "https://prod.uxcrowd.ru/assets/gulp/new_tester_js.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 94,
+              "EventId": 2218,
+              "HttpStatus": 200,
+              "Size": 8083,
+              "URL": "https://prod.uxcrowd.ru/assets/gulp/moderator_js.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 110,
+              "EventId": 2195,
+              "HttpStatus": 200,
+              "Size": 23862,
+              "URL": "https://prod.uxcrowd.ru/assets/gulp/home_js.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 62,
+              "EventId": 2185,
+              "HttpStatus": 200,
+              "Size": 2129,
+              "URL": "https://prod.uxcrowd.ru/assets/gulp/blog_js.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 78,
+              "EventId": 2182,
+              "HttpStatus": 200,
+              "Size": 12438,
+              "URL": "https://prod.uxcrowd.ru/assets/gulp/customer_js.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 93,
+              "EventId": 2159,
+              "HttpStatus": 200,
+              "Size": 1249,
+              "URL": "https://prod.uxcrowd.ru/assets/gulp/admin_js.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 140,
+              "EventId": 2089,
+              "HttpStatus": 200,
+              "Size": 2366,
+              "URL": "https://prod.uxcrowd.ru/assets/js/app_js/auth.interceptor.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 110,
+              "EventId": 2087,
+              "HttpStatus": 200,
+              "Size": 510172,
+              "URL": "https://prod.uxcrowd.ru/assets/js/main_js/mediaelement-and-player.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 110,
+              "EventId": 2085,
+              "HttpStatus": 200,
+              "Size": 20930,
+              "URL": "https://prod.uxcrowd.ru/assets/gulp/app_js.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 109,
+              "EventId": 2082,
+              "HttpStatus": 200,
+              "Size": 87478,
+              "URL": "https://prod.uxcrowd.ru/assets/js/main_js/init.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 109,
+              "EventId": 2080,
+              "HttpStatus": 200,
+              "Size": 2339,
+              "URL": "https://prod.uxcrowd.ru/assets/js/main_js/validation.rule.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 109,
+              "EventId": 2078,
+              "HttpStatus": 200,
+              "Size": 1892351,
+              "URL": "https://prod.uxcrowd.ru/assets/gulp/sup_js.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 62,
+              "EventId": 2076,
+              "HttpStatus": 200,
+              "Size": 5938,
+              "URL": "https://prod.uxcrowd.ru/library/FileSaver.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 47,
+              "EventId": 2074,
+              "HttpStatus": 200,
+              "Size": 9156,
+              "URL": "https://prod.uxcrowd.ru/assets/js/main_js/validation.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 625,
+              "EventId": 2046,
+              "HttpStatus": 200,
+              "Size": 48602,
+              "URL": "https://prod.uxcrowd.ru/library/jquery.form.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 437,
+              "EventId": 2042,
+              "HttpStatus": 200,
+              "Size": 630,
+              "URL": "https://prod.uxcrowd.ru/assets/gulp/env.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 437,
+              "EventId": 2040,
+              "HttpStatus": 200,
+              "Size": 14859,
+              "URL": "https://prod.uxcrowd.ru/library/jquery.uploadfile.min.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 407,
+              "EventId": 2037,
+              "HttpStatus": 200,
+              "Size": 366102,
+              "URL": "https://prod.uxcrowd.ru/library/jquery.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 110,
+              "EventId": 2030,
+              "HttpStatus": 200,
+              "Size": 27881,
+              "URL": "https://prod.uxcrowd.ru/assets/css/landing/uxcrowd.webflow.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 110,
+              "EventId": 2027,
+              "HttpStatus": 200,
+              "Size": 2064,
+              "URL": "https://prod.uxcrowd.ru/assets/css/landing/YouTube.HD.Thumbnail.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 110,
+              "EventId": 2025,
+              "HttpStatus": 200,
+              "Size": 37409,
+              "URL": "https://prod.uxcrowd.ru/assets/css/landing/webflow.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 109,
+              "EventId": 1962,
+              "HttpStatus": 200,
+              "Size": 653120,
+              "URL": "https://prod.uxcrowd.ru/assets/gulp/sup_css.css"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 62,
+              "EventId": 1959,
+              "HttpStatus": 200,
+              "Size": 3314,
+              "URL": "https://prod.uxcrowd.ru/"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "ulogin.ru",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "95.163.118.168",
+          "IncludeInScript": false,
+          "Name": "ulogin.ru",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/x-javascript",
+              "DownloadTime": 16,
+              "EventId": 2165,
+              "HttpStatus": 200,
+              "Size": 18697,
+              "URL": "https://ulogin.ru/js/ulogin.js"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "typekit.net",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "23.38.53.224",
+          "IncludeInScript": false,
+          "Name": "use.typekit.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "application/font-woff2",
+              "DownloadTime": 79,
+              "EventId": 2350,
+              "HttpStatus": 200,
+              "Size": 42304,
+              "URL": "https://use.typekit.net/af/c4c302/000000000000000000012192/27/l?primer=e7c58b81a305e1fc09dd5591d751a34891b5b63ab278ac3b87ed8857fdd9b01a&fvd=n6&v=3"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/font-woff2",
+              "DownloadTime": 63,
+              "EventId": 2348,
+              "HttpStatus": 200,
+              "Size": 64176,
+              "URL": "https://use.typekit.net/af/cf3e4e/000000000000000000010095/27/l?primer=e7c58b81a305e1fc09dd5591d751a34891b5b63ab278ac3b87ed8857fdd9b01a&fvd=i4&v=3"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/font-woff2",
+              "DownloadTime": 47,
+              "EventId": 2345,
+              "HttpStatus": 200,
+              "Size": 57236,
+              "URL": "https://use.typekit.net/af/9b05f3/000000000000000000013365/27/l?primer=e7c58b81a305e1fc09dd5591d751a34891b5b63ab278ac3b87ed8857fdd9b01a&fvd=n4&v=3"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/font-woff2",
+              "DownloadTime": 62,
+              "EventId": 2335,
+              "HttpStatus": 200,
+              "Size": 48696,
+              "URL": "https://use.typekit.net/af/309dfe/000000000000000000010091/27/l?primer=e7c58b81a305e1fc09dd5591d751a34891b5b63ab278ac3b87ed8857fdd9b01a&fvd=n7&v=3"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/font-woff2",
+              "DownloadTime": 62,
+              "EventId": 2327,
+              "HttpStatus": 200,
+              "Size": 52888,
+              "URL": "https://use.typekit.net/af/2cd6bf/00000000000000000001008f/27/l?primer=e7c58b81a305e1fc09dd5591d751a34891b5b63ab278ac3b87ed8857fdd9b01a&fvd=n5&v=3"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/javascript",
+              "DownloadTime": 110,
+              "EventId": 2207,
+              "HttpStatus": 200,
+              "Size": 7517,
+              "URL": "https://use.typekit.net/hym5rnq.js"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES256-GCM-SHA384",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "23.38.53.224",
+          "IncludeInScript": false,
+          "Name": "p.typekit.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 47,
+              "EventId": 3150,
+              "HttpStatus": 200,
+              "Size": 35,
+              "URL": "https://p.typekit.net/p.gif?s=1&k=hym5rnq&ht=tk&h=prod.uxcrowd.ru&f=10879.10881.10884.10885.15586&a=9108420&js=1.19.2&app=typekit&e=js&_=1571834870575"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 47,
+              "EventId": 2415,
+              "HttpStatus": 200,
+              "Size": 35,
+              "URL": "https://p.typekit.net/p.gif?s=1&k=hym5rnq&ht=tk&h=prod.uxcrowd.ru&f=10879.10881.10884.10885.15586&a=9108420&js=1.19.2&app=typekit&e=js&_=1571834721565"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES256-GCM-SHA384",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "intercomcdn.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "54.230.229.47",
+          "IncludeInScript": false,
+          "Name": "js.intercomcdn.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 16,
+              "EventId": 3170,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://js.intercomcdn.com/shim.latest.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 2985,
+              "HttpStatus": 200,
+              "Size": 3764,
+              "URL": "https://js.intercomcdn.com/locale-ru-json.486c7fb1.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 32,
+              "EventId": 2937,
+              "HttpStatus": 200,
+              "Size": 178851,
+              "URL": "https://js.intercomcdn.com/vendor.7807495b.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 32,
+              "EventId": 2929,
+              "HttpStatus": 200,
+              "Size": 78576,
+              "URL": "https://js.intercomcdn.com/frame.f21efd07.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 2926,
+              "HttpStatus": 200,
+              "Size": 4046,
+              "URL": "https://js.intercomcdn.com/shim.latest.js"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "intercom.io",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "54.230.229.48",
+          "IncludeInScript": false,
+          "Name": "widget.intercom.io",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 31,
+              "EventId": 3168,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://widget.intercom.io/widget/fkbc3no8"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 32,
+              "EventId": 2908,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://widget.intercom.io/widget/fkbc3no8"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "35.170.0.145",
+          "IncludeInScript": false,
+          "Name": "nexus-websocket-a.intercom.io",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 125,
+              "EventId": 3198,
+              "HttpStatus": 101,
+              "Size": 0,
+              "URL": "https://nexus-websocket-a.intercom.io/pubsub/5-RjEG6wSU7Z7yMnSOTur-VFtGfj6gEqwtgd5LyY0qqQS5c2hoHrI5t_wVrIINJnUUbnwdKCey7T-RvrXFDZjMPGBBGTBLTFNVRIVj?X-Nexus-New-Client=true&X-Nexus-Version=0.4.67&user_role=user"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 125,
+              "EventId": 3059,
+              "HttpStatus": 101,
+              "Size": 0,
+              "URL": "https://nexus-websocket-a.intercom.io/pubsub/5-Rodv1TVLAS9Yt2qe1ey2LglcvH3V8aFJOPd8TMDrlnKSqv0zJ_HPTnnqXJvJUW3Vqc5xZJ-0aVMeo9xrvRneSxbjk2IJkDvr1omF?X-Nexus-New-Client=true&X-Nexus-Version=0.4.67&user_role=user"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 125,
+              "EventId": 2999,
+              "HttpStatus": 101,
+              "Size": 0,
+              "URL": "https://nexus-websocket-a.intercom.io/pubsub/5-C9PAtYKydEjkkBIVwOwDEDgiolCsrNoplDQE5pX9JSX7ouB7cM521suQ1n4clNSqn6kQCwkNI0OEKM3as5qHEXf5RmJgnzUTxDjA?X-Nexus-New-Client=true&X-Nexus-Version=0.4.67&user_role=visitor"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "54.230.229.60",
+          "IncludeInScript": false,
+          "Name": "api-iam.intercom.io",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 266,
+              "EventId": 3193,
+              "HttpStatus": 200,
+              "Size": 1406,
+              "URL": "https://api-iam.intercom.io/messenger/web/ping"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 297,
+              "EventId": 3180,
+              "HttpStatus": 200,
+              "Size": 1404,
+              "URL": "https://api-iam.intercom.io/messenger/web/ping"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 172,
+              "EventId": 3091,
+              "HttpStatus": 200,
+              "Size": 25,
+              "URL": "https://api-iam.intercom.io/messenger/web/metrics"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 360,
+              "EventId": 3081,
+              "HttpStatus": 200,
+              "Size": 1405,
+              "URL": "https://api-iam.intercom.io/messenger/web/ping"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 750,
+              "EventId": 3046,
+              "HttpStatus": 200,
+              "Size": 1405,
+              "URL": "https://api-iam.intercom.io/messenger/web/ping"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 328,
+              "EventId": 2982,
+              "HttpStatus": 200,
+              "Size": 1285,
+              "URL": "https://api-iam.intercom.io/messenger/web/ping"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "gstatic.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "64.233.165.94",
+          "IncludeInScript": false,
+          "Name": "ssl.gstatic.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 31,
+              "EventId": 2798,
+              "HttpStatus": 200,
+              "Size": 77948,
+              "URL": "https://ssl.gstatic.com/safebrowsing/csd/client_model_v5_ext_variation_0.pb"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 31,
+              "EventId": 2756,
+              "HttpStatus": 200,
+              "Size": 77948,
+              "URL": "https://ssl.gstatic.com/safebrowsing/csd/client_model_v5_variation_0.pb"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "64.233.163.94",
+          "IncludeInScript": false,
+          "Name": "fonts.gstatic.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "font/woff2",
+              "DownloadTime": 31,
+              "EventId": 2753,
+              "HttpStatus": 200,
+              "Size": 9832,
+              "URL": "https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu5mxKOzY.woff2"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "font/woff2",
+              "DownloadTime": 31,
+              "EventId": 2721,
+              "HttpStatus": 200,
+              "Size": 15344,
+              "URL": "https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "googleapis.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "64.233.165.95",
+          "IncludeInScript": false,
+          "Name": "safebrowsing.googleapis.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/x-protobuf",
+              "DownloadTime": 16,
+              "EventId": 3212,
+              "HttpStatus": 200,
+              "Size": 765,
+              "URL": "https://safebrowsing.googleapis.com/v4/threatListUpdates:fetch?$req=Ch0KDGdvb2dsZWNocm9tZRINNzcuMC4zODY1LjEyMBopCAUQARobCg0IBRAGGAEiAzAwMTABEOqxBxoCGAlbEFwnIgQgASACKAEaKQgBEAEaGwoNCAEQBhgBIgMwMDEwARCBzAYaAhgJUGO_UyIEIAEgAigBGikIBxABGhsKDQgHEAYYASIDMDAxMAEQ8ZwGGgIYCa4feqgiBCABIAIoARonCAEQARoZCg0IARAGGAEiAzAwMTADEBQaAhgJQbBwTCIEIAEgAigDGigIARAIGhoKDQgBEAgYASIDMDAxMAQQxRgaAhgJHefnXCIEIAEgAigEGicICRABGhkKDQgJEAYYASIDMDAxMAYQAhoCGAlVogr3IgQgASACKAYaKAgPEAEaGgoNCA8QBhgBIgMwMDEwARDtExoCGAkSrjbxIgQgASACKAEaJwgJEAEaGQoNCAkQBhgBIgMwMDEwARAVGgIYCUr9-14iBCABIAIoARonCAoQCBoZCg0IChAIGAEiAzAwMTABEAUaAhgJcBovJCIEIAEgAigBGigICBABGhoKDQgIEAYYASIDMDAxMAEQiAcaAhgJ0_0n-CIEIAEgAigBGigIDRABGhoKDQgNEAYYASIDMDAxMAEQ2FEaAhgJVx3H7SIEIAEgAigBGikIAxABGhsKDQgDEAYYASIDMDAxMAEQ48kGGgIYCY1zAekiBCABIAIoARopCA4QARobCg0IDhAGGAEiAzAwMTABELC6AhoCGAkB0q6TIgQgASACKAEiAggB&$ct=application/x-protobuf&key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "64.233.165.94",
+          "IncludeInScript": false,
+          "Name": "clientservices.googleapis.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 31,
+              "EventId": 1957,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://clientservices.googleapis.com/chrome-variations/seed?osname=win&channel=stable&milestone=77"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "google.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "64.233.162.104",
+          "IncludeInScript": false,
+          "Name": "www.google.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/javascript",
+              "DownloadTime": 32,
+              "EventId": 2696,
+              "HttpStatus": 200,
+              "Size": 5305,
+              "URL": "https://www.google.com/js/bg/4Yded54XDJAR3XmzVwO6ufrxT_MQSIaW0_tTFbN1Ar4.js"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "173.194.222.102",
+          "IncludeInScript": false,
+          "Name": "clients1.google.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/proto",
+              "DownloadTime": 31,
+              "EventId": 2922,
+              "HttpStatus": 200,
+              "Size": 28,
+              "URL": "https://clients1.google.com/tbproxy/af/query?q=Chc2LjEuMTcxNS4xNDQyL2VuIChHR0xMKRMZw-l5gx6tGBgjLShLLYkkIy3OQUx6JBQTGaQ8HMmfGKNvIy14bxIZJBQ="
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "facebook.net",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "31.13.72.12",
+          "IncludeInScript": false,
+          "Name": "connect.facebook.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/x-javascript",
+              "DownloadTime": 31,
+              "EventId": 2380,
+              "HttpStatus": 200,
+              "Size": 59108,
+              "URL": "https://connect.facebook.net/ru_RU/sdk.js?hash=0fbeb47da8e4487d3fe1175776da175b&ua=modern_es6"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/x-javascript",
+              "DownloadTime": 31,
+              "EventId": 2305,
+              "HttpStatus": 200,
+              "Size": 1779,
+              "URL": "https://connect.facebook.net/ru_RU/sdk.js"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "facebook.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "31.13.72.12",
+          "IncludeInScript": false,
+          "Name": "staticxx.facebook.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "br",
+              "DataType": "text/html",
+              "DownloadTime": 16,
+              "EventId": 3154,
+              "HttpStatus": 200,
+              "Size": 11616,
+              "URL": "https://staticxx.facebook.com/connect/xd_arbiter.php?version=44"
+            },
+            {
+              "CompressionType": "br",
+              "DataType": "text/html",
+              "DownloadTime": 47,
+              "EventId": 2501,
+              "HttpStatus": 200,
+              "Size": 11616,
+              "URL": "https://staticxx.facebook.com/connect/xd_arbiter.php?version=44"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "doubleclick.net",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "64.233.165.148",
+          "IncludeInScript": false,
+          "Name": "static.doubleclick.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/javascript",
+              "DownloadTime": 16,
+              "EventId": 2682,
+              "HttpStatus": 200,
+              "Size": 29,
+              "URL": "https://static.doubleclick.net/instream/ad_status.js"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "64.233.163.157",
+          "IncludeInScript": false,
+          "Name": "googleads.g.doubleclick.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 15,
+              "EventId": 2684,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://googleads.g.doubleclick.net/pagead/id"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    }
+  ],
+  "WebSocket": {
+    "IncludeInScript": false,
+    "IsScriptIncludeWebSocket": true
+  },
+  "NumberOfCorrelations": 4
+}

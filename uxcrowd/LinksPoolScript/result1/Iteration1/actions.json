@@ -1,0 +1,35 @@
+[
+    {
+        "actionName": "Action",
+        "steps": [
+            {
+                "stepId": "STEP1",
+                "stepName": "Url: /api/account",
+                "infFile": "t1.inf",
+                "time": 1572013404527
+            },
+            {
+                "stepId": "STEP2",
+                "stepName": "Submit Data: /api/authentication",
+                "infFile": "t2.inf",
+                "time": 1572013404790
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "ParentTransaction",
+                "rawStartTime": 1572013404576,
+                "rawEndTime": 1572013745180,
+                "thinkTime": 0.0,
+                "wastedTime": 0.027775049209594728
+            },
+            {
+                "transactionName": "Login",
+                "rawStartTime": 1572013404533,
+                "rawEndTime": 1572013745180,
+                "thinkTime": 0.0,
+                "wastedTime": 0.027775049209594728
+            }
+        ]
+    }
+]

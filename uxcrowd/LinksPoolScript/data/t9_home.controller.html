@@ -1,0 +1,21 @@
+define(['../../app'], function (app) {
+    app_cached_providers
+        .$controllerProvider
+        .register('customerHomeController', function ($scope, $rootScope, $state, $config, Principal, Auth, Translation, $config) {
+            $scope.testStandLogo = $config.testStandLogo;
+            $scope.fullUrl = $config.fullUrl;
+            $scope.extensionID = Translation.getExtensionId();
+            Principal.identity().then(function (account) {
+                $scope.account = account;
+                $scope.$watch('$root.draftSaved', function(newValue, oldValue) {
+                    if (newValue!=null) {
+                        $('#draftSavedId').addClass('draft-saved');
+                        setInterval(function () {
+                            $('#draftSavedId').removeClass('draft-saved');
+                        }, 1000);
+                    }
+                });
+            });
+        });
+});
+

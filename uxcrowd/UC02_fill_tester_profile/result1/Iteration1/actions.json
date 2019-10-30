@@ -1,0 +1,46 @@
+[
+    {
+        "actionName": "Action",
+        "steps": [
+            {
+                "stepId": "STEP1",
+                "stepName": "Url: account",
+                "infFile": "t1.inf",
+                "time": 1571817156584
+            },
+            {
+                "stepId": "STEP2",
+                "stepName": "Url: host",
+                "infFile": "t2.inf",
+                "time": 1571817158470
+            },
+            {
+                "stepId": "STEP3",
+                "stepName": "Submit Data: authentication",
+                "infFile": "t3.inf",
+                "time": 1571817158767
+            },
+            {
+                "stepId": "STEP4",
+                "stepName": "Custom Request: profile_3",
+                "infFile": "t4.inf",
+                "time": 1571817158895
+            },
+            {
+                "stepId": "STEP5",
+                "stepName": "Custom Request: fill_profile",
+                "infFile": "t5.inf",
+                "time": 1571817159025
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "UC02_fill_tester_profile",
+                "rawStartTime": 1571817156593,
+                "rawEndTime": 1571817159027,
+                "thinkTime": 0.0,
+                "wastedTime": 0.4053363800048828
+            }
+        ]
+    }
+]

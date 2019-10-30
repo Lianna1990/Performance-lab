@@ -1,0 +1,118 @@
+[
+    {
+        "actionName": "Action",
+        "steps": [
+            {
+                "stepId": "STEP1",
+                "stepName": "Url: {host}",
+                "infFile": "t1.inf",
+                "time": 1571392616047
+            },
+            {
+                "stepId": "STEP2",
+                "stepName": "Url: account",
+                "infFile": "t2.inf",
+                "time": 1571392616161
+            },
+            {
+                "stepId": "STEP3",
+                "stepName": "Url: headerGreenWhite.html",
+                "infFile": "t3.inf",
+                "time": 1571392616479
+            },
+            {
+                "stepId": "STEP4",
+                "stepName": "Url: footer.html",
+                "infFile": "t4.inf",
+                "time": 1571392616713
+            },
+            {
+                "stepId": "STEP5",
+                "stepName": "Url: home.html",
+                "infFile": "t5.inf",
+                "time": 1571392621610
+            },
+            {
+                "stepId": "STEP6",
+                "stepName": "Url: {host}_2",
+                "infFile": "t6.inf",
+                "time": 1571392621766
+            },
+            {
+                "stepId": "STEP7",
+                "stepName": "Url: modal-login.html",
+                "infFile": "t7.inf",
+                "time": 1571392621924
+            },
+            {
+                "stepId": "STEP8",
+                "stepName": "Submit Data: authentication",
+                "infFile": "t8.inf",
+                "time": 1571392622265
+            },
+            {
+                "stepId": "STEP9",
+                "stepName": "Url: account",
+                "infFile": "t9.inf",
+                "time": 1571392622388
+            },
+            {
+                "stepId": "STEP10",
+                "stepName": "Url: profile",
+                "infFile": "t10.inf",
+                "time": 1571392622495
+            },
+            {
+                "stepId": "STEP11",
+                "stepName": "Url: main_template.html",
+                "infFile": "t11.inf",
+                "time": 1571392622724
+            },
+            {
+                "stepId": "STEP12",
+                "stepName": "Url: home.html_2",
+                "infFile": "t12.inf",
+                "time": 1571392622820
+            },
+            {
+                "stepId": "STEP13",
+                "stepName": "Url: header.html",
+                "infFile": "t13.inf",
+                "time": 1571392622915
+            },
+            {
+                "stepId": "STEP14",
+                "stepName": "Url: new-tasks.html",
+                "infFile": "t14.inf",
+                "time": 1571392623017
+            },
+            {
+                "stepId": "STEP15",
+                "stepName": "Url: rating",
+                "infFile": "t15.inf",
+                "time": 1571392623132
+            },
+            {
+                "stepId": "STEP16",
+                "stepName": "Url: profile_2",
+                "infFile": "t16.inf",
+                "time": 1571392623237
+            },
+            {
+                "stepId": "STEP17",
+                "stepName": "Url: new-tasks",
+                "infFile": "t17.inf",
+                "time": 1571392631955
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "Login",
+                "rawStartTime": 1571392621768,
+                "rawEndTime": 1571392631957,
+                "thinkTime": 0.0,
+                "wastedTime": 0.2739691734313965
+            }
+        ]
+    }
+]

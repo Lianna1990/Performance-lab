@@ -1,0 +1,58 @@
+<div class="block_list" ng-show="profile.testone">
+    <div class="header_table">
+        <div class="all_info orders-list">
+            <div class="order-num-table table-header-names">№</div>
+            <div class="date-table table-header-names" ng-tr="NTS.NTS"></div>
+            <div class="time-table table-header-names" ng-tr="NTS.NTS1"></div>
+            <div class="action-table table-header-names" style="width: 20%" ng-tr="NTS.NTS2"></div>
+            <div class="action-table table-header-names" style="width: 20%" ng-tr="NTS.NTS3"></div>
+        </div>
+    </div>
+    <div ng:if="tests.length==0" class="item_row">
+        <div class="all_info">
+            <div class="tester-alert text-center" ng-tr="NTS.NTS4">
+            </div>
+        </div>
+    </div>
+    <div ng:if="tests.length>0" class="item_row" ng-repeat="orders in tests track by orders.id">
+        <div class="all_info orders-list" ng:click="openRightMenu($index)">
+            <div class="order-num-table">
+                {{orders.id}}
+            </div>
+
+            <div class="date-table">
+                {{orders.creationDate | date:'dd.MM.yyyy'}}
+            </div>
+
+            <div class="time-table">
+                {{orders.duration}} <span ng-tr="NTS.NTS5"></span>
+            </div>
+
+            <div class="pass-test-table">
+                <div ng:if="orders.type == 'SITE'">
+                    <form method="post" action="{{'uxcrowd://?orderId=' + orders.id}}">
+                        <button type="submit" class="inline-btn" ux-test-click ng-tr="NTS.NTS6">
+                        </button>
+                    </form>
+                </div>
+                <div ng:if="orders.type != 'SITE'"><a target="_blank"
+                   href="https://play.google.com/store/apps/details?id=ru.pflb.mobile.uxcrowd">Этот тест можно пройти только с мобильного телефона или планшета через приложение UXCrowd для Android.</a>
+                </div>
+            </div>
+            <div class="pass-test-table">
+                <div ng:if="orders.type == 'SITE'">
+                    <label class="uploadbutton">
+                        <div class="upload-button"><span ng-tr="NTS.NTS7"></span>
+                            <div class="upload-button-progress" style="height:0px;width:0%"></div>
+                        </div>
+                        <input tester-upload-video type="file" orderId="{{orders.id}}"/>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="" ng-show="profile.test">
+    <div class="alert alert-danger tester-menu text-center" ng-tr="NTS.NTS8">
+    </div>
+</div>

@@ -1,0 +1,30 @@
+define(['../../../app'], function (app) {
+    app_cached_providers
+        .$controllerProvider
+        .register('testerNewTesterHeaderController', function ($scope, $state, $config, Principal, Header, Auth, $window, Translation, $http) {
+            $scope.testStandLogo = $config.testStandLogo;
+            $scope.fullUrl = $config.fullUrl;
+            $scope.extensionID = Translation.getExtensionId();
+            Principal.identity().then(function (account) {
+                $scope.account = account;
+            });
+            $scope.openVoiceInstruction = function () {
+              $http({
+                method: 'GET',
+                url: '/api/tester/voice-instruction',
+              }).then(function successCallback(data) {
+                var link = document.createElement("a");
+                link.setAttribute("href",
+                    'data:application/pdf;base64,' + data.data);
+                link.setAttribute("download", "voice-instruction.pdf");
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              });
+            };
+            $scope.logout = function () {
+                Auth.logout();
+                $state.go('new_main_index');
+            };
+        });
+});

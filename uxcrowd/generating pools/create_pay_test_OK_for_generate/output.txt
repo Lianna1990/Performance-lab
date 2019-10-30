@@ -1,0 +1,123 @@
+Virtual User Script started at: 28.10.2019 15:50:56
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 10; build 971 (рту 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36  	[MsgId: MMSG-26988]
+Runtime Settings file: "C:\Users\student\Documents\create_pay_test_OK_for_generate\\default.cfg"  	[MsgId: MMSG-27141]
+vuser_init.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+vuser_init.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+vuser_init.c(5): Notify: Transaction "Homepage" started.
+vuser_init.c(7): web_url("/") started  	[MsgId: MMSG-26355]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/sup_css.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/css/landing/webflow.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/css/landing/uxcrowd.webflow.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/css/landing/YouTube.HD.Thumbnail.css" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/env.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://use.typekit.net/hym5rnq.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://ulogin.ru/js/ulogin.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/library/jquery.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/library/jquery.form.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/library/jquery.uploadfile.min.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/library/FileSaver.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/sup_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/init.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/validation.rule.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/app_js/auth.interceptor.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/mediaelement-and-player.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/app_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/admin_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/customer_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/blog_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/home_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/moderator_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/new_tester_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/gulp/tester_js.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/library/require.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/path_controller.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/landing/jQuery.YouTube.HD.Thumbnail.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): Found resource "https://prod.uxcrowd.ru/assets/js/main_js/main_route.js" in HTML "https://prod.uxcrowd.ru/"  	[MsgId: MMSG-26659]
+vuser_init.c(7): web_url("/") was successful, 3911498 body bytes, 15558 header bytes, 13 chunking overhead bytes  	[MsgId: MMSG-26385]
+vuser_init.c(16): Notify: Transaction "Homepage" ended with a "Pass" status (Duration: 7.7409 Wasted Time: 0.4919).
+vuser_init.c(18): web_reg_save_param started  	[MsgId: MMSG-26355]
+vuser_init.c(18): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+vuser_init.c(22): web_url("/api/account") started  	[MsgId: MMSG-26355]
+vuser_init.c(22): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");, Snapshot Info [MSH 1 2]  	[MsgId: MERR-26547]
+vuser_init.c(22): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://prod.uxcrowd.ru/api/account", Snapshot Info [MSH 1 2]  	[MsgId: MERR-26630]
+vuser_init.c(22): web_url("/api/account") highest severity level was "continue on error", 0 body bytes, 397 header bytes  	[MsgId: MMSG-26388]
+vuser_init.c(22): Continuing after error in Vuser script.
+vuser_init.c(31): web_add_auto_header("X-XSRF-TOKEN") started  	[MsgId: MMSG-26355]
+vuser_init.c(31): web_add_auto_header("X-XSRF-TOKEN") was successful  	[MsgId: MMSG-26392]
+vuser_init.c(34): Notify: Transaction "Login" started.
+vuser_init.c(36): web_reg_save_param started  	[MsgId: MMSG-26355]
+vuser_init.c(36): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+vuser_init.c(42): web_reg_save_param started  	[MsgId: MMSG-26355]
+vuser_init.c(42): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+vuser_init.c(47): web_reg_save_param started  	[MsgId: MMSG-26355]
+vuser_init.c(47): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+vuser_init.c(52): web_submit_data("/api/authentication") started  	[MsgId: MMSG-26355]
+vuser_init.c(52): web_submit_data("/api/authentication") was successful, 0 body bytes, 1058 header bytes  	[MsgId: MMSG-26386]
+vuser_init.c(65): web_add_auto_header("X-XSRF-TOKEN") started  	[MsgId: MMSG-26355]
+vuser_init.c(65): web_add_auto_header("X-XSRF-TOKEN") was successful  	[MsgId: MMSG-26392]
+vuser_init.c(68): web_reg_save_param started  	[MsgId: MMSG-26355]
+vuser_init.c(68): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+vuser_init.c(73): web_url("/api/account") started  	[MsgId: MMSG-26355]
+vuser_init.c(73): web_url("/api/account") was successful, 442 body bytes, 633 header bytes  	[MsgId: MMSG-26386]
+vuser_init.c(82): web_url("/api/v2/customer/profile") started  	[MsgId: MMSG-26355]
+vuser_init.c(82): web_url("/api/v2/customer/profile") was successful, 147 body bytes, 333 header bytes  	[MsgId: MMSG-26386]
+vuser_init.c(91): web_url("/api/customer/hist-orders") started  	[MsgId: MMSG-26355]
+vuser_init.c(91): web_url("/api/customer/hist-orders") was successful, 28 body bytes, 633 header bytes  	[MsgId: MMSG-26386]
+vuser_init.c(100): web_url("/api/customer/waitingOrders") started  	[MsgId: MMSG-26355]
+vuser_init.c(100): web_url("/api/customer/waitingOrders") was successful, 28 body bytes, 633 header bytes  	[MsgId: MMSG-26386]
+vuser_init.c(109): web_url("/api/customer/orders") started  	[MsgId: MMSG-26355]
+vuser_init.c(109): web_url("/api/customer/orders") was successful, 2387 body bytes, 633 header bytes  	[MsgId: MMSG-26386]
+vuser_init.c(118): Notify: Transaction "Login" ended with a "Pass" status (Duration: 1.5533 Wasted Time: 0.1423).
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Action.
+Action.c(4): Notify: Transaction "Create_new_test" started.
+Action.c(6): web_url("new.order.html") started  	[MsgId: MMSG-26355]
+Action.c(6): web_url("new.order.html") was successful, 202438 body bytes, 501 header bytes  	[MsgId: MMSG-26386]
+Action.c(15): Notify: Transaction "Create_new_test" ended with a "Pass" status (Duration: 0.6619 Wasted Time: 0.0555).
+Action.c(17): Notify: Transaction "Add_description" started.
+Action.c(19): web_add_header("Origin") started  	[MsgId: MMSG-26355]
+Action.c(19): web_add_header("Origin") was successful  	[MsgId: MMSG-26392]
+Action.c(22): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+Action.c(22): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+Action.c(29): web_custom_request("draft") started  	[MsgId: MMSG-26355]
+Action.c(29): web_custom_request("draft") was successful, 34 body bytes, 633 header bytes  	[MsgId: MMSG-26386]
+Action.c(41): Notify: Transaction "Add_description" ended with a "Pass" status (Duration: 0.2849 Wasted Time: 0.0275).
+Action.c(43): Notify: Transaction "Participant_group" started.
+Action.c(45): web_add_auto_header("Origin") started  	[MsgId: MMSG-26355]
+Action.c(45): web_add_auto_header("Origin") was successful  	[MsgId: MMSG-26392]
+Action.c(48): web_custom_request("updateOrderAudience") started  	[MsgId: MMSG-26355]
+Action.c(48): web_custom_request("updateOrderAudience") was successful, 55 body bytes, 633 header bytes  	[MsgId: MMSG-26386]
+Action.c(60): Notify: Transaction "Participant_group" ended with a "Pass" status (Duration: 0.2233 Wasted Time: 0.0256).
+Action.c(62): Notify: Transaction "Add_question" started.
+Action.c(64): web_custom_request("updateOrderSteps") started  	[MsgId: MMSG-26355]
+Action.c(64): web_custom_request("updateOrderSteps") was successful, 88 body bytes, 633 header bytes  	[MsgId: MMSG-26386]
+Action.c(76): web_remove_auto_header("Origin") started  	[MsgId: MMSG-26355]
+Action.c(76): Previous automatically added web header for "Origin" removed  	[MsgId: MMSG-26587]
+Action.c(76): web_remove/revert_auto_header("Origin") was successful  	[MsgId: MMSG-26392]
+Action.c(78): web_url("calculatePrice") started  	[MsgId: MMSG-26355]
+Action.c(78): web_url("calculatePrice") was successful, 15 body bytes, 606 header bytes  	[MsgId: MMSG-26386]
+Action.c(87): Notify: Transaction "Add_question" ended with a "Pass" status (Duration: 0.3506 Wasted Time: 0.0398).
+Action.c(89): web_add_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+Action.c(89): web_add_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+Action.c(92): web_add_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+Action.c(92): web_add_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+Action.c(95): web_add_header("X-XSRF-TOKEN") started  	[MsgId: MMSG-26355]
+Action.c(95): web_add_header("X-XSRF-TOKEN") was successful  	[MsgId: MMSG-26392]
+Action.c(98): web_url("paymentInitRequest_2") started  	[MsgId: MMSG-26355]
+Action.c(98): web_url("paymentInitRequest_2") was successful, 95 body bytes, 633 header bytes  	[MsgId: MMSG-26386]
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+vuser_end.c(3): Notify: Transaction "Logout" started.
+vuser_end.c(5): web_custom_request("logout") started  	[MsgId: MMSG-26355]
+vuser_end.c(5): web_custom_request("logout") was successful, 0 body bytes, 975 header bytes  	[MsgId: MMSG-26386]
+vuser_end.c(14): Notify: Transaction "Logout" ended with a "Pass" status (Duration: 0.1812 Wasted Time: 0.0279).
+Ending action vuser_end.
+Vuser Terminated.
