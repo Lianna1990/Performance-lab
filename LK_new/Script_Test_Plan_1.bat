@@ -1,0 +1,1 @@
+jmeter.bat -n -t D:\Users\user\Desktop\LK_new\2.jmx -j test.log -l jmeter_report\UC02_Result.csv -e -o jmeter_report
